@@ -1,1 +1,1 @@
-# The Foundraising Game
+# The Fundraising Game

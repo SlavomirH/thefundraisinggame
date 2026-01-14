@@ -449,12 +449,6 @@ input[type="text"]:focus {
     justify-content: center;
 }
 
-@media (min-width: 1024px) {
-    .hero-image {
-        justify-content: flex-end;
-    }
-}
-
 .book-glow {
     position: absolute;
     inset: -20%;

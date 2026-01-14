@@ -27,11 +27,10 @@
             <div class="hero-content">
                 <!-- Left Column -->
                 <div class="hero-text">
-                    <span class="badge">💘 The Ultimate VC Dating Guide</span>
-
                     <h1>
                         <span class="title-main">How Raising Capital and Hitting on Women Are More Alike Than You Think</span>
-                        <span class="title-sub">And Why You Need to Change Your Approach</span>
+                        <span class="title-sub">Raising Capital Is Just Like Dating</span>
+                        <span class="title-accent">Learn the unspoken rules VCs never say out loud.</span>
                     </h1>
 
                     <p class="hero-description">
@@ -39,60 +38,29 @@
                     </p>
 
                     <div class="hero-stats">
-                        <div class="stat-item">
-                            <span class="stat-icon">📈</span>
-                            <span class="stat-text">10+ Chapters</span>
+                        <div class="stat-item stat-confident">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="stat-icon-svg"><polyline points="22 7 13.5 15.5 8.5 10.5 2 17"></polyline><polyline points="16 7 22 7 22 13"></polyline></svg>
+                            <span class="stat-text">100+ VCs opened up about what really wins them over</span>
                         </div>
-                        <div class="stat-item">
-                            <span class="stat-icon">❤️</span>
-                            <span class="stat-text">Real Stories</span>
+                        <div class="stat-item stat-romantic">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="stat-icon-svg"><path d="M19 14c1.49-1.46 3-3.21 3-5.5A5.5 5.5 0 0 0 16.5 3c-1.76 0-3 .5-4.5 2-1.5-1.5-2.74-2-4.5-2A5.5 5.5 0 0 0 2 8.5c0 2.3 1.5 4.05 3 5.5l7 7Z"></path></svg>
+                            <span class="stat-text">50+ Hidden patterns decoded from their decision-making</span>
                         </div>
-                        <div class="stat-item">
-                            <span class="stat-icon">👥</span>
+                        <div class="stat-item stat-sophisticated">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="stat-icon-svg"><path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"></path><circle cx="9" cy="7" r="4"></circle><path d="M22 21v-2a4 4 0 0 0-3-3.87"></path><path d="M16 3.13a4 4 0 0 1 0 7.75"></path></svg>
                             <span class="stat-text">Insider Access</span>
                         </div>
                     </div>
 
-                    <!-- Hero Signup Form -->
-                    <div class="signup-card">
-                        <div class="card-header">
-                            <div class="card-icons">
-                                <span>❤️</span>
-                                <span>✨</span>
-                            </div>
-                            <h3>Get Exclusive Early Access</h3>
-                            <p class="card-description">Join our VIP list and be the first to get the insider secrets that actually work</p>
-                        </div>
-                        <form id="hero-form" class="hero-form">
-                            <div class="form-row">
-                                <input type="email" id="hero-email" placeholder="Enter your email" required>
-                                <button type="submit" class="btn-primary">Join</button>
-                            </div>
-                            <div id="hero-message" class="form-message"></div>
-                        </form>
-                        <ul class="benefits-list">
-                            <li>
-                                <span class="benefit-icon">📈</span>
-                                <span>10+ game-changing chapters</span>
-                            </li>
-                            <li>
-                                <span class="benefit-icon">❤️</span>
-                                <span>Real stories from VCs and founders</span>
-                            </li>
-                            <li>
-                                <span class="benefit-icon">👥</span>
-                                <span>Insider access to VC psychology</span>
-                            </li>
-                        </ul>
+                    <div class="hero-cta">
+                        <button class="btn-primary btn-large" onclick="scrollToForm()">
+                            Get Exclusive Early Access
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="btn-icon-svg"><path d="M12 5v14"></path><path d="m19 12-7 7-7-7"></path></svg>
+                        </button>
+                        <p class="hero-stats-text">
+                            Join <span class="highlight">500+</span> VCs and founders already on the list
+                        </p>
                     </div>
-
-                    <button class="btn-outline" onclick="scrollToForm()">
-                        See Full Details ⬇
-                    </button>
-
-                    <p class="hero-stats-text">
-                        Join <span class="highlight">500+</span> VCs and founders already on the list
-                    </p>
                 </div>
 
                 <!-- Right Column - Book Cover -->
@@ -118,20 +86,91 @@
             </p>
 
             <div class="cards-grid">
-                <div class="feature-card">
-                    <div class="card-icon">🎯</div>
+                <div class="feature-card card-destructive">
+                    <div class="card-icon">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon-destructive"><circle cx="12" cy="12" r="10"></circle><circle cx="12" cy="12" r="6"></circle><circle cx="12" cy="12" r="2"></circle></svg>
+                    </div>
                     <h3>The Problem</h3>
                     <p>95% of founders focus only on the rational side: metrics, market size, product-market fit.</p>
                 </div>
-                <div class="feature-card">
-                    <div class="card-icon">⚡</div>
+                <div class="feature-card card-confident">
+                    <div class="card-icon">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon-confident"><path d="M4 14a1 1 0 0 1-.78-1.63l9.9-10.2a.5.5 0 0 1 .86.46l-1.92 6.02A1 1 0 0 0 13 10h7a1 1 0 0 1 .78 1.63l-9.9 10.2a.5.5 0 0 1-.86-.46l1.92-6.02A1 1 0 0 0 11 14z"></path></svg>
+                    </div>
                     <h3>The Reality</h3>
                     <p>VCs make emotional decisions first, then justify them rationally. Just like dating.</p>
                 </div>
-                <div class="feature-card">
-                    <div class="card-icon">❤️</div>
+                <div class="feature-card card-passion">
+                    <div class="card-icon">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon-passion"><path d="M19 14c1.49-1.46 3-3.21 3-5.5A5.5 5.5 0 0 0 16.5 3c-1.76 0-3 .5-4.5 2-1.5-1.5-2.74-2-4.5-2A5.5 5.5 0 0 0 2 8.5c0 2.3 1.5 4.05 3 5.5l7 7Z"></path></svg>
+                    </div>
                     <h3>The Solution</h3>
                     <p>Master the psychology of attraction, chemistry, and persuasion that wins both hearts and checks.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Early Access Section -->
+    <section class="early-access-section">
+        <div class="early-access-glow"></div>
+        <div class="container">
+            <div class="early-access-card">
+                <div class="card-glow card-glow-top"></div>
+                <div class="card-glow card-glow-bottom"></div>
+                <div class="early-access-content">
+                    <div class="limited-badge">
+                        <span>🚀</span> Limited Time Offer
+                    </div>
+                    <h2 class="early-access-title">
+                        Get Exclusive <span>Early Access</span>
+                    </h2>
+                    <p class="early-access-description">
+                        Join our VIP list and be the first to get the insider secrets that actually work
+                    </p>
+
+                    <div class="benefits-section">
+                        <h3>What you'll get:</h3>
+                        <div class="benefits-grid">
+                            <div class="benefit-item">
+                                <span class="benefit-emoji">✨</span>
+                                <span>Exclusive launch discount</span>
+                            </div>
+                            <div class="benefit-item">
+                                <span class="benefit-emoji">📖</span>
+                                <span>Bonus chapter PDF</span>
+                            </div>
+                            <div class="benefit-item">
+                                <span class="benefit-emoji">🚀</span>
+                                <span>Early access before Amazon release</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <form id="early-access-form" class="early-access-form">
+                        <div class="form-row">
+                            <input type="email" id="early-access-email" placeholder="Enter your email address" required>
+                            <button type="submit" class="btn-primary">Join the List</button>
+                        </div>
+                        <div id="early-access-message" class="form-message"></div>
+                    </form>
+
+                    <p class="join-count">Join <span class="highlight">500+</span> VCs and founders already on the list</p>
+
+                    <div class="trust-badges">
+                        <span class="trust-badge">
+                            <span class="badge-dot"></span>
+                            No spam, ever
+                        </span>
+                        <span class="trust-badge">
+                            <span class="badge-dot"></span>
+                            Unsubscribe anytime
+                        </span>
+                        <span class="trust-badge">
+                            <span class="badge-dot"></span>
+                            Exclusive content only
+                        </span>
+                    </div>
                 </div>
             </div>
         </div>

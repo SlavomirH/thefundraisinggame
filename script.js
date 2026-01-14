@@ -48,33 +48,68 @@ function showMessage(elementId, message, type) {
     }, 5000);
 }
 
-// Hero Form Handler
+// Hero Form Handler (if hero form exists)
 const heroForm = document.getElementById('hero-form');
-heroForm.addEventListener('submit', async (e) => {
-    e.preventDefault();
+if (heroForm) {
+    heroForm.addEventListener('submit', async (e) => {
+        e.preventDefault();
 
-    const emailInput = document.getElementById('hero-email');
-    const submitButton = heroForm.querySelector('button[type="submit"]');
-    const originalButtonText = submitButton.textContent;
+        const emailInput = document.getElementById('hero-email');
+        const submitButton = heroForm.querySelector('button[type="submit"]');
+        const originalButtonText = submitButton.textContent;
 
-    // Disable button and show loading state
-    submitButton.disabled = true;
-    submitButton.textContent = '...';
+        // Disable button and show loading state
+        submitButton.disabled = true;
+        submitButton.textContent = '...';
 
-    const result = await subscribeToBluefox(emailInput.value);
+        const result = await subscribeToBluefox(emailInput.value);
 
-    // Show message
-    showMessage('hero-message', result.message, result.success ? 'success' : 'error');
+        // Show message
+        showMessage('hero-message', result.message, result.success ? 'success' : 'error');
 
-    // Reset form if successful
-    if (result.success) {
-        emailInput.value = '';
-    }
+        // Reset form if successful
+        if (result.success) {
+            emailInput.value = '';
+        }
 
-    // Re-enable button
-    submitButton.disabled = false;
-    submitButton.textContent = originalButtonText;
-});
+        // Re-enable button
+        submitButton.disabled = false;
+        submitButton.textContent = originalButtonText;
+    });
+}
+
+// Early Access Form Handler
+const earlyAccessForm = document.getElementById('early-access-form');
+if (earlyAccessForm) {
+    earlyAccessForm.addEventListener('submit', async (e) => {
+        e.preventDefault();
+
+        const emailInput = document.getElementById('early-access-email');
+        const submitButton = earlyAccessForm.querySelector('button[type="submit"]');
+        const originalButtonText = submitButton.textContent;
+
+        // Disable button and show loading state
+        submitButton.disabled = true;
+        submitButton.textContent = 'Joining...';
+
+        const result = await subscribeToBluefox(emailInput.value);
+
+        // Show message
+        const message = result.success
+            ? "You're in! Check your inbox for confirmation."
+            : "Oops! Something went wrong. Please try again.";
+        showMessage('early-access-message', message, result.success ? 'success' : 'error');
+
+        // Reset form if successful
+        if (result.success) {
+            emailInput.value = '';
+        }
+
+        // Re-enable button
+        submitButton.disabled = false;
+        submitButton.textContent = originalButtonText;
+    });
+}
 
 // Preorder Form Handler
 const preorderForm = document.getElementById('preorder-form');

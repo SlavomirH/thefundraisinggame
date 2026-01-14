@@ -367,44 +367,50 @@
     <!-- Preorder Form Section -->
     <section id="preorder" class="preorder-section">
         <div class="container">
-            <h2 class="section-title">
-                Get The Playbook That
-                <span class="text-passion">Changes Everything</span>
-            </h2>
-            <p class="section-description">
-                Join the VIP list for exclusive early access, bonus content, and launch day discounts.
-            </p>
-
-            <div class="preorder-card">
-                <div class="card-header">
-                    <div class="card-icons">
-                        <span>❤️</span>
-                        <span>✨</span>
-                    </div>
-                    <h3 class="card-title">Get Exclusive Early Access</h3>
-                    <p class="card-description">Join our VIP list and be the first to get the insider secrets that actually work</p>
-                </div>
-
-                <form id="preorder-form" class="preorder-form">
-                    <div class="form-group">
-                        <label for="preorder-email">Email *</label>
-                        <input type="email" id="preorder-email" required>
-                    </div>
-
-                    <div class="form-group">
-                        <label class="checkbox-label">
-                            <input type="checkbox" id="marketing-consent" required>
-                            <span>I'd like to receive updates about the book launch and related content *</span>
-                        </label>
-                    </div>
-
-                    <div id="preorder-message" class="form-message"></div>
-
-                    <button type="submit" class="btn-submit">Get Early Access 🚀</button>
-                </form>
+            <div class="preorder-header">
+                <h2 class="section-title">
+                    Get The Playbook That
+                    <span class="text-passion">Changes Everything</span>
+                </h2>
+                <p class="section-description">
+                    Join the VIP list for exclusive early access, bonus content, and launch day discounts.
+                </p>
             </div>
 
-            <p class="disclaimer">No spam, ever. Unsubscribe anytime. Your email stays between us.</p>
+            <div class="preorder-card">
+                <div class="preorder-card-header">
+                    <div class="card-icons-svg">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="card-icon-heart"><path d="M19 14c1.49-1.46 3-3.21 3-5.5A5.5 5.5 0 0 0 16.5 3c-1.76 0-3 .5-4.5 2-1.5-1.5-2.74-2-4.5-2A5.5 5.5 0 0 0 2 8.5c0 2.3 1.5 4.05 3 5.5l7 7Z"></path></svg>
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="card-icon-sparkles"><path d="M9.937 15.5A2 2 0 0 0 8.5 14.063l-6.135-1.582a.5.5 0 0 1 0-.962L8.5 9.936A2 2 0 0 0 9.937 8.5l1.582-6.135a.5.5 0 0 1 .963 0L14.063 8.5A2 2 0 0 0 15.5 9.937l6.135 1.581a.5.5 0 0 1 0 .964L15.5 14.063a2 2 0 0 0-1.437 1.437l-1.582 6.135a.5.5 0 0 1-.963 0z"></path><path d="M20 3v4"></path><path d="M22 5h-4"></path><path d="M4 17v2"></path><path d="M5 18H3"></path></svg>
+                    </div>
+                    <h3 class="preorder-card-title">Get Exclusive Early Access</h3>
+                    <p class="preorder-card-description">Join our VIP list and be the first to get the insider secrets that actually work</p>
+                </div>
+
+                <div class="preorder-card-content">
+                    <form id="preorder-form" class="preorder-form">
+                        <div class="form-group">
+                            <label for="preorder-email">Email *</label>
+                            <input type="email" id="preorder-email" required>
+                        </div>
+
+                        <div class="form-group checkbox-group">
+                            <input type="checkbox" id="marketing-consent" required>
+                            <label for="marketing-consent" class="checkbox-label-text">I'd like to receive updates about the book launch and related content</label>
+                        </div>
+
+                        <div id="preorder-message" class="form-message"></div>
+
+                        <button type="submit" class="btn-submit">
+                            <span class="btn-text-blink">Get Early Access 🚀</span>
+                        </button>
+                    </form>
+                </div>
+            </div>
+
+            <div class="preorder-disclaimer">
+                <p class="disclaimer">No spam, ever. Unsubscribe anytime. Your email stays between us.</p>
+            </div>
         </div>
     </section>
 

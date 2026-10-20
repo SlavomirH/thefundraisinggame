@@ -73,3 +73,81 @@
   }
   if (document.readyState === 'loading') document.addEventListener('DOMContentLoaded', init); else init();
 })();
+
+/* Google Analytics 4 (G-HKGBHJZMNC) with cookie consent (Consent Mode v2, basic) */
+(function () {
+  var GA_ID = 'G-HKGBHJZMNC';
+  var KEY = 'tfg_cookie_consent';
+  var loaded = false;
+
+  window.dataLayer = window.dataLayer || [];
+  window.gtag = window.gtag || function () { window.dataLayer.push(arguments); };
+  gtag('consent', 'default', {
+    ad_storage: 'denied', ad_user_data: 'denied', ad_personalization: 'denied',
+    analytics_storage: 'denied', wait_for_update: 500
+  });
+
+  function getChoice() { try { return localStorage.getItem(KEY); } catch (e) { return null; } }
+  function setChoice(v) { try { localStorage.setItem(KEY, v); } catch (e) {} }
+
+  function loadGA() {
+    if (loaded) return; loaded = true;
+    gtag('consent', 'update', { analytics_storage: 'granted' });
+    var s = document.createElement('script');
+    s.async = true; s.src = 'https://www.googletagmanager.com/gtag/js?id=' + GA_ID;
+    document.head.appendChild(s);
+    gtag('js', new Date());
+    gtag('config', GA_ID);
+  }
+
+  function removeGACookies() {
+    document.cookie.split(';').forEach(function (c) {
+      var n = c.split('=')[0].trim();
+      if (n === '_ga' || n.indexOf('_ga_') === 0) {
+        var host = location.hostname.replace(/^www\./, '');
+        ['', '; domain=' + host, '; domain=.' + host].forEach(function (d) {
+          document.cookie = n + '=; expires=Thu, 01 Jan 1970 00:00:00 GMT; path=/' + d;
+        });
+      }
+    });
+  }
+
+  function banner() {
+    if (document.getElementById('tfg-cookie')) return;
+    var b = document.createElement('div');
+    b.id = 'tfg-cookie';
+    b.setAttribute('role', 'dialog');
+    b.setAttribute('aria-label', 'Cookie consent');
+    b.style.cssText = 'position:fixed;left:16px;right:16px;bottom:16px;z-index:9999;max-width:560px;margin:0 auto;background:#12141C;color:#F5F1EA;border-radius:16px;padding:18px 20px;box-shadow:0 10px 30px rgba(0,0,0,.25);font-size:15px;line-height:1.5;display:flex;flex-direction:column;gap:12px';
+    b.innerHTML = '<p style="margin:0">We use Google Analytics cookies to understand how visitors use this site. Nothing is tracked unless you accept.</p>' +
+      '<div style="display:flex;gap:10px;flex-wrap:wrap;justify-content:flex-end">' +
+      '<button type="button" data-c="denied" style="min-height:44px;padding:0 18px;border-radius:999px;border:1px solid rgba(245,241,234,.4);background:transparent;color:#F5F1EA;font:inherit;cursor:pointer">Decline</button>' +
+      '<button type="button" data-c="granted" style="min-height:44px;padding:0 18px;border-radius:999px;border:0;background:#F5F1EA;color:#12141C;font:inherit;font-weight:600;cursor:pointer">Accept</button></div>';
+    b.addEventListener('click', function (e) {
+      var v = e.target && e.target.getAttribute('data-c');
+      if (!v) return;
+      setChoice(v);
+      if (v === 'granted') loadGA();
+      else { gtag('consent', 'update', { analytics_storage: 'denied' }); removeGACookies(); }
+      b.parentNode.removeChild(b);
+    });
+    document.body.appendChild(b);
+  }
+
+  function addSettingsLink() {
+    var f = document.querySelector('footer');
+    if (!f || document.getElementById('tfg-cookie-settings')) return;
+    var a = document.createElement('a');
+    a.id = 'tfg-cookie-settings'; a.href = '#'; a.textContent = 'Cookie settings';
+    a.style.cssText = 'display:inline-block;margin-top:12px;font-size:13px;opacity:.75;color:inherit';
+    a.addEventListener('click', function (e) { e.preventDefault(); banner(); });
+    f.appendChild(a);
+  }
+
+  window.tfgCookieSettings = banner;
+  var choice = getChoice();
+  if (choice === 'granted') loadGA();
+
+  function init() { if (!choice) banner(); addSettingsLink(); }
+  if (document.readyState === 'loading') document.addEventListener('DOMContentLoaded', init); else init();
+})();

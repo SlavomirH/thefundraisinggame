@@ -43,7 +43,7 @@ html{scroll-behavior:smooth}img{max-width:100%;height:auto}
 .tfg-tool .field textarea{min-height:120px;resize:vertical}
 .tfg-tool .metrics{display:grid;grid-template-columns:repeat(auto-fit,minmax(120px,1fr));gap:12px}
 .tfg-tool .metric{background:rgb(18,20,28);border-radius:14px;padding:14px}
-.tfg-tool .metric b{display:block;font-family:"Instrument Serif",Georgia,serif;font-size:28px;color:rgb(242,232,220)}
+.tfg-tool .metric b{display:block;font-family:"Instrument Serif",Georgia,serif;font-size:clamp(20px,2.4vw,28px);color:rgb(242,232,220);white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
 .tfg-tool .metric span{font-size:12px;color:rgb(185,175,164)}
 .tfg-tool button.tfg-btn,.tfg-tool a.tfg-btn{align-self:flex-start;display:inline-flex;align-items:center;min-height:48px;padding:0 22px;border-radius:999px;border:0;background:rgb(224,82,47);color:rgb(18,20,28);font:inherit;font-weight:600;cursor:pointer;text-decoration:none}
 .tfg-tool button.tfg-btn.secondary{background:transparent;color:rgb(242,232,220);border:1px solid rgba(242,232,220,.25)}
@@ -65,7 +65,7 @@ html{scroll-behavior:smooth}img{max-width:100%;height:auto}
 <div class="field"><label for="run-pre">Pre-money valuation (€)</label><input id="run-pre" type="number" min="0" value="4000000"></div>
 <button id="runway-calculate" class="tfg-btn" type="button">Calculate raise →</button></section>
 <section class="result" aria-live="polite"><span style="font-family:&quot;Geist Mono&quot;,monospace;font-size:12px;letter-spacing:.14em;text-transform:uppercase;color:rgb(245,154,106)">Illustrative results</span>
-<div class="metrics"><div class="metric"><b id="run-net">—</b><span>Net burn / month</span></div><div class="metric"><b id="run-existing">—</b><span>Existing runway</span></div><div class="metric"><b id="run-raise">—</b><span>Raise needed</span></div><div class="metric"><b id="run-dilution">—</b><span>Simplified dilution</span></div></div>
+<div class="metrics"><div class="metric"><b id="run-net">—</b><span>Net burn / month</span></div><div class="metric"><b id="run-existing">—</b><span>Existing runway (months)</span></div><div class="metric"><b id="run-raise">—</b><span>Raise needed</span></div><div class="metric"><b id="run-dilution">—</b><span>Simplified dilution</span></div></div>
 <p class="mini">Post-money (simplified): <strong id="run-post" style="color:rgb(242,232,220)">—</strong></p>
 <p class="mini">Buffer amount: <strong id="run-pool" style="color:rgb(242,232,220)">—</strong></p>
 <p id="run-note" class="notice"></p></section></div><section style="max-width:760px;margin:0 auto;padding:8px 24px 72px;display:flex;flex-direction:column;gap:18px;color:rgb(207,197,186)">

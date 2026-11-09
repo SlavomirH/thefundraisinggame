@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
-"""Build SK/CS staging drafts from FULL locale content (not English bodies).
+"""Build SK/CS/DE/PL staging drafts from FULL locale content (not English bodies).
 
-NOT PUBLIC. Every page: <meta name="robots" content="noindex,nofollow">, html lang=sk|cs, no canonical, no hreflang,
+NOT PUBLIC. Every page: <meta name="robots" content="noindex,nofollow">, html lang=sk|cs|de|pl, no canonical, no hreflang,
 not in sitemap.xml; robots.txt disallows /_staging/ and vercel.json sends X-Robots-Tag: noindex.
 
 Inputs
@@ -32,7 +32,20 @@ sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
 import build_vc_says as B  # noqa: E402  (reuses head(), chrome(), page helpers; does not write public files on import)
 
 ROOT = B.ROOT
-LOCALES = ["sk", "cs"]
+LOCALES = ["sk", "cs"]  # DE/PL enabled after content packs exist
+# per-locale typography / chrome bits that are not in the i18n packs
+QUOTES = {"sk": ("„", "“"), "cs": ("„", "“"), "de": ("„", "“"), "pl": ("„", "”")}
+DRAFT_TAG = {"sk": "NÁVRH", "cs": "NÁVRH", "de": "ENTWURF", "pl": "SZKIC"}
+NEW_TAB = {"sk": "(otvorí sa na novej karte)", "cs": "(otevře se na nové kartě)", "de": "(öffnet in neuem Tab)", "pl": "(otwiera się w nowej karcie)"}
+DATE_DISPLAY = {"sk": "9. 11. 2026", "cs": "9. 11. 2026", "de": "9. November 2026", "pl": "9 listopada 2026"}
+
+
+def q(loc, x):
+    return QUOTES[loc][0] + x + QUOTES[loc][1]
+
+
+def tag(loc):
+    return f"[{DRAFT_TAG[loc]} {loc.upper()}]"
 STATUS = "machine_draft_fluent_reviewed_needs_native_approval"
 REVIEWED_AT = "2026-11-09"
 ARTICLES = ["vc-too-early-meaning", "how-to-follow-up-with-vc-after-meeting", "signs-vc-interested"]
@@ -60,7 +73,7 @@ def url(loc, *parts):
 
 # --------------------------------------------------------------------------- data merge
 def merge_records():
-    """Copy full SK/CS first-10 fields into data/vc_signals.expanded.json (idempotent)."""
+    """Copy full SK/CS/DE/PL first-10 fields into data/vc_signals.expanded.json (idempotent)."""
     data = jload("data/vc_signals.expanded.json")
     recs = {r["id"]: r for r in data["records"]}
     for loc in LOCALES:
@@ -82,8 +95,8 @@ def merge_records():
             cur["seedPhrase"] = cur.get("seedPhrase", cur["phrase"])
             cur["phrase"] = phrase
             cur["seedFixNote"] = "Seed contained a Slovak form (“tejto”); corrected in AI fluent pass. Needs native check."
-    data["localization_note"] = ("SK/CS: the 10 priority records carry full translated fields (status " + STATUS +
-                                 "; AI fluent pass, NOT native-approved). Other SK/CS records and all DE/PL records are phrase seeds only. "
+    data["localization_note"] = ("SK/CS/DE/PL: the 10 priority records carry full translated fields (status " + STATUS +
+                                 "; AI fluent pass, NOT native-approved). The other 20 records in every locale are phrase seeds only. "
                                  "seedPhrase keeps the original seed wherever a phrase was revised; the public EN hub search index reads seedPhrase so "
                                  "public EN output stays byte-identical. Nothing non-EN is published.")
     out = json.dumps(data, ensure_ascii=False, indent=2) + "\n"
@@ -184,6 +197,12 @@ def tools_js(loc, pack, phrases):
           "`" + em["subject_prefix"] + "${subs.subject}\\n\\n" + em["greeting"].replace("{person}", "${person}") +
           "\\n\\n${subs.intro}\\n\\n${subs.mid}\\n\\n${subs.ask}\\n\\n" + em["signoff"] + "\\n[Your name]`", 1)
     S.lit("Scenario preselected from the VC Says entry: ", fub["signal_note_prefix"], 1)
+    # Localized visible placeholders in generated emails (map from EN tokens)
+    _pmap = pack.get("placeholderMapFromEnglish") or {}
+    for _en, _loc in sorted(_pmap.items(), key=lambda kv: -len(kv[0])):
+        S.s = S.s.replace(f"[{_en}]", f"[{_loc}]")
+        S.s = S.s.replace(f"'[{_en}]'", f"'[{_loc}]'")
+
     # VC Says links + phrases
     S.rep("a.href='/vc-says/'+id;a.textContent='\\u201C'+VC_SAYS[id].phrase.replace(/\\.$/,'')+'\\u201D in VC Says';",
           "a.href=" + js_str(url(loc, "vc-says") + "/") + "+id;a.textContent=VCS_LINK.replace('{phrase}',VC_SAYS[id].phrase.replace(/[.?!]$/,''));", 1)
@@ -207,9 +226,13 @@ def vcsays_js(loc, t):
         S.rep(f"text: '{txt}'", "text: " + js_str(s[f"rule_{rid}"]), 1)
     S.rep("var RANK_LABELS = ['Most consistent with your answers', 'Also plausible', 'Less consistent, but still possible'];",
           "var RANK_LABELS = [" + ", ".join(js_str(s[f"decoder_rank_{i}"]) for i in (1, 2, 3)) + "];", 1)
-    S.rep("'Closest library match: “' + BY_ID[id].phrase + '” (selected below — change it if it doesn’t fit).'",
-          js_str(s["decoder_hint_match"]) + ".replace('{phrase}', BY_ID[id].phrase)", 1)
-    S.lit("No close match — choose the closest category below.", s["decoder_hint_nomatch"], 1)
+    # Hint strings (EN source uses setHintForSuggestion / syncHintWithManualChoice)
+    S.rep("'Closest library match: “' + BY_ID[id].phrase + '”. Selected below — change the category if it doesn’t fit.'",
+          js_str(s.get("decoder_hint_match") or "Najbližšia zhoda v knižnici: „{phrase}“. Vybrané nižšie — kategóriu môžete zmeniť.") + ".replace('{phrase}', BY_ID[id].phrase)", 1)
+    S.lit("No close match — choose the closest category below.", s.get("decoder_hint_nomatch") or s.get("decoder_hint_none") or "Žiadna blízka zhoda — vyberte najbližšiu kategóriu nižšie.", 1)
+    S.rep("'Using “' + BY_ID[cat.value].phrase + '” (you changed the suggested match).'",
+          js_str(s.get("decoder_hint_manual") or "Používate „{phrase}“ (zmenili ste navrhnutú zhodu).") + ".replace('{phrase}', BY_ID[cat.value].phrase)", 1)
+    S.lit("Choose the closest category below.", s.get("decoder_hint_choose") or "Vyberte najbližšiu kategóriu nižšie.", 1)
     S.lit("Choose what the investor said or did to see plausible interpretations.", s["decoder_choose_first"], 1)
     S.rep("'Plausible interpretations of “' + res.rec.phrase + '”'", js_str(s["decoder_out_heading"]) + ".replace('{phrase}', res.rec.phrase)", 1)
     S.lit("Rules applied: ", s["decoder_rules_applied"], 1)
@@ -256,7 +279,7 @@ def localized_chrome(loc, t, cs):
     header, footer = B.chrome()
     header = header.replace(f'<a href="/vc-says" aria-current="page" style="{B.NAV_LINK_ACTIVE_STYLE}">VC Says</a>',
                             f'<a href="/vc-says" style="{B.NAV_LINK_STYLE}">VC Says</a>')
-    new_tab = {"sk": "(otvorí sa na novej karte)", "cs": "(otevře se na nové kartě)"}[loc]
+    new_tab = NEW_TAB[loc]
     reps_h = [(">The Book</a>", s["nav_book"]), (">Author</a>", s["nav_author"]), (">Articles</a>", s["nav_articles"]),
               (">VC Says</a>", s["nav_vc_says"]), (">Tools</a>", s["nav_tools"]), (">Reviews</a>", s["nav_reviews"]),
               (">FAQ</a>", s["nav_faq"]), (">Press</a>", s["nav_press"]), (">Get early access</a>", s["nav_get_early_access"])]
@@ -383,7 +406,7 @@ def build_vcsays(loc, t, pack, data, header, footer, titles_loc, titles_en):
         return (f'<li class="vc-card" data-vc-id="{e(r["id"])}" data-class="{e(r["signalClass"])}" data-stage="{e(" ".join(r["stageTags"]))}" '
                 f'data-topic="{e(" ".join(r["topicTags"]))}" data-context="{e(" ".join(r["contexts"]))}">'
                 f'{pills(r, t)}<h3><a href="{href}">{e(L["phrase"])}</a></h3><p>{e(L["shortAnswer"])}</p>'
-                f'<a class="vc-more" href="{href}" aria-label="{e(s["see_how_to_respond"])} „{e(L["phrase"])}“">{e(s["see_how_to_respond"])}</a></li>')
+                f'<a class="vc-more" href="{href}" aria-label="{e(s["see_how_to_respond"])} {e(q(loc, L["phrase"]))}">{e(s["see_how_to_respond"])}</a></li>')
 
     idx = []
     for r in pub:
@@ -468,7 +491,7 @@ def build_vcsays(loc, t, pack, data, header, footer, titles_loc, titles_en):
             f'<span class="vc-pill">{e(s["editorial_label"])}</span></p></div>')
     main = (f'<main class="tfg-vcsays">{B.breadcrumb_nav([(s["breadcrumb_home"], "/"), (s["nav_vc_says"], None)])}{hero}{controls}{decoder}{related}'
             f'<script type="application/json" id="vc-says-index">{index_json}</script></main>')
-    title = f'[NÁVRH {loc.upper()}] {s["hub_title"]} | The Fundraising Game' if loc == "sk" else f'[NÁVRH {loc.upper()}] {s["hub_title"]} | The Fundraising Game'
+    title = f'{tag(loc)} {s["hub_title"]} | The Fundraising Game'
     written.append(B.write(f"{base(loc)}/vc-says/index.html",
                            staging_page(loc, t, title, f'{s["hub_subtitle"]} {s["hub_lead"]}', hdr, footer, main,
                                         f' data-vc-hub="{loc}" data-vc-draft="{loc}"', js)))
@@ -492,7 +515,7 @@ def build_vcsays(loc, t, pack, data, header, footer, titles_loc, titles_en):
             f'<li><a href="{url(loc, "tools", k)}{"?signal=" + e(r["id"]) if k == "investor-follow-up-builder" else ""}" data-vc-tool="{e(k)}">{e(tool_name(pack, k))}</a></li>'
             for k in r.get("relatedToolSlugs", []) if k in B.TOOLS)
         said_note = f'<p class="vc-why">{e(s["behavior_note"])}</p>' if is_beh else ""
-        syn = f'<p class="vc-why">{e(s["also_phrased"])} {e(" · ".join("„" + x + "“" for x in L["synonyms"]))}</p>' if L["synonyms"] else ""
+        syn = f'<p class="vc-why">{e(s["also_phrased"])} {e(" · ".join(q(loc, x) for x in L["synonyms"]))}</p>' if L["synonyms"] else ""
         fub = f'{url(loc, "tools", "investor-follow-up-builder")}?signal={e(r["id"])}'
         main = (
             f'<main class="tfg-vcsays">{B.breadcrumb_nav([(s["breadcrumb_home"], "/"), (s["nav_vc_says"], hub_href), (L["phrase"], None)])}'
@@ -524,7 +547,7 @@ def build_vcsays(loc, t, pack, data, header, footer, titles_loc, titles_en):
             + (f'<h3>{e(s["h_tools_short"])}</h3><ul class="vc-links">{rel_tools}</ul>' if rel_tools else "")
             + f'<p><a href="{hub_href}">{e(s["all_entries"])}</a></p></section>'
             + book_cta(t) + disclaimer(t) + "</article></main>")
-        title = f'[NÁVRH {loc.upper()}] {L["metaTitle"]}'
+        title = f'{tag(loc)} {L["metaTitle"]}'
         written.append(B.write(f"{base(loc)}/vc-says/{r['slug']}.html",
                                staging_page(loc, t, title, L["metaDescription"], hdr, footer, main,
                                             f' data-vc-draft="{loc}" data-vc-signal="{e(r["id"])}" data-vc-class="{e(r["signalClass"])}"', js)))
@@ -556,7 +579,7 @@ def en_input(tool, id_):
 
 
 def vcs_phrase_link(loc, pack, rid, phrase):
-    return f'<a href="{url(loc, "vc-says", rid)}">„{e(phrase.rstrip(".?!"))}“</a>'
+    return f'<a href="{url(loc, "vc-says", rid)}">{e(q(loc, phrase.rstrip(".?!")))}</a>'
 
 
 def build_tools(loc, t, pack, phrases, header, footer, titles_loc, titles_en):
@@ -662,7 +685,7 @@ def build_tools(loc, t, pack, phrases, header, footer, titles_loc, titles_en):
         T = pack["tools"][slug]
         main = f'<main class="tfg-tool">{crumbs(T["h1"])}{hero(T)}{body}</main>'
         written.append(B.write(f"{base(loc)}/tools/{slug}.html",
-                               staging_page(loc, t, f'[NÁVRH {loc.upper()}] {T["meta_title"]}', T["meta_description"], hdr, footer, main,
+                               staging_page(loc, t, f'{tag(loc)} {T["meta_title"]}', T["meta_description"], hdr, footer, main,
                                             f' data-tool="{slug}" data-tfg-draft="{loc}"', js, style)))
     H = pack["hub"]
     cards = "".join(
@@ -679,7 +702,7 @@ def build_tools(loc, t, pack, phrases, header, footer, titles_loc, titles_en):
             f'<div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,280px),1fr));gap:20px">{cards}</div>'
             f'<p style="margin:12px 0 0;font-size:14px;color:rgb(140,131,120)">{foot}</p></div></main>')
     written.append(B.write(f"{base(loc)}/tools/index.html",
-                           staging_page(loc, t, f'[NÁVRH {loc.upper()}] {H["meta_title"]}', H["meta_description"], hdr, footer, main,
+                           staging_page(loc, t, f'{tag(loc)} {H["meta_title"]}', H["meta_description"], hdr, footer, main,
                                         f' data-tfg-draft="{loc}"', js)))
     return written
 
@@ -768,14 +791,14 @@ def build_articles(loc, t, header, footer, titles_loc):
         meta = (f'<div style="display:flex;align-items:center;gap:12px;font-size:15px;color:rgb(185,175,164)">'
                 f'<img src="/assets/slavomir-hruska-portrait.webp" alt="" style="width:40px;height:40px;border-radius:50%;object-fit:cover">'
                 f'<span><a href="/author" style="color:rgb(242,232,220);text-decoration:none;font-weight:600">Slavomír Hruška</a> · '
-                f'<time datetime="2026-11-09">9. 11. 2026</time> · {e(fm["readingTime"])}</span></div>')
+                f'<time datetime="2026-11-09">{DATE_DISPLAY[loc]}</time> · {e(fm["readingTime"])}</span></div>')
         main = ('<main><article style="max-width:760px;margin:0 auto;padding:40px 24px 88px;display:flex;flex-direction:column;gap:24px">'
                 '<header style="display:flex;flex-direction:column;gap:22px;padding-bottom:16px">'
                 f'<span style="{STYLE_MONO}">{e(fm["eyebrow"])}</span>'
                 f'<h1 style="margin:0;font-family:&quot;Instrument Serif&quot;,Georgia,serif;font-weight:400;font-size:clamp(42px,5.4vw,68px);line-height:1.02;letter-spacing:-.01em;text-wrap:balance">{e(fm["h1"])}</h1>'
                 f'{meta}</header>{md_to_html(body, loc, titles_loc)}</article></main>')
         written.append(B.write(f"{base(loc)}/articles/{slug}.html",
-                               staging_page(loc, t, f'[NÁVRH {loc.upper()}] {fm["title"]} | The Fundraising Game', fm["description"],
+                               staging_page(loc, t, f'{tag(loc)} {fm["title"]} | The Fundraising Game', fm["description"],
                                             hdr, footer, main, f' data-article="{slug}" data-tfg-draft="{loc}"', [])))
     return written
 
@@ -804,6 +827,6 @@ def build_all():
 
 if __name__ == "__main__":
     w = build_all()
-    print(f"SK/CS staging build: {len(w)} files")
+    print(f"SK/CS/DE/PL staging build: {len(w)} files")
     for x in w:
         print("   ", x)

@@ -164,7 +164,9 @@
     "footer_h_author": "Autor",
     "footer_about_author": "O Slavomírovi",
     "footer_press_kit": "Tlačová sada a materiály pre médiá",
-    "footer_made_for": "Pre zakladateľov a investorov"
+    "footer_made_for": "Pre zakladateľov a investorov",
+    "decoder_hint_manual": "Používate „{phrase}“ (zmenili ste navrhnutú zhodu).",
+    "decoder_hint_choose": "Vyberte najbližšiu kategóriu nižšie."
   },
   "reviewer": null,
   "note": "Machine draft with AI fluent review. Do not publish until a native reviewer approves (see docs/vc-says/REVIEWER_CHECKLIST.md). Formal register (vykanie/vykání) is the default for all founder-facing copy.",

@@ -48,7 +48,7 @@
       "clarifyingQuestion": "Děkuji za otevřenou zpětnou vazbu. Abych se mohl soustředit na to podstatné — existuje jeden konkrétní milník (zákazníci, retence nebo něco jiného), po jehož dosažení by mělo smysl se k tomu vrátit?",
       "recommendedAction": "Zapište si zpětnou vazbu i případný zmíněný milník. Než si uděláte závěr, ověřte, v jaké fázi fond obvykle investuje. Pokračujte v kole s investory specializovanými na pre-seed a seed a tomuto investorovi se znovu ozvěte, až budete mít podstatný pokrok právě v milníku, který zmínil.",
       "followUpTimingNote": "Odpovězte jednou, do jednoho až dvou pracovních dnů: poděkujte a položte upřesňující otázku. Potom se ozvěte, až milníku dosáhnete — ne jen proto, že vám to připomene kalendář.",
-      "editableReplyTemplate": "Dobrý den, [Investor name],\n\nděkuji za Váš čas věnovaný [Company] i za otevřenou zpětnou vazbu.\n\nAbych se soustředil na to podstatné: existuje jeden konkrétní ukazatel — například [ukazatel, např. počet platících zákazníků nebo retence] — po jehož dosažení by mělo smysl se znovu sejít? Pokud ano, rád Vám pošlu krátkou zprávu, jakmile ho dosáhneme.\n\nA pokud znáte investora, který obvykle podporuje firmy v naší fázi, budu velmi vděčný za doporučení.\n\nS pozdravem,\n[Your name]",
+      "editableReplyTemplate": "Dobrý den, [jméno investora],\n\nděkuji za Váš čas věnovaný [název firmy] i za otevřenou zpětnou vazbu.\n\nAbych se soustředil na to podstatné: existuje jeden konkrétní ukazatel — například [ukazatel, např. počet platících zákazníků nebo retence] — po jehož dosažení by mělo smysl se znovu sejít? Pokud ano, rád Vám pošlu krátkou zprávu, jakmile ho dosáhneme.\n\nA pokud znáte investora, který obvykle podporuje firmy v naší fázi, budu velmi vděčný za doporučení.\n\nS pozdravem,\n[vaše jméno]",
       "exampleScenario": {
         "description": "Hypotetický příklad: zakladatel B2B softwarové firmy ve fázi seed se třemi placenými pilotními projekty představí firmu fondu, jehož nedávné investice jsou převážně ve fázi Series A. Partner fondu řekne „zatím jste pro nás v příliš rané fázi“ a zmíní, že obvykle chtějí delší historii tržeb. Nejpravděpodobnější je zde výklad nesouladu ve fázi. Zakladatel poděkuje, zeptá se, zda by bylo užitečné poslat zprávu po dalších dvou čtvrtletích tržeb, a kolo přesměruje na investory specializované na seed.",
         "hypothetical": true
@@ -102,7 +102,7 @@
       "clarifyingQuestion": "Děkuji za jasnou odpověď — opravdu to pomáhá. Šlo hlavně o fázi, sektor, nebo region? Pomůže mi to zaměřit se na vhodnější investory.",
       "recommendedAction": "Položte upřesňující otázku jednou a pak tohoto investora vyřaďte z aktivní pipeline. To, co zjistíte, využijte ke zpřesnění seznamu cílových investorů (fáze, sektor, region, velikost investice). Pokud byl vztah přátelský, požádejte o jedno doporučení.",
       "followUpTimingNote": "Odpovězte jednou, do dvou až tří pracovních dnů. V tomto kole už se znovu neozývejte; vraťte se k tomu, jen pokud se jejich investiční teze nebo vaše firma výrazně změní.",
-      "editableReplyTemplate": "Dobrý den, [Investor name],\n\nděkuji za jasnou odpověď — oceňuji, že nás nenecháváte v nejistotě.\n\nPokud máte chvilku: šlo hlavně o fázi, sektor, nebo region? Pomůže mi to zaměřit se na vhodnější investory.\n\nA pokud Vás napadá fond, který obvykle podporuje [krátký popis firmy] v naší fázi, budu vděčný za tip.\n\nS pozdravem,\n[Your name]",
+      "editableReplyTemplate": "Dobrý den, [jméno investora],\n\nděkuji za jasnou odpověď — oceňuji, že nás nenecháváte v nejistotě.\n\nPokud máte chvilku: šlo hlavně o fázi, sektor, nebo region? Pomůže mi to zaměřit se na vhodnější investory.\n\nA pokud Vás napadá fond, který obvykle podporuje [krátký popis firmy] v naší fázi, budu vděčný za tip.\n\nS pozdravem,\n[vaše jméno]",
       "exampleScenario": {
         "description": "Hypotetický příklad: startup kombinující hardware a software osloví fond, který investuje výhradně do čistého softwaru. Analytik fondu ještě týž den odpoví, že to „nezapadá do jejich investiční strategie“. Nejpravděpodobnější je výklad nesouladu s mandátem. Zakladatel jednou odpoví s dotazem, zda byl problém v hardwaru, dostane jednořádkové potvrzení a ze seznamu cílových investorů vyřadí fondy, které se hardwaru vyhýbají.",
         "hypothetical": true
@@ -154,10 +154,10 @@
         "Na pozdější updaty nijak nereagují.",
         "Zazní po schůzce, kde většinu času mluvili o fondu, místo aby se ptali na vás."
       ],
-      "clarifyingQuestion": "Rád. Jaký vývoj by pro Vás bylo nejužitečnější sledovat — a hodila by se Vám zpráva po dosažení milníku [milestone]?",
+      "clarifyingQuestion": "Rád. Jaký vývoj by pro Vás bylo nejužitečnější sledovat — a hodila by se Vám zpráva po dosažení milníku [milník]?",
       "recommendedAction": "Pokud neřeknou jinak, počítejte s tím, že do vašeho aktuálního kola nepatří. S jejich souhlasem je zařaďte mezi příjemce stručných zpráv pro investory a posílejte podstatný pokrok. Neposílejte týdenní připomínky; posílejte zprávy, které mají skutečnou výpovědní hodnotu.",
       "followUpTimingNote": "Teď pošlete jednu krátkou odpověď. Potom se ozvěte, když se stane něco podstatného — měsíční nebo čtvrtletní frekvence je obvyklou horní hranicí pro nevyžádané updaty.",
-      "editableReplyTemplate": "Dobrý den, [Investor name],\n\nještě jednou děkuji za rozhovor — v kontaktu zůstanu rád.\n\nAby pro Vás moje zprávy byly opravdu užitečné: co by pro Vás bylo nejzajímavější sledovat — [možnost A, např. růst tržeb], [možnost B, např. klíčové nábory], nebo něco jiného? Krátkou zprávu o pokroku plánuji poslat po dosažení milníku [milestone].\n\nMohu Vás přidat mezi příjemce našich pravidelných zpráv pro investory? Rozesíláme je zhruba [frekvence] a odhlásit se z nich dá snadno.\n\nS pozdravem,\n[Your name]",
+      "editableReplyTemplate": "Dobrý den, [jméno investora],\n\nještě jednou děkuji za rozhovor — v kontaktu zůstanu rád.\n\nAby pro Vás moje zprávy byly opravdu užitečné: co by pro Vás bylo nejzajímavější sledovat — [možnost A, např. růst tržeb], [možnost B, např. klíčové nábory], nebo něco jiného? Krátkou zprávu o pokroku plánuji poslat po dosažení milníku [milník].\n\nMohu Vás přidat mezi příjemce našich pravidelných zpráv pro investory? Rozesíláme je zhruba [frekvence] a odhlásit se z nich dá snadno.\n\nS pozdravem,\n[vaše jméno]",
       "exampleScenario": {
         "description": "Hypotetický příklad: po prvním hovoru řekne business anděl „zůstaňme v kontaktu“ a zeptá se, kdy zakladatel plánuje spustit placenou verzi. Tato konkrétní otázka posouvá výklad směrem k „čeká na signál“. Zakladatel potvrdí měsíc spuštění, se souhlasem anděla ho zařadí do čtvrtletního updatu a pošle mu update s výsledky spuštění.",
         "hypothetical": true
@@ -211,7 +211,7 @@
       "clarifyingQuestion": "Rád se ozvu. Co by pro Vás do příštího čtvrtletí bylo nejdůležitější vidět — a hodí se Vám nějaký konkrétní měsíc?",
       "recommendedAction": "Nastavte si jednu připomínku s datem a poznamenejte si, co chtěli vidět. Nepozastavujte kvůli nim své kolo. Pokud kolo pravděpodobně uzavřete dřív, zdvořile jim to řekněte, aby se mohli rozhodnout.",
       "followUpTimingNote": "Ozvěte se kolem měsíce, který zmínili, s krátkým updatem. Pokud neodpoví, pošlete po týdnu či dvou jedno jemné připomenutí a pak to nechte být.",
-      "editableReplyTemplate": "Dobrý den, [Investor name],\n\nděkuji — v příštím čtvrtletí se rád ozvu.\n\nAby byl další rozhovor užitečný: co by pro Vás do té doby bylo nejdůležitější vidět? Počítám s tím, že budeme mít [očekávaný pokrok, např. výsledky prvního pilotu u velkého firemního zákazníka].\n\nPro úplnost: jako cílový měsíc uzavření kola nyní plánujeme [cílový měsíc]. Pokud to pro Vás něco mění, rád Vám ještě předtím pošlu víc informací.\n\nS pozdravem,\n[Your name]",
+      "editableReplyTemplate": "Dobrý den, [jméno investora],\n\nděkuji — v příštím čtvrtletí se rád ozvu.\n\nAby byl další rozhovor užitečný: co by pro Vás do té doby bylo nejdůležitější vidět? Počítám s tím, že budeme mít [očekávaný pokrok, např. výsledky prvního pilotu u velkého firemního zákazníka].\n\nPro úplnost: jako cílový měsíc uzavření kola nyní plánujeme [cílový měsíc]. Pokud to pro Vás něco mění, rád Vám ještě předtím pošlu víc informací.\n\nS pozdravem,\n[vaše jméno]",
       "exampleScenario": {
         "description": "Hypotetický příklad: partner fondu řekne „ozvěte se nám v příštím čtvrtletí“ a vysvětlí, že právě dokončují nový fond. Výklad skutečného časového omezení je věrohodný, jenže kolo zakladatele se uzavírá za šest týdnů. Zakladatel odpoví s datem uzavření a pokračuje v kole; partner se rozhodne v tomto kole nevstoupit, ale požádá o zasílání dalších updatů.",
         "hypothetical": true
@@ -265,7 +265,7 @@
       "clarifyingQuestion": "Samozřejmě — pošlu ji ještě dnes. Až se na ni podíváte, dával by smysl dvacetiminutový hovor, kde bychom prošli Vaše otázky?",
       "recommendedAction": "Do jednoho dne pošlete stručnou, aktuální prezentaci, v těle e-mailu shrnutí na tři až čtyři řádky a návrh dalšího kroku. Sdílejte jen to, co jste v této fázi ochotni sdílet.",
       "followUpTimingNote": "Pošlete do 24–48 hodin. Pokud neodpoví, jedno krátké připomenutí zhruba po týdnu, ideálně s malou, ale skutečnou novinkou.",
-      "editableReplyTemplate": "Dobrý den, [Investor name],\n\nděkuji za zájem o [Company] — prezentaci posílám v příloze.\n\nVe zkratce: pomáháme [customer] [outcome]. Za [časové období, např. posledních šest měsíců] jsme [klíčový pokrok] a nyní získáváme [velikost kola / fáze] na [hlavní využití prostředků].\n\nAž se na ni podíváte, dával by smysl dvacetiminutový hovor, kde bychom prošli případné otázky? Mám čas [dva možné termíny].\n\nS pozdravem,\n[Your name]",
+      "editableReplyTemplate": "Dobrý den, [jméno investora],\n\nděkuji za zájem o [název firmy] — prezentaci posílám v příloze.\n\nVe zkratce: pomáháme [zákazník] [výsledek]. Za [časové období, např. posledních šest měsíců] jsme [klíčový pokrok] a nyní získáváme [velikost kola / fáze] na [hlavní využití prostředků].\n\nAž se na ni podíváte, dával by smysl dvacetiminutový hovor, kde bychom prošli případné otázky? Mám čas [dva možné termíny].\n\nS pozdravem,\n[vaše jméno]",
       "exampleScenario": {
         "description": "Hypotetický příklad: na demo day řekne analytik fondu po dvouminutovém rozhovoru „pošlete mi svou prezentaci“. Nejpravděpodobnější je výklad prvotního prověření. Zakladatel pošle prezentaci druhý den ráno s krátkým shrnutím a dvěma termíny hovoru; analytik odpoví třemi konkrétními otázkami, což je silnější signál než samotná původní žádost.",
         "hypothetical": true
@@ -320,7 +320,7 @@
       "clarifyingQuestion": "Těším se. Co by tento rozhovor měl ideálně vyjasnit a kdo další se za Vás připojí?",
       "recommendedAction": "Potvrďte schůzku, zeptejte se, co by měla vyjasnit, a připravte si k tomu tématu podklady. Zeptejte se na jejich proces a harmonogram. Ostatní jednání posouvejte stejným tempem dál.",
       "followUpTimingNote": "Potvrďte do jednoho dne. Vyžádané materiály pošlete před schůzkou a do 24 hodin po ní krátké shrnutí s dalšími kroky.",
-      "editableReplyTemplate": "Dobrý den, [Investor name],\n\nděkuji — jsem rád, že byl rozhovor užitečný. [Den/čas] nám vyhovuje.\n\nAbychom čas využili co nejlépe: je něco konkrétního, na co bychom se měli zaměřit — například [téma, např. přehled obchodních příležitostí nebo jednotková ekonomika]? Materiály rád pošlu předem.\n\nPřipojí se ještě někdo další z [Fund]? Rád bych z naší strany přizval ty správné lidi.\n\nS pozdravem,\n[Your name]",
+      "editableReplyTemplate": "Dobrý den, [jméno investora],\n\nděkuji — jsem rád, že byl rozhovor užitečný. [Den/čas] nám vyhovuje.\n\nAbychom čas využili co nejlépe: je něco konkrétního, na co bychom se měli zaměřit — například [téma, např. přehled obchodních příležitostí nebo jednotková ekonomika]? Materiály rád pošlu předem.\n\nPřipojí se ještě někdo další z [fond]? Rád bych z naší strany přizval ty správné lidi.\n\nS pozdravem,\n[vaše jméno]",
       "exampleScenario": {
         "description": "Hypotetický příklad: po prvním hovoru požádá partner fondu o druhou schůzku a předem si vyžádá přehled obchodních příležitostí. Nejpravděpodobnější je výklad prověřování konkrétní obavy. Zakladatel pošle přehled s kontextem, na schůzku vezme obchodního ředitele a na konci se zeptá, jaký bude další krok v procesu fondu.",
         "hypothetical": true
@@ -371,10 +371,10 @@
         "Představení přijde bez kontextu a bez časového rámce.",
         "Váš původní kontakt se po předání odmlčí."
       ],
-      "clarifyingQuestion": "Děkuji za představení. Co by bylo nejužitečnější probrat s [Partner name] a jaké jsou ve Vašem procesu další kroky po tomto rozhovoru?",
+      "clarifyingQuestion": "Děkuji za představení. Co by bylo nejužitečnější probrat s [jméno partnera] a jaké jsou ve Vašem procesu další kroky po tomto rozhovoru?",
       "recommendedAction": "Připravte se na širší otázky na úrovni fondu — velikost trhu, jak velký může být výsledek, soulad s portfoliem. Zeptejte se svého kontaktu, kterým obavám se věnovat. Pošlete krátký podklad k přečtení předem, aby kolega přišel informovaný.",
       "followUpTimingNote": "Odpovězte do jednoho dne a nabídněte termíny. Do 24 hodin po schůzce s partnerem pošlete shrnutí a svůj původní kontakt dejte do kopie.",
-      "editableReplyTemplate": "Dobrý den, [Investor name],\n\nděkuji — s [Partner name] se rád setkám.\n\nAbych se dobře připravil: je něco, na co by bylo dobré se pro [Partner name] zaměřit — například [téma, např. velikost trhu nebo technické riziko]? Rád předem pošlu krátký podklad k přečtení.\n\nA abych s tím mohl počítat: co ve Vašem procesu po takovém rozhovoru obvykle následuje?\n\nS pozdravem,\n[Your name]",
+      "editableReplyTemplate": "Dobrý den, [jméno investora],\n\nděkuji — s [jméno partnera] se rád setkám.\n\nAbych se dobře připravil: je něco, na co by bylo dobré se pro [jméno partnera] zaměřit — například [téma, např. velikost trhu nebo technické riziko]? Rád předem pošlu krátký podklad k přečtení.\n\nA abych s tím mohl počítat: co ve Vašem procesu po takovém rozhovoru obvykle následuje?\n\nS pozdravem,\n[vaše jméno]",
       "exampleScenario": {
         "description": "Hypotetický příklad: dva dny po schůzce, na které padla řeč na regulatorní riziko, představí analytik zakladatele partnerovi s hlubokou zkušeností z oblasti plateb. Výklad odborného prověření je věrohodný. Zakladatel se analytika zeptá, na co se partner zaměří, a připraví jednostránkový přehled regulace.",
         "hypothetical": true
@@ -428,7 +428,7 @@
       "clarifyingQuestion": "Která metrika je pro Vás nejdůležitější — tržby, tempo růstu, retence, nebo něco jiného — a na zhruba jaké úrovni by mělo smysl se znovu sejít?",
       "recommendedAction": "Pokud zazněla metrika a prahová hodnota, zapište si je. Rozhodněte, zda zapadají do vašeho vlastního plánu — nehoňte se za libovolným číslem kvůli jednomu investorovi. Upřednostněte investory, kteří podporují firmy ve vaší současné fázi, a až milníku dosáhnete, pošlete krátkou zprávu o pokroku.",
       "followUpTimingNote": "Upřesňující otázku položte do několika dnů. Znovu se ozvěte, až milníku dosáhnete, a to s daty — ne dřív.",
-      "editableReplyTemplate": "Dobrý den, [Investor name],\n\nděkuji za přímost — je to užitečné.\n\nAbych rozuměl, co by mělo skutečný vliv: která metrika je pro Vás v naší fázi nejdůležitější — [možnost A, např. měsíční tržby], [možnost B, např. retence], nebo něco jiného — a na zhruba jaké úrovni by mělo smysl se znovu sejít?\n\nPokud to bude v souladu s naším plánem, rád Vám pošlu krátkou zprávu o pokroku, až se tam dostaneme.\n\nS pozdravem,\n[Your name]",
+      "editableReplyTemplate": "Dobrý den, [jméno investora],\n\nděkuji za přímost — je to užitečné.\n\nAbych rozuměl, co by mělo skutečný vliv: která metrika je pro Vás v naší fázi nejdůležitější — [možnost A, např. měsíční tržby], [možnost B, např. retence], nebo něco jiného — a na zhruba jaké úrovni by mělo smysl se znovu sejít?\n\nPokud to bude v souladu s naším plánem, rád Vám pošlu krátkou zprávu o pokroku, až se tam dostaneme.\n\nS pozdravem,\n[vaše jméno]",
       "exampleScenario": {
         "description": "Hypotetický příklad: zakladatel spotřebitelské aplikace uslyší „potřebujeme vidět větší trakci“ po schůzce, které dominovaly otázky na konkurenci. Protože žádná metrika nezazněla, je věrohodný výklad, že námitka zakrývá jinou obavu. Zakladatel se zeptá, která metrika je důležitá, zjistí, že skutečnou starostí byla konkurence, a do dalších prezentací přidá snímek o odlišení od konkurence.",
         "hypothetical": true
@@ -482,7 +482,7 @@
       "clarifyingQuestion": "To je užitečné, děkuji. Pokud získáme hlavního investora za podmínek v rozmezí, o kterém jsme mluvili, jakou výši investice by Váš fond zvážil — a máte nějaké požadavky na to, kdo by měl kolo vést?",
       "recommendedAction": "Zapište si to jako podmíněný, ne závazný zájem a do celkové výše kola to nezapočítávejte. Soustřeďte úsilí na nalezení hlavního investora. Požádejte o představení fondům, které ve vaší fázi kola vedou.",
       "followUpTimingNote": "Odpovězte do dvou až tří dnů. Znovu se ozvěte, až se hlavní investor zaváže nebo až budou jednání o term sheetu v pokročilé fázi.",
-      "editableReplyTemplate": "Dobrý den, [Investor name],\n\nděkuji — je to jasné a užitečné.\n\nAbych mohl kolo dobře naplánovat: pokud získáme hlavního investora za podmínek zhruba v rozsahu [cílové podmínky nebo rozmezí], jakou výši investice by Váš fond zvážil a máte nějaké požadavky na to, kdo kolo povede?\n\nPokud Vás napadají fondy, které v naší fázi obvykle kola vedou, budu za představení velmi vděčný. Jakmile budeme mít hlavního investora, dám Vám hned vědět.\n\nS pozdravem,\n[Your name]",
+      "editableReplyTemplate": "Dobrý den, [jméno investora],\n\nděkuji — je to jasné a užitečné.\n\nAbych mohl kolo dobře naplánovat: pokud získáme hlavního investora za podmínek zhruba v rozsahu [cílové podmínky nebo rozmezí], jakou výši investice by Váš fond zvážil a máte nějaké požadavky na to, kdo kolo povede?\n\nPokud Vás napadají fondy, které v naší fázi obvykle kola vedou, budu za představení velmi vděčný. Jakmile budeme mít hlavního investora, dám Vám hned vědět.\n\nS pozdravem,\n[vaše jméno]",
       "exampleScenario": {
         "description": "Hypotetický příklad: zakladatel ve fázi seed uslyší „ozvěte se, až budete mít hlavního investora“ od fondu, který uvede výši investice a nabídne představení dvěma investorům, kteří kola vedou. Nejpravděpodobnější je výklad skutečného následného investora. Zakladatel si to zapíše jako podmíněný zájem, představení využije a fondu dá vědět, když hlavní investor pošle term sheet.",
         "hypothetical": true
@@ -536,7 +536,7 @@
       "clarifyingQuestion": "Chcete se tomu ještě věnovat, nebo to mám zatím uzavřít, ať Vám to nezabírá čas? Obě odpovědi jsou úplně v pořádku.",
       "recommendedAction": "Pošlete jednu krátkou uzavírací zprávu se skutečnou novinkou a jednoduchou otázkou ano/ne. Pak investora v pipeline přesuňte mezi „neaktivní“ a svou pozornost věnujte jinam. Další připomínky už neposílejte.",
       "followUpTimingNote": "Počkejte, až od slíbeného termínu uplyne pár pracovních dnů (nebo zhruba týden po schůzce). Po dvou nezodpovězených připomenutích pošlete za 1–2 týdny jednu poslední zprávu — a tím skončete.",
-      "editableReplyTemplate": "Dobrý den, [Investor name],\n\nvím, že toho máte hodně, takže budu stručný.\n\nKrátká novinka: [jeden konkrétní pokrok].\n\nChcete se [Company] v tomto kole ještě věnovat, nebo to mám zatím uzavřít, ať Vám to nezabírá čas? Obě odpovědi jsou úplně v pořádku — jen mi to pomůže s plánováním.\n\nS pozdravem,\n[Your name]",
+      "editableReplyTemplate": "Dobrý den, [jméno investora],\n\nvím, že toho máte hodně, takže budu stručný.\n\nKrátká novinka: [jeden konkrétní pokrok].\n\nChcete se [název firmy] v tomto kole ještě věnovat, nebo to mám zatím uzavřít, ať Vám to nezabírá čas? Obě odpovědi jsou úplně v pořádku — jen mi to pomůže s plánováním.\n\nS pozdravem,\n[vaše jméno]",
       "exampleScenario": {
         "description": "Hypotetický příklad: partner fondu slíbil rozhodnutí „do pátku“ a pak se dva týdny neozval, a to i přes dvě zdvořilá připomenutí. Věrohodný je jak zaseknutý interní proces, tak malý zájem. Zakladatel pošle jednu uzavírací zprávu s novým získaným zákazníkem a otázkou ano/ne a dál se soustředí na dva investory, kteří jsou aktivně zapojení.",
         "hypothetical": true
@@ -548,5 +548,22 @@
       "reviewedAt": "2026-11-09",
       "reviewNote": "AI fluent review pass done (terminology, vykání, calques, placeholders). Not reviewed by a native human; needs native CS approval before publication."
     }
-  ]
+  ],
+  "placeholderPolicy": {
+    "note": "Visible bracket placeholders are localized for founders; locale tools.locale.js replaces the same localized tokens. EN public tools keep English tokens.",
+    "mapFromEnglish": {
+      "Investor name": "jméno investora",
+      "Company": "název firmy",
+      "Your name": "vaše jméno",
+      "Partner name": "jméno partnera",
+      "Fund": "fond",
+      "milestone": "milník",
+      "progress": "pokrok",
+      "topic": "téma",
+      "customer": "zákazník",
+      "outcome": "výsledek",
+      "specific next step": "konkrétní další krok"
+    },
+    "status": "machine_draft_fluent_reviewed_needs_native_approval"
+  }
 }

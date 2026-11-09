@@ -9,7 +9,7 @@ const path = require('path');
 const vm = require('vm');
 const ROOT = path.resolve(__dirname, '..');
 const LOC = process.argv[2] || 'sk';
-const BCP = { sk: 'sk-SK', cs: 'cs-CZ' }[LOC];
+const BCP = { sk: 'sk-SK', cs: 'cs-CZ', de: 'de-DE', pl: 'pl-PL' }[LOC];
 const EN_TOOLS = fs.readFileSync(path.join(ROOT, 'assets/growth/tools.js'), 'utf8');
 const LOC_TOOLS = fs.readFileSync(path.join(ROOT, `_staging/locales/${LOC}/assets/tools.locale.js`), 'utf8');
 const EN_VCS = fs.readFileSync(path.join(ROOT, 'assets/growth/vc-says.js'), 'utf8');
@@ -139,14 +139,25 @@ function check(name, ok, detail) { checks[name] = { ok: !!ok, detail: ok ? undef
   const ids = ['followup-calculate', 'follow-type', 'follow-company', 'follow-name', 'follow-topic', 'follow-progress', 'follow-milestone', 'follow-next', 'follow-output', 'follow-copy', 'follow-signal-note'];
   const types = ['meeting', 'tooearly', 'quiet', 'update', 'notfit', 'nolead', 'cold'];
   const filled = { 'follow-company': 'AcmeX', 'follow-name': 'Jana', 'follow-topic': 'TOPICX', 'follow-progress': 'PROGX', 'follow-milestone': 'MILEX', 'follow-next': 'NEXTX' };
-  const bad = []; const keep = ['[Company]', '[Investor name]', '[Your name]'];
+  const bad = [];
+  const phMap = (PACK.placeholderMapFromEnglish || (PACK.placeholderPolicy && PACK.placeholderPolicy.mapFromEnglish) || {});
+  const keepEn = ['[Company]', '[Investor name]', '[Your name]'];
+  const keepLoc = keepEn.map(p => {
+    const tok = p.slice(1, -1);
+    return '[' + (phMap[tok] || tok) + ']';
+  });
   for (const t of types) for (const data of [filled, {}]) {
     const setup = els => { els['follow-type'].value = t; els['follow-type'].options = types.map(v => ({ value: v })); Object.entries(data).forEach(([k, v]) => { els[k].value = v; }); };
     const [en, lo] = [EN_TOOLS, LOC_TOOLS].map(src => run(src, ids, setup).els['follow-output'].value);
     counts.comparisons++;
     for (const v of Object.values(filled)) { const ce = en.split(v).length, cl = lo.split(v).length; if (ce !== cl) bad.push({ t, v, en: ce - 1, loc: cl - 1 }); }
-    if (!Object.keys(data).length) for (const p of keep) if (en.includes(p) !== lo.includes(p)) bad.push({ t, p });
-    if (!lo.includes('[Your name]')) bad.push({ t, missing: '[Your name]' });
+    if (!Object.keys(data).length) {
+      for (let i = 0; i < keepEn.length; i++) {
+        if (en.includes(keepEn[i]) !== lo.includes(keepLoc[i])) bad.push({ t, en: keepEn[i], loc: keepLoc[i], enHas: en.includes(keepEn[i]), locHas: lo.includes(keepLoc[i]) });
+      }
+    }
+    const yourNameLoc = keepLoc[keepEn.indexOf('[Your name]')];
+    if (!lo.includes(yourNameLoc)) bad.push({ t, missing: yourNameLoc });
   }
   check('follow-up: every scenario substitutes the same user fields the same number of times as EN; placeholders preserved when empty', bad.length === 0, bad.slice(0, 5));
   const expected = { 'too-early': 'tooearly', 'not-right-fit': 'notfit', 'keep-in-touch': 'update', 'circle-back-next-quarter': 'update', 'send-deck': 'meeting', 'second-meeting': 'meeting', 'partner-introduction': 'meeting', 'need-more-traction': 'tooearly', 'no-lead-investor': 'nolead', 'investor-ghosting': 'quiet' };

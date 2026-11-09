@@ -160,11 +160,35 @@
     var btn = $('vc-dec-run');
     if (!btn) return;
     var out = $('vc-dec-out'), paste = $('vc-dec-paste'), hint = $('vc-dec-paste-hint'), cat = $('vc-dec-category');
+    var suggestedId = null;
+    function setHintForSuggestion(id) {
+      if (!hint) return;
+      if (id && BY_ID[id]) {
+        hint.textContent = "Najbližšia zhoda v knižnici: „{phrase}“ (vybraná nižšie — ak nesedí, zmeňte ju).".replace('{phrase}', BY_ID[id].phrase);
+      } else if (paste && paste.value) {
+        hint.textContent = "Žiadna blízka zhoda — vyberte nižšie najbližšiu kategóriu.";
+      } else {
+        hint.textContent = '';
+      }
+    }
+    function syncHintWithManualChoice() {
+      if (!hint || !cat) return;
+      if (!suggestedId) return; // nothing auto-suggested yet
+      if (cat.value === suggestedId) {
+        setHintForSuggestion(suggestedId);
+      } else if (cat.value && BY_ID[cat.value]) {
+        hint.textContent = "Používate „{phrase}“ (zmenili ste navrhnutú zhodu).".replace('{phrase}', BY_ID[cat.value].phrase);
+      } else {
+        hint.textContent = "Vyberte najbližšiu kategóriu nižšie.";
+      }
+    }
     if (paste) paste.addEventListener('input', function () {
       var id = guessCategory(paste.value);   // local only — text is never sent or tracked
-      if (id && cat) { cat.value = id; if (hint) hint.textContent = "Najbližšia zhoda v knižnici: „{phrase}“ (vybraná nižšie — ak nesedí, zmeňte ju).".replace('{phrase}', BY_ID[id].phrase); }
-      else if (hint) hint.textContent = paste.value ? "Žiadna blízka zhoda — vyberte nižšie najbližšiu kategóriu." : '';
+      suggestedId = id;
+      if (id && cat) cat.value = id;
+      setHintForSuggestion(id);
     });
+    if (cat) cat.addEventListener('change', syncHintWithManualChoice);
     btn.addEventListener('click', function () {
       var state = { stage: $('vc-dec-stage').value, category: cat.value, next: $('vc-dec-next').value, elapsed: $('vc-dec-elapsed').value };
       var res = decode(state);

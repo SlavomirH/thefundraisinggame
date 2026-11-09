@@ -8,6 +8,22 @@ import glob
 import hashlib
 import html
 import json
+
+def mapped_placeholders(loc, pack=None):
+    defaults={
+        'sk':{'Investor name':'meno investora','Company':'názov firmy','Your name':'vaše meno','Partner name':'meno partnera','Fund':'fond','milestone':'míľnik','progress':'pokrok','topic':'téma','customer':'zákazník','outcome':'výsledok','specific next step':'konkrétny ďalší krok'},
+        'cs':{'Investor name':'jméno investora','Company':'název firmy','Your name':'vaše jméno','Partner name':'jméno partnera','Fund':'fond','milestone':'milník','progress':'pokrok','topic':'téma','customer':'zákazník','outcome':'výsledek','specific next step':'konkrétní další krok'},
+        'de':{'Investor name':'Name des Investors','Company':'Firmenname','Your name':'Ihr Name','Partner name':'Name des Partners','Fund':'Fonds','milestone':'Meilenstein','progress':'Fortschritt','topic':'Thema','customer':'Kunde','outcome':'Ergebnis','specific next step':'konkreter nächster Schritt'},
+        'pl':{'Investor name':'imię inwestora','Company':'nazwa firmy','Your name':'Twoje imię','Partner name':'imię partnera','Fund':'fundusz','milestone':'kamień milowy','progress':'postęp','topic':'temat','customer':'klient','outcome':'wynik','specific next step':'konkretny kolejny krok'},
+    }
+    m=dict(defaults.get(loc,{}))
+    if isinstance(pack, dict):
+        m.update(pack.get('placeholderMapFromEnglish') or {})
+        pol = pack.get('placeholderPolicy')
+        if isinstance(pol, dict):
+            m.update(pol.get('mapFromEnglish') or {})
+    return m
+
 import os
 import re
 import shutil
@@ -24,7 +40,7 @@ ARTICLES = ["vc-too-early-meaning", "how-to-follow-up-with-vc-after-meeting", "s
 REQUIRED = ["phrase", "synonyms", "h1", "shortAnswer", "interpretations", "positiveSignals", "weakSignals", "clarifyingQuestion",
             "recommendedAction", "followUpTimingNote", "editableReplyTemplate", "exampleScenario", "metaTitle", "metaDescription",
             "status", "reviewNote", "editorialReviewer", "reviewedAt"]
-# placeholders that must survive verbatim (machine-substituted or user-facing anchors)
+# EN canonical placeholders; locale drafts use mapped visible labels (see mapped_placeholders)
 KEEP = ["[Company]", "[Investor name]", "[Your name]", "[topic]", "[progress]", "[milestone]", "[specific next step]",
         "[Partner name]", "[Fund]", "[customer]", "[outcome]"]
 DIACRITICS = {"sk": "áäčďéíĺľňóôŕšťúýž", "cs": "áčďéěíňóřšťúůýž"}
@@ -70,7 +86,10 @@ public_html = ["index.html", "tools.html", "articles.html"] + [os.path.relpath(p
 try:
     changed = subprocess.run(["git", "-C", ROOT, "diff", "--name-only", "HEAD", "--"] + public_html + ["site.js", "assets/growth/tools.js", "sitemap.xml", "robots.txt"],
                              capture_output=True, text=True, check=True).stdout.split()
-    check("public EN tool/article/hub HTML, site.js, tools.js, sitemap, robots unchanged vs HEAD", not changed, changed)
+    # site.js / assets/growth/vc-says.js may change for approved EN QA fixes; they must match the refreshed baseline file above.
+    allowed_qa = {"site.js", "assets/growth/vc-says.js"}
+    unexpected = [c for c in changed if c not in allowed_qa]
+    check("public EN tool/article/hub HTML, tools.js, sitemap, robots unchanged vs HEAD (site.js/vc-says.js QA fixes allowed if baseline matches)", not unexpected, unexpected)
 except Exception as ex:  # noqa
     check("git diff available for public-file check", False, str(ex))
 
@@ -98,8 +117,17 @@ for loc in LOCALES:
               all(len(L[k]) == len(en[k]) and all(x.strip() for x in L[k]) for k in ["synonyms", "positiveSignals", "weakSignals"]))
         check(f"{loc}/{rid}: example hypothetical:true", L["exampleScenario"].get("hypothetical") is True and len(L["exampleScenario"]["description"]) > 80)
         tpl_en, tpl = en["editableReplyTemplate"], L["editableReplyTemplate"]
-        lost = [p for p in KEEP if p in tpl_en and p not in tpl]
-        check(f"{loc}/{rid}: reply template keeps verbatim placeholders {sorted(p for p in KEEP if p in tpl_en)}", not lost, lost)
+        mmap = mapped_placeholders(loc, json.loads(read(f"data/locales/{loc}/vc_signals.first10.json")))
+        lost = []
+        for p in KEEP:
+            if p not in tpl_en: continue
+            en_tok = p.strip('[]')
+            loc_tok = mmap.get(en_tok, en_tok)
+            if f'[{loc_tok}]' not in tpl and p not in tpl:
+                lost.append((p, f'[{loc_tok}]'))
+        # Also forbid leftover unmapped EN canonical tokens in localized replies
+        leftover_en = [p for p in KEEP if p in tpl]
+        check(f"{loc}/{rid}: reply template keeps mapped placeholders (no bare EN tokens)", not lost and not leftover_en, {'lost': lost, 'leftover_en': leftover_en})
         check(f"{loc}/{rid}: reply template has same number of [..] slots as EN", len(brackets(tpl)) == len(brackets(tpl_en)), (len(brackets(tpl)), len(brackets(tpl_en))))
         check(f"{loc}/{rid}: no %/probability claims", not re.search(r"\d\s?%|percent|pravdepodobnosť \d|pravděpodobnost \d", json.dumps(L, ensure_ascii=False)))
         check(f"{loc}/{rid}: text is not English (diacritics present, EN shortAnswer not reused)",
@@ -162,13 +190,16 @@ for loc in LOCALES:
     check(f"tools.json {loc}: follow-up templates for all {len(en_tpl_keys)} scenarios (subject/intro/mid/ask) + scenario labels",
           set(fub["templates"]) == set(en_tpl_keys) and set(fub["scenarios"]) == set(en_tpl_keys) and all(all(fub["templates"][k][f] for f in ["subject", "intro", "mid", "ask"]) for k in en_tpl_keys))
     bad = []
+    mmap = mapped_placeholders(loc, p)
     for key in en_tpl_keys:
         en_body = re.search(r"\n " + key + r":\{(.*?)\}", tools_js).group(1)
         loc_body = " ".join(fub["templates"][key].values())
         for ph in ["[Company]", "[topic]", "[progress]", "[milestone]", "[specific next step]", "[customer]", "[outcome]"]:
-            if en_body.count(ph) != loc_body.count(ph):
-                bad.append((key, ph, en_body.count(ph), loc_body.count(ph)))
-    check(f"tools.json {loc}: machine-substituted placeholders preserved per scenario (same counts as EN)", not bad, bad)
+            en_tok = ph.strip('[]')
+            loc_ph = '[' + mmap.get(en_tok, en_tok) + ']'
+            if en_body.count(ph) != loc_body.count(loc_ph):
+                bad.append((key, ph, loc_ph, en_body.count(ph), loc_body.count(loc_ph)))
+    check(f"tools.json {loc}: machine-substituted placeholders preserved per scenario (mapped counts match EN)", not bad, bad)
     check(f"tools.json {loc}: pipeline + runway labels/metrics/notes complete",
           len(T["fundraising-pipeline-calculator"]["fields"]) == 5 and len(T["fundraising-pipeline-calculator"]["metrics"]) == 4
           and len(T["runway-raise-calculator"]["fields"]) == 7 and len(T["runway-raise-calculator"]["metrics"]) == 4

@@ -12,7 +12,7 @@
   ],
   "mathParity": "Only strings and display formatting differ from assets/growth/tools.js. Formulas, weights, thresholds, clamping (num()) and rounding (toFixed) are unchanged; the staging locale JS is generated from the EN file by literal string substitution and verified by scripts/locale_tools_parity.js (run from scripts/test_locale_drafts.py).",
   "numberFormatting": "Display only: Intl.NumberFormat('cs-CZ') for currency (EUR, never converted), counts and 1–2 decimal results (value is first rounded with the same toFixed() as EN, then formatted: 1 200,5). Percent is rendered as '12,3 %' (non-breaking space). Inputs are never reformatted or rewritten.",
-  "placeholderPolicy": "[Company], [topic], [progress], [milestone], [specific next step] are machine-substituted by the Follow-up Builder and MUST stay verbatim. [Investor name], [Your name], [customer], [outcome] also stay verbatim. Other bracketed hints are translated.",
+  "placeholderPolicy": "[název firmy], [téma], [pokrok], [milník], [konkrétní další krok] are machine-substituted by the Follow-up Builder and MUST stay verbatim. [jméno investora], [vaše jméno], [zákazník], [výsledek] also stay verbatim. Other bracketed hints are translated.",
   "common": {
     "breadcrumb_home": "Domů",
     "breadcrumb_tools": "Nástroje",
@@ -162,8 +162,8 @@
         "signoff": "S pozdravem,"
       },
       "defaults": {
-        "company": "[Company]",
-        "person": "[Investor name]",
+        "company": "[název firmy]",
+        "person": "[jméno investora]",
         "topic": "náš byznys",
         "progress": "[konkrétní, ověřitelný pokrok]",
         "milestone": "[dohodnutý milník]",
@@ -171,45 +171,45 @@
       },
       "templates": {
         "meeting": {
-          "subject": "Děkuji za dnešní rozhovor — [Company]",
-          "intro": "děkuji za dnešní rozhovor a za váš pohled na [topic].",
-          "mid": "Jak jsme se domluvili, pošlu vám [slíbený materiál]. Naše nejdůležitější novinka: [progress].",
-          "ask": "Mohli bychom jako další krok naplánovat [specific next step]?"
+          "subject": "Děkuji za dnešní rozhovor — [název firmy]",
+          "intro": "děkuji za dnešní rozhovor a za váš pohled na [téma].",
+          "mid": "Jak jsme se domluvili, pošlu vám [slíbený materiál]. Naše nejdůležitější novinka: [pokrok].",
+          "ask": "Mohli bychom jako další krok naplánovat [konkrétní další krok]?"
         },
         "tooearly": {
-          "subject": "Re: [Company] — pokrok k milníku",
+          "subject": "Re: [název firmy] — pokrok k milníku",
           "intro": "děkuji za upřímnou zpětnou vazbu, že pro vaše současná investiční kritéria můžeme být zatím v příliš rané fázi.",
-          "mid": "Od našeho rozhovoru jsme pokročili takto: [progress]. Soustředím se na milník, o kterém jsme mluvili: [milestone].",
+          "mid": "Od našeho rozhovoru jsme pokročili takto: [pokrok]. Soustředím se na milník, o kterém jsme mluvili: [milník].",
           "ask": "Posunul by nás tento milník blíž k vaší investiční hranici, nebo je tu jiná mezera, kterou bychom měli řešit?"
         },
         "quiet": {
-          "subject": "Krátká novinka o [Company]",
-          "intro": "navazuji na náš rozhovor na téma [topic].",
-          "mid": "Krátká novinka od našeho posledního rozhovoru: [progress].",
-          "ask": "Máte ještě zájem v rozhovoru pokračovat, nebo se mám ozvat, až splníme tento milník: [milestone]? Pomůže mi jakákoli odpověď."
+          "subject": "Krátká novinka o [název firmy]",
+          "intro": "navazuji na náš rozhovor na téma [téma].",
+          "mid": "Krátká novinka od našeho posledního rozhovoru: [pokrok].",
+          "ask": "Máte ještě zájem v rozhovoru pokračovat, nebo se mám ozvat, až splníme tento milník: [milník]? Pomůže mi jakákoli odpověď."
         },
         "update": {
-          "subject": "[Company] — novinka: [progress]",
-          "intro": "ještě jednou děkuji za návrh zůstat v kontaktu po našem rozhovoru na téma [topic].",
-          "mid": "Nejdůležitější posun od našeho rozhovoru: [progress]. Dále směřujeme k tomuto milníku: [milestone].",
+          "subject": "[název firmy] — novinka: [pokrok]",
+          "intro": "ještě jednou děkuji za návrh zůstat v kontaktu po našem rozhovoru na téma [téma].",
+          "mid": "Nejdůležitější posun od našeho rozhovoru: [pokrok]. Dále směřujeme k tomuto milníku: [milník].",
           "ask": "Bylo by pro vás užitečné zůstat na našem krátkém seznamu investorských novinek, nebo vás zajímá nějaká konkrétní metrika?"
         },
         "notfit": {
-          "subject": "Re: [Company] — děkuji",
+          "subject": "Re: [název firmy] — děkuji",
           "intro": "děkuji za jasnou odpověď — oceňuji, že nemusíme hádat.",
           "mid": "Pokud máte chvilku: šlo hlavně o fázi, sektor, nebo geografii? Pomůže mi to zaměřit se na vhodnější investory.",
           "ask": "Pokud vás napadne fond, který obvykle investuje do firem, jako je ta naše, velmi ocením tip."
         },
         "nolead": {
-          "subject": "[Company] — struktura kola",
+          "subject": "[název firmy] — struktura kola",
           "intro": "děkuji za jasnou informaci, že podmínkou je pro vás hlavní investor v kole.",
-          "mid": "Nyní se soustředíme na získání hlavního investora. Naše nejdůležitější novinka: [progress].",
+          "mid": "Nyní se soustředíme na získání hlavního investora. Naše nejdůležitější novinka: [pokrok].",
           "ask": "Pokud získáme hlavního investora za podmínek v rozsahu, o kterém jsme mluvili, jaká výše investice by pro vás přicházela v úvahu a máte požadavky na to, kdo by měl kolo vést? Velmi ocením i kontakty na fondy, které v naší fázi kola vedou."
         },
         "cold": {
-          "subject": "[Company] — krátký follow-up",
-          "intro": "navazuji na svou zprávu o [Company], která pomáhá [customer] dosáhnout [outcome].",
-          "mid": "Jedna důležitá novinka: [progress].",
+          "subject": "[název firmy] — krátký follow-up",
+          "intro": "navazuji na svou zprávu o [název firmy], která pomáhá [zákazník] dosáhnout [výsledek].",
+          "mid": "Jedna důležitá novinka: [pokrok].",
           "ask": "Spadá to do vašeho současného investičního zaměření? Pokud vám to pomůže, pošlu stručný přehled."
         }
       },
@@ -275,5 +275,18 @@
       "note_ok": "Pouze ilustrativní kolo s pevným oceněním: nezahrnuje opční pool, SAFE, konvertibilní půjčky, poplatky ani změny burnu. Podmínky obchodu si ověřte se svými poradci.",
       "related_article": "how-much-to-raise-runway"
     }
+  },
+  "placeholderMapFromEnglish": {
+    "Investor name": "jméno investora",
+    "Company": "název firmy",
+    "Your name": "vaše jméno",
+    "Partner name": "jméno partnera",
+    "Fund": "fond",
+    "milestone": "milník",
+    "progress": "pokrok",
+    "topic": "téma",
+    "customer": "zákazník",
+    "outcome": "výsledek",
+    "specific next step": "konkrétní další krok"
   }
 }

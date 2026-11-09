@@ -164,7 +164,9 @@
     "footer_h_author": "Autor",
     "footer_about_author": "O Slavomírze",
     "footer_press_kit": "Materiały prasowe",
-    "footer_made_for": "Dla founderów i VC"
+    "footer_made_for": "Dla founderów i VC",
+    "decoder_hint_manual": "Using “{phrase}” (you changed the suggested match).",
+    "decoder_hint_choose": "Choose the closest category below."
   },
   "reviewer": null,
   "note": "Machine draft (lighter pass than SK/CS). Do not publish until a native reviewer approves. DE uses formal Sie; PL UI strings currently use informal 'Ty' as in the original seed — reviewer to decide register."

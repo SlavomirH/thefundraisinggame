@@ -18,9 +18,8 @@ SITE = "https://thefundraisinggame.com"
 PRIORITY = ["too-early", "not-right-fit", "keep-in-touch", "circle-back-next-quarter", "send-deck",
             "second-meeting", "partner-introduction", "need-more-traction", "no-lead-investor", "investor-ghosting"]
 DRAFT_LOCALES = ["sk", "cs", "de", "pl"]
-# SK/CS got an AI fluent pass (still NOT native-approved); DE/PL are lighter machine drafts. See scripts/test_locale_drafts.py.
-LOCALE_STATUS = {"sk": "machine_draft_fluent_reviewed_needs_native_approval", "cs": "machine_draft_fluent_reviewed_needs_native_approval",
-                 "de": "machine_draft_needs_native_review", "pl": "machine_draft_needs_native_review"}
+# SK/CS/DE/PL all got full content + an AI fluent pass (still NOT native-approved). See scripts/test_locale_drafts.py.
+LOCALE_STATUS = {l: "machine_draft_fluent_reviewed_needs_native_approval" for l in DRAFT_LOCALES}
 ALLOWED_SOURCE_PREFIXES = ("https://usegems.com/", "https://www.ycombinator.com/", "https://developers.google.com/search/")
 
 results = []
@@ -220,15 +219,14 @@ for loc in DRAFT_LOCALES:
         check(f"staging {loc}: noindex,nofollow, lang={loc}, no canonical/hreflang", not bad, bad)
     ph = json.loads(read(f"{base}/phrases.json")) if exists(f"{base}/phrases.json") else {"phrases": []}
     check(f"staging {loc}: phrase seeds for all 30", len(ph["phrases"]) == 30 and ph["review_status"] == LOCALE_STATUS[loc])
-check("staging sk/cs hubs show localized phrase seeds",
-      recs["keep-in-touch"]["locales"]["sk"]["phrase"] in read("_staging/locales/sk/vc-says/index.html")
-      and recs["keep-in-touch"]["locales"]["cs"]["phrase"] in read("_staging/locales/cs/vc-says/index.html"))
+check("staging sk/cs/de/pl hubs show localized phrases",
+      all(html.escape(recs["keep-in-touch"]["locales"][l]["phrase"], quote=True) in read(f"_staging/locales/{l}/vc-says/index.html") for l in DRAFT_LOCALES))
 
 # ---------------------------------------------------------------- i18n
 i18n = {l: json.loads(read(f"data/i18n/{l}.json")) for l in ["en"] + DRAFT_LOCALES}
 keys = set(i18n["en"]["strings"])
 check("i18n: 5 dictionaries with identical key sets", all(set(d["strings"]) == keys for d in i18n.values()))
-check("i18n: SK/CS fluent-reviewed drafts, DE/PL machine drafts (none approved)",
+check("i18n: SK/CS/DE/PL fluent-reviewed drafts (none native-approved)",
       all(i18n[l]["review_status"] == LOCALE_STATUS[l] for l in DRAFT_LOCALES))
 check("i18n: no locale claims native approval", not any(re.search(r"native_approved|human_translat", json.dumps(d)) for d in i18n.values()))
 check("i18n: numeric Intl note present", all("Intl.NumberFormat" in d["numberFormatting"]["note"] for d in i18n.values()))

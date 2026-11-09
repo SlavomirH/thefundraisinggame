@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Checks for the SK/CS localization drafts (staging only). No browser, no network.
+"""Checks for the SK/CS/DE/PL localization drafts (staging only). No browser, no network.
 
 Usage: python3 scripts/build_vc_says.py && python3 scripts/test_locale_drafts.py
 Exit code 0 = all checks passed. Prints concrete pass/fail counts per section.
@@ -31,7 +31,7 @@ import subprocess
 import sys
 
 ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
-LOCALES = ["sk", "cs"]
+LOCALES = ["sk", "cs", "de", "pl"]
 STATUS = "machine_draft_fluent_reviewed_needs_native_approval"
 PRIORITY = ["too-early", "not-right-fit", "keep-in-touch", "circle-back-next-quarter", "send-deck",
             "second-meeting", "partner-introduction", "need-more-traction", "no-lead-investor", "investor-ghosting"]
@@ -43,8 +43,17 @@ REQUIRED = ["phrase", "synonyms", "h1", "shortAnswer", "interpretations", "posit
 # EN canonical placeholders; locale drafts use mapped visible labels (see mapped_placeholders)
 KEEP = ["[Company]", "[Investor name]", "[Your name]", "[topic]", "[progress]", "[milestone]", "[specific next step]",
         "[Partner name]", "[Fund]", "[customer]", "[outcome]"]
-DIACRITICS = {"sk": "áäčďéíĺľňóôŕšťúýž", "cs": "áčďéěíňóřšťúůýž"}
-LANG_MARKERS = {"sk": ["ľ", "ä", "ô", "ĺ", "ŕ"], "cs": ["ř", "ě", "ů"]}
+DIACRITICS = {"sk": "áäčďéíĺľňóôŕšťúýž", "cs": "áčďéěíňóřšťúůýž", "de": "äöüßÄÖÜ", "pl": "ąćęłńóśźżĄĆĘŁŃÓŚŹŻ"}
+LANG_MARKERS = {"sk": ["ľ", "ä", "ô", "ĺ", "ŕ"], "cs": ["ř", "ě", "ů"], "de": ["ä", "ö", "ü", "ß"], "pl": ["ą", "ę", "ł", "ś", "ż"]}
+# German shortAnswers carry fewer diacritics per sentence than SK/CS/PL; threshold is per locale.
+MIN_SHORT_DIA = {"sk": 5, "cs": 5, "de": 2, "pl": 5}
+# English-only book disclosure, per locale
+EN_ONLY = {"sk": r"iba v angličtin", "cs": r"pouze v angličtin", "de": r"nur auf Englisch", "pl": r"tylko po angielsku"}
+MIN_PAGE_DIA = {"sk": 40, "cs": 40, "de": 20, "pl": 40}
+# positive language signal: share of common local function words among all words on the page
+LOCAL_STOP = {"de": {"der", "die", "das", "und", "sie", "nicht", "ist", "mit", "für", "ein", "eine", "zu", "den", "auf", "oder", "wenn", "ihr", "ihre", "von"},
+              "pl": {"i", "w", "nie", "się", "na", "z", "to", "jest", "do", "że", "lub", "czy", "o", "jak", "od", "po", "co", "dla"}}
+WORD_RE = r"[a-záäčďéěíĺľňóôŕřšťúůýžößąćęłńśźż]+"
 EN_STOP = {"the", "and", "you", "your", "with", "for", "that", "this", "what", "is", "are", "of", "it", "they", "we", "or", "be", "not"}
 
 results = []
@@ -93,8 +102,8 @@ try:
 except Exception as ex:  # noqa
     check("git diff available for public-file check", False, str(ex))
 
-# ============================================================== 2. data: 10 SK/CS entries
-section = "SK/CS entries"
+# ============================================================== 2. data: 10 entries per locale
+section = "SK/CS/DE/PL entries"
 data = json.loads(read("data/vc_signals.expanded.json"))
 recs = {r["id"]: r for r in data["records"]}
 en_src = {r["id"]: r for r in json.loads(read("data/locales/en_first10_source.json"))}
@@ -131,7 +140,7 @@ for loc in LOCALES:
         check(f"{loc}/{rid}: reply template has same number of [..] slots as EN", len(brackets(tpl)) == len(brackets(tpl_en)), (len(brackets(tpl)), len(brackets(tpl_en))))
         check(f"{loc}/{rid}: no %/probability claims", not re.search(r"\d\s?%|percent|pravdepodobnosť \d|pravděpodobnost \d", json.dumps(L, ensure_ascii=False)))
         check(f"{loc}/{rid}: text is not English (diacritics present, EN shortAnswer not reused)",
-              L["shortAnswer"] != en["shortAnswer"] and sum(L["shortAnswer"].count(c) for c in DIACRITICS[loc]) >= 5)
+              L["shortAnswer"] != en["shortAnswer"] and sum(L["shortAnswer"].count(c) for c in DIACRITICS[loc]) >= MIN_SHORT_DIA[loc])
         check(f"{loc}/{rid}: seedPhrase recorded and matches seed file", L.get("seedPhrase") == next(x for x in json.loads(read("data/vc_signals.seed.json"))["records"] if x["id"] == rid)["phrase"][loc])
         m = mir[rid]
         check(f"{loc}/{rid}: mirror file == merged expanded.json fields", all(m[k] == L[k] for k in REQUIRED if k != "exampleScenario") and m["exampleScenario"]["description"] == L["exampleScenario"]["description"])
@@ -157,9 +166,7 @@ for l in ["sk", "cs", "de", "pl"]:
                     "class_positive", "class_hard-no", "stage_series-a", "topic_traction", "context_silence", "nav_book", "draft_banner"]
         check(f"i18n {l}: hub UI coverage (nav, filters, search, decoder labels/rules, privacy, empty state, copy/reset, book CTA, classes, stages, topics, situations)",
               all(k in s and s[k] for k in hub_keys))
-        check(f"i18n {l}: book note discloses English-only", re.search(r"angličtin", s["book_language_note"]) and re.search(r"iba|pouze", s["book_language_note"]))
-    else:
-        check(f"i18n {l}: still machine_draft_needs_native_review (lighter DE/PL pass)", i18n[l]["review_status"] == "machine_draft_needs_native_review")
+        check(f"i18n {l}: book note discloses English-only", re.search(EN_ONLY[l], s["book_language_note"]))
     check(f"i18n {l}: no native-approval claim", not re.search(r"native_approved|human_translat|\"approved\"|published", json.dumps({k: v for k, v in i18n[l].items() if k != "publication_status"})))
 en_cs_keys = None
 for loc in LOCALES:
@@ -169,7 +176,7 @@ for loc in LOCALES:
             "vip_eyebrow", "vip_title", "vip_body", "book_english_only"]
     check(f"chrome_signup {loc}: all signup/captcha/cookie/VIP keys present and translated",
           all(c["strings"].get(k) and c["strings"][k] != c["en_source"].get(k) for k in need), [k for k in need if not c["strings"].get(k) or c["strings"][k] == c["en_source"].get(k)])
-    check(f"chrome_signup {loc}: English-only book note", "angličtin" in c["strings"]["book_english_only"])
+    check(f"chrome_signup {loc}: English-only book note", re.search(EN_ONLY[loc], c["strings"]["book_english_only"]))
     check(f"chrome_signup {loc}: status {STATUS}", c["status"] == STATUS)
 
 # ============================================================== 4. tools packs + locale JS
@@ -206,7 +213,8 @@ for loc in LOCALES:
           and all(T["runway-raise-calculator"][k] for k in ["no_net_burn", "note_no_pre", "note_ok"]))
     check(f"tools.json {loc}: disclaimers, buttons, related-link text present",
           all(p["common"][k] for k in ["disclaimer", "book_cta", "book_p", "related_guide", "related_tools_link", "copied"]) and all(T[t]["calculate"] for t in TOOLS))
-    check(f"tools.json {loc}: book CTA discloses English-only", "angličtin" in p["common"]["book_p"])
+    check(f"tools.json {loc}: book CTA discloses English-only", re.search(EN_ONLY[loc], p["common"]["book_p"]))
+    check(f"tools.json {loc}: bcp47 is the {loc} locale used by Intl", p.get("bcp47") == {"sk": "sk-SK", "cs": "cs-CZ", "de": "de-DE", "pl": "pl-PL"}[loc])
     check(f"tools.json {loc}: math parity + Intl number formatting documented", "unchanged" in p["mathParity"] and "Intl.NumberFormat" in p["numberFormatting"])
     for a in ["tools.locale.js", "vc-says.locale.js", "site.locale.js"]:
         check(f"{loc}: _staging/locales/{loc}/assets/{a} exists", exists(f"_staging/locales/{loc}/assets/{a}"))
@@ -256,7 +264,7 @@ for slug in ARTICLES:
         check(f"{loc}/{slug}: table rows match EN ({en_rows})", rows == en_rows, rows)
         check(f"{loc}/{slug}: full body length ≥70% of EN text", len(visible_text(body)) >= 0.7 * len(visible_text(art)), (len(visible_text(body)), len(visible_text(art))))
         check(f"{loc}/{slug}: no [Investor]/[Name] EN-only placeholders left", "[Investor]" not in body and "[Name]" not in body)
-        check(f"{loc}/{slug}: CTA discloses English-only book", re.search(r"(iba|pouze) v angličtině?|(iba|pouze) v angličtine", body))
+        check(f"{loc}/{slug}: CTA discloses English-only book", re.search(EN_ONLY[loc], body))
 
 # ============================================================== 6. staging pages
 section = "staging pages"
@@ -279,13 +287,16 @@ for loc in LOCALES:
         check(f"{loc}/{name}: draft banner (AI fluent draft, needs native human approval)", "DRAFT — AI fluent draft, needs native human approval. noindex." in s)
         txt = visible_text(s)
         found_en = [x for x in EN_PHRASES if x in txt]
-        words = re.findall(r"[a-záäčďéěíĺľňóôŕřšťúůýž]+", re.sub(r"\[[^\]]*\]", " ", txt.lower()))
+        words = re.findall(WORD_RE, re.sub(r"\[[^\]]*\]", " ", txt.lower()))
         en_ratio = sum(w in EN_STOP for w in words) / max(1, len(words))
         dia = sum(txt.count(c) for c in DIACRITICS[loc])
         stats.append((name, round(en_ratio, 3), dia))
         check(f"{loc}/{name}: body not predominantly English (no EN UI phrases; EN stop-word ratio {en_ratio:.1%} < 3%; {dia} diacritics)",
-              not found_en and en_ratio < 0.03 and dia >= 40 and any(m in txt for m in LANG_MARKERS[loc]), (found_en, en_ratio, dia))
-        check(f"{loc}/{name}: English-only book disclosure visible", re.search(r"(iba|pouze) v angličtin", txt))
+              not found_en and en_ratio < 0.03 and dia >= MIN_PAGE_DIA[loc] and any(m in txt for m in LANG_MARKERS[loc]), (found_en, en_ratio, dia))
+        if loc in LOCAL_STOP:
+            loc_ratio = sum(w in LOCAL_STOP[loc] for w in words) / max(1, len(words))
+            check(f"{loc}/{name}: {loc.upper()} function-word ratio {loc_ratio:.1%} ≥ 8% (page is written in {loc.upper()})", loc_ratio >= 0.08, loc_ratio)
+        check(f"{loc}/{name}: English-only book disclosure visible", re.search(EN_ONLY[loc], txt))
         links = set(re.findall(r'href="(/[^"#?]*)', re.sub(r"<script\b.*?</script>", "", s, flags=re.S)))
         broken = [l for l in links if l != "/" and not (exists(l.lstrip("/") + ".html") or exists(l.lstrip("/") + "/index.html") or exists(l.lstrip("/")))]
         check(f"{loc}/{name}: internal links resolve", not broken, broken)
@@ -314,17 +325,17 @@ check("sitemap: no /sk/, /cs/, /de/, /pl/ or /_staging/ URLs", not any(re.search
 check("robots.txt disallows /_staging/", "Disallow: /_staging/" in read("robots.txt"))
 vj = json.loads(read("vercel.json"))
 check("vercel.json sends X-Robots-Tag noindex for /_staging/", any(h["source"].startswith("/_staging/") and any("noindex" in x["value"] for x in h["headers"]) for h in vj.get("headers", [])))
-check("no public /sk or /cs route directories", not any(os.path.isdir(os.path.join(ROOT, l)) for l in ["sk", "cs", "de", "pl"]))
+check("no public /sk, /cs, /de or /pl route directories", not any(os.path.isdir(os.path.join(ROOT, l)) for l in ["sk", "cs", "de", "pl"]))
 pub_hreflang = [p for p in public_html + ["vc-says.html"] if "hreflang" in read(p)]
 check("no hreflang on any public page", not pub_hreflang, pub_hreflang)
-check("no SK/CS status claims approval/publication", all(recs[r]["locales"][l]["status"] == STATUS for r in PRIORITY for l in LOCALES)
-      and not re.search(r'"(sk|cs)": "(published|approved[^"]*)"', read("data/vc_signals.expanded.json")))
+check("no SK/CS/DE/PL status claims approval/publication", all(recs[r]["locales"][l]["status"] == STATUS for r in PRIORITY for l in LOCALES)
+      and not re.search(r'"(sk|cs|de|pl)": "(published|approved[^"]*)"', read("data/vc_signals.expanded.json")))
 
 # ============================================================== 8. docs
 section = "docs"
-for d in ["REVIEW_SK.md", "REVIEW_CS.md", "REVIEWER_CHECKLIST.md", "COVERAGE_MATRIX.md"]:
+for d in ["REVIEW_SK.md", "REVIEW_CS.md", "REVIEW_DE.md", "REVIEW_PL.md", "REVIEWER_CHECKLIST.md", "COVERAGE_MATRIX.md"]:
     check(f"docs/vc-says/{d} exists", exists(f"docs/vc-says/{d}"))
-for d, loc in [("REVIEW_SK.md", "sk"), ("REVIEW_CS.md", "cs")]:
+for d, loc in [("REVIEW_SK.md", "sk"), ("REVIEW_CS.md", "cs"), ("REVIEW_DE.md", "de"), ("REVIEW_PL.md", "pl")]:
     if exists(f"docs/vc-says/{d}"):
         t = read(f"docs/vc-says/{d}")
         check(f"{d}: covers what was reviewed / issues fixed / remaining risks / checklist",
@@ -332,6 +343,14 @@ for d, loc in [("REVIEW_SK.md", "sk"), ("REVIEW_CS.md", "cs")]:
         check(f"{d}: does not claim native sign-off", re.search(r"not (been )?reviewed by a native|no native", t, re.I))
 cm = read("docs/vc-says/COVERAGE_MATRIX.md") if exists("docs/vc-says/COVERAGE_MATRIX.md") else ""
 check("COVERAGE_MATRIX.md reflects SK/CS fluent-reviewed status", STATUS in cm)
+for loc, reg in [("de", r"\bSie\b"), ("pl", r"Pan/Pani|Państw")]:
+    rows = [l for l in cm.splitlines() if re.match(rf"\|\s*{loc}\b", l, re.I)]
+    check(f"COVERAGE_MATRIX.md: {loc.upper()} rows say fluent-reviewed / needs native approval (no 'EN body' light-draft claim)",
+          rows and any(STATUS in l or "fluent" in l for l in rows) and not any(re.search(r"EN body|English body|light draft", l, re.I) for l in rows), rows)
+    if exists(f"docs/vc-says/REVIEW_{loc.upper()}.md"):
+        check(f"REVIEW_{loc.upper()}.md documents the formal register decision", re.search(reg, read(f"docs/vc-says/REVIEW_{loc.upper()}.md")))
+rc = read("docs/vc-says/REVIEWER_CHECKLIST.md")
+check("REVIEWER_CHECKLIST.md covers DE and PL", re.search(r"\bDE\b", rc) and re.search(r"\bPL\b", rc) and "REVIEW_DE.md" in rc and "REVIEW_PL.md" in rc)
 
 # ============================================================== report
 by = {}

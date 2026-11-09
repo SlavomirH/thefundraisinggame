@@ -5,11 +5,11 @@ NOT PUBLIC. Every page: <meta name="robots" content="noindex,nofollow">, html la
 not in sitemap.xml; robots.txt disallows /_staging/ and vercel.json sends X-Robots-Tag: noindex.
 
 Inputs
-  data/locales/{sk,cs}/vc_signals.first10.json   full translated entries (merged into data/vc_signals.expanded.json)
-  data/i18n/{sk,cs}.json                          hub/detail/chrome UI strings
-  data/locales/{sk,cs}/tools.json                 tool string packs
-  data/locales/{sk,cs}/chrome_signup.json         signup / captcha / cookie strings
-  content/articles/{sk,cs}/{slug}.md              article drafts
+  data/locales/{sk,cs,de,pl}/vc_signals.first10.json   full translated entries (merged into data/vc_signals.expanded.json)
+  data/i18n/{sk,cs,de,pl}.json                          hub/detail/chrome UI strings
+  data/locales/{sk,cs,de,pl}/tools.json                 tool string packs
+  data/locales/{sk,cs,de,pl}/chrome_signup.json         signup / captcha / cookie strings
+  content/articles/{sk,cs,de,pl}/{slug}.md              article drafts
   assets/growth/{tools,vc-says}.js, site.js       EN scripts — read only, never modified
 
 Outputs (all under _staging/locales/{loc}/)
@@ -32,7 +32,7 @@ sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
 import build_vc_says as B  # noqa: E402  (reuses head(), chrome(), page helpers; does not write public files on import)
 
 ROOT = B.ROOT
-LOCALES = ["sk", "cs"]  # DE/PL enabled after content packs exist
+LOCALES = ["sk", "cs", "de", "pl"]
 # per-locale typography / chrome bits that are not in the i18n packs
 QUOTES = {"sk": ("„", "“"), "cs": ("„", "“"), "de": ("„", "“"), "pl": ("„", "”")}
 DRAFT_TAG = {"sk": "NÁVRH", "cs": "NÁVRH", "de": "ENTWURF", "pl": "SZKIC"}
@@ -210,7 +210,7 @@ def tools_js(loc, pack, phrases):
         S.rep(f"'{rid}':{{phrase:'{en_phrase}',", f"'{rid}':{{phrase:" + js_str(phrases[rid]) + ",", 1)
     # nothing English left in user-visible literals that we know of
     out = S.s
-    for leftover in ["Insufficient signal", "Copied ✓", "selected signals", "Hi ${person}", "Browse VC Says", "in VC Says", "No net burn"]:
+    for leftover in ["Insufficient signal", "Copied ✓", "selected signals", "Hi ${person}", "Browse VC Says", "\\u201D in VC Says", "No net burn"]:
         assert leftover not in out, leftover
     return out
 
@@ -226,13 +226,13 @@ def vcsays_js(loc, t):
         S.rep(f"text: '{txt}'", "text: " + js_str(s[f"rule_{rid}"]), 1)
     S.rep("var RANK_LABELS = ['Most consistent with your answers', 'Also plausible', 'Less consistent, but still possible'];",
           "var RANK_LABELS = [" + ", ".join(js_str(s[f"decoder_rank_{i}"]) for i in (1, 2, 3)) + "];", 1)
-    # Hint strings (EN source uses setHintForSuggestion / syncHintWithManualChoice)
+    # Hint strings (EN source uses setHintForSuggestion / syncHintWithManualChoice). Every locale pack must define all four keys.
     S.rep("'Closest library match: “' + BY_ID[id].phrase + '”. Selected below — change the category if it doesn’t fit.'",
-          js_str(s.get("decoder_hint_match") or "Najbližšia zhoda v knižnici: „{phrase}“. Vybrané nižšie — kategóriu môžete zmeniť.") + ".replace('{phrase}', BY_ID[id].phrase)", 1)
-    S.lit("No close match — choose the closest category below.", s.get("decoder_hint_nomatch") or s.get("decoder_hint_none") or "Žiadna blízka zhoda — vyberte najbližšiu kategóriu nižšie.", 1)
+          js_str(s["decoder_hint_match"]) + ".replace('{phrase}', BY_ID[id].phrase)", 1)
+    S.lit("No close match — choose the closest category below.", s["decoder_hint_nomatch"], 1)
     S.rep("'Using “' + BY_ID[cat.value].phrase + '” (you changed the suggested match).'",
-          js_str(s.get("decoder_hint_manual") or "Používate „{phrase}“ (zmenili ste navrhnutú zhodu).") + ".replace('{phrase}', BY_ID[cat.value].phrase)", 1)
-    S.lit("Choose the closest category below.", s.get("decoder_hint_choose") or "Vyberte najbližšiu kategóriu nižšie.", 1)
+          js_str(s["decoder_hint_manual"]) + ".replace('{phrase}', BY_ID[cat.value].phrase)", 1)
+    S.lit("Choose the closest category below.", s["decoder_hint_choose"], 1)
     S.lit("Choose what the investor said or did to see plausible interpretations.", s["decoder_choose_first"], 1)
     S.rep("'Plausible interpretations of “' + res.rec.phrase + '”'", js_str(s["decoder_out_heading"]) + ".replace('{phrase}', res.rec.phrase)", 1)
     S.lit("Rules applied: ", s["decoder_rules_applied"], 1)

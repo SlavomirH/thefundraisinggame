@@ -1,83 +1,95 @@
 {
   "locale": "sk",
-  "review_status": "machine_draft_needs_native_review",
+  "review_status": "machine_draft_fluent_reviewed_needs_native_approval",
   "publication_status": "draft_not_public",
+  "note": "10 priority entries: full fluent-reviewed drafts (needs native approval). Other 20: phrase seeds only.",
   "phrases": [
     {
       "id": "too-early",
       "signalClass": "soft-no",
       "en": "You're too early for us.",
-      "sk": "Zatiaľ ste pre nás v príliš skorej fáze.",
-      "status": "draft_machine_translation_needs_native_review"
+      "sk": "Na nás je to zatiaľ priskoro.",
+      "seedPhrase": "Zatiaľ ste pre nás v príliš skorej fáze.",
+      "status": "machine_draft_fluent_reviewed_needs_native_approval"
     },
     {
       "id": "not-right-fit",
       "signalClass": "hard-no",
       "en": "It's not the right fit for us.",
       "sk": "Nezapadá to do našej investičnej stratégie.",
-      "status": "draft_machine_translation_needs_native_review"
+      "seedPhrase": "Nezapadá to do našej investičnej stratégie.",
+      "status": "machine_draft_fluent_reviewed_needs_native_approval"
     },
     {
       "id": "keep-in-touch",
       "signalClass": "soft-no",
       "en": "Let's keep in touch.",
       "sk": "Zostaňme v kontakte.",
-      "status": "draft_machine_translation_needs_native_review"
+      "seedPhrase": "Zostaňme v kontakte.",
+      "status": "machine_draft_fluent_reviewed_needs_native_approval"
     },
     {
       "id": "circle-back-next-quarter",
       "signalClass": "ambiguous",
       "en": "Circle back next quarter.",
-      "sk": "Ozvite sa nám opäť budúci štvrťrok.",
-      "status": "draft_machine_translation_needs_native_review"
+      "sk": "Ozvite sa nám znova budúci štvrťrok.",
+      "seedPhrase": "Ozvite sa nám opäť budúci štvrťrok.",
+      "status": "machine_draft_fluent_reviewed_needs_native_approval"
     },
     {
       "id": "send-deck",
       "signalClass": "ambiguous",
       "en": "Send me your deck.",
-      "sk": "Pošlite mi vašu prezentáciu pre investorov.",
-      "status": "draft_machine_translation_needs_native_review"
+      "sk": "Pošlite mi svoju prezentáciu.",
+      "seedPhrase": "Pošlite mi vašu prezentáciu pre investorov.",
+      "status": "machine_draft_fluent_reviewed_needs_native_approval"
     },
     {
       "id": "second-meeting",
       "signalClass": "positive",
       "en": "Let's schedule another meeting.",
       "sk": "Dohodnime si ďalšie stretnutie.",
-      "status": "draft_machine_translation_needs_native_review"
+      "seedPhrase": "Dohodnime si ďalšie stretnutie.",
+      "status": "machine_draft_fluent_reviewed_needs_native_approval"
     },
     {
       "id": "partner-introduction",
       "signalClass": "positive",
       "en": "I'd like you to meet my partner.",
       "sk": "Rád by som vás zoznámil s kolegom z fondu.",
-      "status": "draft_machine_translation_needs_native_review"
+      "seedPhrase": "Rád by som vás zoznámil s kolegom z fondu.",
+      "status": "machine_draft_fluent_reviewed_needs_native_approval"
     },
     {
       "id": "need-more-traction",
       "signalClass": "soft-no",
       "en": "We need to see more traction.",
-      "sk": "Potrebujeme vidieť viac dôkazov o záujme zákazníkov.",
-      "status": "draft_machine_translation_needs_native_review"
+      "sk": "Potrebujeme vidieť väčšiu trakciu.",
+      "seedPhrase": "Potrebujeme vidieť viac dôkazov o záujme zákazníkov.",
+      "status": "machine_draft_fluent_reviewed_needs_native_approval"
     },
     {
       "id": "no-lead-investor",
       "signalClass": "soft-no",
       "en": "Come back when you have a lead investor.",
       "sk": "Ozvite sa, keď budete mať hlavného investora.",
-      "status": "draft_machine_translation_needs_native_review"
+      "seedPhrase": "Ozvite sa, keď budete mať hlavného investora.",
+      "status": "machine_draft_fluent_reviewed_needs_native_approval"
     },
     {
       "id": "investor-ghosting",
       "signalClass": "soft-no",
       "en": "No response after two follow-ups.",
-      "sk": "Bez odpovede po dvoch pripomenutiach.",
-      "status": "draft_machine_translation_needs_native_review"
+      "sk": "Žiadna odpoveď ani po dvoch pripomenutiach.",
+      "seedPhrase": "Bez odpovede po dvoch pripomenutiach.",
+      "status": "machine_draft_fluent_reviewed_needs_native_approval"
     },
     {
       "id": "market-too-small",
       "signalClass": "hard-no",
       "en": "The market looks too small.",
       "sk": "Trh sa nám zdá príliš malý.",
+      "seedPhrase": "Trh sa nám zdá príliš malý.",
       "status": "draft_machine_translation_needs_native_review"
     },
     {
@@ -85,6 +97,7 @@
       "signalClass": "ambiguous",
       "en": "Your team isn't complete yet.",
       "sk": "Váš tím zatiaľ nie je kompletný.",
+      "seedPhrase": "Váš tím zatiaľ nie je kompletný.",
       "status": "draft_machine_translation_needs_native_review"
     },
     {
@@ -92,6 +105,7 @@
       "signalClass": "hard-no",
       "en": "We invest only in companies based here.",
       "sk": "Investujeme len do firiem so sídlom v našom regióne.",
+      "seedPhrase": "Investujeme len do firiem so sídlom v našom regióne.",
       "status": "draft_machine_translation_needs_native_review"
     },
     {
@@ -99,6 +113,7 @@
       "signalClass": "hard-no",
       "en": "We're not making new investments right now.",
       "sk": "Momentálne nerobíme nové investície.",
+      "seedPhrase": "Momentálne nerobíme nové investície.",
       "status": "draft_machine_translation_needs_native_review"
     },
     {
@@ -106,6 +121,7 @@
       "signalClass": "ambiguous",
       "en": "I need to discuss this with our investment committee.",
       "sk": "Musím to prebrať s investičným výborom.",
+      "seedPhrase": "Musím to prebrať s investičným výborom.",
       "status": "draft_machine_translation_needs_native_review"
     },
     {
@@ -113,6 +129,7 @@
       "signalClass": "positive",
       "en": "Can we speak with your customers?",
       "sk": "Môžeme sa porozprávať s vašimi zákazníkmi?",
+      "seedPhrase": "Môžeme sa porozprávať s vašimi zákazníkmi?",
       "status": "draft_machine_translation_needs_native_review"
     },
     {
@@ -120,6 +137,7 @@
       "signalClass": "ambiguous",
       "en": "We're impressed by your team.",
       "sk": "Váš tím na nás urobil dojem.",
+      "seedPhrase": "Váš tím na nás urobil dojem.",
       "status": "draft_machine_translation_needs_native_review"
     },
     {
@@ -127,6 +145,7 @@
       "signalClass": "soft-no",
       "en": "We like the product, but not the business model.",
       "sk": "Produkt sa nám páči, ale nie váš biznis model.",
+      "seedPhrase": "Produkt sa nám páči, ale nie váš biznis model.",
       "status": "draft_machine_translation_needs_native_review"
     },
     {
@@ -134,6 +153,7 @@
       "signalClass": "ambiguous",
       "en": "Your valuation is too high for us.",
       "sk": "Vaše ocenenie je pre nás príliš vysoké.",
+      "seedPhrase": "Vaše ocenenie je pre nás príliš vysoké.",
       "status": "draft_machine_translation_needs_native_review"
     },
     {
@@ -141,6 +161,7 @@
       "signalClass": "ambiguous",
       "en": "How defensible is this business?",
       "sk": "Ako sa dokážete ubrániť konkurencii?",
+      "seedPhrase": "Ako sa dokážete ubrániť konkurencii?",
       "status": "draft_machine_translation_needs_native_review"
     },
     {
@@ -148,6 +169,7 @@
       "signalClass": "soft-no",
       "en": "We need stronger unit economics.",
       "sk": "Potrebujeme vidieť lepšiu jednotkovú ekonomiku.",
+      "seedPhrase": "Potrebujeme vidieť lepšiu jednotkovú ekonomiku.",
       "status": "draft_machine_translation_needs_native_review"
     },
     {
@@ -155,6 +177,7 @@
       "signalClass": "ambiguous",
       "en": "What are other investors saying?",
       "sk": "Čo hovoria ostatní investori?",
+      "seedPhrase": "Čo hovoria ostatní investori?",
       "status": "draft_machine_translation_needs_native_review"
     },
     {
@@ -162,6 +185,7 @@
       "signalClass": "ambiguous",
       "en": "We'd like to see you hit the next milestone.",
       "sk": "Radi by sme videli, že dosiahnete ďalší míľnik.",
+      "seedPhrase": "Radi by sme videli, že dosiahnete ďalší míľnik.",
       "status": "draft_machine_translation_needs_native_review"
     },
     {
@@ -169,6 +193,7 @@
       "signalClass": "positive",
       "en": "Can you send your financial model?",
       "sk": "Môžete nám poslať finančný model?",
+      "seedPhrase": "Môžete nám poslať finančný model?",
       "status": "draft_machine_translation_needs_native_review"
     },
     {
@@ -176,6 +201,7 @@
       "signalClass": "ambiguous",
       "en": "We could participate, but we won't lead.",
       "sk": "Mohli by sme sa zapojiť, ale nepovedieme kolo.",
+      "seedPhrase": "Mohli by sme sa zapojiť, ale nepovedieme kolo.",
       "status": "draft_machine_translation_needs_native_review"
     },
     {
@@ -183,6 +209,7 @@
       "signalClass": "ambiguous",
       "en": "I'd like to introduce you to a portfolio founder.",
       "sk": "Rád by som vás spojil so zakladateľom z nášho portfólia.",
+      "seedPhrase": "Rád by som vás spojil so zakladateľom z nášho portfólia.",
       "status": "draft_machine_translation_needs_native_review"
     },
     {
@@ -190,6 +217,7 @@
       "signalClass": "ambiguous",
       "en": "Our decision process takes a few weeks.",
       "sk": "Náš rozhodovací proces trvá niekoľko týždňov.",
+      "seedPhrase": "Náš rozhodovací proces trvá niekoľko týždňov.",
       "status": "draft_machine_translation_needs_native_review"
     },
     {
@@ -197,6 +225,7 @@
       "signalClass": "positive",
       "en": "Let's bring another partner into the next meeting.",
       "sk": "Na ďalšie stretnutie prizvime ďalšieho partnera z fondu.",
+      "seedPhrase": "Na ďalšie stretnutie prizvime ďalšieho partnera z fondu.",
       "status": "draft_machine_translation_needs_native_review"
     },
     {
@@ -204,6 +233,7 @@
       "signalClass": "hard-no",
       "en": "We don't invest at your stage.",
       "sk": "V tejto fáze bežne neinvestujeme.",
+      "seedPhrase": "V tejto fáze bežne neinvestujeme.",
       "status": "draft_machine_translation_needs_native_review"
     },
     {
@@ -211,6 +241,7 @@
       "signalClass": "hard-no",
       "en": "We won't proceed with an investment this round.",
       "sk": "V tomto kole nebudeme pokračovať v investičnom procese.",
+      "seedPhrase": "V tomto kole nebudeme pokračovať v investičnom procese.",
       "status": "draft_machine_translation_needs_native_review"
     }
   ]

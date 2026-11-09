@@ -52,3 +52,12 @@
 - [ ] Staging screenshot and test log captured for each locale.
 - [ ] Publish via existing approved production workflow, smoke test live HTTPS URLs and preserve rollback plan.
 - [ ] Deliver a coverage matrix: Locale × pages × tools × entries × approved/published, and complete live URL list.
+
+## SK/CS localization drafts (staging only) — added 2026-11-09
+```bash
+python3 scripts/build_vc_says.py        # EN (byte-identical) + DE/PL light drafts + SK/CS full drafts via build_locale_staging.py
+python3 scripts/test_vc_says.py         # EN milestone: 300 checks
+python3 scripts/test_locale_drafts.py   # SK/CS drafts: 679 checks (EN sha256 baseline, 10 entries × fields/placeholders,
+                                        # staging pages noindex/lang/not-English, tools packs, EN-vs-locale math parity
+                                        # via scripts/locale_tools_parity.js, sitemap/robots/vercel, docs)
+```

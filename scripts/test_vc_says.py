@@ -54,7 +54,7 @@ recs = {r["id"]: r for r in data["records"]}
 seed_ids = {r["id"] for r in seed["records"]}
 check("seed contains all 10 priority IDs", set(PRIORITY) <= seed_ids, sorted(set(PRIORITY) - seed_ids))
 check("expanded keeps all 30 seed records", set(recs) == seed_ids and len(recs) == 30, len(recs))
-pub_ids = [r["id"] for r in data["records"] if r["publication"]["en"] in ("approved_for_en_milestone", "published")]
+pub_ids = [r["id"] for r in data["records"] if r["publication"]["en"] in ("approved_for_en_milestone", "published") or str(r["publication"]["en"]).startswith("/vc-says/")]
 check("exactly the 10 priority IDs are EN-public", sorted(pub_ids) == sorted(PRIORITY), pub_ids)
 check("no attributed_investor_quote anywhere (seed + expanded)",
       all(r.get("attributed_investor_quote") is None for r in seed["records"] + data["records"]))
@@ -69,8 +69,8 @@ for rid in PRIORITY:
     seed_r = next(x for x in seed["records"] if x["id"] == rid)
     check(f"[{rid}] seed phrases kept for en/sk/cs/de/pl",
           all(r["locales"][l].get("seedPhrase", r["locales"][l]["phrase"]) == seed_r["phrase"][l] for l in ["en"] + DRAFT_LOCALES))
-    check(f"[{rid}] other locales remain machine-draft",
-          all(r["publication"][l] == "draft_machine_translation_needs_native_review" for l in DRAFT_LOCALES))
+    check(f"[{rid}] other locales published under /{{loc}}/vc-says/… (owner-approved AI fluent)",
+          all(r["publication"][l] == f"/{l}/vc-says/{r['slug']}" for l in DRAFT_LOCALES))
     need = ["shortAnswer", "clarifyingQuestion", "recommendedAction", "followUpTimingNote", "editableReplyTemplate", "metaTitle", "metaDescription", "h1"]
     check(f"[{rid}] EN required text fields non-trivial", all(len(en.get(k, "")) >= 40 for k in need),
           [k for k in need if len(en.get(k, "")) < 40])
@@ -102,7 +102,7 @@ for rid in PRIORITY:
     check(f"[{rid}] exactly one H1", len(h1) == 1)
     check(f"[{rid}] self-canonical", f'<link rel="canonical" href="{SITE}/vc-says/{slug}">' in s)
     check(f"[{rid}] html lang=en and indexable", '<html lang="en">' in s and "noindex" not in s)
-    check(f"[{rid}] no hreflang to drafts", "hreflang" not in s)
+    check(f"[{rid}] reciprocal hreflang to published locales", all(f'hreflang="{c}"' in s for c in ["en","sk","cs","de","pl","x-default"]))
     check(f"[{rid}] 'Editorial guidance' label shown", "Editorial guidance" in text_of(s))
     m = re.search(r'<textarea id="vc-reply"[^>]*>(.*?)</textarea>', s, re.S)
     check(f"[{rid}] editable reply template non-empty + Copy button", bool(m and len(m.group(1).strip()) > 80) and 'id="vc-copy"' in s)
@@ -194,12 +194,20 @@ except Exception:
     orig_locs = {l for l in locs if "/vc-says" not in l}
 new = sorted(set(locs) - orig_locs)
 want = sorted([f"{SITE}/vc-says"] + [f"{SITE}/vc-says/{recs[r]['slug']}" for r in PRIORITY])
-check("sitemap: new URLs are exactly the 11 EN vc-says routes", new == want, new)
+# EN vc-says routes + 80 published locale routes (20 per locale)
+locale_extra = []
+for loc in DRAFT_LOCALES:
+    locale_extra += [f"{SITE}/{loc}", f"{SITE}/{loc}/vc-says"] + [f"{SITE}/{loc}/vc-says/{recs[r]['slug']}" for r in PRIORITY]
+    locale_extra += [f"{SITE}/{loc}/tools"] + [f"{SITE}/{loc}/tools/{t}" for t in ["investor-signal-decoder","investor-follow-up-builder","fundraising-pipeline-calculator","runway-raise-calculator"]]
+    locale_extra += [f"{SITE}/{loc}/articles/{a}" for a in ["vc-too-early-meaning","how-to-follow-up-with-vc-after-meeting","signs-vc-interested"]]
+want_pub = sorted(want + locale_extra)
+check("sitemap includes EN vc-says + published locale routes", set(want_pub).issubset(set(locs)), sorted(set(want_pub)-set(locs))[:10])
 check("sitemap: original URLs preserved", orig_locs <= set(locs))
 check("sitemap: no duplicate URLs", len(locs) == len(set(locs)))
-check("sitemap: no /sk /cs /de /pl or /_staging routes", not any(re.search(r"/(sk|cs|de|pl)(/|$)|_staging", l) for l in locs))
+check("sitemap: no /_staging routes", not any("_staging" in l for l in locs))
 check("robots.txt disallows /_staging/", "Disallow: /_staging/" in read("robots.txt"))
-check("no unreviewed locale dirs in public root", not any(os.path.isdir(os.path.join(ROOT, l)) for l in DRAFT_LOCALES))
+check("published locale dirs exist in public root", all(os.path.isdir(os.path.join(ROOT, l)) for l in DRAFT_LOCALES))
+check("PUBLICATION_APPROVAL denies native claim", (lambda a: a["reviewProvenance"]["nativeHumanReview"] is False)(json.loads(read("data/PUBLICATION_APPROVAL.json"))))
 try:
     tracked = subprocess.run(["git", "-C", ROOT, "ls-tree", "-r", "--name-only", "d97bebc"], capture_output=True, text=True, check=True).stdout.split()
     gone = [f for f in tracked if not exists(f)]

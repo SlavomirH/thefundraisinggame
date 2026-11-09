@@ -3,7 +3,7 @@
   "generated_from": "data/vc_signals.seed.json (0.1-draft)",
   "revisedAt": "2026-11-09",
   "editorial_note": "EN content for the 10 priority records is editorial analysis by The Fundraising Game, not investor quotations or interview data. Interpretations are possibilities, not diagnoses. No probabilities are claimed.",
-  "localization_note": "SK/CS/DE/PL: the 10 priority records carry full translated fields (status machine_draft_fluent_reviewed_needs_native_approval; AI fluent pass, NOT native-approved). The other 20 records in every locale are phrase seeds only. seedPhrase keeps the original seed wherever a phrase was revised; the public EN hub search index reads seedPhrase so public EN output stays byte-identical. Nothing non-EN is published.",
+  "localization_note": "SK/CS/DE/PL: 10 priority records published at /{loc}/vc-says/… after owner approval (pt15u) of AI-fluent drafts. NOT native-human-reviewed. Other 20 records remain phrase seeds only. Book inLanguage=en.",
   "priority_ids": [
     "too-early",
     "not-right-fit",
@@ -70,11 +70,11 @@
       "followUpTemplate": "tooearly",
       "publication_status": "en_approved_for_en_milestone",
       "publication": {
-        "en": "approved_for_en_milestone",
-        "sk": "draft_machine_translation_needs_native_review",
-        "cs": "draft_machine_translation_needs_native_review",
-        "de": "draft_machine_translation_needs_native_review",
-        "pl": "draft_machine_translation_needs_native_review"
+        "en": "/vc-says/too-early",
+        "sk": "/sk/vc-says/too-early",
+        "cs": "/cs/vc-says/too-early",
+        "de": "/de/vc-says/too-early",
+        "pl": "/pl/vc-says/too-early"
       },
       "locales": {
         "en": {
@@ -400,11 +400,11 @@
       "followUpTemplate": "notfit",
       "publication_status": "en_approved_for_en_milestone",
       "publication": {
-        "en": "approved_for_en_milestone",
-        "sk": "draft_machine_translation_needs_native_review",
-        "cs": "draft_machine_translation_needs_native_review",
-        "de": "draft_machine_translation_needs_native_review",
-        "pl": "draft_machine_translation_needs_native_review"
+        "en": "/vc-says/not-right-fit",
+        "sk": "/sk/vc-says/not-right-fit",
+        "cs": "/cs/vc-says/not-right-fit",
+        "de": "/de/vc-says/not-right-fit",
+        "pl": "/pl/vc-says/not-right-fit"
       },
       "locales": {
         "en": {
@@ -726,11 +726,11 @@
       "followUpTemplate": "update",
       "publication_status": "en_approved_for_en_milestone",
       "publication": {
-        "en": "approved_for_en_milestone",
-        "sk": "draft_machine_translation_needs_native_review",
-        "cs": "draft_machine_translation_needs_native_review",
-        "de": "draft_machine_translation_needs_native_review",
-        "pl": "draft_machine_translation_needs_native_review"
+        "en": "/vc-says/keep-in-touch",
+        "sk": "/sk/vc-says/keep-in-touch",
+        "cs": "/cs/vc-says/keep-in-touch",
+        "de": "/de/vc-says/keep-in-touch",
+        "pl": "/pl/vc-says/keep-in-touch"
       },
       "locales": {
         "en": {
@@ -1056,11 +1056,11 @@
       "followUpTemplate": "update",
       "publication_status": "en_approved_for_en_milestone",
       "publication": {
-        "en": "approved_for_en_milestone",
-        "sk": "draft_machine_translation_needs_native_review",
-        "cs": "draft_machine_translation_needs_native_review",
-        "de": "draft_machine_translation_needs_native_review",
-        "pl": "draft_machine_translation_needs_native_review"
+        "en": "/vc-says/circle-back-next-quarter",
+        "sk": "/sk/vc-says/circle-back-next-quarter",
+        "cs": "/cs/vc-says/circle-back-next-quarter",
+        "de": "/de/vc-says/circle-back-next-quarter",
+        "pl": "/pl/vc-says/circle-back-next-quarter"
       },
       "locales": {
         "en": {
@@ -1383,11 +1383,11 @@
       "followUpTemplate": "meeting",
       "publication_status": "en_approved_for_en_milestone",
       "publication": {
-        "en": "approved_for_en_milestone",
-        "sk": "draft_machine_translation_needs_native_review",
-        "cs": "draft_machine_translation_needs_native_review",
-        "de": "draft_machine_translation_needs_native_review",
-        "pl": "draft_machine_translation_needs_native_review"
+        "en": "/vc-says/send-deck",
+        "sk": "/sk/vc-says/send-deck",
+        "cs": "/cs/vc-says/send-deck",
+        "de": "/de/vc-says/send-deck",
+        "pl": "/pl/vc-says/send-deck"
       },
       "locales": {
         "en": {
@@ -1701,11 +1701,11 @@
       "followUpTemplate": "meeting",
       "publication_status": "en_approved_for_en_milestone",
       "publication": {
-        "en": "approved_for_en_milestone",
-        "sk": "draft_machine_translation_needs_native_review",
-        "cs": "draft_machine_translation_needs_native_review",
-        "de": "draft_machine_translation_needs_native_review",
-        "pl": "draft_machine_translation_needs_native_review"
+        "en": "/vc-says/second-meeting",
+        "sk": "/sk/vc-says/second-meeting",
+        "cs": "/cs/vc-says/second-meeting",
+        "de": "/de/vc-says/second-meeting",
+        "pl": "/pl/vc-says/second-meeting"
       },
       "locales": {
         "en": {
@@ -2023,11 +2023,11 @@
       "followUpTemplate": "meeting",
       "publication_status": "en_approved_for_en_milestone",
       "publication": {
-        "en": "approved_for_en_milestone",
-        "sk": "draft_machine_translation_needs_native_review",
-        "cs": "draft_machine_translation_needs_native_review",
-        "de": "draft_machine_translation_needs_native_review",
-        "pl": "draft_machine_translation_needs_native_review"
+        "en": "/vc-says/partner-introduction",
+        "sk": "/sk/vc-says/partner-introduction",
+        "cs": "/cs/vc-says/partner-introduction",
+        "de": "/de/vc-says/partner-introduction",
+        "pl": "/pl/vc-says/partner-introduction"
       },
       "locales": {
         "en": {
@@ -2341,11 +2341,11 @@
       "followUpTemplate": "tooearly",
       "publication_status": "en_approved_for_en_milestone",
       "publication": {
-        "en": "approved_for_en_milestone",
-        "sk": "draft_machine_translation_needs_native_review",
-        "cs": "draft_machine_translation_needs_native_review",
-        "de": "draft_machine_translation_needs_native_review",
-        "pl": "draft_machine_translation_needs_native_review"
+        "en": "/vc-says/need-more-traction",
+        "sk": "/sk/vc-says/need-more-traction",
+        "cs": "/cs/vc-says/need-more-traction",
+        "de": "/de/vc-says/need-more-traction",
+        "pl": "/pl/vc-says/need-more-traction"
       },
       "locales": {
         "en": {
@@ -2666,11 +2666,11 @@
       "followUpTemplate": "nolead",
       "publication_status": "en_approved_for_en_milestone",
       "publication": {
-        "en": "approved_for_en_milestone",
-        "sk": "draft_machine_translation_needs_native_review",
-        "cs": "draft_machine_translation_needs_native_review",
-        "de": "draft_machine_translation_needs_native_review",
-        "pl": "draft_machine_translation_needs_native_review"
+        "en": "/vc-says/no-lead-investor",
+        "sk": "/sk/vc-says/no-lead-investor",
+        "cs": "/cs/vc-says/no-lead-investor",
+        "de": "/de/vc-says/no-lead-investor",
+        "pl": "/pl/vc-says/no-lead-investor"
       },
       "locales": {
         "en": {
@@ -2984,11 +2984,11 @@
       "followUpTemplate": "quiet",
       "publication_status": "en_approved_for_en_milestone",
       "publication": {
-        "en": "approved_for_en_milestone",
-        "sk": "draft_machine_translation_needs_native_review",
-        "cs": "draft_machine_translation_needs_native_review",
-        "de": "draft_machine_translation_needs_native_review",
-        "pl": "draft_machine_translation_needs_native_review"
+        "en": "/vc-says/investor-ghosting",
+        "sk": "/sk/vc-says/investor-ghosting",
+        "cs": "/cs/vc-says/investor-ghosting",
+        "de": "/de/vc-says/investor-ghosting",
+        "pl": "/pl/vc-says/investor-ghosting"
       },
       "locales": {
         "en": {

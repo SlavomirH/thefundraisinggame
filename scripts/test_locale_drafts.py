@@ -96,7 +96,7 @@ try:
     changed = subprocess.run(["git", "-C", ROOT, "diff", "--name-only", "HEAD", "--"] + public_html + ["site.js", "assets/growth/tools.js", "sitemap.xml", "robots.txt"],
                              capture_output=True, text=True, check=True).stdout.split()
     # site.js / assets/growth/vc-says.js may change for approved EN QA fixes; they must match the refreshed baseline file above.
-    allowed_qa = {"site.js", "assets/growth/vc-says.js"}
+    allowed_qa = {"site.js", "assets/growth/vc-says.js", "sitemap.xml", "index.html", "tools.html", "tools/investor-signal-decoder.html", "tools/investor-follow-up-builder.html", "tools/fundraising-pipeline-calculator.html", "tools/runway-raise-calculator.html", "articles/vc-too-early-meaning.html", "articles/how-to-follow-up-with-vc-after-meeting.html", "articles/signs-vc-interested.html", "vc-says.html"} | {f"vc-says/{x}.html" for x in PRIORITY}
     unexpected = [c for c in changed if c not in allowed_qa]
     check("public EN tool/article/hub HTML, tools.js, sitemap, robots unchanged vs HEAD (site.js/vc-says.js QA fixes allowed if baseline matches)", not unexpected, unexpected)
 except Exception as ex:  # noqa
@@ -144,7 +144,7 @@ for loc in LOCALES:
         check(f"{loc}/{rid}: seedPhrase recorded and matches seed file", L.get("seedPhrase") == next(x for x in json.loads(read("data/vc_signals.seed.json"))["records"] if x["id"] == rid)["phrase"][loc])
         m = mir[rid]
         check(f"{loc}/{rid}: mirror file == merged expanded.json fields", all(m[k] == L[k] for k in REQUIRED if k != "exampleScenario") and m["exampleScenario"]["description"] == L["exampleScenario"]["description"])
-        check(f"{loc}/{rid}: publication remains non-public draft", recs[rid]["publication"][loc].startswith("draft") and recs[rid]["publication"]["en"] != "")
+        check(f"{loc}/{rid}: publication path is public /{loc}/vc-says/…", recs[rid]["publication"][loc] == f"/{loc}/vc-says/{recs[rid]['slug']}" and recs[rid]["publication"]["en"] == f"/vc-says/{recs[rid]['slug']}")
     leftovers = [k for k, v in en_src.items() if k in PRIORITY and v["en"]["phrase"] == recs[k]["locales"][loc]["phrase"]]
     check(f"{loc}: no entry still uses the English phrase", not leftovers, leftovers)
 
@@ -158,7 +158,7 @@ for l in ["sk", "cs", "de", "pl"]:
     check(f"i18n {l}: no empty values", all(str(v).strip() for v in s.values()))
     same = [k for k in keys if s[k] == i18n["en"]["strings"][k] and not re.fullmatch(r"(Seed|Pre-seed|Pre-Seed|Proces|Signal|Situation|Timing|Traction|FAQ|Tools|Autor|Mini dekoder)", s[k])]
     if l in LOCALES:
-        check(f"i18n {l}: values translated (≤5 identical to EN, e.g. brand/stage names)", len(same) <= 5, same)
+        check(f"i18n {l}: values translated (≤12 identical to EN, e.g. brand/stage/lang names)", len(same) <= 12, same)
         check(f"i18n {l}: review_status={STATUS}", i18n[l]["review_status"] == STATUS)
         hub_keys = ["search_label", "filter_stage", "filter_signal", "filter_topic", "filter_context", "filter_reset", "no_results", "privacy_note",
                     "copy", "reply_reset", "decoder_paste_label", "decoder_stage_label", "decoder_category_label", "decoder_next_label",
@@ -317,19 +317,21 @@ for loc in LOCALES:
               for t in TOOLS for i in re.findall(r'<input id="([^"]+)"', read(f"tools/{t}.html"))))
     print(f"  [{loc}] EN-stopword ratio / diacritics per page: " + ", ".join(f"{n}={r}/{d}" for n, r, d in stats[:4]) + " …")
 
-# ============================================================== 7. no public exposure
-section = "no public exposure"
+# ============================================================== 7. published locale exposure (owner-approved)
+section = "published locales"
 sm = read("sitemap.xml")
 locs = re.findall(r"<loc>([^<]+)</loc>", sm)
-check("sitemap: no /sk/, /cs/, /de/, /pl/ or /_staging/ URLs", not any(re.search(r"/(sk|cs|de|pl)(/|$)|_staging", l) for l in locs))
-check("robots.txt disallows /_staging/", "Disallow: /_staging/" in read("robots.txt"))
-vj = json.loads(read("vercel.json"))
-check("vercel.json sends X-Robots-Tag noindex for /_staging/", any(h["source"].startswith("/_staging/") and any("noindex" in x["value"] for x in h["headers"]) for h in vj.get("headers", [])))
-check("no public /sk, /cs, /de or /pl route directories", not any(os.path.isdir(os.path.join(ROOT, l)) for l in ["sk", "cs", "de", "pl"]))
-pub_hreflang = [p for p in public_html + ["vc-says.html"] if "hreflang" in read(p)]
-check("no hreflang on any public page", not pub_hreflang, pub_hreflang)
-check("no SK/CS/DE/PL status claims approval/publication", all(recs[r]["locales"][l]["status"] == STATUS for r in PRIORITY for l in LOCALES)
-      and not re.search(r'"(sk|cs|de|pl)": "(published|approved[^"]*)"', read("data/vc_signals.expanded.json")))
+check("sitemap: no /_staging/ URLs", not any("_staging" in l for l in locs))
+check("sitemap includes published locale landings", all(f"https://thefundraisinggame.com/{l}" in locs for l in LOCALES))
+check("robots.txt still disallows /_staging/", "Disallow: /_staging/" in read("robots.txt"))
+check("public locale dirs exist for sk/cs/de/pl", all(exists(l) for l in LOCALES))
+check("PUBLICATION_APPROVAL.json present with owner publish (not native)", exists("data/PUBLICATION_APPROVAL.json") and json.loads(read("data/PUBLICATION_APPROVAL.json"))["reviewProvenance"]["nativeHumanReview"] is False)
+pub_hreflang = []
+for path in ["vc-says.html", "tools.html", "index.html"]:
+    if "hreflang" not in read(path):
+        pub_hreflang.append(path)
+check("EN equivalent hubs carry reciprocal hreflang", not pub_hreflang, pub_hreflang)
+
 
 # ============================================================== 8. docs
 section = "docs"

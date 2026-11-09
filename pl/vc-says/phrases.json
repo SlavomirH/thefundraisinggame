@@ -1,0 +1,248 @@
+{
+  "locale": "pl",
+  "review_status": "owner_approved_ai_fluent_review",
+  "publication_status": "published_owner_approved_ai_fluent",
+  "note": "10 priority entries published with owner approval after AI fluent review (not native human review). Other 20: phrase seeds only.",
+  "phrases": [
+    {
+      "id": "too-early",
+      "signalClass": "soft-no",
+      "en": "You're too early for us.",
+      "pl": "To dla nas jeszcze za wczesny etap.",
+      "seedPhrase": "Jesteście dla nas jeszcze na zbyt wczesnym etapie.",
+      "status": "machine_draft_fluent_reviewed_needs_native_approval"
+    },
+    {
+      "id": "not-right-fit",
+      "signalClass": "hard-no",
+      "en": "It's not the right fit for us.",
+      "pl": "To nie jest projekt dla naszego funduszu.",
+      "seedPhrase": "To nie pasuje do naszej strategii inwestycyjnej.",
+      "status": "machine_draft_fluent_reviewed_needs_native_approval"
+    },
+    {
+      "id": "keep-in-touch",
+      "signalClass": "soft-no",
+      "en": "Let's keep in touch.",
+      "pl": "Bądźmy w kontakcie.",
+      "seedPhrase": "Pozostańmy w kontakcie.",
+      "status": "machine_draft_fluent_reviewed_needs_native_approval"
+    },
+    {
+      "id": "circle-back-next-quarter",
+      "signalClass": "ambiguous",
+      "en": "Circle back next quarter.",
+      "pl": "Odezwijcie się w przyszłym kwartale.",
+      "seedPhrase": "Wróćcie do nas w przyszłym kwartale.",
+      "status": "machine_draft_fluent_reviewed_needs_native_approval"
+    },
+    {
+      "id": "send-deck",
+      "signalClass": "ambiguous",
+      "en": "Send me your deck.",
+      "pl": "Podeślijcie mi deck.",
+      "seedPhrase": "Prześlijcie mi swój pitch deck.",
+      "status": "machine_draft_fluent_reviewed_needs_native_approval"
+    },
+    {
+      "id": "second-meeting",
+      "signalClass": "positive",
+      "en": "Let's schedule another meeting.",
+      "pl": "Umówmy się na kolejne spotkanie.",
+      "seedPhrase": "Umówmy kolejne spotkanie.",
+      "status": "machine_draft_fluent_reviewed_needs_native_approval"
+    },
+    {
+      "id": "partner-introduction",
+      "signalClass": "positive",
+      "en": "I'd like you to meet my partner.",
+      "pl": "Przedstawię was jednemu z naszych partnerów.",
+      "seedPhrase": "Chciałbym przedstawić was mojemu partnerowi z funduszu.",
+      "status": "machine_draft_fluent_reviewed_needs_native_approval"
+    },
+    {
+      "id": "need-more-traction",
+      "signalClass": "soft-no",
+      "en": "We need to see more traction.",
+      "pl": "Chcielibyśmy zobaczyć większą trakcję.",
+      "seedPhrase": "Musimy zobaczyć większą trakcję.",
+      "status": "machine_draft_fluent_reviewed_needs_native_approval"
+    },
+    {
+      "id": "no-lead-investor",
+      "signalClass": "soft-no",
+      "en": "Come back when you have a lead investor.",
+      "pl": "Odezwijcie się, gdy będziecie mieć inwestora wiodącego.",
+      "seedPhrase": "Wróćcie, gdy będziecie mieć inwestora wiodącego.",
+      "status": "machine_draft_fluent_reviewed_needs_native_approval"
+    },
+    {
+      "id": "investor-ghosting",
+      "signalClass": "soft-no",
+      "en": "No response after two follow-ups.",
+      "pl": "Brak odpowiedzi po dwóch przypomnieniach.",
+      "seedPhrase": "Brak odpowiedzi po dwóch wiadomościach przypominających.",
+      "status": "machine_draft_fluent_reviewed_needs_native_approval"
+    },
+    {
+      "id": "market-too-small",
+      "signalClass": "hard-no",
+      "en": "The market looks too small.",
+      "pl": "Ten rynek wydaje nam się zbyt mały.",
+      "seedPhrase": "Ten rynek wydaje nam się zbyt mały.",
+      "status": "draft_machine_translation_needs_native_review"
+    },
+    {
+      "id": "team-incomplete",
+      "signalClass": "ambiguous",
+      "en": "Your team isn't complete yet.",
+      "pl": "Wasz zespół nie jest jeszcze kompletny.",
+      "seedPhrase": "Wasz zespół nie jest jeszcze kompletny.",
+      "status": "draft_machine_translation_needs_native_review"
+    },
+    {
+      "id": "local-only",
+      "signalClass": "hard-no",
+      "en": "We invest only in companies based here.",
+      "pl": "Inwestujemy tylko w spółki z naszego regionu.",
+      "seedPhrase": "Inwestujemy tylko w spółki z naszego regionu.",
+      "status": "draft_machine_translation_needs_native_review"
+    },
+    {
+      "id": "not-investing-now",
+      "signalClass": "hard-no",
+      "en": "We're not making new investments right now.",
+      "pl": "Obecnie nie realizujemy nowych inwestycji.",
+      "seedPhrase": "Obecnie nie realizujemy nowych inwestycji.",
+      "status": "draft_machine_translation_needs_native_review"
+    },
+    {
+      "id": "investment-committee",
+      "signalClass": "ambiguous",
+      "en": "I need to discuss this with our investment committee.",
+      "pl": "Muszę omówić to z naszym komitetem inwestycyjnym.",
+      "seedPhrase": "Muszę omówić to z naszym komitetem inwestycyjnym.",
+      "status": "draft_machine_translation_needs_native_review"
+    },
+    {
+      "id": "customer-references",
+      "signalClass": "positive",
+      "en": "Can we speak with your customers?",
+      "pl": "Czy możemy porozmawiać z waszymi klientami?",
+      "seedPhrase": "Czy możemy porozmawiać z waszymi klientami?",
+      "status": "draft_machine_translation_needs_native_review"
+    },
+    {
+      "id": "impressed-team",
+      "signalClass": "ambiguous",
+      "en": "We're impressed by your team.",
+      "pl": "Wasz zespół zrobił na nas wrażenie.",
+      "seedPhrase": "Wasz zespół zrobił na nas wrażenie.",
+      "status": "draft_machine_translation_needs_native_review"
+    },
+    {
+      "id": "product-not-model",
+      "signalClass": "soft-no",
+      "en": "We like the product, but not the business model.",
+      "pl": "Podoba nam się produkt, ale nie model biznesowy.",
+      "seedPhrase": "Podoba nam się produkt, ale nie model biznesowy.",
+      "status": "draft_machine_translation_needs_native_review"
+    },
+    {
+      "id": "valuation-too-high",
+      "signalClass": "ambiguous",
+      "en": "Your valuation is too high for us.",
+      "pl": "Wasza wycena jest dla nas zbyt wysoka.",
+      "seedPhrase": "Wasza wycena jest dla nas zbyt wysoka.",
+      "status": "draft_machine_translation_needs_native_review"
+    },
+    {
+      "id": "weak-defensibility",
+      "signalClass": "ambiguous",
+      "en": "How defensible is this business?",
+      "pl": "Jak zamierzacie bronić przewagi przed konkurencją?",
+      "seedPhrase": "Jak zamierzacie bronić przewagi przed konkurencją?",
+      "status": "draft_machine_translation_needs_native_review"
+    },
+    {
+      "id": "unit-economics",
+      "signalClass": "soft-no",
+      "en": "We need stronger unit economics.",
+      "pl": "Musimy zobaczyć lepszą ekonomikę jednostkową.",
+      "seedPhrase": "Musimy zobaczyć lepszą ekonomikę jednostkową.",
+      "status": "draft_machine_translation_needs_native_review"
+    },
+    {
+      "id": "other-investors",
+      "signalClass": "ambiguous",
+      "en": "What are other investors saying?",
+      "pl": "Co mówią inni inwestorzy?",
+      "seedPhrase": "Co mówią inni inwestorzy?",
+      "status": "draft_machine_translation_needs_native_review"
+    },
+    {
+      "id": "next-milestone",
+      "signalClass": "ambiguous",
+      "en": "We'd like to see you hit the next milestone.",
+      "pl": "Chcielibyśmy zobaczyć, jak osiągacie kolejny kamień milowy.",
+      "seedPhrase": "Chcielibyśmy zobaczyć, jak osiągacie kolejny kamień milowy.",
+      "status": "draft_machine_translation_needs_native_review"
+    },
+    {
+      "id": "financial-model",
+      "signalClass": "positive",
+      "en": "Can you send your financial model?",
+      "pl": "Czy możecie przesłać model finansowy?",
+      "seedPhrase": "Czy możecie przesłać model finansowy?",
+      "status": "draft_machine_translation_needs_native_review"
+    },
+    {
+      "id": "participate-not-lead",
+      "signalClass": "ambiguous",
+      "en": "We could participate, but we won't lead.",
+      "pl": "Możemy dołączyć, ale nie poprowadzimy rundy.",
+      "seedPhrase": "Możemy dołączyć, ale nie poprowadzimy rundy.",
+      "status": "draft_machine_translation_needs_native_review"
+    },
+    {
+      "id": "portfolio-intro",
+      "signalClass": "ambiguous",
+      "en": "I'd like to introduce you to a portfolio founder.",
+      "pl": "Chciałbym przedstawić was founderowi z naszego portfela.",
+      "seedPhrase": "Chciałbym przedstawić was founderowi z naszego portfela.",
+      "status": "draft_machine_translation_needs_native_review"
+    },
+    {
+      "id": "process-weeks",
+      "signalClass": "ambiguous",
+      "en": "Our decision process takes a few weeks.",
+      "pl": "Nasz proces decyzyjny trwa kilka tygodni.",
+      "seedPhrase": "Nasz proces decyzyjny trwa kilka tygodni.",
+      "status": "draft_machine_translation_needs_native_review"
+    },
+    {
+      "id": "another-partner-meeting",
+      "signalClass": "positive",
+      "en": "Let's bring another partner into the next meeting.",
+      "pl": "Zaprośmy kolejnego partnera na następne spotkanie.",
+      "seedPhrase": "Zaprośmy kolejnego partnera na następne spotkanie.",
+      "status": "draft_machine_translation_needs_native_review"
+    },
+    {
+      "id": "not-our-stage",
+      "signalClass": "hard-no",
+      "en": "We don't invest at your stage.",
+      "pl": "Zwykle nie inwestujemy na waszym etapie.",
+      "seedPhrase": "Zwykle nie inwestujemy na waszym etapie.",
+      "status": "draft_machine_translation_needs_native_review"
+    },
+    {
+      "id": "not-proceeding",
+      "signalClass": "hard-no",
+      "en": "We won't proceed with an investment this round.",
+      "pl": "Nie będziemy kontynuować inwestycji w tej rundzie.",
+      "seedPhrase": "Nie będziemy kontynuować inwestycji w tej rundzie.",
+      "status": "draft_machine_translation_needs_native_review"
+    }
+  ]
+}

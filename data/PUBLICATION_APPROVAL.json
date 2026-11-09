@@ -1,0 +1,46 @@
+{
+  "approvedAt": "2026-11-09",
+  "approvedBy": "Slavomir Hruska",
+  "source": "Cursor owner message pt15u",
+  "verbatim": "publish them",
+  "scope": {
+    "locales": [
+      "sk",
+      "cs",
+      "de",
+      "pl"
+    ],
+    "vcSaysEntries": [
+      "too-early",
+      "not-right-fit",
+      "keep-in-touch",
+      "circle-back-next-quarter",
+      "send-deck",
+      "second-meeting",
+      "partner-introduction",
+      "need-more-traction",
+      "no-lead-investor",
+      "investor-ghosting"
+    ],
+    "tools": [
+      "investor-signal-decoder",
+      "investor-follow-up-builder",
+      "fundraising-pipeline-calculator",
+      "runway-raise-calculator"
+    ],
+    "articles": [
+      "vc-too-early-meaning",
+      "how-to-follow-up-with-vc-after-meeting",
+      "signs-vc-interested"
+    ],
+    "excluded": "remaining 20 seed phrases not expanded; book and non-listed site pages remain English-only"
+  },
+  "reviewProvenance": {
+    "aiFluentReviewer": "claude-fluent-pass",
+    "aiStatus": "machine_draft_fluent_reviewed_needs_native_approval",
+    "nativeHumanReview": false,
+    "publicationKind": "owner_approved_ai_fluent_review",
+    "note": "Owner knowingly authorized publishing AI-fluent drafts without native human signoff. Do not claim native approval."
+  },
+  "rollback": "Revert merge commit that introduced /sk /cs /de /pl public trees and restore prior sitemap.xml + EN hreflang-free pages from main@6a56414."
+}

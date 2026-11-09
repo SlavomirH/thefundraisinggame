@@ -10,8 +10,7 @@ Outputs
   sitemap.xml                          adds /vc-says + EN detail URLs (idempotent)
   robots.txt                           adds Disallow: /_staging/ (idempotent)
   Main nav + footer "Learn" links      "VC Says" added to hubs, tools/*, articles/* (idempotent)
-  _staging/locales/{de,pl}/vc-says/         DRAFT pages (EN body), noindex,nofollow, no hreflang, not in sitemap
-  _staging/locales/{sk,cs}/...              full-content drafts via scripts/build_locale_staging.py
+  _staging/locales/{sk,cs,de,pl}/...        full-content drafts via scripts/build_locale_staging.py (noindex, no hreflang, not in sitemap)
 
 Usage: python3 scripts/build_vc_says.py [--no-staging] [--no-nav]
 """
@@ -396,49 +395,24 @@ def build_detail(r, t, header, footer, titles, by_id):
 
 
 # --------------------------------------------------------------------------- staging (drafts)
-LIGHT_DRAFT_LOCALES = ["de", "pl"]  # SK/CS are built from full locale content by scripts/build_locale_staging.py
+# All four draft locales (SK/CS/DE/PL) are built from full locale content by scripts/build_locale_staging.py.
+# (The former DE/PL "light draft" path that rendered the English body has been removed.)
 
 
 def build_staging(records, pub, i18n, header, footer, titles, by_id):
     out = []
-    for loc in LIGHT_DRAFT_LOCALES:
-        t = i18n[loc]
-        s = t["strings"]
-        base = f"_staging/locales/{loc}/vc-says"
-        banner = ('<div class="tfg-vcsays"><p class="vc-draftbanner" role="note">DRAFT — machine translation, needs native review. '
-                  'Not published, noindex. Body text below is the English source awaiting translation.</p></div>')
-        robots = "noindex,nofollow"
-        phrases = {"locale": loc, "review_status": "machine_draft_needs_native_review", "publication_status": "draft_not_public",
-                   "phrases": [{"id": r["id"], "signalClass": r["signalClass"], "en": r["locales"]["en"]["phrase"],
-                                loc: r["locales"][loc]["phrase"], "status": r["locales"][loc]["status"]} for r in records]}
-        out.append(write(f"{base}/phrases.json", json.dumps(phrases, ensure_ascii=False, indent=2) + "\n"))
-        items = "".join(f'<li class="vc-card"><span class="vc-pill cls-{e(r["signalClass"])}">{e(class_label(t, r["signalClass"]))}</span>'
-                        f'<h3>{e(r["locales"][loc]["phrase"])}</h3><p lang="en">{e(r["locales"]["en"]["phrase"])}</p>'
-                        + (f'<a class="vc-more" href="{e(r["slug"])}.html">{e(s["see_how_to_respond"])}</a>' if r in pub else "")
-                        + "</li>" for r in records)
-        main = (f'<main class="tfg-vcsays"><div class="vc-hero"><span class="vc-eyebrow">{e(s["nav_vc_says"])} · {loc.upper()} draft</span>'
-                f'<h1>{e(s["hub_title"])}</h1><p class="vc-lead">{e(s["hub_subtitle"])} {e(s["hub_lead"])}</p>'
-                f'<p class="vc-notice">{e(s["privacy_note"])}</p></div>'
-                f'<section class="vc-wrap" style="padding-bottom:72px"><ul class="vc-grid">{items}</ul></section></main>')
-        h = head(f'[DRAFT {loc}] {s["hub_title"]}', s["hub_subtitle"], None, lang=loc, robots=robots)
-        out.append(write(f"{base}/index.html", page(h, header, footer, main, f' data-vc-draft="{loc}"', banner)))
-        for r in pub:
-            h = head(f'[DRAFT {loc}] {r["locales"][loc]["phrase"]}', s["hub_subtitle"], None, lang=loc, robots=robots)
-            main = detail_main(r, t, titles, by_id, draft_locale=loc)
-            out.append(write(f"{base}/{r['slug']}.html", page(h, header, footer, main, f' data-vc-draft="{loc}" data-vc-signal="{e(r["id"])}"', banner)))
-    import build_locale_staging  # SK/CS full-content drafts (hub, 10 entries, 4 tools + hub, 3 articles, locale JS)
+    import build_locale_staging  # SK/CS/DE/PL full-content drafts (hub, 10 entries, 4 tools + hub, 3 articles, locale JS)
     out += build_locale_staging.build_all()
     write("_staging/locales/README.md",
           "# Locale drafts — NOT PUBLIC\n\nEvery page here has `<meta name=\"robots\" content=\"noindex,nofollow\">`, no canonical, "
           "no hreflang, and is excluded from `sitemap.xml`; `robots.txt` disallows `/_staging/` and `vercel.json` sends "
           "`X-Robots-Tag: noindex, nofollow`.\n\n"
-          "## SK / CS — full drafts (`machine_draft_fluent_reviewed_needs_native_approval`)\n"
+          "## SK / CS / DE / PL — full drafts (`machine_draft_fluent_reviewed_needs_native_approval`)\n"
           "Built by `scripts/build_locale_staging.py` from complete translated content: VC Says hub + 10 entries, tools hub + 4 tools "
           "(with `assets/tools.locale.js`, math identical to EN — see `scripts/locale_tools_parity.js`), 3 articles, localized "
           "signup/cookie chrome (`assets/site.locale.js`). AI fluent pass only — NOT approved by a native human. "
           "Review with `docs/vc-says/REVIEWER_CHECKLIST.md`.\n\n"
-          "## DE / PL — light drafts (`machine_draft_needs_native_review`)\n"
-          "Built by `scripts/build_vc_says.py`: localized UI chrome + phrase seeds; entry body copy is still the English source.\n\n"
+          "DE uses formal *Sie*, PL a formal register (Państwo / gender-neutral forms); see `docs/vc-says/REVIEW_DE.md`, `REVIEW_PL.md`.\n\n"
           "Do not move anything into `/sk/`, `/cs/`, `/de/` or `/pl/` until a native reviewer approves it (docs/vc-says/EDITORIAL_WORKFLOW.md).\n")
     return out
 

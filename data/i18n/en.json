@@ -166,6 +166,24 @@
     "footer_press_kit": "Press & media kit",
     "footer_made_for": "Made for founders and VCs",
     "decoder_hint_manual": "Using “{phrase}” (you changed the suggested match).",
-    "decoder_hint_choose": "Choose the closest category below."
+    "decoder_hint_choose": "Choose the closest category below.",
+    "lang_switcher_label": "Language",
+    "lang_name_en": "English",
+    "lang_name_sk": "Slovenčina",
+    "lang_name_cs": "Čeština",
+    "lang_name_de": "Deutsch",
+    "lang_name_pl": "Polski",
+    "locale_landing_title": "Guides and tools in {lang}",
+    "locale_landing_desc": "VC Says library, fundraising tools, and priority guides available in {lang}. The book and the rest of the site remain in English.",
+    "locale_landing_h1": "Fundraising tools and guides in {lang}",
+    "locale_landing_lead": "This language edition covers the VC Says library (10 entries), four interactive tools, and three priority guides. Other site pages and the book stay in English.",
+    "locale_landing_section_vcsays": "VC Says library",
+    "locale_landing_section_tools": "Tools",
+    "locale_landing_section_articles": "Guides",
+    "locale_landing_section_en": "Also available in English",
+    "locale_landing_en_note": "The book, author pages, FAQ, press, and additional articles are English-only for now.",
+    "locale_landing_ai_note": "Published with owner approval after AI fluent review. Not reviewed by a native speaker.",
+    "locale_partial_badge": "Partial translation",
+    "nav_language": "Language"
   }
 }

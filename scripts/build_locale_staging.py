@@ -5,11 +5,11 @@ NOT PUBLIC. Every page: <meta name="robots" content="noindex,nofollow">, html la
 not in sitemap.xml; robots.txt disallows /_staging/ and vercel.json sends X-Robots-Tag: noindex.
 
 Inputs
-  data/locales/{sk,cs}/vc_signals.first10.json   full translated entries (merged into data/vc_signals.expanded.json)
-  data/i18n/{sk,cs}.json                          hub/detail/chrome UI strings
-  data/locales/{sk,cs}/tools.json                 tool string packs
-  data/locales/{sk,cs}/chrome_signup.json         signup / captcha / cookie strings
-  content/articles/{sk,cs}/{slug}.md              article drafts
+  data/locales/{sk,cs,de,pl}/vc_signals.first10.json   full translated entries (merged into data/vc_signals.expanded.json)
+  data/i18n/{sk,cs,de,pl}.json                          hub/detail/chrome UI strings
+  data/locales/{sk,cs,de,pl}/tools.json                 tool string packs
+  data/locales/{sk,cs,de,pl}/chrome_signup.json         signup / captcha / cookie strings
+  content/articles/{sk,cs,de,pl}/{slug}.md              article drafts
   assets/growth/{tools,vc-says}.js, site.js       EN scripts — read only, never modified
 
 Outputs (all under _staging/locales/{loc}/)
@@ -32,7 +32,11 @@ sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
 import build_vc_says as B  # noqa: E402  (reuses head(), chrome(), page helpers; does not write public files on import)
 
 ROOT = B.ROOT
-LOCALES = ["sk", "cs"]  # DE/PL enabled after content packs exist
+LOCALES = ["sk", "cs", "de", "pl"]
+# PUBLIC=True writes indexable /{loc}/ trees (owner-approved publish). Default staging stays noindex under _staging/.
+PUBLIC = False
+SITE = "https://thefundraisinggame.com"
+PUBLISHED_KIND = "owner_approved_ai_fluent_review"  # NOT native human review
 # per-locale typography / chrome bits that are not in the i18n packs
 QUOTES = {"sk": ("„", "“"), "cs": ("„", "“"), "de": ("„", "“"), "pl": ("„", "”")}
 DRAFT_TAG = {"sk": "NÁVRH", "cs": "NÁVRH", "de": "ENTWURF", "pl": "SZKIC"}
@@ -45,6 +49,8 @@ def q(loc, x):
 
 
 def tag(loc):
+    if PUBLIC:
+        return ""
     return f"[{DRAFT_TAG[loc]} {loc.upper()}]"
 STATUS = "machine_draft_fluent_reviewed_needs_native_approval"
 REVIEWED_AT = "2026-11-09"
@@ -64,11 +70,40 @@ def jload(p):
 
 
 def base(loc):
-    return f"_staging/locales/{loc}"
+    return loc if PUBLIC else f"_staging/locales/{loc}"
 
 
 def url(loc, *parts):
     return "/" + "/".join([base(loc)] + [p for p in parts if p])
+
+
+def locale_home(loc):
+    return f"/{loc}" if PUBLIC else "/"
+
+
+def abs_url(path):
+
+    if not path.startswith("/"):
+        path = "/" + path
+    return SITE + path.rstrip("/") if path != "/" else SITE + "/"
+
+
+def page_kind_path(loc, kind, slug=None):
+    """Return site path for an equivalent page. loc=None|'en' => English roots."""
+    en = loc in (None, "en")
+    if kind == "landing":
+        return "/" if en else f"/{loc}"
+    if kind == "vc_hub":
+        return "/vc-says" if en else f"/{loc}/vc-says"
+    if kind == "vc_entry":
+        return f"/vc-says/{slug}" if en else f"/{loc}/vc-says/{slug}"
+    if kind == "tools_hub":
+        return "/tools" if en else f"/{loc}/tools"
+    if kind == "tool":
+        return f"/tools/{slug}" if en else f"/{loc}/tools/{slug}"
+    if kind == "article":
+        return f"/articles/{slug}" if en else f"/{loc}/articles/{slug}"
+    raise ValueError(kind)
 
 
 # --------------------------------------------------------------------------- data merge
@@ -210,7 +245,7 @@ def tools_js(loc, pack, phrases):
         S.rep(f"'{rid}':{{phrase:'{en_phrase}',", f"'{rid}':{{phrase:" + js_str(phrases[rid]) + ",", 1)
     # nothing English left in user-visible literals that we know of
     out = S.s
-    for leftover in ["Insufficient signal", "Copied ✓", "selected signals", "Hi ${person}", "Browse VC Says", "in VC Says", "No net burn"]:
+    for leftover in ["Insufficient signal", "Copied ✓", "selected signals", "Hi ${person}", "Browse VC Says", "\\u201D in VC Says", "No net burn"]:
         assert leftover not in out, leftover
     return out
 
@@ -226,13 +261,13 @@ def vcsays_js(loc, t):
         S.rep(f"text: '{txt}'", "text: " + js_str(s[f"rule_{rid}"]), 1)
     S.rep("var RANK_LABELS = ['Most consistent with your answers', 'Also plausible', 'Less consistent, but still possible'];",
           "var RANK_LABELS = [" + ", ".join(js_str(s[f"decoder_rank_{i}"]) for i in (1, 2, 3)) + "];", 1)
-    # Hint strings (EN source uses setHintForSuggestion / syncHintWithManualChoice)
+    # Hint strings (EN source uses setHintForSuggestion / syncHintWithManualChoice). Every locale pack must define all four keys.
     S.rep("'Closest library match: “' + BY_ID[id].phrase + '”. Selected below — change the category if it doesn’t fit.'",
-          js_str(s.get("decoder_hint_match") or "Najbližšia zhoda v knižnici: „{phrase}“. Vybrané nižšie — kategóriu môžete zmeniť.") + ".replace('{phrase}', BY_ID[id].phrase)", 1)
-    S.lit("No close match — choose the closest category below.", s.get("decoder_hint_nomatch") or s.get("decoder_hint_none") or "Žiadna blízka zhoda — vyberte najbližšiu kategóriu nižšie.", 1)
+          js_str(s["decoder_hint_match"]) + ".replace('{phrase}', BY_ID[id].phrase)", 1)
+    S.lit("No close match — choose the closest category below.", s["decoder_hint_nomatch"], 1)
     S.rep("'Using “' + BY_ID[cat.value].phrase + '” (you changed the suggested match).'",
-          js_str(s.get("decoder_hint_manual") or "Používate „{phrase}“ (zmenili ste navrhnutú zhodu).") + ".replace('{phrase}', BY_ID[cat.value].phrase)", 1)
-    S.lit("Choose the closest category below.", s.get("decoder_hint_choose") or "Vyberte najbližšiu kategóriu nižšie.", 1)
+          js_str(s["decoder_hint_manual"]) + ".replace('{phrase}', BY_ID[cat.value].phrase)", 1)
+    S.lit("Choose the closest category below.", s["decoder_hint_choose"], 1)
     S.lit("Choose what the investor said or did to see plausible interpretations.", s["decoder_choose_first"], 1)
     S.rep("'Plausible interpretations of “' + res.rec.phrase + '”'", js_str(s["decoder_out_heading"]) + ".replace('{phrase}', res.rec.phrase)", 1)
     S.lit("Rules applied: ", s["decoder_rules_applied"], 1)
@@ -288,6 +323,9 @@ def localized_chrome(loc, t, cs):
         header = header.replace(old, ">" + e(new) + "</a>")
     header = header.replace("(opens in new tab)", new_tab).replace('href="/vc-says"', f'href="{url(loc, "vc-says")}"').replace(
         'href="/tools"', f'href="{url(loc, "tools")}"')
+    if PUBLIC:
+        # Brand + Home targets locale landing; English-only sections keep absolute EN paths.
+        header = header.replace('href="/"', f'href="{locale_home(loc)}"', 1)
     reps_f = [(">The VIP list<", c["vip_eyebrow"]), (">Get the playbook before it hits Amazon<", c["vip_title"]),
               (">Early access, the bonus chapter PDF and a launch-day discount. One email when it matters, nothing in between.<",
                c["vip_body"] + " " + c["book_english_only"]),
@@ -319,21 +357,92 @@ def set_active(header, href):
 
 
 def banner(loc, t):
+    if PUBLIC:
+        return ""
     return ('<div class="tfg-vcsays"><p class="vc-draftbanner" role="note" data-locale-status="' + STATUS + '">'
             f'<span lang="en">{e(BANNER_EN)}</span> · {e(t["strings"]["draft_banner"])}</p></div>')
 
 
-def staging_page(loc, t, title, desc, header, footer, main, body_attrs, scripts, extra_style=""):
-    h = B.head(title, desc, None, lang=loc, robots="noindex,nofollow")
+def hreflang_links(kind, slug=None):
+    """Reciprocal hreflang for EN + published locales for one equivalent page kind."""
+    langs = [("en", "en"), ("sk", "sk"), ("cs", "cs"), ("de", "de"), ("pl", "pl")]
+    out = []
+    for code, loc in langs:
+        path = page_kind_path(None if loc == "en" else loc, kind, slug)
+        out.append(f'<link rel="alternate" hreflang="{code}" href="{e(abs_url(path))}">')
+    out.append(f'<link rel="alternate" hreflang="x-default" href="{e(abs_url(page_kind_path(None, kind, slug)))}">')
+    return "\n".join(out)
+
+
+def language_switcher(loc, t, kind, slug=None):
+    s = t["strings"]
+    items = []
+    for code, label_key in [("en", "lang_name_en"), ("sk", "lang_name_sk"), ("cs", "lang_name_cs"), ("de", "lang_name_de"), ("pl", "lang_name_pl")]:
+        href = page_kind_path(None if code == "en" else code, kind, slug)
+        label = s[label_key]
+        if code == loc:
+            items.append(f'<span aria-current="true" style="font-weight:600;color:rgb(245,154,106)">{e(label)}</span>')
+        else:
+            items.append(
+                f'<a href="{e(href)}" style="color:rgb(207,197,186);text-decoration:none;min-height:44px;display:inline-flex;align-items:center" '
+                f'hreflang="{code}" lang="{code}">{e(label)}</a>'
+            )
+    return (
+        '<nav aria-label="' + e(s["lang_switcher_label"]) + '" class="tfg-lang" '
+        'style="display:inline-flex;flex-wrap:wrap;gap:8px 14px;align-items:center;font-size:13px">'
+        f'<span style="color:rgb(140,131,120)">{e(s["lang_switcher_label"])}:</span>'
+        + "".join(items)
+        + "</nav>"
+    )
+
+
+def staging_page(loc, t, title, desc, header, footer, main, body_attrs, scripts, extra_style="", *, kind=None, slug=None):
+    title = (title or "").strip()
+    if PUBLIC:
+        assert kind, "public pages require kind for canonical/hreflang"
+        canonical = abs_url(page_kind_path(loc, kind, slug))
+        h = B.head(title, desc, canonical, lang=loc, robots=None)
+        h = h.replace("</head>", hreflang_links(kind, slug) + "\n</head>")
+        status_meta = PUBLISHED_KIND
+        # Strip any leaked EN language switcher copied from chrome source HTML, then inject the correct one.
+        header = re.sub(
+            r'<div style="max-width:1240px;margin:0 auto;padding:0 24px 12px"><nav aria-label="[^"]*" class="tfg-lang".*?</nav></div>',
+            "",
+            header,
+            flags=re.S,
+        )
+        header = re.sub(r'<nav aria-label="[^"]*" class="tfg-lang".*?</nav>', "", header, flags=re.S)
+        switch = language_switcher(loc, t, kind, slug)
+        if "</header>" in header:
+            header = header.replace(
+                "</header>",
+                f'<div style="max-width:1240px;margin:0 auto;padding:0 24px 12px">{switch}</div></header>',
+                1,
+            )
+    else:
+        h = B.head(title, desc, None, lang=loc, robots="noindex,nofollow")
+        status_meta = STATUS
     if extra_style:
-        h = h.replace("</head>", f"<style>\n{extra_style}\n</style>\n</head>")
-    h = h.replace("</head>", f'<meta name="tfg-locale-status" content="{STATUS}">\n</head>')
-    body = (f"{h}\n<body{body_attrs}>\n{banner(loc, t)}"
-            '<div class="sc-host"><div style="background: rgb(18, 20, 28); color: rgb(242, 232, 220); font-family: Geist, system-ui, sans-serif; font-size: 18px; line-height: 1.7; min-height: 100vh;">\n'
-            f"{header}\n{main}\n{footer}\n</div></div>\n"
-            + "".join(f'<script src="{s}" defer></script>\n' for s in [url(loc, "assets", "site.locale.js")] + scripts)
-            + "</body>\n</html>\n")
-    assert "hreflang" not in body and 'rel="canonical"' not in body
+        h = h.replace("</head>", "<style>\n" + extra_style + "\n</style>\n</head>")
+    h = h.replace("</head>", f'<meta name="tfg-locale-status" content="{status_meta}">\n</head>')
+    scripts_html = "".join(
+        f'<script src="{s}" defer></script>\n' for s in [url(loc, "assets", "site.locale.js")] + scripts
+    )
+    body = (
+        f"{h}\n<body{body_attrs}>\n{banner(loc, t)}"
+        '<div class="sc-host"><div style="background: rgb(18, 20, 28); color: rgb(242, 232, 220); '
+        'font-family: Geist, system-ui, sans-serif; font-size: 18px; line-height: 1.7; min-height: 100vh;">\n'
+        f"{header}\n{main}\n{footer}\n</div></div>\n"
+        + scripts_html
+        + "</body>\n</html>\n"
+    )
+    if PUBLIC:
+        assert 'rel="canonical"' in body and "hreflang" in body and "noindex" not in body and "vc-draftbanner" not in body
+        assert "[NÁVRH" not in body and "[ENTWURF" not in body and "[SZKIC" not in body
+    else:
+        assert 'rel="canonical"' not in body
+        assert 'rel="alternate" hreflang' not in body
+        assert "vc-draftbanner" in body or not PUBLIC
     return body
 
 
@@ -489,12 +598,13 @@ def build_vcsays(loc, t, pack, data, header, footer, titles_loc, titles_en):
             f'<h1>{e(s["hub_title"])}</h1><p class="vc-lead">{e(s["hub_subtitle"])} {e(s["hub_lead"])}</p>'
             f'<p class="vc-meta"><span class="vc-pill">{e(s["badge_no_account"])}</span><span class="vc-pill">{e(s["badge_local"])}</span>'
             f'<span class="vc-pill">{e(s["editorial_label"])}</span></p></div>')
-    main = (f'<main class="tfg-vcsays">{B.breadcrumb_nav([(s["breadcrumb_home"], "/"), (s["nav_vc_says"], None)])}{hero}{controls}{decoder}{related}'
+    main = (f'<main class="tfg-vcsays">{B.breadcrumb_nav([(s["breadcrumb_home"], locale_home(loc)), (s["nav_vc_says"], None)])}{hero}{controls}{decoder}{related}'
             f'<script type="application/json" id="vc-says-index">{index_json}</script></main>')
     title = f'{tag(loc)} {s["hub_title"]} | The Fundraising Game'
     written.append(B.write(f"{base(loc)}/vc-says/index.html",
                            staging_page(loc, t, title, f'{s["hub_subtitle"]} {s["hub_lead"]}', hdr, footer, main,
-                                        f' data-vc-hub="{loc}" data-vc-draft="{loc}"', js)))
+                                        f' data-vc-hub="{loc}"' + ("" if PUBLIC else f' data-vc-draft="{loc}"'), js,
+                                        kind="vc_hub")))
 
     for r in pub:
         L = loc_rec(r, loc)
@@ -518,7 +628,7 @@ def build_vcsays(loc, t, pack, data, header, footer, titles_loc, titles_en):
         syn = f'<p class="vc-why">{e(s["also_phrased"])} {e(" · ".join(q(loc, x) for x in L["synonyms"]))}</p>' if L["synonyms"] else ""
         fub = f'{url(loc, "tools", "investor-follow-up-builder")}?signal={e(r["id"])}'
         main = (
-            f'<main class="tfg-vcsays">{B.breadcrumb_nav([(s["breadcrumb_home"], "/"), (s["nav_vc_says"], hub_href), (L["phrase"], None)])}'
+            f'<main class="tfg-vcsays">{B.breadcrumb_nav([(s["breadcrumb_home"], locale_home(loc)), (s["nav_vc_says"], hub_href), (L["phrase"], None)])}'
             f'<div class="vc-hero"><span class="vc-eyebrow">{e(s["nav_vc_says"])} · {e(class_label(t, r["signalClass"]))}</span>'
             f'<h1>{e(L["h1"])}</h1>{pills(r, t)}'
             f'<p class="vc-label">{e(s["editorial_label"])} · {e(s["updated"])} {e(r["revisedAt"])}</p></div>'
@@ -550,9 +660,12 @@ def build_vcsays(loc, t, pack, data, header, footer, titles_loc, titles_en):
         title = f'{tag(loc)} {L["metaTitle"]}'
         written.append(B.write(f"{base(loc)}/vc-says/{r['slug']}.html",
                                staging_page(loc, t, title, L["metaDescription"], hdr, footer, main,
-                                            f' data-vc-draft="{loc}" data-vc-signal="{e(r["id"])}" data-vc-class="{e(r["signalClass"])}"', js)))
-    phrases = {"locale": loc, "review_status": STATUS, "publication_status": "draft_not_public",
-               "note": "10 priority entries: full fluent-reviewed drafts (needs native approval). Other 20: phrase seeds only.",
+                                            ("" if PUBLIC else f' data-vc-draft="{loc}"') + f' data-vc-signal="{e(r["id"])}" data-vc-class="{e(r["signalClass"])}"', js,
+                                            kind="vc_entry", slug=r["slug"])))
+    phrases = {"locale": loc, "review_status": STATUS if not PUBLIC else PUBLISHED_KIND,
+               "publication_status": "published_owner_approved_ai_fluent" if PUBLIC else "draft_not_public",
+               "note": ("10 priority entries published with owner approval after AI fluent review (not native human review). Other 20: phrase seeds only."
+                        if PUBLIC else "10 priority entries: full fluent-reviewed drafts (needs native approval). Other 20: phrase seeds only."),
                "phrases": [{"id": r["id"], "signalClass": r["signalClass"], "en": r["locales"]["en"]["phrase"],
                             loc: loc_rec(r, loc)["phrase"], "seedPhrase": loc_rec(r, loc).get("seedPhrase", loc_rec(r, loc)["phrase"]),
                             "status": loc_rec(r, loc)["status"]} for r in records]}
@@ -591,7 +704,7 @@ def build_tools(loc, t, pack, phrases, header, footer, titles_loc, titles_en):
     hub_link = f'<a href="{url(loc, "vc-says")}">{e(s["nav_vc_says"])}</a>'
 
     def crumbs(name):
-        return B.breadcrumb_nav([(C["breadcrumb_home"], "/"), (C["breadcrumb_tools"], url(loc, "tools")), (name, None)])
+        return B.breadcrumb_nav([(C["breadcrumb_home"], locale_home(loc)), (C["breadcrumb_tools"], url(loc, "tools")), (name, None)])
 
     def hero(T):
         return ('<div style="max-width:1240px;margin:0 auto;padding:40px 24px 28px;display:flex;flex-direction:column;gap:14px">'
@@ -686,7 +799,8 @@ def build_tools(loc, t, pack, phrases, header, footer, titles_loc, titles_en):
         main = f'<main class="tfg-tool">{crumbs(T["h1"])}{hero(T)}{body}</main>'
         written.append(B.write(f"{base(loc)}/tools/{slug}.html",
                                staging_page(loc, t, f'{tag(loc)} {T["meta_title"]}', T["meta_description"], hdr, footer, main,
-                                            f' data-tool="{slug}" data-tfg-draft="{loc}"', js, style)))
+                                            f' data-tool="{slug}"' + ("" if PUBLIC else f' data-tfg-draft="{loc}"'), js, style,
+                                            kind="tool", slug=slug)))
     H = pack["hub"]
     cards = "".join(
         f'<a href="{url(loc, "tools", k)}" class="scp0" style="display:flex;flex-direction:column;gap:10px;padding:28px;border-radius:20px;background:rgb(26,29,39);color:rgb(242,232,220);text-decoration:none">'
@@ -695,7 +809,7 @@ def build_tools(loc, t, pack, phrases, header, footer, titles_loc, titles_en):
         f'<span style="font-size:16px;color:rgb(185,175,164)">{e(pack["tools"][k]["meta_description"])}</span></a>' for k in TOOL_SLUGS)
     foot = e(H["footer"]).replace("{guides}", f'<a href="/articles">{e(H["footer_guides_link"])}</a> {e(C["in_english_note"])}')
     main = ('<main><div style="max-width:1240px;margin:0 auto;padding:56px 24px 88px;display:flex;flex-direction:column;gap:28px">'
-            f'{B.breadcrumb_nav([(C["breadcrumb_home"], "/"), (C["breadcrumb_tools"], None)])}'
+            f'{B.breadcrumb_nav([(C["breadcrumb_home"], locale_home(loc)), (C["breadcrumb_tools"], None)])}'
             f'<header style="display:flex;flex-direction:column;gap:14px;max-width:760px"><span style="{STYLE_MONO}">{e(H["eyebrow"])}</span>'
             f'<h1 style="{STYLE_SERIF};font-size:clamp(42px,5vw,64px);line-height:1.05">{e(H["h1_before"])}<span style="font-style:italic;color:rgb(224,82,47)">{e(H["h1_em"])}</span>{e(H["h1_after"])}</h1>'
             f'<p style="margin:0;font-size:20px;color:rgb(207,197,186)">{e(H["lead"])}</p></header>'
@@ -703,7 +817,8 @@ def build_tools(loc, t, pack, phrases, header, footer, titles_loc, titles_en):
             f'<p style="margin:12px 0 0;font-size:14px;color:rgb(140,131,120)">{foot}</p></div></main>')
     written.append(B.write(f"{base(loc)}/tools/index.html",
                            staging_page(loc, t, f'{tag(loc)} {H["meta_title"]}', H["meta_description"], hdr, footer, main,
-                                        f' data-tfg-draft="{loc}"', js)))
+                                        ("" if PUBLIC else f' data-tfg-draft="{loc}"'), js,
+                                        kind="tools_hub")))
     return written
 
 
@@ -799,8 +914,58 @@ def build_articles(loc, t, header, footer, titles_loc):
                 f'{meta}</header>{md_to_html(body, loc, titles_loc)}</article></main>')
         written.append(B.write(f"{base(loc)}/articles/{slug}.html",
                                staging_page(loc, t, f'{tag(loc)} {fm["title"]} | The Fundraising Game', fm["description"],
-                                            hdr, footer, main, f' data-article="{slug}" data-tfg-draft="{loc}"', [])))
+                                            hdr, footer, main, f' data-article="{slug}"' + ("" if PUBLIC else f' data-tfg-draft="{loc}"'), [],
+                                            kind="article", slug=slug)))
     return written
+
+
+
+def build_landing(loc, t, pack, data, header, footer, titles_loc):
+    """Locale home hub listing published VC Says / tools / articles only."""
+    s = t["strings"]
+    lang = s[f"lang_name_{loc}"]
+    hdr = header  # no nav section is "current" on landing; brand links to locale home
+    # Point brand logo to locale landing
+    hdr = hdr.replace('href="/"', f'href="{locale_home(loc)}"', 1)
+    pub = [r for r in data["records"] if r["id"] in data["priority_ids"]]
+    pub.sort(key=lambda r: data["priority_ids"].index(r["id"]))
+    cards_vc = "".join(
+        f'<li style="margin:0"><a href="{url(loc, "vc-says", r["slug"])}" style="color:rgb(242,232,220);text-decoration:none">{e(loc_rec(r, loc)["phrase"])}</a></li>'
+        for r in pub
+    )
+    cards_tools = "".join(
+        f'<li style="margin:0"><a href="{url(loc, "tools", k)}" style="color:rgb(242,232,220);text-decoration:none">{e(pack["tools"][k]["h1"])}</a></li>'
+        for k in TOOL_SLUGS
+    )
+    cards_art = "".join(
+        f'<li style="margin:0"><a href="{url(loc, "articles", slug)}" style="color:rgb(242,232,220);text-decoration:none">{e(titles_loc[slug]["h1"])}</a></li>'
+        for slug in ARTICLES
+    )
+    title = s["locale_landing_title"].replace("{lang}", lang)
+    desc = s["locale_landing_desc"].replace("{lang}", lang)
+    h1 = s["locale_landing_h1"].replace("{lang}", lang)
+    lead = s["locale_landing_lead"]
+    main = (
+        f'<main><div style="max-width:1240px;margin:0 auto;padding:40px 24px 72px;display:flex;flex-direction:column;gap:28px">'
+        f'<p class="vc-meta"><span class="vc-pill">{e(s["locale_partial_badge"])}</span></p>'
+        f'<h1 style="margin:0;font-family:&quot;Instrument Serif&quot;,Georgia,serif;font-weight:400;font-size:clamp(40px,5vw,64px);line-height:1.05">{e(h1)}</h1>'
+        f'<p style="margin:0;max-width:720px;color:rgb(207,197,186)">{e(lead)}</p>'
+        f'<p style="margin:0;font-size:14px;color:rgb(140,131,120)">{e(s["locale_landing_ai_note"])}</p>'
+        f'<section style="display:flex;flex-direction:column;gap:12px"><h2 style="margin:0;font-size:22px">{e(s["locale_landing_section_vcsays"])}</h2>'
+        f'<p><a href="{url(loc, "vc-says")}">{e(s["nav_vc_says"])} →</a></p><ul style="margin:0;padding-left:18px;display:flex;flex-direction:column;gap:8px">{cards_vc}</ul></section>'
+        f'<section style="display:flex;flex-direction:column;gap:12px"><h2 style="margin:0;font-size:22px">{e(s["locale_landing_section_tools"])}</h2>'
+        f'<p><a href="{url(loc, "tools")}">{e(s["nav_tools"])} →</a></p><ul style="margin:0;padding-left:18px;display:flex;flex-direction:column;gap:8px">{cards_tools}</ul></section>'
+        f'<section style="display:flex;flex-direction:column;gap:12px"><h2 style="margin:0;font-size:22px">{e(s["locale_landing_section_articles"])}</h2>'
+        f'<ul style="margin:0;padding-left:18px;display:flex;flex-direction:column;gap:8px">{cards_art}</ul></section>'
+        f'<section style="display:flex;flex-direction:column;gap:12px"><h2 style="margin:0;font-size:22px">{e(s["locale_landing_section_en"])}</h2>'
+        f'<p style="margin:0;color:rgb(185,175,164)">{e(s["locale_landing_en_note"])}</p>'
+        f'<p><a href="/">{e(s["lang_name_en"])} →</a></p></section>'
+        f'{book_cta(t)}{disclaimer(t)}</div></main>'
+    )
+    # landing uses index.html under base(loc)
+    path = f"{base(loc)}/index.html"
+    return [B.write(path, staging_page(loc, t, title + " | The Fundraising Game", desc, hdr, footer, main,
+                                       f' data-locale-landing="{loc}"', [], kind="landing"))]
 
 
 # --------------------------------------------------------------------------- main
@@ -819,6 +984,8 @@ def build_all():
         written.append(B.write(f"{base(loc)}/assets/tools.locale.js", tools_js(loc, pack, phrases)))
         written.append(B.write(f"{base(loc)}/assets/vc-says.locale.js", vcsays_js(loc, t)))
         written.append(B.write(f"{base(loc)}/assets/site.locale.js", site_js(loc, cs)))
+        if PUBLIC:
+            written += build_landing(loc, t, pack, data, header, footer, titles_loc)
         written += build_vcsays(loc, t, pack, data, header, footer, titles_loc, titles_en)
         written += build_tools(loc, t, pack, phrases, header, footer, titles_loc, titles_en)
         written += build_articles(loc, t, header, footer, titles_loc)
@@ -826,7 +993,15 @@ def build_all():
 
 
 if __name__ == "__main__":
+    import argparse
+    ap = argparse.ArgumentParser()
+    ap.add_argument("--public", action="store_true", help="Write indexable /{loc}/ trees (owner-approved publish)")
+    args = ap.parse_args()
+    if args.public:
+        PUBLIC = True  # noqa: F841 — assigned for module callers; set below via globals
+        globals()["PUBLIC"] = True
     w = build_all()
-    print(f"SK/CS/DE/PL staging build: {len(w)} files")
+    mode = "PUBLIC" if PUBLIC else "staging"
+    print(f"SK/CS/DE/PL {mode} build: {len(w)} files")
     for x in w:
         print("   ", x)

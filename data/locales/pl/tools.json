@@ -1,0 +1,292 @@
+{
+  "locale": "pl",
+  "bcp47": "pl-PL",
+  "status": "machine_draft_fluent_reviewed_needs_native_approval",
+  "editorialReviewer": "claude-fluent-pass",
+  "reviewedAt": "2026-11-09",
+  "source": [
+    "assets/growth/tools.js",
+    "tools/*.html",
+    "tools.html",
+    "data/locales/en_tools_meta.json"
+  ],
+  "mathParity": "Only strings and display formatting differ from assets/growth/tools.js. Formulas, weights, thresholds, clamping (num()) and rounding (toFixed) are unchanged; the staging locale JS is generated from the EN file by literal string substitution and verified by scripts/locale_tools_parity.js (run from scripts/test_locale_drafts.py). Intl.NumberFormat('pl-PL') is used for display only.",
+  "numberFormatting": "Display only: Intl.NumberFormat('pl-PL') for currency (EUR, never converted), counts and 1–2 decimal results (value is first rounded with the same toFixed() as EN, then formatted: 1200,5 – pl-PL does not group 4-digit numbers – and 12 345,5 with a non-breaking space as group separator). Percent is rendered as '12,3 %' (non-breaking space). Inputs are never reformatted or rewritten; values and formulas are unchanged.",
+  "placeholderPolicy": "[nazwa firmy], [temat], [postęp], [kamień milowy], [konkretny kolejny krok] are machine-substituted by the Follow-up Builder and MUST stay verbatim. [imię inwestora], [Twoje imię], [klient], [wynik] also stay verbatim. Other bracketed hints are translated.",
+  "common": {
+    "breadcrumb_home": "Strona główna",
+    "breadcrumb_tools": "Narzędzia",
+    "badge_no_account": "Bez zakładania konta",
+    "badge_local": "Działa lokalnie w przeglądarce",
+    "inputs_aria": "Dane wejściowe narzędzia",
+    "how_h2": "Jak korzystać z narzędzia",
+    "how_p": "Warto przejrzeć założenia, sprawdzić fakty i zdecydować o kolejnym praktycznym kroku. Narzędzia ilustrują sposób myślenia; żadne automatyczne obliczenie nie zastąpi mandatu inwestycyjnego funduszu ani Państwa dokumentacji finansowej.",
+    "related_guide": "Powiązany poradnik: {link}. Warto też poznać inne {tools}.",
+    "related_guide_link": "otwórz artykuł",
+    "related_tools_link": "bezpłatne narzędzia do fundraisingu",
+    "book_h3": "Fundraising to relacja, a nie tylko arkusz kalkulacyjny.",
+    "book_p": "Książka o ludzkiej stronie pozyskiwania kapitału. Ukaże się wkrótce – na razie tylko po angielsku.",
+    "book_cta": "Zapisy na listę wczesnego dostępu do książki (tylko po angielsku) →",
+    "disclaimer": "Treści edukacyjne i narzędzia poglądowe; nie stanowią porady prawnej, inwestycyjnej ani podatkowej.",
+    "copied": "Skopiowano ✓",
+    "copy_select": "Tekst należy zaznaczyć i skopiować ręcznie",
+    "vcsays_link": "„{phrase}” w VC Says",
+    "in_english_note": "(po angielsku)"
+  },
+  "hub": {
+    "meta_title": "Bezpłatne narzędzia do fundraisingu | The Fundraising Game",
+    "meta_description": "Narzędzia działające w przeglądarce: sygnały od inwestorów, wiadomości follow-up, lejek fundraisingowy i runway. Bez zakładania konta, nic nie jest wysyłane.",
+    "eyebrow": "Bezpłatne narzędzia do fundraisingu",
+    "h1_before": "Praktyczne narzędzia do rozmów ",
+    "h1_em": "po",
+    "h1_after": " pitchu",
+    "lead": "Narzędzia działające w przeglądarce: sygnały od inwestorów, follow-upy, lejek fundraisingowy i runway. Bez zakładania konta. Z tych stron nic nie jest wysyłane.",
+    "card_badge": "Bezpłatne narzędzie",
+    "footer": "Wyłącznie w celach edukacyjnych i poglądowych – nie stanowi porady prawnej, podatkowej ani inwestycyjnej. Kontekst można znaleźć w powiązanych {guides}.",
+    "footer_guides_link": "poradnikach"
+  },
+  "tools": {
+    "investor-signal-decoder": {
+      "meta_title": "Dekoder sygnałów od inwestorów | The Fundraising Game",
+      "meta_description": "Jak po pitchu oddzielić konkretne działania inwestora od uprzejmych formułek. Bezpłatne narzędzie w przeglądarce – bez zakładania konta.",
+      "h1": "Dekoder sygnałów od inwestorów",
+      "eyebrow": "Bezpłatne narzędzie · Spotkania z inwestorami",
+      "inputs_h2": "Dane wejściowe",
+      "hint": "Proszę zaznaczyć tylko to, co faktycznie się wydarzyło. To jakościowa pomoc do rozmowy, a nie szacunek prawdopodobieństwa inwestycji.",
+      "group_aria": "Zachowania inwestora zaobserwowane podczas spotkania",
+      "calculate": "Oceń sygnały →",
+      "result_eyebrow": "Interpretacja",
+      "initial_status": "Proszę zacząć od wyboru sygnałów",
+      "initial_count": "Nie wybrano żadnej obserwacji",
+      "initial_desc": "Proszę zaznaczyć rzeczywiste zachowania inwestora podczas spotkania, a następnie uruchomić ocenę.",
+      "next_h3": "Rekomendowany kolejny krok",
+      "initial_next": "Przed aktualizacją prognozy fundraisingu warto ustalić jaśniejszy kolejny krok.",
+      "browse_vcsays": "Przeglądaj VC Says: typowe zwroty inwestorów i sposoby odpowiedzi",
+      "related_prefix": "Powiązany poradnik do zwrotu: ",
+      "notice": "Wynik to heurystyka redakcyjna. Nie jest skalibrowany względem rzeczywistych prawdopodobieństw transakcji.",
+      "count_one": "{n} wybrany sygnał",
+      "count_few": "{n} wybrane sygnały",
+      "count_many": "{n} wybranych sygnałów",
+      "signalItems": {
+        "next": "Proponuje konkretne kolejne spotkanie lub termin",
+        "partner": "Umawia rozmowę z innym partnerem lub osobą decyzyjną",
+        "diligence": "Prosi o konkretne dokumenty do due diligence lub referencje klientów",
+        "champion": "Jasno wyjaśnia, jak przebiega wewnętrzny proces decyzyjny funduszu",
+        "question": "Zadaje konkretne, pogłębiające pytania o Państwa biznes",
+        "polite": "Mówi „ciekawe, prosimy informować nas na bieżąco” bez kolejnego kroku",
+        "noresponse": "Uzgodniony termin odpowiedzi minął bez żadnej informacji",
+        "wrong": "Mówi, że etap, sektor, geografia lub kwota inwestycji nie pasują"
+      },
+      "results": {
+        "insufficient": {
+          "status": "Niewystarczający sygnał",
+          "desc": "Na razie brakuje dowodów na konkretny proces. Warto zapytać o dopasowanie do profilu inwestora i o kolejny punkt decyzyjny.",
+          "next": "Wysłać krótki, konkretny follow-up z prośbą o odpowiedni kolejny krok i kontynuować rozmowy z innymi inwestorami."
+        },
+        "mismatch": {
+          "status": "Prawdopodobne niedopasowanie strukturalne",
+          "desc": "Wyraźne niedopasowanie co do etapu, tezy inwestycyjnej, geografii lub kwoty inwestycji waży więcej niż przyjazny ton.",
+          "next": "Podziękować, zapytać o lepiej dopasowaną osobę lub fundusz i przenieść ten kontakt poza aktywny lejek."
+        },
+        "meaningful": {
+          "status": "Istotne sygnały procesu",
+          "desc": "Kilka konkretnych kroków wskazuje na rzeczywisty proces oceny; nadal nie gwarantuje to inwestycji.",
+          "next": "Potwierdzić na piśmie osoby odpowiedzialne, materiały i terminy. Równolegle prowadzić pozostałe rozmowy."
+        },
+        "early": {
+          "status": "Pierwsze oznaki zaangażowania",
+          "desc": "Konkretne działanie mówi więcej niż komplementy, ale proces nie jest jeszcze rozstrzygający.",
+          "next": "Zrealizować prośbę i zapytać, jaka będzie kolejna decyzja i kiedy zapadnie."
+        },
+        "weak": {
+          "status": "Słaba lub słabnąca dynamika",
+          "desc": "Uprzejme zainteresowanie bez działań albo niedotrzymane zobowiązania wymagają wyjaśnienia, a nie optymistycznej interpretacji.",
+          "next": "Przesłać jedną merytoryczną aktualizację i poprosić o jasne „tak” lub „nie” w sprawie dalszych rozmów; nie wymyślać sztucznych terminów."
+        }
+      },
+      "vcsays_para": "Ten dekoder ocenia to, co inwestorzy <em>zrobili</em>. To, co <em>powiedzieli</em>, wyjaśnia sekcja {hub} – np. {second-meeting}, {partner-introduction}, {not-right-fit} i {investor-ghosting}.",
+      "related_article": "vc-too-early-meaning"
+    },
+    "investor-follow-up-builder": {
+      "meta_title": "Generator wiadomości follow-up do inwestorów | The Fundraising Game",
+      "meta_description": "Jasna wiadomość follow-up do inwestora przygotowana na podstawie kontekstu spotkania. Kopiowanie lokalne – nic nie jest wysyłane.",
+      "h1": "Generator wiadomości follow-up do inwestorów",
+      "eyebrow": "Bezpłatne narzędzie · Follow-up",
+      "inputs_h2": "Kontekst spotkania",
+      "hint": "Nic nie jest wysyłane e-mailem. Szkic pozostaje w przeglądarce do momentu skopiowania.",
+      "scenario_label": "Sytuacja",
+      "scenarios": {
+        "meeting": "Po spotkaniu",
+        "tooearly": "Inwestor uznał, że jest za wcześnie",
+        "quiet": "Cisza po okazanym zainteresowaniu",
+        "update": "Inwestor: „bądźmy w kontakcie” / „proszę wrócić później”",
+        "notfit": "Inwestor uznał, że nie ma dopasowania",
+        "nolead": "Inwestor czeka najpierw na inwestora wiodącego",
+        "cold": "Follow-up po pierwszym kontakcie"
+      },
+      "fields": {
+        "company": {
+          "label": "Nazwa firmy",
+          "placeholder": "ExampleCo"
+        },
+        "name": {
+          "label": "Imię inwestora",
+          "placeholder": "Alex"
+        },
+        "topic": {
+          "label": "Temat rozmowy",
+          "placeholder": "nasz produkt lub rynek"
+        },
+        "progress": {
+          "label": "Konkretny postęp",
+          "placeholder": "np. podpisaliśmy umowy z dwoma partnerami projektowymi"
+        },
+        "milestone": {
+          "label": "Kamień milowy (jeśli dotyczy)",
+          "placeholder": "np. 3 miesiące danych o retencji"
+        },
+        "next": {
+          "label": "Konkretny kolejny krok",
+          "placeholder": "20-minutowa rozmowa uzupełniająca"
+        }
+      },
+      "calculate": "Utwórz szkic →",
+      "result_eyebrow": "Szkic wiadomości",
+      "output_label": "Wynik",
+      "copy": "Kopiuj do schowka",
+      "notice": "Wyłącznie szablon edukacyjny. Przed wysłaniem należy go dopracować tak, aby był zgodny z faktami; nigdy nie należy wymyślać trakcji ani konkurencyjnych term sheetów.",
+      "signal_note_prefix": "Sytuacja wybrana na podstawie wpisu w VC Says: ",
+      "email": {
+        "subject_prefix": "Temat: ",
+        "greeting": "Dzień dobry, {person},",
+        "signoff": "Z pozdrowieniami"
+      },
+      "defaults": {
+        "company": "[nazwa firmy]",
+        "person": "[imię inwestora]",
+        "topic": "nasza działalność",
+        "progress": "[konkretny, weryfikowalny postęp]",
+        "milestone": "[uzgodniony kamień milowy]",
+        "next": "krótka rozmowa uzupełniająca"
+      },
+      "templates": {
+        "meeting": {
+          "subject": "Dziękuję za dzisiejszą rozmowę – [nazwa firmy]",
+          "intro": "Dziękuję za dzisiejszą rozmowę oraz za Państwa spostrzeżenia dotyczące tematu: [temat].",
+          "mid": "Zgodnie z ustaleniami prześlę [obiecany materiał]. Najważniejsza aktualizacja z naszej strony: [postęp].",
+          "ask": "Czy jako kolejny krok odpowiadałaby Państwu następująca propozycja: [konkretny kolejny krok]?"
+        },
+        "tooearly": {
+          "subject": "Re: [nazwa firmy] – postępy względem kamienia milowego",
+          "intro": "Dziękuję za szczerą informację zwrotną, że w świetle Państwa obecnych kryteriów inwestycyjnych możemy być jeszcze na zbyt wczesnym etapie.",
+          "mid": "Od naszej ostatniej rozmowy osiągnęliśmy następujący postęp: [postęp]. Skupiamy się na kamieniu milowym, o którym była mowa: [kamień milowy].",
+          "ask": "Czy osiągnięcie tego kamienia milowego przybliżyłoby nas do Państwa progu inwestycyjnego, czy też istnieje inna luka, którą powinniśmy najpierw wypełnić?"
+        },
+        "quiet": {
+          "subject": "Krótka aktualizacja: [nazwa firmy]",
+          "intro": "Wracam do naszej rozmowy dotyczącej tematu: [temat].",
+          "mid": "Krótka aktualizacja od naszej ostatniej rozmowy: [postęp].",
+          "ask": "Czy nadal są Państwo zainteresowani kontynuowaniem rozmowy, czy lepiej odezwać się ponownie po osiągnięciu kamienia milowego: [kamień milowy]? Każda odpowiedź będzie dla nas pomocna."
+        },
+        "update": {
+          "subject": "[nazwa firmy] – aktualizacja: [postęp]",
+          "intro": "Jeszcze raz dziękuję za propozycję pozostania w kontakcie po naszej rozmowie dotyczącej tematu: [temat].",
+          "mid": "Najważniejsza zmiana od naszej rozmowy: [postęp]. Kolejny cel, nad którym pracujemy, to kamień milowy: [kamień milowy].",
+          "ask": "Czy chcieliby Państwo nadal otrzymywać nasze krótkie aktualizacje dla inwestorów, czy może jest konkretny wskaźnik, o którym chcieliby Państwo usłyszeć w pierwszej kolejności?"
+        },
+        "notfit": {
+          "subject": "Re: [nazwa firmy] – dziękuję",
+          "intro": "Dziękuję za jasną odpowiedź w kwestii dopasowania – doceniam, że nie musimy zgadywać.",
+          "mid": "Jeśli znajdą Państwo chwilę: czy chodziło głównie o etap, sektor czy geografię? Pomoże nam to skupić się na lepiej dopasowanych inwestorach.",
+          "ask": "Jeśli przychodzi Państwu na myśl fundusz, który zwykle inwestuje w firmy takie jak nasza, każda wskazówka będzie dla nas bardzo cenna."
+        },
+        "nolead": {
+          "subject": "[nazwa firmy] – struktura rundy",
+          "intro": "Dziękuję za jasną informację, że warunkiem jest dla Państwa wcześniejsze pozyskanie inwestora wiodącego.",
+          "mid": "Obecnie koncentrujemy się na pozyskaniu inwestora wiodącego. Najważniejsza aktualizacja: [postęp].",
+          "ask": "Jeśli pozyskamy inwestora wiodącego na warunkach w omawianym przedziale, jaką kwotę inwestycji byliby Państwo skłonni rozważyć i czy mają Państwo wymagania co do tego, kto powinien prowadzić rundę? Bardzo cenne byłyby także kontakty do funduszy, które prowadzą rundy na naszym etapie."
+        },
+        "cold": {
+          "subject": "[nazwa firmy] – krótki follow-up",
+          "intro": "Nawiązuję do mojej wcześniejszej wiadomości dotyczącej firmy [nazwa firmy], która pomaga [klient] osiągać [wynik].",
+          "mid": "Jedna istotna nowość: [postęp].",
+          "ask": "Czy mieści się to w obecnym obszarze zainteresowań Państwa funduszu? W razie potrzeby chętnie prześlę zwięzłe podsumowanie."
+        }
+      },
+      "vcsays_para": "Nie wiadomo, co inwestor miał na myśli? Sekcja {hub} wyjaśnia typowe zwroty – np. {too-early}, {keep-in-touch} i {investor-ghosting} – i do każdego proponuje odpowiedź do samodzielnego dopasowania.",
+      "related_article": "how-to-follow-up-with-vc-after-meeting"
+    },
+    "fundraising-pipeline-calculator": {
+      "meta_title": "Kalkulator lejka fundraisingowego | The Fundraising Game",
+      "meta_description": "Szacunek liczby spotkań i oczekiwanych zamknięć na podstawie liczby kontaktów i współczynników konwersji. Poglądowy model wartości oczekiwanej.",
+      "h1": "Kalkulator lejka fundraisingowego",
+      "eyebrow": "Bezpłatne narzędzie · Lejek fundraisingowy",
+      "inputs_h2": "Założenia lejka",
+      "hint": "Wartości domyślne są poglądowe. Najlepiej zastąpić je własną historią konwersji.",
+      "fields": {
+        "pipe-leads": "Liczba inwestorów, z którymi nawiązano kontakt",
+        "pipe-r1": "Konwersja na pierwsze spotkanie (%)",
+        "pipe-r2": "Konwersja na drugie spotkanie (%)",
+        "pipe-r3": "Konwersja na term sheet (%)",
+        "pipe-r4": "Konwersja na zamknięcie (%)"
+      },
+      "calculate": "Oblicz wartość oczekiwaną →",
+      "result_eyebrow": "Oczekiwane wyniki",
+      "metrics": {
+        "pipe-meetings": "Pierwsze spotkania",
+        "pipe-deep": "Spotkania pogłębione",
+        "pipe-terms": "Term sheety",
+        "pipe-closes": "Oczekiwane zamknięcia"
+      },
+      "close_rate": "Łączny wskaźnik zamknięć:",
+      "needed": "Liczba kontaktów potrzebnych do ~1 oczekiwanego zamknięcia:",
+      "note_low": "Przy tych założeniach oczekiwana liczba term sheetów jest mniejsza niż jeden. Warto poprawić dopasowanie inwestorów, konwersję lub liczbę kontaktów; wyniki nie są gwarantowane.",
+      "note_ok": "To model wartości oczekiwanej, a nie prognoza rzeczywistych zobowiązań. Przy małych liczbach wyniki mogą się znacznie różnić.",
+      "related_article": "how-many-investors-to-contact"
+    },
+    "runway-raise-calculator": {
+      "meta_title": "Kalkulator runwayu i rundy | The Fundraising Game",
+      "meta_description": "Poglądowe obliczenie runwayu i wymaganej wielkości rundy dla uproszczonej rundy z ustaloną wyceną (priced round). To nie jest kalkulator SAFE.",
+      "h1": "Kalkulator runwayu i rundy",
+      "eyebrow": "Bezpłatne narzędzie · Wielkość rundy",
+      "inputs_h2": "Gotówka i burn",
+      "hint": "Uproszczone obliczenie. Nie uwzględnia puli opcji (option pool), SAFE, pożyczek konwertowalnych ani opłat.",
+      "fields": {
+        "run-cash": "Środki pieniężne na koncie (€)",
+        "run-expenses": "Miesięczne wydatki (€)",
+        "run-revenue": "Miesięczne przychody (€)",
+        "run-months": "Docelowy runway (miesiące)",
+        "run-onetime": "Jednorazowe koszty w tym okresie (€)",
+        "run-buffer": "Bufor bezpieczeństwa (%)",
+        "run-pre": "Wycena pre-money (€)"
+      },
+      "calculate": "Oblicz wielkość rundy →",
+      "result_eyebrow": "Wyniki poglądowe",
+      "metrics": {
+        "run-net": "Burn netto / miesiąc",
+        "run-existing": "Obecny runway (miesiące)",
+        "run-raise": "Wymagana wielkość rundy",
+        "run-dilution": "Uproszczone rozwodnienie"
+      },
+      "post": "Post-money (w uproszczeniu):",
+      "pool": "Kwota bufora:",
+      "no_net_burn": "Brak burnu netto",
+      "note_no_pre": "Aby obliczyć uproszczone rozwodnienie, należy podać dodatnią wycenę pre-money.",
+      "note_ok": "Wyłącznie poglądowa runda z ustaloną wyceną: nie uwzględnia puli opcji, SAFE, pożyczek konwertowalnych, opłat ani zmian burnu. Warunki transakcji należy potwierdzić z doradcami.",
+      "related_article": "how-much-to-raise-runway"
+    }
+  },
+  "placeholderMapFromEnglish": {
+    "Investor name": "imię inwestora",
+    "Company": "nazwa firmy",
+    "Your name": "Twoje imię",
+    "Partner name": "imię partnera",
+    "Fund": "fundusz",
+    "milestone": "kamień milowy",
+    "progress": "postęp",
+    "topic": "temat",
+    "customer": "klient",
+    "outcome": "wynik",
+    "specific next step": "konkretny kolejny krok"
+  }
+}

@@ -3,7 +3,7 @@
   "generated_from": "data/vc_signals.seed.json (0.1-draft)",
   "revisedAt": "2026-11-09",
   "editorial_note": "EN content for the 10 priority records is editorial analysis by The Fundraising Game, not investor quotations or interview data. Interpretations are possibilities, not diagnoses. No probabilities are claimed.",
-  "localization_note": "SK/CS/DE/PL: the 10 priority records carry full translated fields (status machine_draft_fluent_reviewed_needs_native_approval; AI fluent pass, NOT native-approved). The other 20 records in every locale are phrase seeds only. seedPhrase keeps the original seed wherever a phrase was revised; the public EN hub search index reads seedPhrase so public EN output stays byte-identical. Nothing non-EN is published.",
+  "localization_note": "SK/CS/DE/PL: 10 priority records published at /{loc}/vc-says/… after owner approval (pt15u) of AI-fluent drafts. NOT native-human-reviewed. Other 20 records remain phrase seeds only. Book inLanguage=en.",
   "priority_ids": [
     "too-early",
     "not-right-fit",
@@ -70,11 +70,11 @@
       "followUpTemplate": "tooearly",
       "publication_status": "en_approved_for_en_milestone",
       "publication": {
-        "en": "approved_for_en_milestone",
-        "sk": "draft_machine_translation_needs_native_review",
-        "cs": "draft_machine_translation_needs_native_review",
-        "de": "draft_machine_translation_needs_native_review",
-        "pl": "draft_machine_translation_needs_native_review"
+        "en": "/vc-says/too-early",
+        "sk": "/sk/vc-says/too-early",
+        "cs": "/cs/vc-says/too-early",
+        "de": "/de/vc-says/too-early",
+        "pl": "/pl/vc-says/too-early"
       },
       "locales": {
         "en": {
@@ -242,12 +242,114 @@
           "reviewNote": "AI fluent review pass done (terminology, vykání, calques, placeholders). Not reviewed by a native human; needs native CS approval before publication."
         },
         "de": {
-          "status": "draft_machine_translation_needs_native_review",
-          "phrase": "Für uns seid ihr noch in einer zu frühen Phase."
+          "status": "machine_draft_fluent_reviewed_needs_native_approval",
+          "seedPhrase": "Für uns seid ihr noch in einer zu frühen Phase.",
+          "phrase": "Für uns seid ihr noch zu früh dran.",
+          "synonyms": [
+            "Für uns seid ihr noch in einer zu frühen Phase",
+            "Meldet euch, wenn ihr mehr Daten habt",
+            "Wir steigen normalerweise etwas später ein",
+            "Wir würden gern erst mehr Fortschritt sehen"
+          ],
+          "h1": "„Für uns seid ihr noch zu früh dran“ – was es bedeuten kann und wie Sie antworten",
+          "shortAnswer": "Meist eine Lücke bei Phase oder Nachweisen, manchmal eine höfliche Absage. Den Unterschied erkennen Sie daran, ob der Investor einen konkreten Meilenstein nennt und um ein Update bittet. Fragen Sie deshalb nach diesem Meilenstein, sprechen Sie parallel mit Investoren für frühere Phasen weiter und melden Sie sich erst mit echtem Fortschritt wieder.",
+          "interpretations": [
+            {
+              "kind": "mismatch",
+              "possibility": "Phase oder Ticketgröße passen nicht: Der Fonds investiert in der Regel später oder schreibt Tickets, die für Ihre Runde zu groß sind.",
+              "contextualClues": "Die jüngsten Deals des Fonds liegen überwiegend in späteren Phasen; es fallen Begriffe wie Mindestumsatz, Rundengröße oder Zielbeteiligung; das Feedback betrifft die Arbeitsweise des Fonds, nicht Ihr Unternehmen."
+            },
+            {
+              "kind": "condition",
+              "possibility": "Ein konkretes Risiko soll zuerst ausgeräumt sein – Kundennachfrage, Retention, ein technischer Nachweis oder eine Schlüsselbesetzung im Team.",
+              "contextualClues": "Der Investor nennt eine Kennzahl oder einen Meilenstein, fragt zu diesem Bereich detailliert nach oder bittet um ein Update, sobald Sie ihn erreicht haben."
+            },
+            {
+              "kind": "pass",
+              "possibility": "Eine höfliche Absage ohne echte Absicht, die Entscheidung später zu überdenken.",
+              "contextualClues": "Kein Meilenstein, kein Zeitrahmen, keine Bitte um Updates; eine einzeilige Antwort nach langer Funkstille; der Fonds investiert durchaus in Ihrer Phase, wird aber nicht konkret."
+            }
+          ],
+          "positiveSignals": [
+            "Der Investor nennt einen konkreten Meilenstein (z. B. ein Umsatzniveau, eine Zahl zahlender Kunden, eine Retention-Kohorte).",
+            "Sie werden gebeten, sich zu einem bestimmten Zeitpunkt mit einem Update zu melden.",
+            "Der Investor stellt Ihnen einen Investor für frühere Phasen vor oder gibt Feedback zum Deck.",
+            "Die Aussage kommt von einer entscheidungsbefugten Person, die sich ernsthaft Zeit für Ihr Unternehmen genommen hat."
+          ],
+          "weakSignals": [
+            "Kein Meilenstein, kein Zeitrahmen und keine Bitte, in Kontakt zu bleiben.",
+            "Die Aussage kommt als kurze Antwort nach wochenlanger Funkstille.",
+            "Der Fonds hat kürzlich in Ihrer Phase investiert – das Problem liegt also womöglich eher an fehlender Überzeugung als an der Phase.",
+            "Die Formulierung wirkt wie eine Vorlage, die an viele Gründerinnen und Gründer geht."
+          ],
+          "clarifyingQuestion": "Vielen Dank für das offene Feedback. Damit ich mich auf das Richtige konzentriere: Gibt es einen konkreten Meilenstein (Kunden, Retention oder etwas anderes), bei dem es sich lohnen würde, das Gespräch wieder aufzunehmen?",
+          "recommendedAction": "Halten Sie das Feedback und einen etwaigen Meilenstein fest. Prüfen Sie, in welcher Phase der Fonds üblicherweise investiert, bevor Sie Schlüsse ziehen. Treiben Sie die Runde jetzt mit Pre-Seed- und Seed-Spezialisten voran und kontaktieren Sie diesen Investor erst wieder, wenn Sie beim genannten Meilenstein deutlich vorangekommen sind.",
+          "followUpTimingNote": "Antworten Sie einmal innerhalb von ein bis zwei Werktagen, bedanken Sie sich und stellen Sie die Rückfrage. Melden Sie sich danach wieder, wenn Sie den Meilenstein erreicht haben – nicht nur, weil eine Kalendererinnerung fällig ist.",
+          "editableReplyTemplate": "Hallo [Name des Investors],\n\nvielen Dank, dass Sie sich [Firmenname] angesehen haben, und für das offene Feedback.\n\nDamit ich mich auf das Richtige konzentriere: Gibt es einen konkreten Nachweis, etwa [Kennzahl, z. B. zahlende Kunden oder Retention], mit dem sich ein weiteres Gespräch lohnen würde? Wenn ja, schicke ich Ihnen gern ein kurzes Update, sobald wir so weit sind.\n\nUnd falls Sie einen Investor kennen, der typischerweise Unternehmen in unserer Phase finanziert, wäre ich für eine Vorstellung sehr dankbar.\n\nViele Grüße\n[Ihr Name]",
+          "exampleScenario": {
+            "description": "Hypothetisches Beispiel: Ein B2B-Software-Gründer in der Seed-Phase mit drei zahlenden Pilotkunden pitcht bei einem Fonds, dessen jüngste Deals überwiegend Series-A-Runden sind. Der Partner sagt „für uns seid ihr noch zu früh dran“ und erwähnt, dass der Fonds üblicherweise eine längere Umsatzhistorie sehen möchte. Am plausibelsten ist hier, dass Phase und Fonds nicht zusammenpassen. Der Gründer bedankt sich, fragt, ob ein Update nach zwei weiteren Quartalen mit Umsatz hilfreich wäre, und richtet die Runde auf Seed-Spezialisten aus.",
+            "hypothetical": true
+          },
+          "metaTitle": "„Für uns seid ihr noch zu früh dran“: Was ein VC meinen kann | VC Says",
+          "metaDescription": "Was „für uns seid ihr noch zu früh dran“ von einem VC bedeuten kann, welche Signale es stärken oder schwächen, eine Rückfrage und eine Antwortvorlage.",
+          "editorialReviewer": "claude-fluent-pass",
+          "reviewedAt": "2026-11-09",
+          "reviewNote": "AI fluent review pass done (terminology, Sie register, calques, placeholders). Not reviewed by a native human; needs native DE approval before publication. Register decision: investor quotes (phrase, synonyms, h1, quoted lines in scenarios) use informal ihr/euch, as is common in the DACH startup scene and consistent with the seed; all reader-facing copy, founder questions and reply templates use Sie."
         },
         "pl": {
-          "status": "draft_machine_translation_needs_native_review",
-          "phrase": "Jesteście dla nas jeszcze na zbyt wczesnym etapie."
+          "status": "machine_draft_fluent_reviewed_needs_native_approval",
+          "seedPhrase": "Jesteście dla nas jeszcze na zbyt wczesnym etapie.",
+          "phrase": "To dla nas jeszcze za wczesny etap.",
+          "synonyms": [
+            "Jesteście dla nas jeszcze na zbyt wczesnym etapie",
+            "Wróćcie, gdy będziecie mieć więcej danych",
+            "Zwykle wchodzimy nieco później",
+            "Najpierw chcielibyśmy zobaczyć większe postępy"
+          ],
+          "h1": "„To dla nas jeszcze za wczesny etap” – co może oznaczać i jak odpowiedzieć",
+          "shortAnswer": "Zwykle chodzi o niedopasowanie etapu lub brak wystarczających dowodów, czasem o uprzejmą odmowę. Różnicę widać po tym, czy inwestor wskazuje konkretny kamień milowy i prosi o informację o postępach. Warto zapytać o ten kamień milowy, kontynuować rozmowy z inwestorami z wcześniejszych etapów i wrócić dopiero z realnymi postępami.",
+          "interpretations": [
+            {
+              "kind": "mismatch",
+              "possibility": "Niedopasowanie etapu lub kwoty inwestycji: fundusz zwykle wchodzi później albo jego typowa inwestycja jest zbyt duża jak na tę rundę.",
+              "contextualClues": "Ich ostatnie inwestycje to głównie późniejsze etapy; wspominają o minimalnych przychodach, wielkości rundy lub docelowym udziale; uwagi dotyczą sposobu działania funduszu, a nie samej firmy."
+            },
+            {
+              "kind": "condition",
+              "possibility": "Konkretne ryzyko, które według funduszu trzeba najpierw ograniczyć – popyt ze strony klientów, retencja, wykonalność techniczna lub kluczowa rekrutacja.",
+              "contextualClues": "Wskazują metrykę lub kamień milowy, szczegółowo dopytują o ten obszar albo proszą o informację, gdy zostanie on osiągnięty."
+            },
+            {
+              "kind": "pass",
+              "possibility": "Uprzejma odmowa bez realnego zamiaru powrotu do tematu.",
+              "contextualClues": "Brak kamienia milowego, ram czasowych i prośby o informacje o postępach; jednozdaniowa odpowiedź po długiej ciszy; fundusz inwestuje na tym etapie, ale nie podaje żadnych konkretów."
+            }
+          ],
+          "positiveSignals": [
+            "Wskazują konkretny kamień milowy (np. poziom przychodów, liczbę płacących klientów, retencję kohorty).",
+            "Proszą o informację o postępach w określonym momencie.",
+            "Przedstawiają założycieli inwestorowi z wcześniejszego etapu albo przekazują uwagi do pitch decku.",
+            "Powiedziała to osoba decyzyjna, która poświęciła firmie sporo czasu."
+          ],
+          "weakSignals": [
+            "Brak kamienia milowego, ram czasowych i prośby o pozostanie w kontakcie.",
+            "Przychodzi jako krótka odpowiedź po kilku tygodniach ciszy.",
+            "Fundusz niedawno inwestował na tym samym etapie – problemem może więc być raczej brak przekonania niż etap.",
+            "Sformułowanie brzmi jak szablon wysyłany do wielu założycieli."
+          ],
+          "clarifyingQuestion": "Dziękuję za szczerą informację zwrotną. Czy jest jeden konkretny kamień milowy (liczba klientów, retencja lub coś innego), po którego osiągnięciu warto byłoby wrócić do rozmowy?",
+          "recommendedAction": "Warto zanotować informację zwrotną i ewentualny kamień milowy, o którym wspomniał inwestor, a przed wyciąganiem wniosków sprawdzić, na jakim etapie fundusz zwykle inwestuje. Rundę należy kontynuować z funduszami specjalizującymi się w pre-seed i seed, a do tego inwestora wrócić dopiero po istotnych postępach względem wskazanego kamienia milowego.",
+          "followUpTimingNote": "Odpowiedzieć raz, w ciągu jednego–dwóch dni roboczych: podziękować i zadać pytanie doprecyzowujące. Kolejny kontakt – dopiero po osiągnięciu kamienia milowego, a nie dlatego, że przypomniał o nim kalendarz.",
+          "editableReplyTemplate": "Dzień dobry, [imię inwestora],\n\nDziękuję za poświęcony czas, zapoznanie się z firmą [nazwa firmy] i szczerą informację zwrotną.\n\nMam jedno pytanie: czy istnieje konkretny wynik – na przykład [metryka, np. liczba płacących klientów lub retencja] – po którego osiągnięciu warto byłoby wrócić do rozmowy? Jeśli tak, chętnie prześlę krótką aktualizację, gdy go osiągniemy.\n\nJeśli przychodzi Państwu na myśl inwestor, który zwykle finansuje firmy na naszym etapie, z góry dziękuję za ewentualne przedstawienie.\n\nZ pozdrowieniami\n[Twoje imię]",
+          "exampleScenario": {
+            "description": "Hipotetyczny przykład: założyciel spółki tworzącej oprogramowanie B2B, na etapie seed i z trzema płatnymi pilotażami, prezentuje się funduszowi, którego ostatnie inwestycje to głównie serie A. Partner mówi „to dla nas jeszcze za wczesny etap” i dodaje, że fundusz zwykle oczekuje dłuższej historii przychodów. Najbardziej prawdopodobne jest tu niedopasowanie etapu. Założyciel dziękuje, pyta, czy przydatna byłaby aktualizacja po kolejnych dwóch kwartałach przychodów, i kieruje dalsze rozmowy do funduszy seedowych.",
+            "hypothetical": true
+          },
+          "metaTitle": "„To dla nas jeszcze za wczesny etap”: co może mieć na myśli VC | VC Says",
+          "metaDescription": "Co może oznaczać „to dla nas jeszcze za wczesny etap” w ustach VC: sygnały wzmacniające i osłabiające, pytanie doprecyzowujące i szablon odpowiedzi.",
+          "editorialReviewer": "claude-fluent-pass",
+          "reviewedAt": "2026-11-09",
+          "reviewNote": "AI fluent review pass done (terminology, formal register, calques, placeholders); second independent PL editor pass applied. Not reviewed by a native human; needs native PL approval before publication. Register: reader-facing copy is formal/impersonal (infinitive instructions, „warto”/„należy”, „Państwo”), no informal 2nd-person singular; investor quotes keep plural „wy” (addressing the founding team), as in the seeds; emails open with „Dzień dobry, [imię inwestora],” and close with „Z pozdrowieniami”, use „Państwo” for the fund and a gender-neutral founder first person (no chciałbym/chciałabym)."
         }
       }
     },
@@ -298,11 +400,11 @@
       "followUpTemplate": "notfit",
       "publication_status": "en_approved_for_en_milestone",
       "publication": {
-        "en": "approved_for_en_milestone",
-        "sk": "draft_machine_translation_needs_native_review",
-        "cs": "draft_machine_translation_needs_native_review",
-        "de": "draft_machine_translation_needs_native_review",
-        "pl": "draft_machine_translation_needs_native_review"
+        "en": "/vc-says/not-right-fit",
+        "sk": "/sk/vc-says/not-right-fit",
+        "cs": "/cs/vc-says/not-right-fit",
+        "de": "/de/vc-says/not-right-fit",
+        "pl": "/pl/vc-says/not-right-fit"
       },
       "locales": {
         "en": {
@@ -464,12 +566,110 @@
           "reviewNote": "AI fluent review pass done (terminology, vykání, calques, placeholders). Not reviewed by a native human; needs native CS approval before publication."
         },
         "de": {
-          "status": "draft_machine_translation_needs_native_review",
-          "phrase": "Das passt nicht zu unserer Investmentstrategie."
+          "status": "machine_draft_fluent_reviewed_needs_native_approval",
+          "seedPhrase": "Das passt nicht zu unserer Investmentstrategie.",
+          "phrase": "Das passt für uns leider nicht.",
+          "synonyms": [
+            "Das passt nicht zu unserer Investmentstrategie",
+            "Das liegt außerhalb unseres Fokus",
+            "In diesem Bereich investieren wir nicht",
+            "Kein Fit für unseren Fonds"
+          ],
+          "h1": "„Das passt für uns leider nicht“ – was es bedeuten kann und wie Sie antworten",
+          "shortAnswer": "Meist ein klares Nein, das am Mandat des Fonds liegt – Branche, Phase, Region oder Ticketgröße –, gelegentlich auch eine höfliche Art, Zweifel am Markt auszudrücken. In beiden Fällen lohnt es sich selten, dagegen zu argumentieren. Fragen Sie einmal nach, woran es nicht gepasst hat, bitten Sie bei einem guten Gesprächsverlauf um eine Empfehlung und konzentrieren Sie sich dann auf andere Investoren.",
+          "interpretations": [
+            {
+              "kind": "mismatch",
+              "possibility": "Das Mandat passt tatsächlich nicht: Branche, Phase, Region, Ticketgröße oder Zielbeteiligung liegen außerhalb dessen, was der Fonds abbilden kann.",
+              "contextualClues": "Der Investor nennt die Einschränkung; Portfolio und Website bestätigen sie; die Absage kommt schnell, manchmal noch vor einem Termin."
+            },
+            {
+              "kind": "pass",
+              "possibility": "Fehlende Überzeugung, höflich verpackt – der Investor glaubt nicht an die Marktgröße, den Ansatz oder das Timing.",
+              "contextualClues": "Der Fonds investiert in angrenzende Unternehmen in Ihrer Phase; im Termin gab es skeptische Fragen zum Markt; eine konkrete Einschränkung wird nicht genannt."
+            },
+            {
+              "kind": "mismatch",
+              "possibility": "Ein Portfoliokonflikt – der Fonds ist bereits an einem Unternehmen beteiligt, das sich mit Ihrem überschneidet.",
+              "contextualClues": "Im Portfolio findet sich ein ähnliches Unternehmen; die Begründung bleibt vage; die Absage kommt, nachdem der Investor mehr über Ihre Positionierung erfahren hat."
+            }
+          ],
+          "positiveSignals": [
+            "Der Investor erklärt genau, welcher Teil des Mandats nicht passt – hilfreich, um Ihre Investorenliste zu schärfen.",
+            "Es kommt ein Hinweis auf einen besser passenden Fonds oder das Angebot einer Vorstellung.",
+            "Der Investor sagt, was sich für ein späteres Gespräch ändern müsste (selten, aber hilfreich)."
+          ],
+          "weakSignals": [
+            "Eine Standardabsage per E-Mail ohne Begründung.",
+            "Keine Antwort auf eine höfliche Frage nach dem Grund – betrachten Sie das als endgültig.",
+            "Die Antwort dreht sich vor allem darum, wie ausgelastet der Investor ist, und nicht um Ihr Unternehmen."
+          ],
+          "clarifyingQuestion": "Danke für die klare Antwort, das weiß ich zu schätzen. Lag es vor allem an der Phase, der Branche oder der Region? Das hilft mir, mich auf besser passende Investoren zu konzentrieren.",
+          "recommendedAction": "Stellen Sie die Rückfrage einmal und nehmen Sie diesen Investor dann aus Ihrer aktiven Pipeline. Nutzen Sie die Erkenntnisse, um Ihre Zielliste zu schärfen (Phase, Branche, Region, Ticketgröße). War der Kontakt gut, bitten Sie um eine Empfehlung.",
+          "followUpTimingNote": "Antworten Sie einmal innerhalb weniger Werktage. Fassen Sie in dieser Runde nicht erneut nach; kommen Sie nur darauf zurück, wenn sich die Investmentthese des Fonds oder Ihr Unternehmen wesentlich verändert.",
+          "editableReplyTemplate": "Hallo [Name des Investors],\n\nvielen Dank für die klare Antwort – ich weiß es zu schätzen, dass Sie uns nicht im Unklaren lassen.\n\nWenn Sie einen Moment Zeit haben: Lag es vor allem an der Phase, der Branche oder der Region? Das hilft mir, mich auf besser passende Investoren zu konzentrieren.\n\nUnd falls Ihnen ein Fonds einfällt, der typischerweise in Unternehmen wie [Kurzbeschreibung des eigenen Unternehmens] in unserer Phase investiert, wäre ich für einen Hinweis dankbar.\n\nViele Grüße\n[Ihr Name]",
+          "exampleScenario": {
+            "description": "Hypothetisches Beispiel: Ein Startup, das Hardware und Software kombiniert, pitcht bei einem Fonds, der ausschließlich in reine Software investiert. Der Associate antwortet noch am selben Tag: „Das passt für uns leider nicht.“ Am plausibelsten ist hier, dass das Mandat nicht passt. Die Gründerin fragt einmal nach, ob die Hardware der Grund war, erhält eine einzeilige Bestätigung und streicht hardware-skeptische Fonds von ihrer Zielliste.",
+            "hypothetical": true
+          },
+          "metaTitle": "„Das passt für uns leider nicht“: Was ein VC meinen kann | VC Says",
+          "metaDescription": "„Passt für uns nicht“ vom Investor richtig deuten: Mandat, fehlende Überzeugung oder Portfoliokonflikt. Signale, eine Rückfrage und eine Antwortvorlage.",
+          "editorialReviewer": "claude-fluent-pass",
+          "reviewedAt": "2026-11-09",
+          "reviewNote": "AI fluent review pass done (terminology, Sie register, calques, placeholders). Not reviewed by a native human; needs native DE approval before publication."
         },
         "pl": {
-          "status": "draft_machine_translation_needs_native_review",
-          "phrase": "To nie pasuje do naszej strategii inwestycyjnej."
+          "status": "machine_draft_fluent_reviewed_needs_native_approval",
+          "seedPhrase": "To nie pasuje do naszej strategii inwestycyjnej.",
+          "phrase": "To nie jest projekt dla naszego funduszu.",
+          "synonyms": [
+            "To nie pasuje do naszej strategii inwestycyjnej",
+            "To wykracza poza nasz obszar zainteresowań",
+            "Nie inwestujemy w ten sektor",
+            "Nie pasuje to do profilu naszego funduszu"
+          ],
+          "h1": "„To nie jest projekt dla naszego funduszu” – co może oznaczać i jak odpowiedzieć",
+          "shortAnswer": "Najczęściej to jasne „nie” wynikające z mandatu funduszu – sektora, etapu, geografii lub kwoty inwestycji – a czasem uprzejmy sposób wyrażenia wątpliwości co do rynku. W obu przypadkach rzadko warto dyskutować. Najlepiej raz zapytać, który element nie pasował, poprosić o polecenie, jeśli rozmowa była dobra, i iść dalej.",
+          "interpretations": [
+            {
+              "kind": "mismatch",
+              "possibility": "Rzeczywiste niedopasowanie do mandatu: sektor, etap, geografia, kwota inwestycji lub docelowy udział wykraczają poza ramy, w których fundusz może inwestować.",
+              "contextualClues": "Wskazują konkretne ograniczenie; potwierdzają to ich portfel i strona internetowa; odmowa przychodzi szybko, czasem jeszcze przed spotkaniem."
+            },
+            {
+              "kind": "pass",
+              "possibility": "Brak przekonania wyrażony uprzejmie – nie wierzą w wielkość rynku, podejście lub moment wejścia.",
+              "contextualClues": "Inwestują w pokrewne firmy na tym samym etapie; podczas spotkania padały sceptyczne pytania o rynek; nie wskazują żadnego konkretnego ograniczenia."
+            },
+            {
+              "kind": "mismatch",
+              "possibility": "Konflikt w portfelu – fundusz już wspiera firmę, która częściowo konkuruje z tym startupem.",
+              "contextualClues": "W ich portfelu jest podobna firma; uzasadnienie jest mgliste; odmawiają, gdy dowiadują się więcej o pozycjonowaniu firmy."
+            }
+          ],
+          "positiveSignals": [
+            "Precyzyjnie wyjaśniają, który element mandatu nie pasuje – to przydatne przy doborze kolejnych inwestorów.",
+            "Proponują lepiej dopasowany fundusz albo oferują przedstawienie.",
+            "Mówią, co musiałoby się zmienić, żeby wrócić do rozmowy (rzadkie, ale cenne)."
+          ],
+          "weakSignals": [
+            "Ogólny, szablonowy mail bez podania powodu.",
+            "Brak odpowiedzi na uprzejmą prośbę o podanie powodu – to należy potraktować jako ostateczną decyzję.",
+            "Podkreślają, jak bardzo są zajęci, zamiast powiedzieć cokolwiek o samej firmie."
+          ],
+          "clarifyingQuestion": "Dziękuję za jasną odpowiedź – to naprawdę pomaga. Czy chodziło głównie o etap, sektor czy geografię? Dzięki temu łatwiej będzie dotrzeć do lepiej dopasowanych inwestorów.",
+          "recommendedAction": "Pytanie doprecyzowujące warto zadać tylko raz, a następnie przenieść tego inwestora poza aktywny lejek fundraisingowy. Zdobytą wiedzę należy wykorzystać do zawężenia listy docelowych inwestorów (etap, sektor, geografia, kwota inwestycji). Jeśli relacja była dobra, można poprosić o jedno polecenie.",
+          "followUpTimingNote": "Odpowiedzieć raz, w ciągu kilku dni roboczych. W tej rundzie nie wracać już do tematu – dopiero wtedy, gdy strategia funduszu lub sama firma istotnie się zmieni.",
+          "editableReplyTemplate": "Dzień dobry, [imię inwestora],\n\nDziękuję za jasną odpowiedź – doceniam, że nie musimy zgadywać.\n\nJeśli to możliwe, proszę o krótką informację: czy chodziło głównie o etap, sektor czy geografię? Pomoże nam to skupić się na lepiej dopasowanych inwestorach.\n\nJeśli przychodzi Państwu na myśl fundusz, który zwykle inwestuje w [krótki opis firmy] na naszym etapie, z góry dziękuję za wskazówkę.\n\nZ pozdrowieniami\n[Twoje imię]",
+          "exampleScenario": {
+            "description": "Hipotetyczny przykład: startup łączący hardware i oprogramowanie prezentuje się funduszowi, który inwestuje wyłącznie w czysty software. Associate odpowiada tego samego dnia: „to nie jest projekt dla naszego funduszu”. Najbardziej prawdopodobne jest niedopasowanie do mandatu. Założyciel odpowiada raz, pytając, czy problemem był hardware, dostaje jednozdaniowe potwierdzenie i usuwa z listy fundusze unikające hardware’u.",
+            "hypothetical": true
+          },
+          "metaTitle": "„To nie jest projekt dla naszego funduszu”: co może oznaczać | VC Says",
+          "metaDescription": "Jak odczytać „to nie jest projekt dla naszego funduszu”: mandat, brak przekonania czy konflikt w portfelu? Sygnały, jedno pytanie i szablon odpowiedzi.",
+          "editorialReviewer": "claude-fluent-pass",
+          "reviewedAt": "2026-11-09",
+          "reviewNote": "AI fluent review pass done (terminology, formal register, calques, placeholders); second independent PL editor pass applied. Not reviewed by a native human; needs native PL approval before publication. „Mandat funduszu” and „teza/strategia inwestycyjna” used as in PL VC practice; cheque size = „kwota inwestycji”."
         }
       }
     },
@@ -526,11 +726,11 @@
       "followUpTemplate": "update",
       "publication_status": "en_approved_for_en_milestone",
       "publication": {
-        "en": "approved_for_en_milestone",
-        "sk": "draft_machine_translation_needs_native_review",
-        "cs": "draft_machine_translation_needs_native_review",
-        "de": "draft_machine_translation_needs_native_review",
-        "pl": "draft_machine_translation_needs_native_review"
+        "en": "/vc-says/keep-in-touch",
+        "sk": "/sk/vc-says/keep-in-touch",
+        "cs": "/cs/vc-says/keep-in-touch",
+        "de": "/de/vc-says/keep-in-touch",
+        "pl": "/pl/vc-says/keep-in-touch"
       },
       "locales": {
         "en": {
@@ -695,12 +895,112 @@
           "reviewNote": "AI fluent review pass done (terminology, vykání, calques, placeholders). Not reviewed by a native human; needs native CS approval before publication."
         },
         "de": {
-          "status": "draft_machine_translation_needs_native_review",
-          "phrase": "Lasst uns in Kontakt bleiben."
+          "status": "machine_draft_fluent_reviewed_needs_native_approval",
+          "seedPhrase": "Lasst uns in Kontakt bleiben.",
+          "phrase": "Lasst uns in Kontakt bleiben.",
+          "synonyms": [
+            "Haltet uns auf dem Laufenden",
+            "Bleiben wir in Verbindung",
+            "Schickt mir gern Updates zu euren Fortschritten",
+            "Nehmt mich in euren Verteiler für Investoren-Updates auf"
+          ],
+          "h1": "„Lasst uns in Kontakt bleiben“ – was es bedeuten kann und wie Sie antworten",
+          "shortAnswer": "Eine offene Tür, keine Zusage. Dahinter kann echtes langfristiges Interesse stecken, Interesse, das auf ein bestimmtes Signal wartet, oder ein sanftes Nein. Eine präzise Bitte um ein bestimmtes Update ist ein stärkeres Signal als eine freundliche, aber allgemeine Verabschiedung.",
+          "interpretations": [
+            {
+              "kind": "condition",
+              "possibility": "Interesse ist da, aber der Investor wartet auf ein Signal – einen Meilenstein, einen Lead-Investor oder Momentum in Ihrer Runde.",
+              "contextualClues": "Der Investor sagt, was er gern sehen würde, fragt, wann Sie die Runde schließen wollen, oder erkundigt sich, wer sonst noch beteiligt ist."
+            },
+            {
+              "kind": "interest",
+              "possibility": "Echtes Interesse an einer langfristigen Beziehung, ohne dass gerade eine Entscheidung ansteht.",
+              "contextualClues": "Der Investor möchte in Ihre Investoren-Updates aufgenommen werden, antwortet darauf oder bietet Hilfe an, die nichts mit einem Investment zu tun hat."
+            },
+            {
+              "kind": "pass",
+              "possibility": "Ein höfliches, sanftes Nein, das die Beziehung freundlich hält.",
+              "contextualClues": "Keine konkrete Bitte, keine Frage zum Timing – und der Satz beendet das Gespräch, statt einen nächsten Schritt zu eröffnen."
+            }
+          ],
+          "positiveSignals": [
+            "Der Investor bittet um ein bestimmtes Update (eine Kennzahl, einen Launch, eine Neueinstellung).",
+            "Es wird ein Check-in zu einem festgelegten Zeitpunkt vorgeschlagen.",
+            "Der Investor antwortet auf Ihre Updates oder kommentiert sie.",
+            "Der Investor stellt Sie ungefragt relevanten Kontakten vor."
+          ],
+          "weakSignals": [
+            "Allgemeine Freundlichkeit ohne eine einzige Frage zu Ihrem Geschäft.",
+            "Keine Reaktion auf spätere Updates.",
+            "Die Aussage folgt auf ein Gespräch, in dem der Investor vor allem über den Fonds gesprochen hat, statt Fragen zu Ihnen zu stellen."
+          ],
+          "clarifyingQuestion": "Sehr gern. Welche Entwicklung wäre für Sie am interessantesten – und wäre ein Update nach [Meilenstein] hilfreich?",
+          "recommendedAction": "Zählen Sie den Investor nicht zu Ihrer aktiven Runde, solange er nichts anderes signalisiert. Nehmen Sie ihn mit seinem Einverständnis in ein kompaktes Investoren-Update auf und teilen Sie wesentliche Fortschritte. Verzichten Sie auf wöchentliche Check-ins – schicken Sie lieber Updates mit echtem Informationsgehalt.",
+          "followUpTimingNote": "Schicken Sie jetzt eine kurze Antwort. Melden Sie sich danach, wenn etwas Wesentliches passiert – ein monatlicher oder vierteljährlicher Rhythmus gilt als übliche Obergrenze für unaufgeforderte Updates.",
+          "editableReplyTemplate": "Hallo [Name des Investors],\n\nnochmals vielen Dank für das Gespräch – sehr gern bleiben wir in Kontakt.\n\nDamit meine Updates für Sie wirklich nützlich sind: Was wäre für Sie am relevantesten – [Option A, z. B. Umsatzwachstum], [Option B, z. B. wichtige Neueinstellungen] oder etwas anderes? Ein kurzes Update plane ich nach [Meilenstein].\n\nDürfte ich Sie in den Verteiler unserer Investoren-Updates aufnehmen? Das Update erscheint etwa [Häufigkeit], eine Abmeldung ist jederzeit problemlos möglich.\n\nViele Grüße\n[Ihr Name]",
+          "exampleScenario": {
+            "description": "Hypothetisches Beispiel: Nach einem ersten Call sagt ein Business Angel „lasst uns in Kontakt bleiben“ und fragt, wann der Gründer den kostenpflichtigen Tarif launchen will. Diese konkrete Frage spricht eher für die Lesart „wartet auf ein Signal“. Der Gründer bestätigt den Launch-Monat, nimmt den Angel mit dessen Einverständnis in das vierteljährliche Update auf und schickt ihm später das Update mit den Launch-Ergebnissen.",
+            "hypothetical": true
+          },
+          "metaTitle": "„Lasst uns in Kontakt bleiben“: Was ein Investor meinen kann | VC Says",
+          "metaDescription": "„Lasst uns in Kontakt bleiben“ vom VC kann echtes Interesse, ein bedingtes Vielleicht oder ein höfliches Nein sein. Signale, Rückfrage und Antwortvorlage.",
+          "editorialReviewer": "claude-fluent-pass",
+          "reviewedAt": "2026-11-09",
+          "reviewNote": "AI fluent review pass done (terminology, Sie register, calques, placeholders). Not reviewed by a native human; needs native DE approval before publication. Seed phrase kept unchanged as the phrase (already idiomatic). [Meilenstein] in the clarifying question stays an English token per placeholder policy."
         },
         "pl": {
-          "status": "draft_machine_translation_needs_native_review",
-          "phrase": "Pozostańmy w kontakcie."
+          "status": "machine_draft_fluent_reviewed_needs_native_approval",
+          "seedPhrase": "Pozostańmy w kontakcie.",
+          "phrase": "Bądźmy w kontakcie.",
+          "synonyms": [
+            "Informujcie nas na bieżąco",
+            "Pozostańmy w kontakcie",
+            "Dawajcie znać o postępach",
+            "Dopiszcie mnie do swojego newslettera dla inwestorów"
+          ],
+          "h1": "„Bądźmy w kontakcie” – co może oznaczać i jak odpowiedzieć",
+          "shortAnswer": "Otwarte drzwi, a nie zobowiązanie. Może oznaczać prawdziwe długoterminowe zainteresowanie, zainteresowanie uzależnione od konkretnego sygnału albo łagodne „nie”. Prośba o konkretną aktualizację to silniejszy sygnał niż ciepłe, ale ogólnikowe pożegnanie.",
+          "interpretations": [
+            {
+              "kind": "condition",
+              "possibility": "Zainteresowanie, ale z oczekiwaniem na sygnał – kamień milowy, inwestora wiodącego albo oznaki, że runda nabiera tempa.",
+              "contextualClues": "Mówią, co chcieliby zobaczyć, pytają, kiedy planowane jest zamknięcie rundy albo kto jeszcze w niej uczestniczy."
+            },
+            {
+              "kind": "interest",
+              "possibility": "Prawdziwe zainteresowanie długoterminową relacją, bez bieżącej decyzji.",
+              "contextualClues": "Proszą o dopisanie do listy odbiorców aktualizacji dla inwestorów, odpowiadają na nie albo oferują pomoc niezwiązaną z inwestycją."
+            },
+            {
+              "kind": "pass",
+              "possibility": "Uprzejma, łagodna odmowa, która pozwala zachować dobrą relację.",
+              "contextualClues": "Brak konkretnej prośby i pytań o terminy; zwrot zamyka rozmowę, zamiast otwierać kolejny krok."
+            }
+          ],
+          "positiveSignals": [
+            "Proszą o konkretną aktualizację (metrykę, premierę, rekrutację).",
+            "Proponują kontakt w określonym terminie.",
+            "Odpowiadają na wysyłane aktualizacje lub je komentują.",
+            "Sami z siebie przedstawiają założycieli komuś ze swojej sieci kontaktów."
+          ],
+          "weakSignals": [
+            "Ogólna uprzejmość bez żadnego pytania o biznes.",
+            "Brak reakcji na kolejne aktualizacje.",
+            "Zwrot pada po spotkaniu, na którym głównie opowiadali o funduszu, zamiast pytać o firmę."
+          ],
+          "clarifyingQuestion": "Bardzo chętnie. Jakie informacje byłyby najbardziej przydatne – i czy pomocna byłaby aktualizacja po osiągnięciu kolejnego kamienia milowego: [kamień milowy]?",
+          "recommendedAction": "Traktować tego inwestora jako niebiorącego udziału w bieżącej rundzie, chyba że wyraźnie zasygnalizuje coś innego. Za jego zgodą dopisać go do listy odbiorców zwięzłego newslettera dla inwestorów i dzielić się istotnymi postępami. Zamiast cotygodniowych przypomnień – aktualizacje z konkretną treścią.",
+          "followUpTimingNote": "Teraz wystarczy jedna krótka odpowiedź. Później warto odzywać się, gdy wydarzy się coś istotnego – rytm miesięczny lub kwartalny to zwykle górna granica dla aktualizacji, o które nikt nie prosił.",
+          "editableReplyTemplate": "Dzień dobry, [imię inwestora],\n\nJeszcze raz dziękuję za rozmowę – chętnie pozostanę w kontakcie.\n\nŻeby moje aktualizacje były naprawdę przydatne: co najbardziej warto w nich uwzględniać – [opcja A, np. wzrost przychodów], [opcja B, np. kluczowe rekrutacje] czy coś innego? Krótką aktualizację planuję wysłać po osiągnięciu kolejnego kamienia milowego: [kamień milowy].\n\nCzy mogę dodać ten adres do listy odbiorców naszego newslettera dla inwestorów? Wysyłamy go mniej więcej [częstotliwość, np. raz na kwartał], a wypisać się można w każdej chwili.\n\nZ pozdrowieniami\n[Twoje imię]",
+          "exampleScenario": {
+            "description": "Hipotetyczny przykład: po pierwszej rozmowie anioł biznesu mówi „bądźmy w kontakcie” i pyta, kiedy założyciel planuje uruchomić płatny plan. To konkretne pytanie przechyla interpretację w stronę „czekania na sygnał”. Założyciel podaje miesiąc premiery, za zgodą dopisuje inwestora do listy odbiorców kwartalnego newslettera i wysyła aktualizację z wynikami premiery.",
+            "hypothetical": true
+          },
+          "metaTitle": "„Bądźmy w kontakcie”: co może mieć na myśli inwestor | VC Says",
+          "metaDescription": "„Bądźmy w kontakcie” od VC może oznaczać realne zainteresowanie, warunkowe „może” lub uprzejmą odmowę. Sygnały, pytanie i szablon odpowiedzi.",
+          "editorialReviewer": "claude-fluent-pass",
+          "reviewedAt": "2026-11-09",
+          "reviewNote": "AI fluent review pass done (terminology, formal register, calques, placeholders); second independent PL editor pass applied. Not reviewed by a native human; needs native PL approval before publication. „Investor update” rendered as „newsletter dla inwestorów” / „aktualizacja”."
         }
       }
     },
@@ -756,11 +1056,11 @@
       "followUpTemplate": "update",
       "publication_status": "en_approved_for_en_milestone",
       "publication": {
-        "en": "approved_for_en_milestone",
-        "sk": "draft_machine_translation_needs_native_review",
-        "cs": "draft_machine_translation_needs_native_review",
-        "de": "draft_machine_translation_needs_native_review",
-        "pl": "draft_machine_translation_needs_native_review"
+        "en": "/vc-says/circle-back-next-quarter",
+        "sk": "/sk/vc-says/circle-back-next-quarter",
+        "cs": "/cs/vc-says/circle-back-next-quarter",
+        "de": "/de/vc-says/circle-back-next-quarter",
+        "pl": "/pl/vc-says/circle-back-next-quarter"
       },
       "locales": {
         "en": {
@@ -922,12 +1222,110 @@
           "reviewNote": "AI fluent review pass done (terminology, vykání, calques, placeholders). Not reviewed by a native human; needs native CS approval before publication."
         },
         "de": {
-          "status": "draft_machine_translation_needs_native_review",
-          "phrase": "Meldet euch im nächsten Quartal noch einmal."
+          "status": "machine_draft_fluent_reviewed_needs_native_approval",
+          "seedPhrase": "Meldet euch im nächsten Quartal noch einmal.",
+          "phrase": "Meldet euch gern im nächsten Quartal wieder.",
+          "synonyms": [
+            "Meldet euch im nächsten Quartal noch einmal",
+            "Lasst uns in ein paar Monaten wieder sprechen",
+            "Gerade passt das Timing für uns nicht",
+            "Meldet euch nach dem Sommer noch mal"
+          ],
+          "h1": "„Meldet euch gern im nächsten Quartal wieder“ – was es bedeuten kann und wie Sie antworten",
+          "shortAnswer": "Eine Aussage zum Timing, die ernst gemeint sein kann (Investitionstempo des Fonds, Kapazität der Partner, eigenes Fundraising des Fonds) oder eine sanfte Absage, die Zeit als Begründung vorschiebt. Der Unterschied zeigt sich daran, ob der Investor sagt, was im nächsten Quartal anders sein soll, und sich auf einen Termin festlegt.",
+          "interpretations": [
+            {
+              "kind": "condition",
+              "possibility": "Der Investor möchte in der Zwischenzeit Fortschritt sehen – die Verschiebung ist ein Weg, mehr Daten zu bekommen.",
+              "contextualClues": "Der Investor nennt eine Kennzahl, ein Produkt-Release oder eine Neueinstellung, die er bis dahin sehen möchte."
+            },
+            {
+              "kind": "noise",
+              "possibility": "Eine echte zeitliche Einschränkung auf Seiten des Fonds: Investitionstempo, Kapazität der Partner oder das Fundraising für den eigenen Fonds.",
+              "contextualClues": "Der Investor erklärt die Einschränkung offen, schlägt einen Monat vor oder legt direkt einen Termin in den Kalender."
+            },
+            {
+              "kind": "pass",
+              "possibility": "Eine sanfte Absage, die ein klares Nein vermeidet.",
+              "contextualClues": "Kein Grund, keine Kennzahl, kein Termin; die Aussage folgt auf ein Gespräch, in dem der Investor wenig echtes Interesse gezeigt hat."
+            }
+          ],
+          "positiveSignals": [
+            "Der Investor sagt, was er im nächsten Quartal sehen möchte.",
+            "Ein konkreter Termin wird vorgeschlagen oder angenommen.",
+            "Es gibt einen nachvollziehbaren internen Grund für das Timing."
+          ],
+          "weakSignals": [
+            "Weder Grund noch Kennzahl werden genannt.",
+            "Der Investor möchte sich nichts in den Kalender legen.",
+            "Ihre Runde wird bis dahin voraussichtlich geschlossen sein – und der Investor weiß das."
+          ],
+          "clarifyingQuestion": "Gern melde ich mich dann wieder. Was würden Sie bis zum nächsten Quartal am liebsten sehen – und passt Ihnen ein bestimmter Monat am besten?",
+          "recommendedAction": "Legen Sie eine Erinnerung mit Datum an und notieren Sie, was der Investor sehen möchte. Pausieren Sie Ihre Runde nicht, um auf ihn zu warten. Wenn Sie voraussichtlich früher abschließen, sagen Sie das höflich, damit er selbst entscheiden kann.",
+          "followUpTimingNote": "Melden Sie sich im genannten Monat mit einem kurzen Update. Kommt keine Antwort, fassen Sie nach ein bis zwei Wochen einmal freundlich nach – und lassen Sie es dann gut sein.",
+          "editableReplyTemplate": "Hallo [Name des Investors],\n\nvielen Dank – sehr gern melde ich mich im nächsten Quartal wieder.\n\nDamit das nächste Gespräch ergiebig wird: Was würden Sie bis dahin am liebsten sehen? Ich gehe davon aus, dass wir dann [erwarteter Fortschritt, z. B. Ergebnisse aus unserem ersten Enterprise-Pilotprojekt] vorweisen können.\n\nDer Transparenz halber: Wir planen derzeit, unsere Runde bis [Zielmonat] abzuschließen. Falls das für Sie etwas ändert, teile ich gern schon vorher mehr Informationen.\n\nViele Grüße\n[Ihr Name]",
+          "exampleScenario": {
+            "description": "Hypothetisches Beispiel: Ein Partner sagt „meldet euch gern im nächsten Quartal wieder“ und erklärt, dass der Fonds gerade das Fundraising für seinen eigenen neuen Fonds abschließt. Ein echtes Timing-Problem ist plausibel, doch die Runde der Gründerin schließt in sechs Wochen. Sie antwortet mit dem geplanten Closing-Datum und treibt die Runde weiter voran; der Partner verzichtet auf diese Runde, möchte aber künftige Updates erhalten.",
+            "hypothetical": true
+          },
+          "metaTitle": "„Meldet euch im nächsten Quartal wieder“: Was ein VC meinen kann | VC Says",
+          "metaDescription": "Wenn ein Investor sagt „meldet euch im nächsten Quartal wieder“: echtes Timing, Abwarten oder sanfte Absage. Signale, Rückfrage und Antwortvorlage.",
+          "editorialReviewer": "claude-fluent-pass",
+          "reviewedAt": "2026-11-09",
+          "reviewNote": "AI fluent review pass done (terminology, Sie register, calques, placeholders). Not reviewed by a native human; needs native DE approval before publication."
         },
         "pl": {
-          "status": "draft_machine_translation_needs_native_review",
-          "phrase": "Wróćcie do nas w przyszłym kwartale."
+          "status": "machine_draft_fluent_reviewed_needs_native_approval",
+          "seedPhrase": "Wróćcie do nas w przyszłym kwartale.",
+          "phrase": "Odezwijcie się w przyszłym kwartale.",
+          "synonyms": [
+            "Odezwijcie się za kilka miesięcy",
+            "Wróćcie do nas w przyszłym kwartale",
+            "To dla nas teraz nie najlepszy moment",
+            "Wróćmy do tematu po wakacjach"
+          ],
+          "h1": "„Odezwijcie się w przyszłym kwartale” – co może oznaczać i jak odpowiedzieć",
+          "shortAnswer": "Komunikat o terminie, który może być prawdziwy (tempo inwestowania funduszu, obłożenie partnerów, pozyskiwanie kapitału do kolejnego funduszu) albo jest uprzejmą odmową ukrytą za kwestią czasu. Rozróżnić te przypadki można po tym, czy inwestor mówi, co miałoby się zmienić w przyszłym kwartale, i czy zgadza się na konkretny termin.",
+          "interpretations": [
+            {
+              "kind": "condition",
+              "possibility": "Chcą zobaczyć postępy w tym czasie – odroczenie to sposób na zebranie większej ilości danych.",
+              "contextualClues": "Wspominają metrykę, premierę produktu lub rekrutację, które chcieliby do tego czasu zobaczyć."
+            },
+            {
+              "kind": "noise",
+              "possibility": "Rzeczywiste ograniczenie czasowe po ich stronie: tempo inwestowania, obłożenie partnerów albo pozyskiwanie kapitału do kolejnego funduszu.",
+              "contextualClues": "Otwarcie wyjaśniają to ograniczenie; proponują miesiąc albo od razu wpisują rozmowę do kalendarza."
+            },
+            {
+              "kind": "pass",
+              "possibility": "Łagodna odmowa, która pozwala uniknąć powiedzenia „nie”.",
+              "contextualClues": "Brak powodu, metryki i daty; zwrot pada po spotkaniu, w którym inwestor był mało zaangażowany."
+            }
+          ],
+          "positiveSignals": [
+            "Mówią, co chcą zobaczyć w przyszłym kwartale.",
+            "Proponują lub akceptują konkretną datę.",
+            "Wyjaśniają konkretny wewnętrzny powód takiego terminu."
+          ],
+          "weakSignals": [
+            "Nie podają powodu ani metryki.",
+            "Odmawiają wpisania czegokolwiek do kalendarza.",
+            "Runda najpewniej zamknie się wcześniej – i inwestor o tym wie."
+          ],
+          "clarifyingQuestion": "Chętnie wrócę do rozmowy w tym terminie. Co najbardziej chcieliby Państwo zobaczyć do przyszłego kwartału – i który miesiąc byłby najwygodniejszy?",
+          "recommendedAction": "Ustawić jedno przypomnienie z datą i zanotować, co inwestor chciał zobaczyć. Nie wstrzymywać rundy w oczekiwaniu na jego decyzję. Jeśli z harmonogramu wynika, że runda zamknie się wcześniej, uprzejmie o tym poinformować, żeby fundusz mógł podjąć decyzję.",
+          "followUpTimingNote": "Odezwać się w okolicach wskazanego miesiąca z krótką aktualizacją. Jeśli nie będzie odpowiedzi – wysłać jedno delikatne przypomnienie tydzień lub dwa później, a potem odpuścić.",
+          "editableReplyTemplate": "Dzień dobry, [imię inwestora],\n\nDziękuję – chętnie wrócę do rozmowy w przyszłym kwartale.\n\nŻeby kolejna rozmowa była jak najbardziej wartościowa: co najbardziej chcieliby Państwo zobaczyć do tego czasu? Spodziewamy się, że będziemy już mieć [oczekiwane postępy, np. wyniki pierwszego pilotażu z klientem korporacyjnym].\n\nDodam jeszcze, że obecnie planujemy zamknąć rundę do [docelowy termin, np. końca czerwca]. Jeśli to zmienia sytuację po Państwa stronie, chętnie wcześniej podzielę się dodatkowymi informacjami.\n\nZ pozdrowieniami\n[Twoje imię]",
+          "exampleScenario": {
+            "description": "Hipotetyczny przykład: partner mówi „odezwijcie się w przyszłym kwartale” i wyjaśnia, że fundusz właśnie kończy pozyskiwanie kapitału do nowego funduszu. Interpretacja „rzeczywiste ograniczenie czasowe” jest prawdopodobna, ale runda założyciela zamyka się za sześć tygodni. Założyciel odpowiada, podając datę zamknięcia, i kontynuuje rundę; partner rezygnuje z udziału w tej rundzie, ale prosi o dopisanie do listy odbiorców przyszłych aktualizacji.",
+            "hypothetical": true
+          },
+          "metaTitle": "„Odezwijcie się w przyszłym kwartale”: co może oznaczać | VC Says",
+          "metaDescription": "Gdy inwestor mówi „odezwijcie się w przyszłym kwartale”: realne ograniczenie, czekanie na dane czy uprzejma odmowa? Sygnały, pytanie i szablon.",
+          "editorialReviewer": "claude-fluent-pass",
+          "reviewedAt": "2026-11-09",
+          "reviewNote": "AI fluent review pass done (terminology, formal register, calques, placeholders); second independent PL editor pass applied. Not reviewed by a native human; needs native PL approval before publication."
         }
       }
     },
@@ -985,11 +1383,11 @@
       "followUpTemplate": "meeting",
       "publication_status": "en_approved_for_en_milestone",
       "publication": {
-        "en": "approved_for_en_milestone",
-        "sk": "draft_machine_translation_needs_native_review",
-        "cs": "draft_machine_translation_needs_native_review",
-        "de": "draft_machine_translation_needs_native_review",
-        "pl": "draft_machine_translation_needs_native_review"
+        "en": "/vc-says/send-deck",
+        "sk": "/sk/vc-says/send-deck",
+        "cs": "/cs/vc-says/send-deck",
+        "de": "/de/vc-says/send-deck",
+        "pl": "/pl/vc-says/send-deck"
       },
       "locales": {
         "en": {
@@ -1151,12 +1549,110 @@
           "reviewNote": "AI fluent review pass done (terminology, vykání, calques, placeholders). Not reviewed by a native human; needs native CS approval before publication."
         },
         "de": {
-          "status": "draft_machine_translation_needs_native_review",
-          "phrase": "Schickt mir euer Pitch Deck."
+          "status": "machine_draft_fluent_reviewed_needs_native_approval",
+          "seedPhrase": "Schickt mir euer Pitch Deck.",
+          "phrase": "Schickt mir gern mal euer Deck.",
+          "synonyms": [
+            "Könnt ihr mir euer Deck schicken?",
+            "Schickt mir euer Pitch Deck",
+            "Ich schaue mir das Deck gern an",
+            "Schickt mir gern ein paar Unterlagen"
+          ],
+          "h1": "„Schickt mir gern mal euer Deck“ – was es bedeuten kann und wie Sie antworten",
+          "shortAnswer": "Für sich genommen neutral. Meist ist es ein erster Screening-Schritt, manchmal ein Zeichen echten frühen Interesses – entscheidend ist, was davor passiert ist und was danach folgt. Schicken Sie zügig ein kompaktes, aktuelles Deck und schlagen Sie einen konkreten nächsten Schritt vor.",
+          "interpretations": [
+            {
+              "kind": "noise",
+              "possibility": "Erstes Screening – für den Fonds eine Möglichkeit, mit wenig Aufwand viele Unternehmen zu sichten.",
+              "contextualClues": "Die Bitte kommt auf einem Event oder per E-Mail ohne vorheriges Gespräch, oft von Analysten oder Associates; ein nächster Schritt wird nicht erwähnt."
+            },
+            {
+              "kind": "interest",
+              "possibility": "Echtes erstes Interesse nach einem guten Gespräch.",
+              "contextualClues": "Vorher gab es konkrete Fragen zu Ihrem Geschäft; der Investor erwähnt, wer das Deck noch prüfen wird, oder schlägt nach der Lektüre einen Call vor."
+            },
+            {
+              "kind": "pass",
+              "possibility": "Eine höfliche Art, ein Gespräch zu beenden – oder Marktrecherche für eine These, die der Fonds gerade prüft.",
+              "contextualClues": "Das Interesse gilt eher Ihrer Branche allgemein als Ihrem Unternehmen; nach dem Versand kommen keine Rückfragen."
+            }
+          ],
+          "positiveSignals": [
+            "Nach der Lektüre kommen konkrete Rückfragen.",
+            "Der Investor schlägt einen Call vor oder nennt die nächste Person, die das Deck prüft.",
+            "Es werden weitere Unterlagen angefragt (Datenraum, Finanzmodell, Referenzen)."
+          ],
+          "weakSignals": [
+            "Keine Eingangsbestätigung, nachdem Sie das Deck geschickt haben.",
+            "Die Anfrage kam ohne jeden Bezug zu Ihrem konkreten Unternehmen.",
+            "Hochsensible Daten werden angefragt, bevor überhaupt ein Gespräch stattgefunden hat."
+          ],
+          "clarifyingQuestion": "Sehr gern – ich schicke es Ihnen heute noch. Wäre nach Ihrer Durchsicht ein 20-minütiger Call sinnvoll, um offene Fragen zu besprechen?",
+          "recommendedAction": "Schicken Sie innerhalb eines Tages ein kompaktes, aktuelles Deck – mit einer drei- bis vierzeiligen Zusammenfassung im E-Mail-Text und einem vorgeschlagenen nächsten Schritt. Teilen Sie nur, was Sie in dieser Phase guten Gewissens teilen möchten.",
+          "followUpTimingNote": "Senden Sie das Deck innerhalb von 24–48 Stunden. Kommt keine Antwort, fassen Sie nach etwa einer Woche einmal kurz nach – idealerweise mit einem kleinen, echten Update.",
+          "editableReplyTemplate": "Hallo [Name des Investors],\n\nvielen Dank für Ihr Interesse an [Firmenname] – anbei finden Sie unser Deck.\n\nKurz zusammengefasst: Wir helfen [Kunde], [Ergebnis] zu erreichen. In den letzten [Zeitraum] haben wir [wichtigster Fortschritt] erreicht. Aktuell sammeln wir [Rundengröße/Phase] ein; die Mittel fließen vor allem in [Hauptverwendung der Mittel].\n\nWäre nach Ihrer Durchsicht ein 20-minütiger Call sinnvoll, um offene Fragen zu besprechen? Mögliche Termine wären [zwei Terminvorschläge].\n\nViele Grüße\n[Ihr Name]",
+          "exampleScenario": {
+            "description": "Hypothetisches Beispiel: Auf einem Demo Day sagt ein Associate nach einem zweiminütigen Gespräch „schickt mir gern mal euer Deck“. Am plausibelsten ist hier die Screening-Lesart. Der Gründer schickt das Deck am nächsten Morgen mit einer kurzen Zusammenfassung und zwei Terminvorschlägen; der Associate antwortet mit drei konkreten Fragen – ein stärkeres Signal als die ursprüngliche Bitte.",
+            "hypothetical": true
+          },
+          "metaTitle": "„Schickt mir euer Deck“: Was ein Investor meinen kann | VC Says",
+          "metaDescription": "Ist „schickt mir euer Deck“ Interesse oder Screening? Wie Sie es einordnen, was das Signal stärkt, und eine kurze Begleit-E-Mail zum Anpassen und Kopieren.",
+          "editorialReviewer": "claude-fluent-pass",
+          "reviewedAt": "2026-11-09",
+          "reviewNote": "AI fluent review pass done (terminology, Sie register, calques, placeholders). Not reviewed by a native human; needs native DE approval before publication. „Deck“/„Pitch Deck“ kept as the standard DACH term."
         },
         "pl": {
-          "status": "draft_machine_translation_needs_native_review",
-          "phrase": "Prześlijcie mi swój pitch deck."
+          "status": "machine_draft_fluent_reviewed_needs_native_approval",
+          "seedPhrase": "Prześlijcie mi swój pitch deck.",
+          "phrase": "Podeślijcie mi deck.",
+          "synonyms": [
+            "Możecie podesłać prezentację?",
+            "Prześlijcie mi swój pitch deck",
+            "Chętnie rzucę okiem na deck",
+            "Podeślijcie jakieś materiały"
+          ],
+          "h1": "„Podeślijcie mi deck” – co może oznaczać i jak odpowiedzieć",
+          "shortAnswer": "Ta prośba sama w sobie jest neutralna. Zwykle to wstępna selekcja, a czasem oznaka realnego wczesnego zainteresowania; liczy się to, co ją poprzedza i co dzieje się potem. Warto szybko wysłać zwięzły, aktualny deck i zaproponować konkretny następny krok.",
+          "interpretations": [
+            {
+              "kind": "noise",
+              "possibility": "Wstępna selekcja – niewymagający wysiłku sposób na przejrzenie wielu firm.",
+              "contextualClues": "Prośba pada na wydarzeniu lub w mailu bez wcześniejszej rozmowy; często od analityka lub associate’a; bez wzmianki o następnym kroku."
+            },
+            {
+              "kind": "interest",
+              "possibility": "Prawdziwe wstępne zainteresowanie po dobrej rozmowie.",
+              "contextualClues": "Poprzedzają ją konkretne pytania o biznes; inwestor wspomina, kto jeszcze przejrzy materiały, albo proponuje rozmowę po lekturze."
+            },
+            {
+              "kind": "pass",
+              "possibility": "Uprzejmy sposób na zakończenie rozmowy – albo mapowanie rynku pod tezę, którą fundusz bada.",
+              "contextualClues": "Bardzo ogólne zainteresowanie sektorem, a nie samą firmą; brak dalszych pytań po wysłaniu decku."
+            }
+          ],
+          "positiveSignals": [
+            "Po lekturze zadają konkretne pytania.",
+            "Proponują rozmowę lub wskazują, kto będzie kolejną osobą oceniającą.",
+            "Proszą o dodatkowe materiały (data room, model finansowy, referencje)."
+          ],
+          "weakSignals": [
+            "Brak potwierdzenia po wysłaniu.",
+            "Prośba padła bez żadnego kontekstu dotyczącego tej konkretnej firmy.",
+            "Proszą o bardzo wrażliwe dane jeszcze przed jakąkolwiek rozmową."
+          ],
+          "clarifyingQuestion": "Oczywiście – prześlę deck jeszcze dziś. Czy po zapoznaniu się z nim miałaby sens 20-minutowa rozmowa, żeby omówić ewentualne pytania?",
+          "recommendedAction": "W ciągu doby wysłać zwięzły, aktualny deck z trzy-, czterozdaniowym podsumowaniem w treści maila i propozycją następnego kroku. Udostępniać tylko te informacje, które na tym etapie można bezpiecznie ujawnić.",
+          "followUpTimingNote": "Wysłać w ciągu 24–48 godzin. Jeśli nie będzie odpowiedzi, po mniej więcej tygodniu wysłać jedno krótkie przypomnienie, najlepiej z niewielką, ale prawdziwą aktualizacją.",
+          "editableReplyTemplate": "Dzień dobry, [imię inwestora],\n\nDziękuję za zainteresowanie firmą [nazwa firmy] – deck przesyłam w załączniku.\n\nW skrócie: tworzymy rozwiązanie dla [klient], które pozwala osiągnąć [wynik]. Od [początek okresu, np. stycznia] udało nam się [kluczowe postępy, np. pozyskać pierwszych płacących klientów], a obecnie pozyskujemy [wielkość i etap rundy] na [główne cele, np. rozwój sprzedaży].\n\nCzy po zapoznaniu się z materiałem miałaby sens 20-minutowa rozmowa, żeby omówić ewentualne pytania? Proponuję [dwa terminy do wyboru].\n\nZ pozdrowieniami\n[Twoje imię]",
+          "exampleScenario": {
+            "description": "Hipotetyczny przykład: na demo day associate po dwuminutowej rozmowie mówi „podeślijcie mi deck”. Najbardziej prawdopodobna jest wstępna selekcja. Założyciel następnego ranka wysyła deck z krótkim podsumowaniem i dwoma terminami rozmowy; associate odpowiada trzema konkretnymi pytaniami – to silniejszy sygnał niż sama pierwotna prośba.",
+            "hypothetical": true
+          },
+          "metaTitle": "„Podeślijcie mi deck”: co może mieć na myśli inwestor | VC Says",
+          "metaDescription": "Czy „podeślijcie mi deck” to zainteresowanie, czy selekcja? Jak to odczytać, co wzmacnia sygnał i jak napisać krótki mail z deckiem – szablon do edycji i skopiowania.",
+          "editorialReviewer": "claude-fluent-pass",
+          "reviewedAt": "2026-11-09",
+          "reviewNote": "AI fluent review pass done (terminology, formal register, calques, placeholders); second independent PL editor pass applied. Not reviewed by a native human; needs native PL approval before publication. „Deck”/„pitch deck” kept in English as PL founders use it; [klient]/[wynik] placed after „dla”/„osiągnąć” so founders fill them in the right case."
         }
       }
     },
@@ -1205,11 +1701,11 @@
       "followUpTemplate": "meeting",
       "publication_status": "en_approved_for_en_milestone",
       "publication": {
-        "en": "approved_for_en_milestone",
-        "sk": "draft_machine_translation_needs_native_review",
-        "cs": "draft_machine_translation_needs_native_review",
-        "de": "draft_machine_translation_needs_native_review",
-        "pl": "draft_machine_translation_needs_native_review"
+        "en": "/vc-says/second-meeting",
+        "sk": "/sk/vc-says/second-meeting",
+        "cs": "/cs/vc-says/second-meeting",
+        "de": "/de/vc-says/second-meeting",
+        "pl": "/pl/vc-says/second-meeting"
       },
       "locales": {
         "en": {
@@ -1374,12 +1870,112 @@
           "reviewNote": "AI fluent review pass done (terminology, vykání, calques, placeholders). Not reviewed by a native human; needs native CS approval before publication."
         },
         "de": {
-          "status": "draft_machine_translation_needs_native_review",
-          "phrase": "Lasst uns ein weiteres Gespräch vereinbaren."
+          "status": "machine_draft_fluent_reviewed_needs_native_approval",
+          "seedPhrase": "Lasst uns ein weiteres Gespräch vereinbaren.",
+          "phrase": "Lasst uns einen Folgetermin vereinbaren.",
+          "synonyms": [
+            "Lasst uns ein weiteres Gespräch vereinbaren",
+            "Können wir das Gespräch fortsetzen?",
+            "Lasst uns nächste Woche tiefer einsteigen",
+            "Wir würden euch gern noch einmal treffen"
+          ],
+          "h1": "„Lasst uns einen Folgetermin vereinbaren“ – was es bedeuten kann und wie Sie antworten",
+          "shortAnswer": "Ein positives Prozesssignal: Der Investor investiert mehr Zeit in Sie. Eine Zusage ist es trotzdem nicht. Am stärksten ist das Signal, wenn es mit Agenda, Datum, ranghöheren Teilnehmenden oder konkreten Datenanfragen kommt.",
+          "interpretations": [
+            {
+              "kind": "interest",
+              "possibility": "Echter Fortschritt im Bewertungsprozess des Fonds.",
+              "contextualClues": "Die Kalendereinladung kommt schnell; ein ranghöherer Partner kommt dazu; der Investor erklärt Prozess und Zeitplan."
+            },
+            {
+              "kind": "condition",
+              "possibility": "Eine gezielte Prüfung (Due Diligence) zu einem konkreten Einwand, der ausgeräumt sein soll, bevor es weitergeht.",
+              "contextualClues": "Der Investor nennt ein Thema (Go-to-Market, Unit Economics, Technologie) oder fordert vorab bestimmte Daten an."
+            },
+            {
+              "kind": "noise",
+              "possibility": "Beziehungspflege ohne zeitnahe Entscheidung – manche Investoren treffen sich viele Male, bevor sie entscheiden.",
+              "contextualClues": "Dieselbe Person, keine Agenda, „einfach mal austauschen“; kein Wort zu Prozess oder Zeitplan."
+            }
+          ],
+          "positiveSignals": [
+            "Datum und Agenda werden schnell vorgeschlagen.",
+            "Ein ranghöherer Partner oder eine Fachperson kommt dazu.",
+            "Bestimmte Unterlagen werden vorab angefragt.",
+            "Der Investor beschreibt die nächsten Schritte nach diesem Termin."
+          ],
+          "weakSignals": [
+            "Der Termin wird immer wieder verschoben.",
+            "Keine Agenda und keine neuen Teilnehmenden.",
+            "Mehrere Termine, ohne dass sich im Prozess etwas bewegt."
+          ],
+          "clarifyingQuestion": "Ich freue mich darauf. Was sollte dieses Gespräch aus Ihrer Sicht vor allem klären, und wer aus Ihrem Team wird noch dabei sein?",
+          "recommendedAction": "Bestätigen Sie den Termin, fragen Sie, was er klären soll, und bereiten Sie Belege zu diesem Thema vor. Fragen Sie nach Prozess und Zeitplan des Fonds. Treiben Sie Ihre anderen Gespräche im gleichen Tempo weiter.",
+          "followUpTimingNote": "Bestätigen Sie innerhalb eines Tages. Schicken Sie angefragte Unterlagen vor dem Termin und innerhalb von 24 Stunden danach eine kurze Zusammenfassung mit den nächsten Schritten.",
+          "editableReplyTemplate": "Hallo [Name des Investors],\n\nvielen Dank – schön, dass das Gespräch hilfreich war. [Tag/Uhrzeit] passt uns gut.\n\nDamit wir die Zeit bestmöglich nutzen: Gibt es etwas, das wir uns genauer ansehen sollten, zum Beispiel [Thema, z. B. unsere Sales-Pipeline oder Unit Economics]? Gern schicke ich vorab Unterlagen.\n\nUnd wird noch jemand von [Fonds] dabei sein? Dann bringe ich die passenden Personen aus unserem Team mit.\n\nViele Grüße\n[Ihr Name]",
+          "exampleScenario": {
+            "description": "Hypothetisches Beispiel: Nach einem ersten Call bittet die Partnerin um einen zweiten Termin und fordert vorab die Vertriebspipeline an. Am plausibelsten ist die Lesart, dass ein konkreter Einwand geprüft wird. Der Gründer schickt die Pipeline mit Kontext, bringt seinen Head of Sales mit und fragt am Ende, was der nächste Schritt im Prozess des Fonds wäre.",
+            "hypothetical": true
+          },
+          "metaTitle": "„Lasst uns einen Folgetermin vereinbaren“: Ein gutes Zeichen? | VC Says",
+          "metaDescription": "Ein zweiter Termin mit einem VC ist ein positives Prozesssignal, aber keine Zusage. Einordnung, Vorbereitung und eine Bestätigungsmail zum Kopieren.",
+          "editorialReviewer": "claude-fluent-pass",
+          "reviewedAt": "2026-11-09",
+          "reviewNote": "AI fluent review pass done (terminology, Sie register, calques, placeholders). Not reviewed by a native human; needs native DE approval before publication."
         },
         "pl": {
-          "status": "draft_machine_translation_needs_native_review",
-          "phrase": "Umówmy kolejne spotkanie."
+          "status": "machine_draft_fluent_reviewed_needs_native_approval",
+          "seedPhrase": "Umówmy kolejne spotkanie.",
+          "phrase": "Umówmy się na kolejne spotkanie.",
+          "synonyms": [
+            "Umówmy kolejne spotkanie",
+            "Możemy kontynuować rozmowę?",
+            "Przyjrzyjmy się temu dokładniej w przyszłym tygodniu",
+            "Chętnie spotkamy się ponownie"
+          ],
+          "h1": "„Umówmy się na kolejne spotkanie” – co może oznaczać i jak odpowiedzieć",
+          "shortAnswer": "Pozytywny sygnał w procesie: inwestor poświęca firmie coraz więcej czasu. To wciąż nie jest zobowiązanie. Najsilniejsze warianty obejmują agendę, datę, udział starszych rangą osób z funduszu lub konkretne prośby o dane.",
+          "interpretations": [
+            {
+              "kind": "interest",
+              "possibility": "Realny postęp w ich procesie oceny.",
+              "contextualClues": "Zaproszenie w kalendarzu przychodzi szybko; dołącza starszy rangą partner; wyjaśniają swój proces i harmonogram."
+            },
+            {
+              "kind": "condition",
+              "possibility": "Badanie konkretnej wątpliwości, którą chcą rozwiać, zanim pójdą dalej.",
+              "contextualClues": "Wskazują temat (go-to-market, unit economics, technologia) lub z wyprzedzeniem proszą o konkretne dane."
+            },
+            {
+              "kind": "noise",
+              "possibility": "Budowanie relacji bez decyzji w najbliższym czasie – niektórzy inwestorzy spotykają się wiele razy, zanim zdecydują.",
+              "contextualClues": "Ta sama osoba, brak agendy, „luźna rozmowa, co słychać”; ani słowa o procesie czy terminach."
+            }
+          ],
+          "positiveSignals": [
+            "Szybko proponują termin i agendę.",
+            "Dołącza starszy rangą partner lub specjalista.",
+            "Z wyprzedzeniem proszą o konkretne materiały.",
+            "Opisują kolejne kroki po tym spotkaniu."
+          ],
+          "weakSignals": [
+            "Spotkanie jest wciąż przekładane.",
+            "Brak agendy i nowych uczestników.",
+            "Kilka spotkań bez żadnego postępu w ich procesie."
+          ],
+          "clarifyingQuestion": "Bardzo się cieszę. Co najbardziej przydałoby się wyjaśnić podczas tej rozmowy i kto jeszcze weźmie w niej udział ze strony funduszu?",
+          "recommendedAction": "Potwierdzić spotkanie, zapytać, co ma ono rozstrzygnąć, i przygotować dowody w tym obszarze. Zapytać o proces i harmonogram funduszu. Pozostałe rozmowy prowadzić w tym samym tempie.",
+          "followUpTimingNote": "Potwierdzić w ciągu doby. Materiały, o które poproszono, przesłać przed spotkaniem, a w ciągu 24 godzin po nim – krótkie podsumowanie z kolejnymi krokami.",
+          "editableReplyTemplate": "Dzień dobry, [imię inwestora],\n\nDziękuję – cieszę się, że rozmowa była przydatna. [Dzień i godzina] nam odpowiada.\n\nŻeby jak najlepiej wykorzystać czas: czy jest coś konkretnego, czemu powinniśmy się dokładniej przyjrzeć – na przykład [temat, np. nasz lejek sprzedażowy lub unit economics]? Chętnie wcześniej prześlę materiały.\n\nCzy ze strony funduszu [fundusz] dołączy ktoś jeszcze? Dzięki temu będziemy mogli zaprosić odpowiednie osoby z naszego zespołu.\n\nZ pozdrowieniami\n[Twoje imię]",
+          "exampleScenario": {
+            "description": "Hipotetyczny przykład: po pierwszej rozmowie partner proponuje drugie spotkanie i z wyprzedzeniem prosi o zestawienie lejka sprzedażowego. Najbardziej prawdopodobne jest badanie konkretnej wątpliwości. Założyciel wysyła lejek z kontekstem, zabiera na spotkanie szefa sprzedaży i na koniec pyta, jaki byłby kolejny krok w procesie funduszu.",
+            "hypothetical": true
+          },
+          "metaTitle": "„Umówmy się na kolejne spotkanie”: czy to dobry znak? | VC Says",
+          "metaDescription": "Drugie spotkanie z VC to pozytywny sygnał w procesie, ale nie zobowiązanie. Jak to odczytać, co przygotować i potwierdzenie do skopiowania.",
+          "editorialReviewer": "claude-fluent-pass",
+          "reviewedAt": "2026-11-09",
+          "reviewNote": "AI fluent review pass done (terminology, formal register, calques, placeholders); second independent PL editor pass applied. Not reviewed by a native human; needs native PL approval before publication. „[fundusz]” preceded by „funduszu” so the name stays uninflected."
         }
       }
     },
@@ -1427,11 +2023,11 @@
       "followUpTemplate": "meeting",
       "publication_status": "en_approved_for_en_milestone",
       "publication": {
-        "en": "approved_for_en_milestone",
-        "sk": "draft_machine_translation_needs_native_review",
-        "cs": "draft_machine_translation_needs_native_review",
-        "de": "draft_machine_translation_needs_native_review",
-        "pl": "draft_machine_translation_needs_native_review"
+        "en": "/vc-says/partner-introduction",
+        "sk": "/sk/vc-says/partner-introduction",
+        "cs": "/cs/vc-says/partner-introduction",
+        "de": "/de/vc-says/partner-introduction",
+        "pl": "/pl/vc-says/partner-introduction"
       },
       "locales": {
         "en": {
@@ -1593,12 +2189,110 @@
           "reviewNote": "AI fluent review pass done (terminology, vykání, calques, placeholders). Not reviewed by a native human; needs native CS approval before publication."
         },
         "de": {
-          "status": "draft_machine_translation_needs_native_review",
-          "phrase": "Ich würde euch gern meinem Partner vorstellen."
+          "status": "machine_draft_fluent_reviewed_needs_native_approval",
+          "seedPhrase": "Ich würde euch gern meinem Partner vorstellen.",
+          "phrase": "Ich würde euch gern einem meiner Partner vorstellen.",
+          "synonyms": [
+            "Ich hole einen Partner aus unserem Team dazu",
+            "Ich würde euch gern meinem Partner vorstellen",
+            "Ein weiterer Partner sollte sich das auch anhören",
+            "Könnt ihr in unserer Partnerrunde pitchen?"
+          ],
+          "h1": "„Ich würde euch gern einem meiner Partner vorstellen“ – was es bedeuten kann und wie Sie antworten",
+          "shortAnswer": "Meist ein positives Prozesssignal: Ihr Kontakt ist bereit, sich intern für Sie starkzumachen. Dahinter kann ein Fürsprecher stehen, der Unterstützung sammelt, eine vorgeschriebene zweite Meinung oder eine fachliche Prüfung. Bereiten Sie sich auf Fragen auf Fondsebene vor und fragen Sie Ihren Kontakt, worauf der Partner Wert legen wird.",
+          "interpretations": [
+            {
+              "kind": "interest",
+              "possibility": "Ihr Kontakt agiert intern als Fürsprecher (Champion) und sammelt Unterstützung.",
+              "contextualClues": "Die Vorstellung erklärt, warum Ihr Kontakt begeistert ist; er bleibt eingebunden und hilft Ihnen bei der Vorbereitung."
+            },
+            {
+              "kind": "noise",
+              "possibility": "Ein Routineschritt – viele Fonds verlangen die Einschätzung eines zweiten Partners, bevor es weitergeht.",
+              "contextualClues": "Der Schritt wird als Standardprozess beschrieben; weder besondere Begeisterung noch Bedenken sind erkennbar."
+            },
+            {
+              "kind": "condition",
+              "possibility": "Eine fachliche Prüfung konkreter Bedenken – der Partner bringt Branchen- oder Technologieexpertise mit.",
+              "contextualClues": "Der Hintergrund des Partners passt zu einem Risiko, das im ersten Gespräch zur Sprache kam."
+            }
+          ],
+          "positiveSignals": [
+            "Die Vorstellung kommt mit klarem Zweck und Termin.",
+            "Ihr ursprünglicher Kontakt bleibt eingebunden und gibt Tipps zur Vorbereitung.",
+            "Es folgen Anfragen nach Unterlagen oder Erläuterungen zum Prozess."
+          ],
+          "weakSignals": [
+            "Der neue Partner scheint Ihr Unternehmen kaum zu kennen.",
+            "Die Vorstellung kommt ohne Kontext oder Zeitrahmen.",
+            "Ihr ursprünglicher Kontakt meldet sich nach der Übergabe nicht mehr."
+          ],
+          "clarifyingQuestion": "Vielen Dank für die Vorstellung. Worauf sollten wir im Gespräch mit [Name des Partners] besonders eingehen, und wie sehen die nächsten Schritte in Ihrem Prozess danach aus?",
+          "recommendedAction": "Bereiten Sie sich auf breitere Fragen auf Fondsebene vor – Marktgröße, mögliche Exit-Größe, Passung zum Portfolio. Fragen Sie Ihren Kontakt, welche Bedenken Sie adressieren sollten. Schicken Sie vorab eine kurze Unterlage zur Vorbereitung (Pre-Read), damit der Partner informiert ins Gespräch geht.",
+          "followUpTimingNote": "Antworten Sie innerhalb eines Tages und schlagen Sie Termine vor. Schicken Sie innerhalb von 24 Stunden nach dem Partnergespräch eine Zusammenfassung und setzen Sie Ihren ursprünglichen Kontakt in CC.",
+          "editableReplyTemplate": "Hallo [Name des Investors],\n\nvielen Dank – ich lerne [Name des Partners] sehr gern kennen.\n\nUm mich gut vorzubereiten: Worauf sollten wir im Gespräch mit [Name des Partners] den Schwerpunkt legen, zum Beispiel [Thema, z. B. Marktgröße oder technisches Risiko]? Gern schicke ich vorab eine kurze Unterlage.\n\nUnd damit ich besser planen kann: Was folgt in Ihrem Prozess üblicherweise auf dieses Gespräch?\n\nViele Grüße\n[Ihr Name]",
+          "exampleScenario": {
+            "description": "Hypothetisches Beispiel: Ein Associate stellt eine Gründerin zwei Tage nach einem Termin, in dem regulatorische Risiken zur Sprache kamen, einer Partnerin mit langjähriger Erfahrung im Payment-Bereich vor. Die Lesart „fachliche Prüfung“ ist plausibel. Die Gründerin fragt den Associate, worauf die Partnerin achten wird, und bereitet einen einseitigen Überblick zur Regulierung vor.",
+            "hypothetical": true
+          },
+          "metaTitle": "„Ich würde euch gern einem Partner vorstellen“: Was das heißt | VC Says",
+          "metaDescription": "Die Vorstellung bei einem Partner ist meist ein gutes Prozesssignal. Was sie bedeuten kann, worauf Sie achten, wie Sie sich vorbereiten – plus Vorlage.",
+          "editorialReviewer": "claude-fluent-pass",
+          "reviewedAt": "2026-11-09",
+          "reviewNote": "AI fluent review pass done (terminology, Sie register, calques, placeholders). Not reviewed by a native human; needs native DE approval before publication. Phrase changed to „einem meiner Partner“ because „meinem Partner“ can be misread as a life partner in German; seed kept as synonym."
         },
         "pl": {
-          "status": "draft_machine_translation_needs_native_review",
-          "phrase": "Chciałbym przedstawić was mojemu partnerowi z funduszu."
+          "status": "machine_draft_fluent_reviewed_needs_native_approval",
+          "seedPhrase": "Chciałbym przedstawić was mojemu partnerowi z funduszu.",
+          "phrase": "Przedstawię was jednemu z naszych partnerów.",
+          "synonyms": [
+            "Chciałbym przedstawić was mojemu partnerowi z funduszu",
+            "Zaproszę do rozmowy kogoś z zespołu",
+            "Chciałabym, żeby posłuchał tego jeden z partnerów",
+            "Czy moglibyście zaprezentować się na spotkaniu partnerów?"
+          ],
+          "h1": "„Przedstawię was jednemu z naszych partnerów” – co może oznaczać i jak odpowiedzieć",
+          "shortAnswer": "Zwykle pozytywny sygnał w procesie: osoba kontaktowa w funduszu jest gotowa zaryzykować dla tej firmy część swojej wewnętrznej wiarygodności. Może to być ambasador budujący poparcie, wymagana druga opinia albo weryfikacja przez specjalistę. Warto przygotować się na pytania z perspektywy całego funduszu i zapytać osobę kontaktową, na czym partnerowi będzie zależało.",
+          "interpretations": [
+            {
+              "kind": "interest",
+              "possibility": "Osoba kontaktowa działa jako wewnętrzny ambasador i buduje poparcie.",
+              "contextualClues": "Przedstawiając firmę, wyjaśnia, co ją przekonuje; pozostaje zaangażowana i pomaga w przygotowaniach."
+            },
+            {
+              "kind": "noise",
+              "possibility": "Rutynowy krok – wiele funduszy wymaga opinii drugiego partnera, zanim pójdzie dalej.",
+              "contextualClues": "Przedstawiają to jako standardowy proces; nie sygnalizują ani szczególnego entuzjazmu, ani obaw."
+            },
+            {
+              "kind": "condition",
+              "possibility": "Weryfikacja konkretnej wątpliwości przez specjalistę – partner ma wiedzę branżową lub techniczną.",
+              "contextualClues": "Doświadczenie partnera odpowiada ryzyku omawianemu na pierwszym spotkaniu."
+            }
+          ],
+          "positiveSignals": [
+            "Przedstawienie ma jasno określony cel i termin.",
+            "Pierwotna osoba kontaktowa pozostaje zaangażowana i podpowiada, jak się przygotować.",
+            "Pojawiają się prośby o materiały lub wyjaśnienia procesu."
+          ],
+          "weakSignals": [
+            "Nowy partner wydaje się nie znać firmy.",
+            "Przedstawienie następuje bez kontekstu i ram czasowych.",
+            "Pierwotna osoba kontaktowa milknie po przekazaniu tematu."
+          ],
+          "clarifyingQuestion": "Dziękuję za przedstawienie nas partnerowi. Co warto omówić na spotkaniu, w którym weźmie udział [imię partnera], i jakie są kolejne kroki w Państwa procesie?",
+          "recommendedAction": "Przygotować się na szersze pytania z perspektywy funduszu – wielkość rynku, potencjalna skala sukcesu, dopasowanie do portfela. Zapytać osobę kontaktową, do jakich obaw warto się odnieść. Wysłać krótki materiał do przeczytania przed spotkaniem, żeby partner przyszedł przygotowany.",
+          "followUpTimingNote": "Odpowiedzieć w ciągu doby i zaproponować terminy. W ciągu 24 godzin od spotkania z partnerem wysłać podsumowanie, dodając pierwotną osobę kontaktową do kopii (DW).",
+          "editableReplyTemplate": "Dzień dobry, [imię inwestora],\n\nDziękuję za przedstawienie – bardzo chętnie umówię spotkanie, w którym weźmie udział [imię partnera].\n\nŻeby dobrze się przygotować: na czym warto się skupić z myślą o tym, czego oczekuje [imię partnera] – na przykład [temat, np. wielkość rynku lub ryzyko technologiczne]? Chętnie prześlę wcześniej krótki materiał wprowadzający.\n\nI jeszcze jedno pytanie, które pomoże nam w planowaniu: co zwykle następuje po takiej rozmowie w Państwa procesie?\n\nZ pozdrowieniami\n[Twoje imię]",
+          "exampleScenario": {
+            "description": "Hipotetyczny przykład: dwa dni po spotkaniu, na którym pojawił się temat ryzyka regulacyjnego, associate przedstawia założyciela partnerowi z dużym doświadczeniem w płatnościach. Interpretacja „weryfikacja przez specjalistę” jest prawdopodobna. Założyciel pyta associate’a, na czym partner się skupi, i przygotowuje jednostronicowe omówienie kwestii regulacyjnych.",
+            "hypothetical": true
+          },
+          "metaTitle": "„Przedstawię was jednemu z naszych partnerów”: co to znaczy | VC Says",
+          "metaDescription": "Przedstawienie partnerowi funduszu to zwykle dobry sygnał w procesie. Co może oznaczać, na jakie sygnały zwracać uwagę, jak się przygotować – i odpowiedź do skopiowania.",
+          "editorialReviewer": "claude-fluent-pass",
+          "reviewedAt": "2026-11-09",
+          "reviewNote": "AI fluent review pass done (terminology, formal register, calques, placeholders); second independent PL editor pass applied. Not reviewed by a native human; needs native PL approval before publication. Phrase made gender-neutral for the speaker (seed „Chciałbym…” kept as synonym); „[imię partnera]” always in nominative („weźmie udział [imię partnera]”, „czego oczekuje [imię partnera]”)."
         }
       }
     },
@@ -1647,11 +2341,11 @@
       "followUpTemplate": "tooearly",
       "publication_status": "en_approved_for_en_milestone",
       "publication": {
-        "en": "approved_for_en_milestone",
-        "sk": "draft_machine_translation_needs_native_review",
-        "cs": "draft_machine_translation_needs_native_review",
-        "de": "draft_machine_translation_needs_native_review",
-        "pl": "draft_machine_translation_needs_native_review"
+        "en": "/vc-says/need-more-traction",
+        "sk": "/sk/vc-says/need-more-traction",
+        "cs": "/cs/vc-says/need-more-traction",
+        "de": "/de/vc-says/need-more-traction",
+        "pl": "/pl/vc-says/need-more-traction"
       },
       "locales": {
         "en": {
@@ -1813,12 +2507,110 @@
           "reviewNote": "AI fluent review pass done (terminology, vykání, calques, placeholders). Not reviewed by a native human; needs native CS approval before publication."
         },
         "de": {
-          "status": "draft_machine_translation_needs_native_review",
-          "phrase": "Wir müssen mehr Traktion sehen."
+          "status": "machine_draft_fluent_reviewed_needs_native_approval",
+          "seedPhrase": "Wir müssen mehr Traktion sehen.",
+          "phrase": "Wir müssen erst mehr Traction sehen.",
+          "synonyms": [
+            "Wir müssen mehr Traktion sehen",
+            "Meldet euch, wenn ihr mehr Umsatz habt",
+            "Zeigt uns mehr Validierung durch Kunden",
+            "Die Zahlen sind noch nicht so weit"
+          ],
+          "h1": "„Wir müssen erst mehr Traction sehen“ – was es bedeuten kann und wie Sie antworten",
+          "shortAnswer": "Eine echte Lücke bei den Nachweisen, eine unpassende Phase – oder ein allgemeiner Einwand, hinter dem eine andere Sorge steckt. Fragen Sie, welche Kennzahl zählt und auf welchem Niveau ungefähr – und entscheiden Sie dann, ob dieser Meilenstein zu Ihrem eigenen Plan passt, bevor Sie ihm hinterherlaufen.",
+          "interpretations": [
+            {
+              "kind": "condition",
+              "possibility": "Eine konkrete Nachweislücke – Nachfrage, Wachstumsrate, Retention oder Umsatzqualität.",
+              "contextualClues": "Der Investor nennt eine Kennzahl oder fragt detailliert nach Kohorten, Pipeline oder Churn."
+            },
+            {
+              "kind": "mismatch",
+              "possibility": "Die Phase passt nicht: Der Fonds finanziert üblicherweise Unternehmen mit längerer Historie.",
+              "contextualClues": "Die jüngsten Deals des Fonds liegen in späteren Phasen; die Aussage bezieht sich auf Schwellenwerte, nicht auf Ihre Entwicklung."
+            },
+            {
+              "kind": "pass",
+              "possibility": "Ein allgemeiner Einwand, der eine andere Sorge verdeckt (Team, Markt, Wettbewerb).",
+              "contextualClues": "Im Termin ging es vor allem um andere Themen; keine Kennzahl wird genannt; die Aussage fällt ganz am Ende."
+            }
+          ],
+          "positiveSignals": [
+            "Der Investor nennt die Kennzahl und eine ungefähre Schwelle.",
+            "Sie werden gebeten, Bescheid zu geben, sobald Sie sie erreichen.",
+            "Der Investor geht detailliert auf Ihre Zahlen ein."
+          ],
+          "weakSignals": [
+            "Weder Kennzahl noch Schwelle werden genannt.",
+            "Die Fragen drehten sich um etwas ganz anderes.",
+            "Auf eine Bitte um Präzisierung kommt keine Antwort."
+          ],
+          "clarifyingQuestion": "Welche Kennzahl ist für Sie am wichtigsten – Umsatz, Wachstumsrate, Retention oder etwas anderes – und ab welchem Niveau ungefähr wäre ein Gespräch für Sie lohnenswert?",
+          "recommendedAction": "Notieren Sie Kennzahl und Schwelle, falls genannt. Entscheiden Sie, ob das zu Ihrem eigenen Plan passt – jagen Sie keiner willkürlichen Zahl für einen einzelnen Investor hinterher. Priorisieren Sie Investoren, die Unternehmen in Ihrer aktuellen Phase finanzieren, und schicken Sie ein kurzes Update, wenn Sie den Meilenstein erreichen.",
+          "followUpTimingNote": "Stellen Sie die Rückfrage innerhalb weniger Tage. Melden Sie sich wieder, wenn der Meilenstein erreicht ist – mit Daten, nicht vorher.",
+          "editableReplyTemplate": "Hallo [Name des Investors],\n\nvielen Dank für die offenen Worte – das hilft mir weiter.\n\nDamit ich verstehe, was wirklich den Unterschied machen würde: Welche Kennzahl ist für Sie in unserer Phase am wichtigsten – [Option A, z. B. monatlicher Umsatz], [Option B, z. B. Retention] oder etwas anderes? Und ab welchem Niveau ungefähr wäre ein weiteres Gespräch lohnenswert?\n\nWenn das zu unserem Plan passt, schicke ich Ihnen gern ein kurzes Update, sobald wir so weit sind.\n\nViele Grüße\n[Ihr Name]",
+          "exampleScenario": {
+            "description": "Hypothetisches Beispiel: Die Gründerin einer Consumer-App hört „wir müssen erst mehr Traction sehen“ nach einem Termin, in dem fast nur Fragen zum Wettbewerb kamen. Da keine Kennzahl genannt wurde, ist die Lesart „vorgeschobener Einwand“ plausibel. Sie fragt nach der entscheidenden Kennzahl, erfährt, dass eigentlich der Wettbewerb die Sorge war, und ergänzt künftige Pitches um eine Folie zur Differenzierung.",
+            "hypothetical": true
+          },
+          "metaTitle": "„Wir müssen erst mehr Traction sehen“: Was ein VC meinen kann | VC Says",
+          "metaDescription": "Was „wir müssen erst mehr Traction sehen“ von einem Investor bedeuten kann, wie Sie herausfinden, welche Kennzahl zählt, und eine Antwortvorlage zum Kopieren.",
+          "editorialReviewer": "claude-fluent-pass",
+          "reviewedAt": "2026-11-09",
+          "reviewNote": "AI fluent review pass done (terminology, Sie register, calques, placeholders). Not reviewed by a native human; needs native DE approval before publication. Terminology: uses the anglicism „Traction“, which is what DACH founders and VCs actually say; „Traktion“ reads as a calque/technical term. Seed wording with „Traktion“ kept as a synonym."
         },
         "pl": {
-          "status": "draft_machine_translation_needs_native_review",
-          "phrase": "Musimy zobaczyć większą trakcję."
+          "status": "machine_draft_fluent_reviewed_needs_native_approval",
+          "seedPhrase": "Musimy zobaczyć większą trakcję.",
+          "phrase": "Chcielibyśmy zobaczyć większą trakcję.",
+          "synonyms": [
+            "Wróćcie, gdy będziecie mieć większe przychody",
+            "Chcemy zobaczyć szybszy wzrost",
+            "Musimy zobaczyć większą trakcję",
+            "Liczby jeszcze się nie bronią"
+          ],
+          "h1": "„Chcielibyśmy zobaczyć większą trakcję” – co może oznaczać i jak odpowiedzieć",
+          "shortAnswer": "Realny brak dowodów, niedopasowanie etapu albo ogólny zarzut, za którym kryje się inna wątpliwość. Warto zapytać, która metryka jest kluczowa i na mniej więcej jakim poziomie – a potem ocenić, czy ten kamień milowy pasuje do planu firmy, zanim zacznie się go gonić.",
+          "interpretations": [
+            {
+              "kind": "condition",
+              "possibility": "Konkretna luka w dowodach – popyt, tempo wzrostu, retencja lub jakość przychodów.",
+              "contextualClues": "Wskazują metrykę albo szczegółowo pytają o kohorty, lejek sprzedażowy lub churn."
+            },
+            {
+              "kind": "mismatch",
+              "possibility": "Niedopasowanie etapu: fundusz zwykle wspiera firmy z dłuższą historią.",
+              "contextualClues": "Ich ostatnie inwestycje to późniejsze etapy; uwaga dotyczy progów, a nie trajektorii samej firmy."
+            },
+            {
+              "kind": "pass",
+              "possibility": "Ogólny zarzut maskujący inną wątpliwość (zespół, rynek, konkurencja).",
+              "contextualClues": "Spotkanie dotyczyło innych tematów; nie pada żadna metryka; uwaga pojawia się na samym końcu."
+            }
+          ],
+          "positiveSignals": [
+            "Wskazują metrykę i orientacyjny próg.",
+            "Proszą o informację, gdy próg zostanie osiągnięty.",
+            "Szczegółowo analizują liczby firmy."
+          ],
+          "weakSignals": [
+            "Nie pada żadna metryka ani próg.",
+            "Ich pytania dotyczyły czegoś zupełnie innego.",
+            "Nie odpowiadają na prośbę o doprecyzowanie."
+          ],
+          "clarifyingQuestion": "Która metryka jest dla Państwa najważniejsza – przychody, tempo wzrostu, retencja czy coś innego – i mniej więcej jaki poziom sprawiłby, że rozmowa miałaby sens?",
+          "recommendedAction": "Zanotować metrykę i próg, jeśli je podano. Ocenić, czy pasują do planu firmy – nie warto gonić arbitralnej liczby dla jednego inwestora. Priorytetowo traktować inwestorów, którzy wspierają firmy na obecnym etapie, i wysłać krótką aktualizację po osiągnięciu kamienia milowego.",
+          "followUpTimingNote": "Zadać pytanie doprecyzowujące w ciągu kilku dni. Wrócić z danymi w ręku po osiągnięciu kamienia milowego – nie wcześniej.",
+          "editableReplyTemplate": "Dzień dobry, [imię inwestora],\n\nDziękuję za bezpośredniość – to bardzo pomocne.\n\nChcę dobrze zrozumieć, co realnie zmieniłoby Państwa ocenę: która metryka jest dla Państwa najważniejsza na naszym etapie – [opcja A, np. miesięczne przychody], [opcja B, np. retencja] czy coś innego – i mniej więcej jaki poziom sprawiłby, że warto byłoby wrócić do rozmowy?\n\nJeśli będzie to zgodne z naszym planem, chętnie prześlę krótką aktualizację, gdy ten poziom osiągniemy.\n\nZ pozdrowieniami\n[Twoje imię]",
+          "exampleScenario": {
+            "description": "Hipotetyczny przykład: założycielka aplikacji konsumenckiej słyszy „chcielibyśmy zobaczyć większą trakcję” po spotkaniu zdominowanym przez pytania o konkurencję. Ponieważ nie padła żadna metryka, prawdopodobna jest interpretacja „ogólny zarzut maskujący inną wątpliwość”. Założycielka pyta, która metryka jest kluczowa, dowiaduje się, że prawdziwą obawą była konkurencja, i dodaje do przyszłych prezentacji slajd o wyróżnikach.",
+            "hypothetical": true
+          },
+          "metaTitle": "„Chcielibyśmy zobaczyć większą trakcję”: co może oznaczać | VC Says",
+          "metaDescription": "Co może oznaczać „chcielibyśmy zobaczyć większą trakcję” od inwestora, jak ustalić, która metryka się liczy, i szablon odpowiedzi do skopiowania.",
+          "editorialReviewer": "claude-fluent-pass",
+          "reviewedAt": "2026-11-09",
+          "reviewNote": "AI fluent review pass done (terminology, formal register, calques, placeholders); second independent PL editor pass applied. Not reviewed by a native human; needs native PL approval before publication. Terminology: „trakcja” chosen over English „traction” – established in PL startup media/ecosystem and already used in PL UI decoder rule R10; native reviewer to confirm."
         }
       }
     },
@@ -1874,11 +2666,11 @@
       "followUpTemplate": "nolead",
       "publication_status": "en_approved_for_en_milestone",
       "publication": {
-        "en": "approved_for_en_milestone",
-        "sk": "draft_machine_translation_needs_native_review",
-        "cs": "draft_machine_translation_needs_native_review",
-        "de": "draft_machine_translation_needs_native_review",
-        "pl": "draft_machine_translation_needs_native_review"
+        "en": "/vc-says/no-lead-investor",
+        "sk": "/sk/vc-says/no-lead-investor",
+        "cs": "/cs/vc-says/no-lead-investor",
+        "de": "/de/vc-says/no-lead-investor",
+        "pl": "/pl/vc-says/no-lead-investor"
       },
       "locales": {
         "en": {
@@ -2040,12 +2832,110 @@
           "reviewNote": "AI fluent review pass done (terminology, vykání, calques, placeholders). Not reviewed by a native human; needs native CS approval before publication."
         },
         "de": {
-          "status": "draft_machine_translation_needs_native_review",
-          "phrase": "Kommt wieder, wenn ihr einen Lead-Investor habt."
+          "status": "machine_draft_fluent_reviewed_needs_native_approval",
+          "seedPhrase": "Kommt wieder, wenn ihr einen Lead-Investor habt.",
+          "phrase": "Meldet euch wieder, wenn ihr einen Lead habt.",
+          "synonyms": [
+            "Kommt wieder, wenn ihr einen Lead-Investor habt",
+            "Sobald ihr einen Lead habt, schauen wir es uns an",
+            "Wir gehen in Runden nicht als Lead rein",
+            "Wer ist der Lead in der Runde?"
+          ],
+          "h1": "„Meldet euch wieder, wenn ihr einen Lead habt“ – was es bedeuten kann und wie Sie antworten",
+          "shortAnswer": "Bestenfalls bedingtes Interesse – und manchmal ein höfliches Nein. Manche Investoren steigen grundsätzlich nur als Follower ein, andere warten auf die Bestätigung durch jemand anderen. Werten Sie es als bedingt, nie als zugesagt, und fragen Sie, welche Ticketgröße und welche Bedingungen gelten würden.",
+          "interpretations": [
+            {
+              "kind": "condition",
+              "possibility": "Der Fonds investiert tatsächlich nur als Follower – er führt Runden selten oder nie an und verlässt sich darauf, dass ein Lead die Konditionen festlegt.",
+              "contextualClues": "Im Portfolio finden sich kaum oder keine Lead-Investments; der Investor nennt eine Ticketgröße oder fragt nach den angestrebten Konditionen."
+            },
+            {
+              "kind": "condition",
+              "possibility": "Interesse, das von externer Bestätigung abhängt: Jemand anderes soll die Due Diligence machen und den Preis festlegen.",
+              "contextualClues": "Der Investor fragt, mit wem Sie sonst noch sprechen; die Begeisterung ist echt, aber es wird nichts Konkretes angeboten."
+            },
+            {
+              "kind": "pass",
+              "possibility": "Eine sanfte Absage ohne echte Zusage dahinter.",
+              "contextualClues": "Kein Betrag, keine Bedingungen, keine Bitte um Nachricht, sobald ein Lead zusagt."
+            }
+          ],
+          "positiveSignals": [
+            "Der Investor nennt Ticketgröße und Bedingungen.",
+            "Es werden Vorstellungen bei möglichen Lead-Investoren angeboten.",
+            "Der Investor möchte informiert werden, sobald ein Lead zusagt."
+          ],
+          "weakSignals": [
+            "Es wird kein Betrag genannt.",
+            "Begeisterung ohne jedes Detail.",
+            "Keine Reaktion, wenn Sie ein Update zu Gesprächen mit potenziellen Leads schicken."
+          ],
+          "clarifyingQuestion": "Das hilft mir, vielen Dank. Wenn wir einen Lead zu Konditionen im besprochenen Rahmen gewinnen: Welche Ticketgröße käme für Sie infrage – und haben Sie Anforderungen daran, wer den Lead übernimmt?",
+          "recommendedAction": "Erfassen Sie das als bedingtes, nicht als zugesagtes Interesse und rechnen Sie es nicht in Ihr Rundenvolumen ein. Konzentrieren Sie sich darauf, einen Lead zu finden. Bitten Sie um Vorstellungen bei Fonds, die in Ihrer Phase tatsächlich als Lead investieren.",
+          "followUpTimingNote": "Antworten Sie innerhalb weniger Tage. Melden Sie sich wieder, wenn ein Lead zugesagt hat oder die Term-Sheet-Verhandlungen weit fortgeschritten sind.",
+          "editableReplyTemplate": "Hallo [Name des Investors],\n\nvielen Dank – das ist klar und hilfreich.\n\nDamit ich die Runde sauber planen kann: Wenn wir einen Lead zu Konditionen von etwa [angestrebte Konditionen oder Spanne] gewinnen, welche Ticketgröße käme für Sie infrage, und haben Sie Anforderungen daran, wer den Lead übernimmt?\n\nFalls Ihnen Fonds einfallen, die in unserer Phase typischerweise als Lead investieren, wäre ich für eine Vorstellung sehr dankbar. Ich gebe Ihnen Bescheid, sobald ein Lead feststeht.\n\nViele Grüße\n[Ihr Name]",
+          "exampleScenario": {
+            "description": "Hypothetisches Beispiel: Ein Seed-Gründer hört „meldet euch wieder, wenn ihr einen Lead habt“ von einem Fonds, der eine Ticketgröße nennt und anbietet, ihn zwei möglichen Lead-Investoren vorzustellen. Am plausibelsten ist hier, dass der Fonds tatsächlich nur als Follower investiert. Der Gründer vermerkt das Interesse als bedingt, nimmt die Vorstellungen an und informiert den Fonds, sobald ein Lead ein Term Sheet vorlegt.",
+            "hypothetical": true
+          },
+          "metaTitle": "„Meldet euch wieder, wenn ihr einen Lead habt“: Was das heißt | VC Says",
+          "metaDescription": "Ein Investor will erst einen Lead sehen: echte Follower-Strategie oder sanftes Nein? Signale, was Sie zur Ticketgröße fragen sollten, und eine Antwortvorlage.",
+          "editorialReviewer": "claude-fluent-pass",
+          "reviewedAt": "2026-11-09",
+          "reviewNote": "AI fluent review pass done (terminology, Sie register, calques, placeholders). Not reviewed by a native human; needs native DE approval before publication. „Kommt wieder“ (seed) softened to „Meldet euch wieder“; „Lead“/„Lead-Investor“, „Ticketgröße“ and „Term Sheet“ kept as standard DACH VC terms."
         },
         "pl": {
-          "status": "draft_machine_translation_needs_native_review",
-          "phrase": "Wróćcie, gdy będziecie mieć inwestora wiodącego."
+          "status": "machine_draft_fluent_reviewed_needs_native_approval",
+          "seedPhrase": "Wróćcie, gdy będziecie mieć inwestora wiodącego.",
+          "phrase": "Odezwijcie się, gdy będziecie mieć inwestora wiodącego.",
+          "synonyms": [
+            "Dołączymy, gdy znajdziecie leada",
+            "Wróćcie, gdy będziecie mieć inwestora wiodącego",
+            "Nie występujemy jako lead inwestor",
+            "Kto prowadzi rundę?"
+          ],
+          "h1": "„Odezwijcie się, gdy będziecie mieć inwestora wiodącego” – co może oznaczać i jak odpowiedzieć",
+          "shortAnswer": "W najlepszym razie warunkowe zainteresowanie – a czasem uprzejme „nie”. Niektórzy inwestorzy rzeczywiście tylko dołączają do rund prowadzonych przez innych, inni czekają w ten sposób, aż wartość inwestycji potwierdzi ktoś inny. Należy traktować to jako deklarację warunkową, nigdy jako zobowiązanie, i zapytać, jaka kwota inwestycji i jakie warunki wchodziłyby w grę.",
+          "interpretations": [
+            {
+              "kind": "condition",
+              "possibility": "Rzeczywista preferencja roli koinwestora – fundusz rzadko lub nigdy nie prowadzi rund i polega na inwestorze wiodącym (tzw. leadzie), który ustala warunki.",
+              "contextualClues": "W ich portfelu jest niewiele rund prowadzonych samodzielnie albo nie ma żadnej; wspominają kwotę inwestycji lub pytają o warunki, na jakie liczy firma."
+            },
+            {
+              "kind": "condition",
+              "possibility": "Zainteresowanie zależne od potwierdzenia: chcą, żeby ktoś inny przeprowadził due diligence i ustalił wycenę.",
+              "contextualClues": "Pytają, z kim jeszcze toczą się rozmowy; entuzjazm jest prawdziwy, ale nie pada nic konkretnego."
+            },
+            {
+              "kind": "pass",
+              "possibility": "Łagodna odmowa bez realnego zobowiązania.",
+              "contextualClues": "Brak kwoty, warunków i prośby o informację, gdy inwestor wiodący się zadeklaruje."
+            }
+          ],
+          "positiveSignals": [
+            "Podają kwotę inwestycji i warunki.",
+            "Oferują przedstawienie potencjalnym inwestorom wiodącym.",
+            "Proszą o informację, gdy tylko inwestor wiodący się zadeklaruje."
+          ],
+          "weakSignals": [
+            "Nie pada żadna kwota.",
+            "Entuzjazm bez żadnych szczegółów.",
+            "Nie reagują na informacje o rozmowach z potencjalnymi inwestorami wiodącymi."
+          ],
+          "clarifyingQuestion": "To pomocne, dziękuję. Jeśli pozyskamy inwestora wiodącego na warunkach zbliżonych do omawianych, jaką kwotę inwestycji brałby pod uwagę Państwa fundusz – i czy mają Państwo jakieś wymagania co do tego, kto miałby prowadzić rundę?",
+          "recommendedAction": "Zapisać to jako zainteresowanie warunkowe, a nie zadeklarowane, i nie wliczać go do sumy rundy. Skupić się na znalezieniu inwestora wiodącego. Poprosić o przedstawienie funduszom, które prowadzą rundy na tym etapie.",
+          "followUpTimingNote": "Odpowiedzieć w ciągu kilku dni. Odezwać się ponownie, gdy inwestor wiodący się zadeklaruje lub rozmowy dotyczące term sheetu będą zaawansowane.",
+          "editableReplyTemplate": "Dzień dobry, [imię inwestora],\n\nDziękuję – to jasna i pomocna informacja.\n\nPytam z myślą o planowaniu rundy: jeśli pozyskamy inwestora wiodącego na warunkach w okolicach [docelowe warunki lub przedział wyceny], jaką kwotę inwestycji brałby pod uwagę Państwa fundusz i czy są jakieś wymagania co do tego, kto miałby prowadzić rundę?\n\nJeśli przychodzą Państwu na myśl fundusze, które zwykle prowadzą rundy na naszym etapie, przedstawienie byłoby dla nas ogromną pomocą. Dam znać, gdy tylko inwestor wiodący się zadeklaruje.\n\nZ pozdrowieniami\n[Twoje imię]",
+          "exampleScenario": {
+            "description": "Hipotetyczny przykład: założyciel na etapie seed słyszy „odezwijcie się, gdy będziecie mieć inwestora wiodącego” od funduszu, który podaje kwotę inwestycji i proponuje przedstawienie dwóm potencjalnym inwestorom wiodącym. Najbardziej prawdopodobna jest interpretacja „rzeczywista rola koinwestora”. Założyciel zapisuje to jako zainteresowanie warunkowe, korzysta z tych kontaktów i informuje fundusz, gdy inwestor wiodący przedstawia term sheet.",
+            "hypothetical": true
+          },
+          "metaTitle": "„Gdy będziecie mieć inwestora wiodącego”: co to oznacza | VC Says",
+          "metaDescription": "Inwestor chce najpierw inwestora wiodącego: rzeczywista rola koinwestora czy uprzejma odmowa? Sygnały, pytanie o kwotę inwestycji i odpowiedź do skopiowania.",
+          "editorialReviewer": "claude-fluent-pass",
+          "reviewedAt": "2026-11-09",
+          "reviewNote": "AI fluent review pass done (terminology, formal register, calques, placeholders); second independent PL editor pass applied. Not reviewed by a native human; needs native PL approval before publication. Terminology: „inwestor wiodący” in reader-facing copy and emails (matches PL UI search hint and tools.json; glossed once as „tzw. lead”); colloquial „lead”/„leada” kept only in investor-voice synonyms; cheque size = „kwota inwestycji”; co-investor = „koinwestor”."
         }
       }
     },
@@ -2094,11 +2984,11 @@
       "followUpTemplate": "quiet",
       "publication_status": "en_approved_for_en_milestone",
       "publication": {
-        "en": "approved_for_en_milestone",
-        "sk": "draft_machine_translation_needs_native_review",
-        "cs": "draft_machine_translation_needs_native_review",
-        "de": "draft_machine_translation_needs_native_review",
-        "pl": "draft_machine_translation_needs_native_review"
+        "en": "/vc-says/investor-ghosting",
+        "sk": "/sk/vc-says/investor-ghosting",
+        "cs": "/cs/vc-says/investor-ghosting",
+        "de": "/de/vc-says/investor-ghosting",
+        "pl": "/pl/vc-says/investor-ghosting"
       },
       "locales": {
         "en": {
@@ -2260,12 +3150,110 @@
           "reviewNote": "AI fluent review pass done (terminology, vykání, calques, placeholders). Not reviewed by a native human; needs native CS approval before publication."
         },
         "de": {
-          "status": "draft_machine_translation_needs_native_review",
-          "phrase": "Keine Antwort nach zwei Nachfassnachrichten."
+          "status": "machine_draft_fluent_reviewed_needs_native_approval",
+          "seedPhrase": "Keine Antwort nach zwei Nachfassnachrichten.",
+          "phrase": "Keine Antwort, auch nach zweimaligem Nachfassen.",
+          "synonyms": [
+            "Investor-Ghosting",
+            "VC meldet sich nach dem Meeting nicht mehr",
+            "Keine Antwort nach zwei Nachfassnachrichten",
+            "Investor ist abgetaucht"
+          ],
+          "h1": "Keine Antwort, auch nach zweimaligem Nachfassen – was das Schweigen eines Investors bedeuten kann",
+          "shortAnswer": "Schweigen ist ein Verhalten, keine Botschaft – deuten Sie es also vorsichtig. Dahinter können Zeitmangel, eine untergegangene E-Mail, ein ins Stocken geratener interner Prozess oder geringes Interesse stecken. Schicken Sie nach zwei unbeantworteten Nachfassversuchen eine letzte, kurze Nachricht, die den Faden sauber abschließt, und investieren Sie Ihre Energie in aktive Gespräche.",
+          "interpretations": [
+            {
+              "kind": "noise",
+              "possibility": "Zeitmangel, Reisen oder ein volles Postfach – Ihre E-Mail hatte schlicht keine Priorität.",
+              "contextualClues": "Vorher war das Interesse deutlich erkennbar; die Funkstille ist kurz; der Investor hat früher zügig geantwortet."
+            },
+            {
+              "kind": "noise",
+              "possibility": "Ein interner Prozess stockt, und es gibt noch keine Antwort.",
+              "contextualClues": "Es war von Partnerdiskussionen oder einem Investment Committee die Rede; das Schweigen folgt auf ein zugesagtes Entscheidungsdatum."
+            },
+            {
+              "kind": "pass",
+              "possibility": "Geringes Interesse, das sich im Ausbleiben einer Antwort zeigt.",
+              "contextualClues": "Das Interesse war von Anfang an verhalten; ein konkreter nächster Schritt wurde nie vereinbart; mehrere Wochen sind vergangen."
+            }
+          ],
+          "positiveSignals": [
+            "Es war bereits ein konkreter nächster Schritt oder ein Entscheidungsdatum vereinbart.",
+            "Der Investor hatte sich zuvor intensiv mit Ihnen beschäftigt (Rückfragen, Anfragen nach Unterlagen).",
+            "Eine andere Person beim Fonds reagiert weiterhin."
+          ],
+          "weakSignals": [
+            "Ein konkreter nächster Schritt wurde nie vereinbart.",
+            "Mehrere Wochen Funkstille trotz kurzer, nützlicher Updates.",
+            "Der Investor hat Ihre Nachrichten offensichtlich gesehen (antwortet z. B. anderen), nur Ihnen nicht."
+          ],
+          "clarifyingQuestion": "Ist das Thema für Sie noch interessant, oder soll ich es vorerst von Ihrer Liste nehmen? Beide Antworten sind völlig in Ordnung.",
+          "recommendedAction": "Schicken Sie eine kurze, abschließende Nachricht mit einem echten Update und einer einfachen Ja/Nein-Frage. Setzen Sie den Investor danach in Ihrer Pipeline auf „inaktiv“ und richten Sie Ihre Aufmerksamkeit neu aus. Schicken Sie keine weiteren Erinnerungen.",
+          "followUpTimingNote": "Warten Sie, bis ein zugesagtes Datum um einige Werktage überschritten ist (oder etwa eine Woche nach einem Termin). Nach zwei unbeantworteten Nachfassversuchen folgt nach ein bis zwei Wochen eine letzte Nachricht – danach hören Sie auf.",
+          "editableReplyTemplate": "Hallo [Name des Investors],\n\nich weiß, dass gerade viel los ist, deshalb halte ich mich kurz.\n\nZum aktuellen Stand: [ein konkreter Fortschritt].\n\nIst [Firmenname] in dieser Runde für Sie noch ein Thema, oder soll ich es vorerst von Ihrer Liste nehmen? Beide Antworten sind völlig in Ordnung – es hilft mir einfach bei der Planung.\n\nViele Grüße\n[Ihr Name]",
+          "exampleScenario": {
+            "description": "Hypothetisches Beispiel: Ein Partner hatte eine Entscheidung „bis Freitag“ zugesagt und meldet sich dann trotz zweier höflicher Nachfassnachrichten zwei Wochen lang nicht. Sowohl ein stockender interner Prozess als auch geringes Interesse sind plausibel. Die Gründerin schickt eine abschließende Nachricht mit einem neuen Kundengewinn und einer Ja/Nein-Frage und konzentriert sich dann auf zwei Investoren, die aktiv dabei sind.",
+            "hypothetical": true
+          },
+          "metaTitle": "Investor antwortet nicht auf Nachfassen? Was das heißen kann | VC Says",
+          "metaDescription": "Was Schweigen nach zwei Nachfassnachrichten bei einem VC bedeuten kann, wie lange Sie warten sollten, und eine kurze Abschlussnachricht zum Anpassen.",
+          "editorialReviewer": "claude-fluent-pass",
+          "reviewedAt": "2026-11-09",
+          "reviewNote": "AI fluent review pass done (terminology, Sie register, calques, placeholders). Not reviewed by a native human; needs native DE approval before publication. Behavior record: phrase describes the situation, not an investor quote; awkward seed noun „Nachfassnachrichten“ rephrased and kept as synonym."
         },
         "pl": {
-          "status": "draft_machine_translation_needs_native_review",
-          "phrase": "Brak odpowiedzi po dwóch wiadomościach przypominających."
+          "status": "machine_draft_fluent_reviewed_needs_native_approval",
+          "seedPhrase": "Brak odpowiedzi po dwóch wiadomościach przypominających.",
+          "phrase": "Brak odpowiedzi po dwóch przypomnieniach.",
+          "synonyms": [
+            "Ghosting ze strony inwestora",
+            "VC nie odpowiada po spotkaniu",
+            "Brak odpowiedzi po dwóch wiadomościach przypominających",
+            "Inwestor przestał się odzywać"
+          ],
+          "h1": "Brak odpowiedzi po dwóch przypomnieniach – co może oznaczać milczenie inwestora",
+          "shortAnswer": "Milczenie to zachowanie, a nie komunikat – trzeba je odczytywać ostrożnie. Może wynikać z braku czasu, zagubionego maila, zablokowanego procesu wewnętrznego – albo z niskiego zainteresowania. Po dwóch przypomnieniach bez odpowiedzi warto wysłać jedną krótką wiadomość zamykającą temat i skierować energię na aktywne rozmowy.",
+          "interpretations": [
+            {
+              "kind": "noise",
+              "possibility": "Brak czasu, podróże albo przepełniona skrzynka – mail po prostu nie trafił na listę priorytetów.",
+              "contextualClues": "Wcześniejsze zaangażowanie było duże; cisza trwa krótko; wcześniej odpowiadali szybko."
+            },
+            {
+              "kind": "noise",
+              "possibility": "Proces wewnętrzny utknął i nie mają jeszcze odpowiedzi.",
+              "contextualClues": "Wspominali o dyskusjach partnerów lub komitecie inwestycyjnym; cisza zapadła po obiecanym terminie decyzji."
+            },
+            {
+              "kind": "pass",
+              "possibility": "Niskie zainteresowanie, zakomunikowane brakiem odpowiedzi.",
+              "contextualClues": "Zaangażowanie od początku było ograniczone; nigdy nie uzgodniono konkretnego kolejnego kroku; minęło kilka tygodni."
+            }
+          ],
+          "positiveSignals": [
+            "Wcześniej uzgodnili konkretny kolejny krok lub termin decyzji.",
+            "Wcześniej angażowali się szczegółowo (pytania, prośby o materiały).",
+            "Ktoś inny w funduszu nadal odpowiada."
+          ],
+          "weakSignals": [
+            "Nigdy nie uzgodniono konkretnego kolejnego kroku.",
+            "Kilka tygodni ciszy mimo krótkich, wartościowych aktualizacji.",
+            "Widzieli przypomnienia (np. w tym czasie odpowiadali innym osobom), ale na nie nie odpowiedzieli."
+          ],
+          "clarifyingQuestion": "Czy ten temat jest nadal dla Państwa interesujący, czy na razie lepiej go zamknąć? Każda odpowiedź jest w porządku.",
+          "recommendedAction": "Wysłać jedną krótką wiadomość zamykającą temat, z prawdziwą aktualizacją i prostym pytaniem tak/nie. Następnie oznaczyć inwestora w lejku fundraisingowym jako „nieaktywny” i przenieść uwagę gdzie indziej. Bez kolejnych ponagleń.",
+          "followUpTimingNote": "Odczekać kilka dni roboczych po obiecanym terminie (lub około tygodnia po spotkaniu). Po dwóch przypomnieniach bez odpowiedzi wysłać jedną ostatnią wiadomość 1–2 tygodnie później – i na tym poprzestać.",
+          "editableReplyTemplate": "Dzień dobry, [imię inwestora],\n\nZdaję sobie sprawę, jak napięte bywają kalendarze, więc krótko.\n\nNajważniejsza nowość: [jeden konkretny postęp].\n\nCzy inwestycja w firmę [nazwa firmy] jest nadal dla Państwa interesująca w tej rundzie, czy na razie lepiej zamknąć temat? Każda odpowiedź jest w porządku – po prostu ułatwi mi planowanie.\n\nZ pozdrowieniami\n[Twoje imię]",
+          "exampleScenario": {
+            "description": "Hipotetyczny przykład: partner obiecał decyzję „do piątku”, po czym od dwóch tygodni milczy mimo dwóch uprzejmych przypomnień. Prawdopodobne są zarówno zablokowany proces wewnętrzny, jak i niskie zainteresowanie. Założyciel wysyła jedną wiadomość zamykającą temat z informacją o nowym kliencie i pytaniem tak/nie, a potem skupia się na dwóch inwestorach, którzy są aktywnie zaangażowani.",
+            "hypothetical": true
+          },
+          "metaTitle": "Inwestor nie odpowiada na przypomnienia? Co to może oznaczać | VC Says",
+          "metaDescription": "Co może oznaczać milczenie VC po dwóch przypomnieniach, ile czekać i krótki mail zamykający temat do edycji i skopiowania.",
+          "editorialReviewer": "claude-fluent-pass",
+          "reviewedAt": "2026-11-09",
+          "reviewNote": "AI fluent review pass done (terminology, formal register, calques, placeholders); second independent PL editor pass applied. Not reviewed by a native human; needs native PL approval before publication. Behavior record (not an investor quote). „Ghosting” kept as a synonym because PL founders use the term."
         }
       }
     },

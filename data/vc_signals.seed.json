@@ -1,0 +1,1237 @@
+{
+  "dataset_version": "0.1-draft",
+  "editorial_status": "all records unverified drafts",
+  "source_note": "Common fundraising phrases and speculative interpretations; not investor quotations or interview-derived facts.",
+  "records": [
+    {
+      "id": "too-early",
+      "slug": "too-early",
+      "record_type": "phrase",
+      "signal_class": "soft-no",
+      "topic_tags": [
+        "stage"
+      ],
+      "stage_tags": [
+        "pre-seed",
+        "seed",
+        "series-a"
+      ],
+      "context_tags": [
+        "post-meeting",
+        "email"
+      ],
+      "publication_status": "draft_needs_fact_check_and_editorial_review",
+      "evidence_type": "editorial-analysis",
+      "phrase": {
+        "en": "You're too early for us.",
+        "sk": "Zatiaľ ste pre nás v príliš skorej fáze.",
+        "cs": "Zatím jste pro nás v příliš rané fázi.",
+        "de": "Für uns seid ihr noch in einer zu frühen Phase.",
+        "pl": "Jesteście dla nas jeszcze na zbyt wczesnym etapie."
+      },
+      "hypotheses_en": "Stage mismatch, missing proof, or a polite pass.",
+      "observable_context_en": "A named milestone, timeframe or requested update",
+      "clarifying_question_guidance_en": "Ask which milestone would change the decision.",
+      "next_action_en": "Record the requested proof point and re-contact only after progress.",
+      "source_urls": [],
+      "attributed_investor_quote": null,
+      "localization_status": {
+        "en": "preliminary_phrase_seed_not_reviewed",
+        "sk": "preliminary_phrase_seed_not_reviewed",
+        "cs": "preliminary_phrase_seed_not_reviewed",
+        "de": "preliminary_phrase_seed_not_reviewed",
+        "pl": "preliminary_phrase_seed_not_reviewed"
+      },
+      "notes": "Do not publish from seed. Expand into substantive, sourced, locally edited article with multiple possibilities and actionable response."
+    },
+    {
+      "id": "not-right-fit",
+      "slug": "not-right-fit",
+      "record_type": "phrase",
+      "signal_class": "hard-no",
+      "topic_tags": [
+        "thesis"
+      ],
+      "stage_tags": [
+        "pre-seed",
+        "seed",
+        "series-a"
+      ],
+      "context_tags": [
+        "post-meeting",
+        "email"
+      ],
+      "publication_status": "draft_needs_fact_check_and_editorial_review",
+      "evidence_type": "editorial-analysis",
+      "phrase": {
+        "en": "It's not the right fit for us.",
+        "sk": "Nezapadá to do našej investičnej stratégie.",
+        "cs": "Nezapadá to do naší investiční strategie.",
+        "de": "Das passt nicht zu unserer Investmentstrategie.",
+        "pl": "To nie pasuje do naszej strategii inwestycyjnej."
+      },
+      "hypotheses_en": "A mismatch with fund thesis, stage, geography, size, or a broad rejection.",
+      "observable_context_en": "A clearly explained investment mandate",
+      "clarifying_question_guidance_en": "Ask once whether the issue is sector, stage or geography.",
+      "next_action_en": "Move on to better matched investors.",
+      "source_urls": [],
+      "attributed_investor_quote": null,
+      "localization_status": {
+        "en": "preliminary_phrase_seed_not_reviewed",
+        "sk": "preliminary_phrase_seed_not_reviewed",
+        "cs": "preliminary_phrase_seed_not_reviewed",
+        "de": "preliminary_phrase_seed_not_reviewed",
+        "pl": "preliminary_phrase_seed_not_reviewed"
+      },
+      "notes": "Do not publish from seed. Expand into substantive, sourced, locally edited article with multiple possibilities and actionable response."
+    },
+    {
+      "id": "keep-in-touch",
+      "slug": "keep-in-touch",
+      "record_type": "phrase",
+      "signal_class": "soft-no",
+      "topic_tags": [
+        "timing"
+      ],
+      "stage_tags": [
+        "pre-seed",
+        "seed",
+        "series-a"
+      ],
+      "context_tags": [
+        "post-meeting",
+        "email"
+      ],
+      "publication_status": "draft_needs_fact_check_and_editorial_review",
+      "evidence_type": "editorial-analysis",
+      "phrase": {
+        "en": "Let's keep in touch.",
+        "sk": "Zostaňme v kontakte.",
+        "cs": "Zůstaňme v kontaktu.",
+        "de": "Lasst uns in Kontakt bleiben.",
+        "pl": "Pozostańmy w kontakcie."
+      },
+      "hypotheses_en": "Open door for future updates or a polite no.",
+      "observable_context_en": "A requested specific update or proposed next check-in",
+      "clarifying_question_guidance_en": "Ask what milestone would warrant a future update.",
+      "next_action_en": "Send concise updates only when you have material progress.",
+      "source_urls": [],
+      "attributed_investor_quote": null,
+      "localization_status": {
+        "en": "preliminary_phrase_seed_not_reviewed",
+        "sk": "preliminary_phrase_seed_not_reviewed",
+        "cs": "preliminary_phrase_seed_not_reviewed",
+        "de": "preliminary_phrase_seed_not_reviewed",
+        "pl": "preliminary_phrase_seed_not_reviewed"
+      },
+      "notes": "Do not publish from seed. Expand into substantive, sourced, locally edited article with multiple possibilities and actionable response."
+    },
+    {
+      "id": "circle-back-next-quarter",
+      "slug": "circle-back-next-quarter",
+      "record_type": "phrase",
+      "signal_class": "ambiguous",
+      "topic_tags": [
+        "timing"
+      ],
+      "stage_tags": [
+        "pre-seed",
+        "seed",
+        "series-a"
+      ],
+      "context_tags": [
+        "post-meeting",
+        "email"
+      ],
+      "publication_status": "draft_needs_fact_check_and_editorial_review",
+      "evidence_type": "editorial-analysis",
+      "phrase": {
+        "en": "Circle back next quarter.",
+        "sk": "Ozvite sa nám opäť budúci štvrťrok.",
+        "cs": "Ozvěte se nám znovu příští čtvrtletí.",
+        "de": "Meldet euch im nächsten Quartal noch einmal.",
+        "pl": "Wróćcie do nas w przyszłym kwartale."
+      },
+      "hypotheses_en": "Budget/timing constraint, stage mismatch or a soft pass.",
+      "observable_context_en": "Specific calendar invitation or requested metric",
+      "clarifying_question_guidance_en": "Confirm what they want to see next quarter.",
+      "next_action_en": "Set one relevant follow-up and keep fundraising elsewhere.",
+      "source_urls": [],
+      "attributed_investor_quote": null,
+      "localization_status": {
+        "en": "preliminary_phrase_seed_not_reviewed",
+        "sk": "preliminary_phrase_seed_not_reviewed",
+        "cs": "preliminary_phrase_seed_not_reviewed",
+        "de": "preliminary_phrase_seed_not_reviewed",
+        "pl": "preliminary_phrase_seed_not_reviewed"
+      },
+      "notes": "Do not publish from seed. Expand into substantive, sourced, locally edited article with multiple possibilities and actionable response."
+    },
+    {
+      "id": "send-deck",
+      "slug": "send-deck",
+      "record_type": "phrase",
+      "signal_class": "ambiguous",
+      "topic_tags": [
+        "process"
+      ],
+      "stage_tags": [
+        "pre-seed",
+        "seed",
+        "series-a"
+      ],
+      "context_tags": [
+        "post-meeting",
+        "email"
+      ],
+      "publication_status": "draft_needs_fact_check_and_editorial_review",
+      "evidence_type": "editorial-analysis",
+      "phrase": {
+        "en": "Send me your deck.",
+        "sk": "Pošlite mi vašu prezentáciu pre investorov.",
+        "cs": "Pošlete mi svou prezentaci pro investory.",
+        "de": "Schickt mir euer Pitch Deck.",
+        "pl": "Prześlijcie mi swój pitch deck."
+      },
+      "hypotheses_en": "Initial screening or genuine preliminary interest.",
+      "observable_context_en": "A scheduled review call or specific questions",
+      "clarifying_question_guidance_en": "Ask whether a follow-up discussion makes sense after review.",
+      "next_action_en": "Send the current concise deck and offer a next step.",
+      "source_urls": [],
+      "attributed_investor_quote": null,
+      "localization_status": {
+        "en": "preliminary_phrase_seed_not_reviewed",
+        "sk": "preliminary_phrase_seed_not_reviewed",
+        "cs": "preliminary_phrase_seed_not_reviewed",
+        "de": "preliminary_phrase_seed_not_reviewed",
+        "pl": "preliminary_phrase_seed_not_reviewed"
+      },
+      "notes": "Do not publish from seed. Expand into substantive, sourced, locally edited article with multiple possibilities and actionable response."
+    },
+    {
+      "id": "second-meeting",
+      "slug": "second-meeting",
+      "record_type": "phrase",
+      "signal_class": "positive",
+      "topic_tags": [
+        "process"
+      ],
+      "stage_tags": [
+        "pre-seed",
+        "seed",
+        "series-a"
+      ],
+      "context_tags": [
+        "post-meeting",
+        "email"
+      ],
+      "publication_status": "draft_needs_fact_check_and_editorial_review",
+      "evidence_type": "editorial-analysis",
+      "phrase": {
+        "en": "Let's schedule another meeting.",
+        "sk": "Dohodnime si ďalšie stretnutie.",
+        "cs": "Domluvme si další schůzku.",
+        "de": "Lasst uns ein weiteres Gespräch vereinbaren.",
+        "pl": "Umówmy kolejne spotkanie."
+      },
+      "hypotheses_en": "Meaningful process progress, but no commitment.",
+      "observable_context_en": "Calendar invitation, named agenda, partner attendance",
+      "clarifying_question_guidance_en": "Ask what the next conversation should resolve.",
+      "next_action_en": "Prepare evidence for that agenda; track progress.",
+      "source_urls": [],
+      "attributed_investor_quote": null,
+      "localization_status": {
+        "en": "preliminary_phrase_seed_not_reviewed",
+        "sk": "preliminary_phrase_seed_not_reviewed",
+        "cs": "preliminary_phrase_seed_not_reviewed",
+        "de": "preliminary_phrase_seed_not_reviewed",
+        "pl": "preliminary_phrase_seed_not_reviewed"
+      },
+      "notes": "Do not publish from seed. Expand into substantive, sourced, locally edited article with multiple possibilities and actionable response."
+    },
+    {
+      "id": "partner-introduction",
+      "slug": "partner-introduction",
+      "record_type": "phrase",
+      "signal_class": "positive",
+      "topic_tags": [
+        "process"
+      ],
+      "stage_tags": [
+        "pre-seed",
+        "seed",
+        "series-a"
+      ],
+      "context_tags": [
+        "post-meeting",
+        "email"
+      ],
+      "publication_status": "draft_needs_fact_check_and_editorial_review",
+      "evidence_type": "editorial-analysis",
+      "phrase": {
+        "en": "I'd like you to meet my partner.",
+        "sk": "Rád by som vás zoznámil s kolegom z fondu.",
+        "cs": "Rád bych vás seznámil s kolegou z fondu.",
+        "de": "Ich würde euch gern meinem Partner vorstellen.",
+        "pl": "Chciałbym przedstawić was mojemu partnerowi z funduszu."
+      },
+      "hypotheses_en": "Potential internal champion or routine screening.",
+      "observable_context_en": "Introduced partner with mandate and follow-up date",
+      "clarifying_question_guidance_en": "Ask the aim of the partner discussion.",
+      "next_action_en": "Prepare for the fund-wide investment thesis.",
+      "source_urls": [],
+      "attributed_investor_quote": null,
+      "localization_status": {
+        "en": "preliminary_phrase_seed_not_reviewed",
+        "sk": "preliminary_phrase_seed_not_reviewed",
+        "cs": "preliminary_phrase_seed_not_reviewed",
+        "de": "preliminary_phrase_seed_not_reviewed",
+        "pl": "preliminary_phrase_seed_not_reviewed"
+      },
+      "notes": "Do not publish from seed. Expand into substantive, sourced, locally edited article with multiple possibilities and actionable response."
+    },
+    {
+      "id": "need-more-traction",
+      "slug": "need-more-traction",
+      "record_type": "phrase",
+      "signal_class": "soft-no",
+      "topic_tags": [
+        "traction"
+      ],
+      "stage_tags": [
+        "pre-seed",
+        "seed",
+        "series-a"
+      ],
+      "context_tags": [
+        "post-meeting",
+        "email"
+      ],
+      "publication_status": "draft_needs_fact_check_and_editorial_review",
+      "evidence_type": "editorial-analysis",
+      "phrase": {
+        "en": "We need to see more traction.",
+        "sk": "Potrebujeme vidieť viac dôkazov o záujme zákazníkov.",
+        "cs": "Potřebujeme vidět více důkazů o zájmu zákazníků.",
+        "de": "Wir müssen mehr Traktion sehen.",
+        "pl": "Musimy zobaczyć większą trakcję."
+      },
+      "hypotheses_en": "Insufficient evidence of demand, growth or an easy general objection.",
+      "observable_context_en": "Explicit growth or retention threshold",
+      "clarifying_question_guidance_en": "Ask which traction metric matters most.",
+      "next_action_en": "Validate the milestone and show progress later.",
+      "source_urls": [],
+      "attributed_investor_quote": null,
+      "localization_status": {
+        "en": "preliminary_phrase_seed_not_reviewed",
+        "sk": "preliminary_phrase_seed_not_reviewed",
+        "cs": "preliminary_phrase_seed_not_reviewed",
+        "de": "preliminary_phrase_seed_not_reviewed",
+        "pl": "preliminary_phrase_seed_not_reviewed"
+      },
+      "notes": "Do not publish from seed. Expand into substantive, sourced, locally edited article with multiple possibilities and actionable response."
+    },
+    {
+      "id": "market-too-small",
+      "slug": "market-too-small",
+      "record_type": "phrase",
+      "signal_class": "hard-no",
+      "topic_tags": [
+        "market"
+      ],
+      "stage_tags": [
+        "pre-seed",
+        "seed",
+        "series-a"
+      ],
+      "context_tags": [
+        "post-meeting",
+        "email"
+      ],
+      "publication_status": "draft_needs_fact_check_and_editorial_review",
+      "evidence_type": "editorial-analysis",
+      "phrase": {
+        "en": "The market looks too small.",
+        "sk": "Trh sa nám zdá príliš malý.",
+        "cs": "Trh se nám zdá příliš malý.",
+        "de": "Der Markt scheint uns zu klein.",
+        "pl": "Ten rynek wydaje nam się zbyt mały."
+      },
+      "hypotheses_en": "Concern about return potential, TAM definition or go-to-market scope.",
+      "observable_context_en": "Concrete questions about adjacent segments",
+      "clarifying_question_guidance_en": "Ask which expansion assumptions are unconvincing.",
+      "next_action_en": "Tighten market evidence; do not exaggerate TAM.",
+      "source_urls": [],
+      "attributed_investor_quote": null,
+      "localization_status": {
+        "en": "preliminary_phrase_seed_not_reviewed",
+        "sk": "preliminary_phrase_seed_not_reviewed",
+        "cs": "preliminary_phrase_seed_not_reviewed",
+        "de": "preliminary_phrase_seed_not_reviewed",
+        "pl": "preliminary_phrase_seed_not_reviewed"
+      },
+      "notes": "Do not publish from seed. Expand into substantive, sourced, locally edited article with multiple possibilities and actionable response."
+    },
+    {
+      "id": "team-incomplete",
+      "slug": "team-incomplete",
+      "record_type": "phrase",
+      "signal_class": "ambiguous",
+      "topic_tags": [
+        "team"
+      ],
+      "stage_tags": [
+        "pre-seed",
+        "seed",
+        "series-a"
+      ],
+      "context_tags": [
+        "post-meeting",
+        "email"
+      ],
+      "publication_status": "draft_needs_fact_check_and_editorial_review",
+      "evidence_type": "editorial-analysis",
+      "phrase": {
+        "en": "Your team isn't complete yet.",
+        "sk": "Váš tím zatiaľ nie je kompletný.",
+        "cs": "Váš tým zatím není kompletní.",
+        "de": "Euer Team ist noch nicht vollständig.",
+        "pl": "Wasz zespół nie jest jeszcze kompletny."
+      },
+      "hypotheses_en": "Missing function, commitment or execution capacity.",
+      "observable_context_en": "Specific role or capability the investor wants",
+      "clarifying_question_guidance_en": "Ask which team gap is blocking the investment.",
+      "next_action_en": "Prepare credible staffing/partnership plan.",
+      "source_urls": [],
+      "attributed_investor_quote": null,
+      "localization_status": {
+        "en": "preliminary_phrase_seed_not_reviewed",
+        "sk": "preliminary_phrase_seed_not_reviewed",
+        "cs": "preliminary_phrase_seed_not_reviewed",
+        "de": "preliminary_phrase_seed_not_reviewed",
+        "pl": "preliminary_phrase_seed_not_reviewed"
+      },
+      "notes": "Do not publish from seed. Expand into substantive, sourced, locally edited article with multiple possibilities and actionable response."
+    },
+    {
+      "id": "no-lead-investor",
+      "slug": "no-lead-investor",
+      "record_type": "phrase",
+      "signal_class": "soft-no",
+      "topic_tags": [
+        "terms"
+      ],
+      "stage_tags": [
+        "pre-seed",
+        "seed",
+        "series-a"
+      ],
+      "context_tags": [
+        "post-meeting",
+        "email"
+      ],
+      "publication_status": "draft_needs_fact_check_and_editorial_review",
+      "evidence_type": "editorial-analysis",
+      "phrase": {
+        "en": "Come back when you have a lead investor.",
+        "sk": "Ozvite sa, keď budete mať hlavného investora.",
+        "cs": "Ozvěte se, až budete mít hlavního investora.",
+        "de": "Kommt wieder, wenn ihr einen Lead-Investor habt.",
+        "pl": "Wróćcie, gdy będziecie mieć inwestora wiodącego."
+      },
+      "hypotheses_en": "Only co-invest appetite, or a soft decline.",
+      "observable_context_en": "A stated check size and real follow-on terms",
+      "clarifying_question_guidance_en": "Ask whether participation is conditional on a named lead and ticket.",
+      "next_action_en": "Record as conditional; focus on securing a legitimate lead.",
+      "source_urls": [],
+      "attributed_investor_quote": null,
+      "localization_status": {
+        "en": "preliminary_phrase_seed_not_reviewed",
+        "sk": "preliminary_phrase_seed_not_reviewed",
+        "cs": "preliminary_phrase_seed_not_reviewed",
+        "de": "preliminary_phrase_seed_not_reviewed",
+        "pl": "preliminary_phrase_seed_not_reviewed"
+      },
+      "notes": "Do not publish from seed. Expand into substantive, sourced, locally edited article with multiple possibilities and actionable response."
+    },
+    {
+      "id": "local-only",
+      "slug": "local-only",
+      "record_type": "phrase",
+      "signal_class": "hard-no",
+      "topic_tags": [
+        "thesis"
+      ],
+      "stage_tags": [
+        "pre-seed",
+        "seed",
+        "series-a"
+      ],
+      "context_tags": [
+        "post-meeting",
+        "email"
+      ],
+      "publication_status": "draft_needs_fact_check_and_editorial_review",
+      "evidence_type": "editorial-analysis",
+      "phrase": {
+        "en": "We invest only in companies based here.",
+        "sk": "Investujeme len do firiem so sídlom v našom regióne.",
+        "cs": "Investujeme jen do firem se sídlem v našem regionu.",
+        "de": "Wir investieren nur in Unternehmen aus unserer Region.",
+        "pl": "Inwestujemy tylko w spółki z naszego regionu."
+      },
+      "hypotheses_en": "Mandate/geographic restriction or a general pass.",
+      "observable_context_en": "Published geographic investment policy",
+      "clarifying_question_guidance_en": "Clarify where incorporation or operations must be.",
+      "next_action_en": "Respect mandate; target eligible investors.",
+      "source_urls": [],
+      "attributed_investor_quote": null,
+      "localization_status": {
+        "en": "preliminary_phrase_seed_not_reviewed",
+        "sk": "preliminary_phrase_seed_not_reviewed",
+        "cs": "preliminary_phrase_seed_not_reviewed",
+        "de": "preliminary_phrase_seed_not_reviewed",
+        "pl": "preliminary_phrase_seed_not_reviewed"
+      },
+      "notes": "Do not publish from seed. Expand into substantive, sourced, locally edited article with multiple possibilities and actionable response."
+    },
+    {
+      "id": "not-investing-now",
+      "slug": "not-investing-now",
+      "record_type": "phrase",
+      "signal_class": "hard-no",
+      "topic_tags": [
+        "timing"
+      ],
+      "stage_tags": [
+        "pre-seed",
+        "seed",
+        "series-a"
+      ],
+      "context_tags": [
+        "post-meeting",
+        "email"
+      ],
+      "publication_status": "draft_needs_fact_check_and_editorial_review",
+      "evidence_type": "editorial-analysis",
+      "phrase": {
+        "en": "We're not making new investments right now.",
+        "sk": "Momentálne nerobíme nové investície.",
+        "cs": "Momentálně neděláme nové investice.",
+        "de": "Wir tätigen derzeit keine Neuinvestitionen.",
+        "pl": "Obecnie nie realizujemy nowych inwestycji."
+      },
+      "hypotheses_en": "Fund deployment pause, fundraising cycle or a polite rejection.",
+      "observable_context_en": "Published portfolio deployment status and future window",
+      "clarifying_question_guidance_en": "Ask if there is a definite reopening date.",
+      "next_action_en": "Remove from active round unless an exact follow-up is agreed.",
+      "source_urls": [],
+      "attributed_investor_quote": null,
+      "localization_status": {
+        "en": "preliminary_phrase_seed_not_reviewed",
+        "sk": "preliminary_phrase_seed_not_reviewed",
+        "cs": "preliminary_phrase_seed_not_reviewed",
+        "de": "preliminary_phrase_seed_not_reviewed",
+        "pl": "preliminary_phrase_seed_not_reviewed"
+      },
+      "notes": "Do not publish from seed. Expand into substantive, sourced, locally edited article with multiple possibilities and actionable response."
+    },
+    {
+      "id": "investment-committee",
+      "slug": "investment-committee",
+      "record_type": "phrase",
+      "signal_class": "ambiguous",
+      "topic_tags": [
+        "process"
+      ],
+      "stage_tags": [
+        "pre-seed",
+        "seed",
+        "series-a"
+      ],
+      "context_tags": [
+        "post-meeting",
+        "email"
+      ],
+      "publication_status": "draft_needs_fact_check_and_editorial_review",
+      "evidence_type": "editorial-analysis",
+      "phrase": {
+        "en": "I need to discuss this with our investment committee.",
+        "sk": "Musím to prebrať s investičným výborom.",
+        "cs": "Musím to probrat s investičním výborem.",
+        "de": "Ich muss das mit unserem Investmentkomitee besprechen.",
+        "pl": "Muszę omówić to z naszym komitetem inwestycyjnym."
+      },
+      "hypotheses_en": "Formal decision step or a stall.",
+      "observable_context_en": "Scheduled committee date and due-diligence questions",
+      "clarifying_question_guidance_en": "Ask what materials and timeline the committee requires.",
+      "next_action_en": "Supply useful information and agree a check-in.",
+      "source_urls": [],
+      "attributed_investor_quote": null,
+      "localization_status": {
+        "en": "preliminary_phrase_seed_not_reviewed",
+        "sk": "preliminary_phrase_seed_not_reviewed",
+        "cs": "preliminary_phrase_seed_not_reviewed",
+        "de": "preliminary_phrase_seed_not_reviewed",
+        "pl": "preliminary_phrase_seed_not_reviewed"
+      },
+      "notes": "Do not publish from seed. Expand into substantive, sourced, locally edited article with multiple possibilities and actionable response."
+    },
+    {
+      "id": "customer-references",
+      "slug": "customer-references",
+      "record_type": "phrase",
+      "signal_class": "positive",
+      "topic_tags": [
+        "diligence"
+      ],
+      "stage_tags": [
+        "pre-seed",
+        "seed",
+        "series-a"
+      ],
+      "context_tags": [
+        "post-meeting",
+        "email"
+      ],
+      "publication_status": "draft_needs_fact_check_and_editorial_review",
+      "evidence_type": "editorial-analysis",
+      "phrase": {
+        "en": "Can we speak with your customers?",
+        "sk": "Môžeme sa porozprávať s vašimi zákazníkmi?",
+        "cs": "Můžeme si promluvit s vašimi zákazníky?",
+        "de": "Können wir mit euren Kunden sprechen?",
+        "pl": "Czy możemy porozmawiać z waszymi klientami?"
+      },
+      "hypotheses_en": "Real diligence or early market research.",
+      "observable_context_en": "Named reference request and process owner",
+      "clarifying_question_guidance_en": "Ask the scope, timing and consent needs.",
+      "next_action_en": "Seek customer permission and prepare references.",
+      "source_urls": [],
+      "attributed_investor_quote": null,
+      "localization_status": {
+        "en": "preliminary_phrase_seed_not_reviewed",
+        "sk": "preliminary_phrase_seed_not_reviewed",
+        "cs": "preliminary_phrase_seed_not_reviewed",
+        "de": "preliminary_phrase_seed_not_reviewed",
+        "pl": "preliminary_phrase_seed_not_reviewed"
+      },
+      "notes": "Do not publish from seed. Expand into substantive, sourced, locally edited article with multiple possibilities and actionable response."
+    },
+    {
+      "id": "impressed-team",
+      "slug": "impressed-team",
+      "record_type": "phrase",
+      "signal_class": "ambiguous",
+      "topic_tags": [
+        "team"
+      ],
+      "stage_tags": [
+        "pre-seed",
+        "seed",
+        "series-a"
+      ],
+      "context_tags": [
+        "post-meeting",
+        "email"
+      ],
+      "publication_status": "draft_needs_fact_check_and_editorial_review",
+      "evidence_type": "editorial-analysis",
+      "phrase": {
+        "en": "We're impressed by your team.",
+        "sk": "Váš tím na nás urobil dojem.",
+        "cs": "Váš tým na nás udělal dojem.",
+        "de": "Euer Team hat uns beeindruckt.",
+        "pl": "Wasz zespół zrobił na nas wrażenie."
+      },
+      "hypotheses_en": "A genuine compliment, not necessarily funding interest.",
+      "observable_context_en": "Partner meetings and specific follow-up asks",
+      "clarifying_question_guidance_en": "Ask what next step would make sense.",
+      "next_action_en": "Thank them and focus on concrete process evidence.",
+      "source_urls": [],
+      "attributed_investor_quote": null,
+      "localization_status": {
+        "en": "preliminary_phrase_seed_not_reviewed",
+        "sk": "preliminary_phrase_seed_not_reviewed",
+        "cs": "preliminary_phrase_seed_not_reviewed",
+        "de": "preliminary_phrase_seed_not_reviewed",
+        "pl": "preliminary_phrase_seed_not_reviewed"
+      },
+      "notes": "Do not publish from seed. Expand into substantive, sourced, locally edited article with multiple possibilities and actionable response."
+    },
+    {
+      "id": "product-not-model",
+      "slug": "product-not-model",
+      "record_type": "phrase",
+      "signal_class": "soft-no",
+      "topic_tags": [
+        "business-model"
+      ],
+      "stage_tags": [
+        "pre-seed",
+        "seed",
+        "series-a"
+      ],
+      "context_tags": [
+        "post-meeting",
+        "email"
+      ],
+      "publication_status": "draft_needs_fact_check_and_editorial_review",
+      "evidence_type": "editorial-analysis",
+      "phrase": {
+        "en": "We like the product, but not the business model.",
+        "sk": "Produkt sa nám páči, ale nie váš biznis model.",
+        "cs": "Produkt se nám líbí, ale ne váš obchodní model.",
+        "de": "Wir mögen das Produkt, aber nicht das Geschäftsmodell.",
+        "pl": "Podoba nam się produkt, ale nie model biznesowy."
+      },
+      "hypotheses_en": "Monetization or scale concern, possibly a mismatch.",
+      "observable_context_en": "Questions about margins, pricing, retention or GTM",
+      "clarifying_question_guidance_en": "Ask which business-model assumption fails their test.",
+      "next_action_en": "Validate with real unit economics and experiments.",
+      "source_urls": [],
+      "attributed_investor_quote": null,
+      "localization_status": {
+        "en": "preliminary_phrase_seed_not_reviewed",
+        "sk": "preliminary_phrase_seed_not_reviewed",
+        "cs": "preliminary_phrase_seed_not_reviewed",
+        "de": "preliminary_phrase_seed_not_reviewed",
+        "pl": "preliminary_phrase_seed_not_reviewed"
+      },
+      "notes": "Do not publish from seed. Expand into substantive, sourced, locally edited article with multiple possibilities and actionable response."
+    },
+    {
+      "id": "valuation-too-high",
+      "slug": "valuation-too-high",
+      "record_type": "phrase",
+      "signal_class": "ambiguous",
+      "topic_tags": [
+        "valuation"
+      ],
+      "stage_tags": [
+        "pre-seed",
+        "seed",
+        "series-a"
+      ],
+      "context_tags": [
+        "post-meeting",
+        "email"
+      ],
+      "publication_status": "draft_needs_fact_check_and_editorial_review",
+      "evidence_type": "editorial-analysis",
+      "phrase": {
+        "en": "Your valuation is too high for us.",
+        "sk": "Vaše ocenenie je pre nás príliš vysoké.",
+        "cs": "Vaše ocenění je pro nás příliš vysoké.",
+        "de": "Eure Bewertung ist uns zu hoch.",
+        "pl": "Wasza wycena jest dla nas zbyt wysoka."
+      },
+      "hypotheses_en": "Pricing gap, returns math concern or a negotiation.",
+      "observable_context_en": "Alternative numbers/terms and continued diligence",
+      "clarifying_question_guidance_en": "Ask what valuation range and structure could work.",
+      "next_action_en": "Model dilution and decide whether expectations align.",
+      "source_urls": [],
+      "attributed_investor_quote": null,
+      "localization_status": {
+        "en": "preliminary_phrase_seed_not_reviewed",
+        "sk": "preliminary_phrase_seed_not_reviewed",
+        "cs": "preliminary_phrase_seed_not_reviewed",
+        "de": "preliminary_phrase_seed_not_reviewed",
+        "pl": "preliminary_phrase_seed_not_reviewed"
+      },
+      "notes": "Do not publish from seed. Expand into substantive, sourced, locally edited article with multiple possibilities and actionable response."
+    },
+    {
+      "id": "weak-defensibility",
+      "slug": "weak-defensibility",
+      "record_type": "phrase",
+      "signal_class": "ambiguous",
+      "topic_tags": [
+        "competition"
+      ],
+      "stage_tags": [
+        "pre-seed",
+        "seed",
+        "series-a"
+      ],
+      "context_tags": [
+        "post-meeting",
+        "email"
+      ],
+      "publication_status": "draft_needs_fact_check_and_editorial_review",
+      "evidence_type": "editorial-analysis",
+      "phrase": {
+        "en": "How defensible is this business?",
+        "sk": "Ako sa dokážete ubrániť konkurencii?",
+        "cs": "Jak se dokážete ubránit konkurenci?",
+        "de": "Wie gut könnt ihr euch gegen Wettbewerber behaupten?",
+        "pl": "Jak zamierzacie bronić przewagi przed konkurencją?"
+      },
+      "hypotheses_en": "Concern about competition, differentiation or switching costs.",
+      "observable_context_en": "Specific questions about customer lock-in or IP",
+      "clarifying_question_guidance_en": "Ask which competitive threat worries them most.",
+      "next_action_en": "Bring evidence of retention, differentiation and moat.",
+      "source_urls": [],
+      "attributed_investor_quote": null,
+      "localization_status": {
+        "en": "preliminary_phrase_seed_not_reviewed",
+        "sk": "preliminary_phrase_seed_not_reviewed",
+        "cs": "preliminary_phrase_seed_not_reviewed",
+        "de": "preliminary_phrase_seed_not_reviewed",
+        "pl": "preliminary_phrase_seed_not_reviewed"
+      },
+      "notes": "Do not publish from seed. Expand into substantive, sourced, locally edited article with multiple possibilities and actionable response."
+    },
+    {
+      "id": "unit-economics",
+      "slug": "unit-economics",
+      "record_type": "phrase",
+      "signal_class": "soft-no",
+      "topic_tags": [
+        "economics"
+      ],
+      "stage_tags": [
+        "pre-seed",
+        "seed",
+        "series-a"
+      ],
+      "context_tags": [
+        "post-meeting",
+        "email"
+      ],
+      "publication_status": "draft_needs_fact_check_and_editorial_review",
+      "evidence_type": "editorial-analysis",
+      "phrase": {
+        "en": "We need stronger unit economics.",
+        "sk": "Potrebujeme vidieť lepšiu jednotkovú ekonomiku.",
+        "cs": "Potřebujeme vidět lepší jednotkovou ekonomiku.",
+        "de": "Wir müssen bessere Unit Economics sehen.",
+        "pl": "Musimy zobaczyć lepszą ekonomikę jednostkową."
+      },
+      "hypotheses_en": "Worry about contribution margins or scaling efficiency.",
+      "observable_context_en": "Specific CAC/payback/margin questions",
+      "clarifying_question_guidance_en": "Ask which metric is the key blocker.",
+      "next_action_en": "Produce cohort-level economics with transparent assumptions.",
+      "source_urls": [],
+      "attributed_investor_quote": null,
+      "localization_status": {
+        "en": "preliminary_phrase_seed_not_reviewed",
+        "sk": "preliminary_phrase_seed_not_reviewed",
+        "cs": "preliminary_phrase_seed_not_reviewed",
+        "de": "preliminary_phrase_seed_not_reviewed",
+        "pl": "preliminary_phrase_seed_not_reviewed"
+      },
+      "notes": "Do not publish from seed. Expand into substantive, sourced, locally edited article with multiple possibilities and actionable response."
+    },
+    {
+      "id": "other-investors",
+      "slug": "other-investors",
+      "record_type": "phrase",
+      "signal_class": "ambiguous",
+      "topic_tags": [
+        "process"
+      ],
+      "stage_tags": [
+        "pre-seed",
+        "seed",
+        "series-a"
+      ],
+      "context_tags": [
+        "post-meeting",
+        "email"
+      ],
+      "publication_status": "draft_needs_fact_check_and_editorial_review",
+      "evidence_type": "editorial-analysis",
+      "phrase": {
+        "en": "What are other investors saying?",
+        "sk": "Čo hovoria ostatní investori?",
+        "cs": "Co říkají ostatní investoři?",
+        "de": "Was sagen andere Investoren?",
+        "pl": "Co mówią inni inwestorzy?"
+      },
+      "hypotheses_en": "Social proof check or coordination of a round.",
+      "observable_context_en": "Specific commitment/timing questions and continued process",
+      "clarifying_question_guidance_en": "Ask how co-investor status affects their process.",
+      "next_action_en": "Provide truthful aggregate fundraising status, not invented FOMO.",
+      "source_urls": [],
+      "attributed_investor_quote": null,
+      "localization_status": {
+        "en": "preliminary_phrase_seed_not_reviewed",
+        "sk": "preliminary_phrase_seed_not_reviewed",
+        "cs": "preliminary_phrase_seed_not_reviewed",
+        "de": "preliminary_phrase_seed_not_reviewed",
+        "pl": "preliminary_phrase_seed_not_reviewed"
+      },
+      "notes": "Do not publish from seed. Expand into substantive, sourced, locally edited article with multiple possibilities and actionable response."
+    },
+    {
+      "id": "next-milestone",
+      "slug": "next-milestone",
+      "record_type": "phrase",
+      "signal_class": "ambiguous",
+      "topic_tags": [
+        "traction"
+      ],
+      "stage_tags": [
+        "pre-seed",
+        "seed",
+        "series-a"
+      ],
+      "context_tags": [
+        "post-meeting",
+        "email"
+      ],
+      "publication_status": "draft_needs_fact_check_and_editorial_review",
+      "evidence_type": "editorial-analysis",
+      "phrase": {
+        "en": "We'd like to see you hit the next milestone.",
+        "sk": "Radi by sme videli, že dosiahnete ďalší míľnik.",
+        "cs": "Rádi bychom viděli, že dosáhnete dalšího milníku.",
+        "de": "Wir würden gern sehen, dass ihr den nächsten Meilenstein erreicht.",
+        "pl": "Chcielibyśmy zobaczyć, jak osiągacie kolejny kamień milowy."
+      },
+      "hypotheses_en": "Conditional future interest or a generic decline.",
+      "observable_context_en": "Precisely defined milestone and reevaluation date",
+      "clarifying_question_guidance_en": "Ask what measurable proof point matters.",
+      "next_action_en": "Track the milestone and keep raising broadly.",
+      "source_urls": [],
+      "attributed_investor_quote": null,
+      "localization_status": {
+        "en": "preliminary_phrase_seed_not_reviewed",
+        "sk": "preliminary_phrase_seed_not_reviewed",
+        "cs": "preliminary_phrase_seed_not_reviewed",
+        "de": "preliminary_phrase_seed_not_reviewed",
+        "pl": "preliminary_phrase_seed_not_reviewed"
+      },
+      "notes": "Do not publish from seed. Expand into substantive, sourced, locally edited article with multiple possibilities and actionable response."
+    },
+    {
+      "id": "financial-model",
+      "slug": "financial-model",
+      "record_type": "phrase",
+      "signal_class": "positive",
+      "topic_tags": [
+        "diligence"
+      ],
+      "stage_tags": [
+        "pre-seed",
+        "seed",
+        "series-a"
+      ],
+      "context_tags": [
+        "post-meeting",
+        "email"
+      ],
+      "publication_status": "draft_needs_fact_check_and_editorial_review",
+      "evidence_type": "editorial-analysis",
+      "phrase": {
+        "en": "Can you send your financial model?",
+        "sk": "Môžete nám poslať finančný model?",
+        "cs": "Můžete nám poslat finanční model?",
+        "de": "Könnt ihr uns euer Finanzmodell schicken?",
+        "pl": "Czy możecie przesłać model finansowy?"
+      },
+      "hypotheses_en": "Growing diligence interest or baseline screening.",
+      "observable_context_en": "Detailed questions and scheduled review",
+      "clarifying_question_guidance_en": "Ask which scenarios they want to understand.",
+      "next_action_en": "Send realistic model with assumptions and correct version.",
+      "source_urls": [],
+      "attributed_investor_quote": null,
+      "localization_status": {
+        "en": "preliminary_phrase_seed_not_reviewed",
+        "sk": "preliminary_phrase_seed_not_reviewed",
+        "cs": "preliminary_phrase_seed_not_reviewed",
+        "de": "preliminary_phrase_seed_not_reviewed",
+        "pl": "preliminary_phrase_seed_not_reviewed"
+      },
+      "notes": "Do not publish from seed. Expand into substantive, sourced, locally edited article with multiple possibilities and actionable response."
+    },
+    {
+      "id": "participate-not-lead",
+      "slug": "participate-not-lead",
+      "record_type": "phrase",
+      "signal_class": "ambiguous",
+      "topic_tags": [
+        "terms"
+      ],
+      "stage_tags": [
+        "pre-seed",
+        "seed",
+        "series-a"
+      ],
+      "context_tags": [
+        "post-meeting",
+        "email"
+      ],
+      "publication_status": "draft_needs_fact_check_and_editorial_review",
+      "evidence_type": "editorial-analysis",
+      "phrase": {
+        "en": "We could participate, but we won't lead.",
+        "sk": "Mohli by sme sa zapojiť, ale nepovedieme kolo.",
+        "cs": "Mohli bychom se zapojit, ale nepovedeme kolo.",
+        "de": "Wir könnten mitinvestieren, aber die Runde nicht anführen.",
+        "pl": "Możemy dołączyć, ale nie poprowadzimy rundy."
+      },
+      "hypotheses_en": "A non-lead check possibility or a way to defer.",
+      "observable_context_en": "Written check-size range and explicit lead condition",
+      "clarifying_question_guidance_en": "Ask how large a check and what conditions apply.",
+      "next_action_en": "Keep it conditional; prioritize lead fundraising.",
+      "source_urls": [],
+      "attributed_investor_quote": null,
+      "localization_status": {
+        "en": "preliminary_phrase_seed_not_reviewed",
+        "sk": "preliminary_phrase_seed_not_reviewed",
+        "cs": "preliminary_phrase_seed_not_reviewed",
+        "de": "preliminary_phrase_seed_not_reviewed",
+        "pl": "preliminary_phrase_seed_not_reviewed"
+      },
+      "notes": "Do not publish from seed. Expand into substantive, sourced, locally edited article with multiple possibilities and actionable response."
+    },
+    {
+      "id": "portfolio-intro",
+      "slug": "portfolio-intro",
+      "record_type": "phrase",
+      "signal_class": "ambiguous",
+      "topic_tags": [
+        "diligence"
+      ],
+      "stage_tags": [
+        "pre-seed",
+        "seed",
+        "series-a"
+      ],
+      "context_tags": [
+        "post-meeting",
+        "email"
+      ],
+      "publication_status": "draft_needs_fact_check_and_editorial_review",
+      "evidence_type": "editorial-analysis",
+      "phrase": {
+        "en": "I'd like to introduce you to a portfolio founder.",
+        "sk": "Rád by som vás spojil so zakladateľom z nášho portfólia.",
+        "cs": "Rád bych vás propojil se zakladatelem z našeho portfolia.",
+        "de": "Ich würde euch gern einem Gründer aus unserem Portfolio vorstellen.",
+        "pl": "Chciałbym przedstawić was founderowi z naszego portfela."
+      },
+      "hypotheses_en": "Reference diligence, help or market check.",
+      "observable_context_en": "Specific introduction with planned follow-up",
+      "clarifying_question_guidance_en": "Ask the purpose of the meeting.",
+      "next_action_en": "Prepare thoughtfully and respect introduction.",
+      "source_urls": [],
+      "attributed_investor_quote": null,
+      "localization_status": {
+        "en": "preliminary_phrase_seed_not_reviewed",
+        "sk": "preliminary_phrase_seed_not_reviewed",
+        "cs": "preliminary_phrase_seed_not_reviewed",
+        "de": "preliminary_phrase_seed_not_reviewed",
+        "pl": "preliminary_phrase_seed_not_reviewed"
+      },
+      "notes": "Do not publish from seed. Expand into substantive, sourced, locally edited article with multiple possibilities and actionable response."
+    },
+    {
+      "id": "process-weeks",
+      "slug": "process-weeks",
+      "record_type": "phrase",
+      "signal_class": "ambiguous",
+      "topic_tags": [
+        "process"
+      ],
+      "stage_tags": [
+        "pre-seed",
+        "seed",
+        "series-a"
+      ],
+      "context_tags": [
+        "post-meeting",
+        "email"
+      ],
+      "publication_status": "draft_needs_fact_check_and_editorial_review",
+      "evidence_type": "editorial-analysis",
+      "phrase": {
+        "en": "Our decision process takes a few weeks.",
+        "sk": "Náš rozhodovací proces trvá niekoľko týždňov.",
+        "cs": "Náš rozhodovací proces trvá několik týdnů.",
+        "de": "Unser Entscheidungsprozess dauert einige Wochen.",
+        "pl": "Nasz proces decyzyjny trwa kilka tygodni."
+      },
+      "hypotheses_en": "Legitimate committee timing or delay.",
+      "observable_context_en": "Named milestones, owners and decision date",
+      "clarifying_question_guidance_en": "Ask about the remaining process and next decision point.",
+      "next_action_en": "Track timeline and maintain other investor discussions.",
+      "source_urls": [],
+      "attributed_investor_quote": null,
+      "localization_status": {
+        "en": "preliminary_phrase_seed_not_reviewed",
+        "sk": "preliminary_phrase_seed_not_reviewed",
+        "cs": "preliminary_phrase_seed_not_reviewed",
+        "de": "preliminary_phrase_seed_not_reviewed",
+        "pl": "preliminary_phrase_seed_not_reviewed"
+      },
+      "notes": "Do not publish from seed. Expand into substantive, sourced, locally edited article with multiple possibilities and actionable response."
+    },
+    {
+      "id": "another-partner-meeting",
+      "slug": "another-partner-meeting",
+      "record_type": "phrase",
+      "signal_class": "positive",
+      "topic_tags": [
+        "process"
+      ],
+      "stage_tags": [
+        "pre-seed",
+        "seed",
+        "series-a"
+      ],
+      "context_tags": [
+        "post-meeting",
+        "email"
+      ],
+      "publication_status": "draft_needs_fact_check_and_editorial_review",
+      "evidence_type": "editorial-analysis",
+      "phrase": {
+        "en": "Let's bring another partner into the next meeting.",
+        "sk": "Na ďalšie stretnutie prizvime ďalšieho partnera z fondu.",
+        "cs": "Na další schůzku přizvěme dalšího partnera z fondu.",
+        "de": "Nehmen wir beim nächsten Gespräch einen weiteren Partner dazu.",
+        "pl": "Zaprośmy kolejnego partnera na następne spotkanie."
+      },
+      "hypotheses_en": "Internal momentum, not a guaranteed investment.",
+      "observable_context_en": "Partner availability and substantive agenda",
+      "clarifying_question_guidance_en": "Ask which questions should be resolved at next meeting.",
+      "next_action_en": "Prepare relevant material and clarify next step.",
+      "source_urls": [],
+      "attributed_investor_quote": null,
+      "localization_status": {
+        "en": "preliminary_phrase_seed_not_reviewed",
+        "sk": "preliminary_phrase_seed_not_reviewed",
+        "cs": "preliminary_phrase_seed_not_reviewed",
+        "de": "preliminary_phrase_seed_not_reviewed",
+        "pl": "preliminary_phrase_seed_not_reviewed"
+      },
+      "notes": "Do not publish from seed. Expand into substantive, sourced, locally edited article with multiple possibilities and actionable response."
+    },
+    {
+      "id": "not-our-stage",
+      "slug": "not-our-stage",
+      "record_type": "phrase",
+      "signal_class": "hard-no",
+      "topic_tags": [
+        "stage"
+      ],
+      "stage_tags": [
+        "pre-seed",
+        "seed",
+        "series-a"
+      ],
+      "context_tags": [
+        "post-meeting",
+        "email"
+      ],
+      "publication_status": "draft_needs_fact_check_and_editorial_review",
+      "evidence_type": "editorial-analysis",
+      "phrase": {
+        "en": "We don't invest at your stage.",
+        "sk": "V tejto fáze bežne neinvestujeme.",
+        "cs": "V této fázi běžně neinvestujeme.",
+        "de": "In eurer Phase investieren wir normalerweise nicht.",
+        "pl": "Zwykle nie inwestujemy na waszym etapie."
+      },
+      "hypotheses_en": "Ineligible current stage or formal mandate mismatch.",
+      "observable_context_en": "Fund typical initial check/stage record",
+      "clarifying_question_guidance_en": "Ask whether there is any later relevant stage.",
+      "next_action_en": "Target stage-appropriate funds; no pressure to change mandate.",
+      "source_urls": [],
+      "attributed_investor_quote": null,
+      "localization_status": {
+        "en": "preliminary_phrase_seed_not_reviewed",
+        "sk": "preliminary_phrase_seed_not_reviewed",
+        "cs": "preliminary_phrase_seed_not_reviewed",
+        "de": "preliminary_phrase_seed_not_reviewed",
+        "pl": "preliminary_phrase_seed_not_reviewed"
+      },
+      "notes": "Do not publish from seed. Expand into substantive, sourced, locally edited article with multiple possibilities and actionable response."
+    },
+    {
+      "id": "not-proceeding",
+      "slug": "not-proceeding",
+      "record_type": "phrase",
+      "signal_class": "hard-no",
+      "topic_tags": [
+        "decision"
+      ],
+      "stage_tags": [
+        "pre-seed",
+        "seed",
+        "series-a"
+      ],
+      "context_tags": [
+        "post-meeting",
+        "email"
+      ],
+      "publication_status": "draft_needs_fact_check_and_editorial_review",
+      "evidence_type": "editorial-analysis",
+      "phrase": {
+        "en": "We won't proceed with an investment this round.",
+        "sk": "V tomto kole nebudeme pokračovať v investičnom procese.",
+        "cs": "V tejto rundě nebudeme pokračovat v investičním procesu.",
+        "de": "Wir werden in dieser Runde nicht investieren.",
+        "pl": "Nie będziemy kontynuować inwestycji w tej rundzie."
+      },
+      "hypotheses_en": "A definitive no for the current round.",
+      "observable_context_en": "Written explicit decision",
+      "clarifying_question_guidance_en": "Ask politely for one actionable takeaway if appropriate.",
+      "next_action_en": "Close the opportunity and avoid repeated pressure.",
+      "source_urls": [],
+      "attributed_investor_quote": null,
+      "localization_status": {
+        "en": "preliminary_phrase_seed_not_reviewed",
+        "sk": "preliminary_phrase_seed_not_reviewed",
+        "cs": "preliminary_phrase_seed_not_reviewed",
+        "de": "preliminary_phrase_seed_not_reviewed",
+        "pl": "preliminary_phrase_seed_not_reviewed"
+      },
+      "notes": "Do not publish from seed. Expand into substantive, sourced, locally edited article with multiple possibilities and actionable response."
+    },
+    {
+      "id": "investor-ghosting",
+      "slug": "investor-ghosting",
+      "record_type": "behavior",
+      "signal_class": "soft-no",
+      "topic_tags": [
+        "timing"
+      ],
+      "stage_tags": [
+        "pre-seed",
+        "seed",
+        "series-a"
+      ],
+      "context_tags": [
+        "post-meeting",
+        "email"
+      ],
+      "publication_status": "draft_needs_fact_check_and_editorial_review",
+      "evidence_type": "editorial-analysis",
+      "phrase": {
+        "en": "No response after two follow-ups.",
+        "sk": "Bez odpovede po dvoch pripomenutiach.",
+        "cs": "Bez odpovědi po dvou připomenutích.",
+        "de": "Keine Antwort nach zwei Nachfassnachrichten.",
+        "pl": "Brak odpowiedzi po dwóch wiadomościach przypominających."
+      },
+      "hypotheses_en": "Bandwidth, poor fit, lost email, or low interest.",
+      "observable_context_en": "Earlier concrete engagement or promised decision date",
+      "clarifying_question_guidance_en": "Ask one brief status question, then move on.",
+      "next_action_en": "Use one sensible final check-in and reallocate attention.",
+      "source_urls": [],
+      "attributed_investor_quote": null,
+      "localization_status": {
+        "en": "preliminary_phrase_seed_not_reviewed",
+        "sk": "preliminary_phrase_seed_not_reviewed",
+        "cs": "preliminary_phrase_seed_not_reviewed",
+        "de": "preliminary_phrase_seed_not_reviewed",
+        "pl": "preliminary_phrase_seed_not_reviewed"
+      },
+      "notes": "Do not publish from seed. Expand into substantive, sourced, locally edited article with multiple possibilities and actionable response."
+    }
+  ]
+}

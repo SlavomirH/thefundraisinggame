@@ -1,0 +1,217 @@
+{
+  "locale": "sk",
+  "review_status": "machine_draft_needs_native_review",
+  "publication_status": "draft_not_public",
+  "phrases": [
+    {
+      "id": "too-early",
+      "signalClass": "soft-no",
+      "en": "You're too early for us.",
+      "sk": "Zatiaľ ste pre nás v príliš skorej fáze.",
+      "status": "draft_machine_translation_needs_native_review"
+    },
+    {
+      "id": "not-right-fit",
+      "signalClass": "hard-no",
+      "en": "It's not the right fit for us.",
+      "sk": "Nezapadá to do našej investičnej stratégie.",
+      "status": "draft_machine_translation_needs_native_review"
+    },
+    {
+      "id": "keep-in-touch",
+      "signalClass": "soft-no",
+      "en": "Let's keep in touch.",
+      "sk": "Zostaňme v kontakte.",
+      "status": "draft_machine_translation_needs_native_review"
+    },
+    {
+      "id": "circle-back-next-quarter",
+      "signalClass": "ambiguous",
+      "en": "Circle back next quarter.",
+      "sk": "Ozvite sa nám opäť budúci štvrťrok.",
+      "status": "draft_machine_translation_needs_native_review"
+    },
+    {
+      "id": "send-deck",
+      "signalClass": "ambiguous",
+      "en": "Send me your deck.",
+      "sk": "Pošlite mi vašu prezentáciu pre investorov.",
+      "status": "draft_machine_translation_needs_native_review"
+    },
+    {
+      "id": "second-meeting",
+      "signalClass": "positive",
+      "en": "Let's schedule another meeting.",
+      "sk": "Dohodnime si ďalšie stretnutie.",
+      "status": "draft_machine_translation_needs_native_review"
+    },
+    {
+      "id": "partner-introduction",
+      "signalClass": "positive",
+      "en": "I'd like you to meet my partner.",
+      "sk": "Rád by som vás zoznámil s kolegom z fondu.",
+      "status": "draft_machine_translation_needs_native_review"
+    },
+    {
+      "id": "need-more-traction",
+      "signalClass": "soft-no",
+      "en": "We need to see more traction.",
+      "sk": "Potrebujeme vidieť viac dôkazov o záujme zákazníkov.",
+      "status": "draft_machine_translation_needs_native_review"
+    },
+    {
+      "id": "no-lead-investor",
+      "signalClass": "soft-no",
+      "en": "Come back when you have a lead investor.",
+      "sk": "Ozvite sa, keď budete mať hlavného investora.",
+      "status": "draft_machine_translation_needs_native_review"
+    },
+    {
+      "id": "investor-ghosting",
+      "signalClass": "soft-no",
+      "en": "No response after two follow-ups.",
+      "sk": "Bez odpovede po dvoch pripomenutiach.",
+      "status": "draft_machine_translation_needs_native_review"
+    },
+    {
+      "id": "market-too-small",
+      "signalClass": "hard-no",
+      "en": "The market looks too small.",
+      "sk": "Trh sa nám zdá príliš malý.",
+      "status": "draft_machine_translation_needs_native_review"
+    },
+    {
+      "id": "team-incomplete",
+      "signalClass": "ambiguous",
+      "en": "Your team isn't complete yet.",
+      "sk": "Váš tím zatiaľ nie je kompletný.",
+      "status": "draft_machine_translation_needs_native_review"
+    },
+    {
+      "id": "local-only",
+      "signalClass": "hard-no",
+      "en": "We invest only in companies based here.",
+      "sk": "Investujeme len do firiem so sídlom v našom regióne.",
+      "status": "draft_machine_translation_needs_native_review"
+    },
+    {
+      "id": "not-investing-now",
+      "signalClass": "hard-no",
+      "en": "We're not making new investments right now.",
+      "sk": "Momentálne nerobíme nové investície.",
+      "status": "draft_machine_translation_needs_native_review"
+    },
+    {
+      "id": "investment-committee",
+      "signalClass": "ambiguous",
+      "en": "I need to discuss this with our investment committee.",
+      "sk": "Musím to prebrať s investičným výborom.",
+      "status": "draft_machine_translation_needs_native_review"
+    },
+    {
+      "id": "customer-references",
+      "signalClass": "positive",
+      "en": "Can we speak with your customers?",
+      "sk": "Môžeme sa porozprávať s vašimi zákazníkmi?",
+      "status": "draft_machine_translation_needs_native_review"
+    },
+    {
+      "id": "impressed-team",
+      "signalClass": "ambiguous",
+      "en": "We're impressed by your team.",
+      "sk": "Váš tím na nás urobil dojem.",
+      "status": "draft_machine_translation_needs_native_review"
+    },
+    {
+      "id": "product-not-model",
+      "signalClass": "soft-no",
+      "en": "We like the product, but not the business model.",
+      "sk": "Produkt sa nám páči, ale nie váš biznis model.",
+      "status": "draft_machine_translation_needs_native_review"
+    },
+    {
+      "id": "valuation-too-high",
+      "signalClass": "ambiguous",
+      "en": "Your valuation is too high for us.",
+      "sk": "Vaše ocenenie je pre nás príliš vysoké.",
+      "status": "draft_machine_translation_needs_native_review"
+    },
+    {
+      "id": "weak-defensibility",
+      "signalClass": "ambiguous",
+      "en": "How defensible is this business?",
+      "sk": "Ako sa dokážete ubrániť konkurencii?",
+      "status": "draft_machine_translation_needs_native_review"
+    },
+    {
+      "id": "unit-economics",
+      "signalClass": "soft-no",
+      "en": "We need stronger unit economics.",
+      "sk": "Potrebujeme vidieť lepšiu jednotkovú ekonomiku.",
+      "status": "draft_machine_translation_needs_native_review"
+    },
+    {
+      "id": "other-investors",
+      "signalClass": "ambiguous",
+      "en": "What are other investors saying?",
+      "sk": "Čo hovoria ostatní investori?",
+      "status": "draft_machine_translation_needs_native_review"
+    },
+    {
+      "id": "next-milestone",
+      "signalClass": "ambiguous",
+      "en": "We'd like to see you hit the next milestone.",
+      "sk": "Radi by sme videli, že dosiahnete ďalší míľnik.",
+      "status": "draft_machine_translation_needs_native_review"
+    },
+    {
+      "id": "financial-model",
+      "signalClass": "positive",
+      "en": "Can you send your financial model?",
+      "sk": "Môžete nám poslať finančný model?",
+      "status": "draft_machine_translation_needs_native_review"
+    },
+    {
+      "id": "participate-not-lead",
+      "signalClass": "ambiguous",
+      "en": "We could participate, but we won't lead.",
+      "sk": "Mohli by sme sa zapojiť, ale nepovedieme kolo.",
+      "status": "draft_machine_translation_needs_native_review"
+    },
+    {
+      "id": "portfolio-intro",
+      "signalClass": "ambiguous",
+      "en": "I'd like to introduce you to a portfolio founder.",
+      "sk": "Rád by som vás spojil so zakladateľom z nášho portfólia.",
+      "status": "draft_machine_translation_needs_native_review"
+    },
+    {
+      "id": "process-weeks",
+      "signalClass": "ambiguous",
+      "en": "Our decision process takes a few weeks.",
+      "sk": "Náš rozhodovací proces trvá niekoľko týždňov.",
+      "status": "draft_machine_translation_needs_native_review"
+    },
+    {
+      "id": "another-partner-meeting",
+      "signalClass": "positive",
+      "en": "Let's bring another partner into the next meeting.",
+      "sk": "Na ďalšie stretnutie prizvime ďalšieho partnera z fondu.",
+      "status": "draft_machine_translation_needs_native_review"
+    },
+    {
+      "id": "not-our-stage",
+      "signalClass": "hard-no",
+      "en": "We don't invest at your stage.",
+      "sk": "V tejto fáze bežne neinvestujeme.",
+      "status": "draft_machine_translation_needs_native_review"
+    },
+    {
+      "id": "not-proceeding",
+      "signalClass": "hard-no",
+      "en": "We won't proceed with an investment this round.",
+      "sk": "V tomto kole nebudeme pokračovať v investičnom procese.",
+      "status": "draft_machine_translation_needs_native_review"
+    }
+  ]
+}

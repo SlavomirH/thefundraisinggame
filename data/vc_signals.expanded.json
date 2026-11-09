@@ -1,0 +1,2525 @@
+{
+  "dataset_version": "0.2-en-milestone",
+  "generated_from": "data/vc_signals.seed.json (0.1-draft)",
+  "revisedAt": "2026-11-09",
+  "editorial_note": "EN content for the 10 priority records is editorial analysis by The Fundraising Game, not investor quotations or interview data. Interpretations are possibilities, not diagnoses. No probabilities are claimed.",
+  "localization_note": "SK/CS/DE/PL phrase strings are preliminary machine/editor seeds that need native review; they are not published.",
+  "priority_ids": [
+    "too-early",
+    "not-right-fit",
+    "keep-in-touch",
+    "circle-back-next-quarter",
+    "send-deck",
+    "second-meeting",
+    "partner-introduction",
+    "need-more-traction",
+    "no-lead-investor",
+    "investor-ghosting"
+  ],
+  "records": [
+    {
+      "id": "too-early",
+      "slug": "too-early",
+      "recordType": "phrase",
+      "stageTags": [
+        "pre-seed",
+        "seed"
+      ],
+      "topicTags": [
+        "stage"
+      ],
+      "signalClass": "soft-no",
+      "contexts": [
+        "post-meeting",
+        "email",
+        "rejection"
+      ],
+      "evidenceType": "editorial-analysis",
+      "sourceDisplayLabel": "Editorial guidance",
+      "attributed_investor_quote": null,
+      "revisedAt": "2026-11-09",
+      "seed": {
+        "hypotheses_en": "Stage mismatch, missing proof, or a polite pass.",
+        "observable_context_en": "A named milestone, timeframe or requested update",
+        "clarifying_question_guidance_en": "Ask which milestone would change the decision.",
+        "next_action_en": "Record the requested proof point and re-contact only after progress."
+      },
+      "sources": [
+        {
+          "url": "https://usegems.com/post/understanding-investor-replies-to-your-pitch",
+          "title": "Understanding investor replies to your pitch (Gems)",
+          "reviewedDate": null,
+          "verificationStatus": "cited_in_research_package_pending_editor_reverification",
+          "claimSupported": "General background reading on how founders can interpret investor replies. Not a source for any specific investor's intent and not quoted on this page."
+        }
+      ],
+      "relatedArticleSlugs": [
+        "vc-too-early-meaning",
+        "how-to-follow-up-with-vc-after-meeting",
+        "how-vcs-make-decisions"
+      ],
+      "relatedToolSlugs": [
+        "investor-follow-up-builder",
+        "investor-signal-decoder"
+      ],
+      "relatedSignalIds": [
+        "need-more-traction",
+        "keep-in-touch",
+        "circle-back-next-quarter"
+      ],
+      "followUpTemplate": "tooearly",
+      "publication_status": "en_approved_for_en_milestone",
+      "publication": {
+        "en": "approved_for_en_milestone",
+        "sk": "draft_machine_translation_needs_native_review",
+        "cs": "draft_machine_translation_needs_native_review",
+        "de": "draft_machine_translation_needs_native_review",
+        "pl": "draft_machine_translation_needs_native_review"
+      },
+      "locales": {
+        "en": {
+          "status": "approved_for_en_milestone",
+          "phrase": "You're too early for us.",
+          "synonyms": [
+            "It's a bit early for us",
+            "Come back when you have more data",
+            "We usually come in a little later",
+            "We'd like to see more progress first"
+          ],
+          "h1": "“You’re too early for us” — what it might mean and how to reply",
+          "shortAnswer": "Usually a stage or evidence gap, sometimes a polite pass. The difference shows up in whether the investor names a specific milestone and invites an update — so ask for that milestone, keep raising from earlier-stage investors, and come back only with real progress.",
+          "interpretations": [
+            {
+              "kind": "mismatch",
+              "possibility": "Stage or cheque-size mismatch: the fund typically invests later, or writes cheques too large for your round.",
+              "contextualClues": "Their recent deals are mostly later-stage; they mention minimum revenue, round size or ownership targets; the feedback is about how the fund works rather than about your company."
+            },
+            {
+              "kind": "condition",
+              "possibility": "A specific risk they want retired first — customer demand, retention, a technical proof point or a key hire.",
+              "contextualClues": "They name a metric or milestone, ask detailed questions about that area, or ask you to send an update when you reach it."
+            },
+            {
+              "kind": "pass",
+              "possibility": "A polite decline with no real plan to reconsider.",
+              "contextualClues": "No milestone, no timeframe and no request for updates; a one-line reply after a long silence; the fund does invest at your stage but offers no specifics."
+            }
+          ],
+          "positiveSignals": [
+            "They name a concrete milestone (e.g. a revenue level, number of paying customers, retention cohort).",
+            "They ask you to send an update at a specific point.",
+            "They introduce you to an earlier-stage investor or offer feedback on the deck.",
+            "The person who said it is a decision-maker who spent real time on your business."
+          ],
+          "weakSignals": [
+            "No milestone, no timeframe and no request to stay in touch.",
+            "It arrives as a short reply after weeks of silence.",
+            "The fund has recently invested at your stage, which suggests the issue may be conviction rather than stage.",
+            "The wording reads like a template sent to many founders."
+          ],
+          "clarifyingQuestion": "Thanks for the candid feedback. So I can focus on the right things — is there one specific milestone (customers, retention or something else) that would make it worth revisiting?",
+          "recommendedAction": "Log the feedback and any milestone they mention. Check the fund's typical stage before drawing conclusions. Keep the round moving with pre-seed/seed specialists now, and re-contact this investor only when you have material progress against the milestone they named.",
+          "followUpTimingNote": "Reply once within one or two business days to thank them and ask the clarifying question. After that, reconnect when you hit the milestone — not on a calendar reminder alone.",
+          "editableReplyTemplate": "Hi [Investor name],\n\nThank you for taking the time to look at [Company] and for the candid feedback.\n\nSo I focus on the right things: is there one specific proof point — for example [metric, e.g. paying customers or retention] — that would make a future conversation worthwhile? If so, I'd be glad to send a short update once we've reached it.\n\nAnd if you know an investor who typically backs companies at our stage, I'd really appreciate an introduction.\n\nBest,\n[Your name]",
+          "exampleScenario": {
+            "hypothetical": true,
+            "description": "Hypothetical: a seed-stage B2B software founder with three paying pilots pitches a fund whose recent deals are mostly Series A. The partner says “you’re too early for us” and mentions they usually want a longer revenue history. The stage-mismatch reading is the most plausible here. The founder thanks them, asks whether an update after two more quarters of revenue would be useful, and refocuses the round on seed specialists."
+          },
+          "metaTitle": "“You’re Too Early for Us”: What a VC Might Mean | VC Says",
+          "metaDescription": "What “you’re too early for us” can mean from a VC, signals that strengthen or weaken it, a question to ask, and an editable reply you can copy.",
+          "editorialReviewer": null,
+          "reviewedAt": null,
+          "reviewNote": "EN editorial draft approved for the EN milestone by project instruction; no named human reviewer recorded yet."
+        },
+        "sk": {
+          "status": "draft_machine_translation_needs_native_review",
+          "phrase": "Zatiaľ ste pre nás v príliš skorej fáze."
+        },
+        "cs": {
+          "status": "draft_machine_translation_needs_native_review",
+          "phrase": "Zatím jste pro nás v příliš rané fázi."
+        },
+        "de": {
+          "status": "draft_machine_translation_needs_native_review",
+          "phrase": "Für uns seid ihr noch in einer zu frühen Phase."
+        },
+        "pl": {
+          "status": "draft_machine_translation_needs_native_review",
+          "phrase": "Jesteście dla nas jeszcze na zbyt wczesnym etapie."
+        }
+      }
+    },
+    {
+      "id": "not-right-fit",
+      "slug": "not-right-fit",
+      "recordType": "phrase",
+      "stageTags": [
+        "pre-seed",
+        "seed",
+        "series-a"
+      ],
+      "topicTags": [
+        "thesis"
+      ],
+      "signalClass": "hard-no",
+      "contexts": [
+        "first-contact",
+        "post-meeting",
+        "email",
+        "rejection"
+      ],
+      "evidenceType": "editorial-analysis",
+      "sourceDisplayLabel": "Editorial guidance",
+      "attributed_investor_quote": null,
+      "revisedAt": "2026-11-09",
+      "seed": {
+        "hypotheses_en": "A mismatch with fund thesis, stage, geography, size, or a broad rejection.",
+        "observable_context_en": "A clearly explained investment mandate",
+        "clarifying_question_guidance_en": "Ask once whether the issue is sector, stage or geography.",
+        "next_action_en": "Move on to better matched investors."
+      },
+      "sources": [],
+      "relatedArticleSlugs": [
+        "how-vcs-make-decisions",
+        "how-many-investors-to-contact",
+        "questions-to-ask-venture-capitalists"
+      ],
+      "relatedToolSlugs": [
+        "investor-signal-decoder",
+        "investor-follow-up-builder"
+      ],
+      "relatedSignalIds": [
+        "too-early",
+        "keep-in-touch",
+        "investor-ghosting"
+      ],
+      "followUpTemplate": "notfit",
+      "publication_status": "en_approved_for_en_milestone",
+      "publication": {
+        "en": "approved_for_en_milestone",
+        "sk": "draft_machine_translation_needs_native_review",
+        "cs": "draft_machine_translation_needs_native_review",
+        "de": "draft_machine_translation_needs_native_review",
+        "pl": "draft_machine_translation_needs_native_review"
+      },
+      "locales": {
+        "en": {
+          "status": "approved_for_en_milestone",
+          "phrase": "It's not the right fit for us.",
+          "synonyms": [
+            "It doesn't fit our thesis",
+            "This is outside our focus",
+            "We don't invest in this space",
+            "Not a fit for our fund"
+          ],
+          "h1": "“It’s not the right fit for us” — what it might mean and how to reply",
+          "shortAnswer": "Most often a clear no tied to the fund's mandate — sector, stage, geography or cheque size — and occasionally a polite way to express doubts about the market. Either way, it is rarely worth arguing. Ask once which dimension didn't fit, ask for a referral if the conversation was warm, and move on.",
+          "interpretations": [
+            {
+              "kind": "mismatch",
+              "possibility": "A genuine mandate mismatch: sector, stage, geography, cheque size or ownership target sits outside what the fund can do.",
+              "contextualClues": "They name the constraint; their portfolio and website confirm it; the decline comes quickly, sometimes before a meeting."
+            },
+            {
+              "kind": "pass",
+              "possibility": "A conviction gap expressed politely — they don't believe in the market size, the approach or the timing.",
+              "contextualClues": "They invest in adjacent companies at your stage; the meeting included sceptical questions about the market; no specific constraint is named."
+            },
+            {
+              "kind": "mismatch",
+              "possibility": "A portfolio conflict — they already back a company that overlaps with yours.",
+              "contextualClues": "A similar company appears in their portfolio; the reasoning is vague; they decline after learning more about your positioning."
+            }
+          ],
+          "positiveSignals": [
+            "They explain precisely which part of the mandate doesn't fit — useful for targeting.",
+            "They suggest a better-fit fund or offer an introduction.",
+            "They say what would need to change for a future conversation (rare, but useful)."
+          ],
+          "weakSignals": [
+            "A generic template email with no reason.",
+            "No reply to a polite request for the reason — treat that as final.",
+            "They emphasise how busy they are rather than anything about your company."
+          ],
+          "clarifyingQuestion": "Thanks for the clear answer — it genuinely helps. Was it mainly stage, sector or geography? It will help me focus on better-fit investors.",
+          "recommendedAction": "Ask the clarifying question once, then move this investor out of your active pipeline. Use what you learn to tighten your target list (stage, sector, geography, cheque size). If the relationship was warm, ask for one referral.",
+          "followUpTimingNote": "Reply once within a couple of business days. Don't follow up again this round; revisit only if their thesis or your company changes materially.",
+          "editableReplyTemplate": "Hi [Investor name],\n\nThanks for the clear answer — I appreciate you not leaving us guessing.\n\nIf you have a moment, was it mainly a question of stage, sector or geography? It will help me focus on better-fit investors.\n\nAnd if a fund comes to mind that typically backs [short description of Company] at our stage, I'd be grateful for a pointer.\n\nAll the best,\n[Your name]",
+          "exampleScenario": {
+            "hypothetical": true,
+            "description": "Hypothetical: a hardware-plus-software startup pitches a fund that only invests in pure software. The associate replies “not the right fit for us” the same day. The mandate-mismatch reading is most plausible. The founder replies once asking whether hardware was the issue, gets a one-line confirmation, and removes hardware-averse funds from the target list."
+          },
+          "metaTitle": "“It’s Not the Right Fit for Us”: What a VC Might Mean | VC Says",
+          "metaDescription": "Decode “not the right fit” from an investor: mandate mismatch, conviction gap or portfolio conflict. Signals to watch, one question to ask and a reply to copy.",
+          "editorialReviewer": null,
+          "reviewedAt": null,
+          "reviewNote": "EN editorial draft approved for the EN milestone by project instruction; no named human reviewer recorded yet."
+        },
+        "sk": {
+          "status": "draft_machine_translation_needs_native_review",
+          "phrase": "Nezapadá to do našej investičnej stratégie."
+        },
+        "cs": {
+          "status": "draft_machine_translation_needs_native_review",
+          "phrase": "Nezapadá to do naší investiční strategie."
+        },
+        "de": {
+          "status": "draft_machine_translation_needs_native_review",
+          "phrase": "Das passt nicht zu unserer Investmentstrategie."
+        },
+        "pl": {
+          "status": "draft_machine_translation_needs_native_review",
+          "phrase": "To nie pasuje do naszej strategii inwestycyjnej."
+        }
+      }
+    },
+    {
+      "id": "keep-in-touch",
+      "slug": "keep-in-touch",
+      "recordType": "phrase",
+      "stageTags": [
+        "pre-seed",
+        "seed",
+        "series-a"
+      ],
+      "topicTags": [
+        "timing"
+      ],
+      "signalClass": "soft-no",
+      "contexts": [
+        "post-meeting",
+        "email"
+      ],
+      "evidenceType": "editorial-analysis",
+      "sourceDisplayLabel": "Editorial guidance",
+      "attributed_investor_quote": null,
+      "revisedAt": "2026-11-09",
+      "seed": {
+        "hypotheses_en": "Open door for future updates or a polite no.",
+        "observable_context_en": "A requested specific update or proposed next check-in",
+        "clarifying_question_guidance_en": "Ask what milestone would warrant a future update.",
+        "next_action_en": "Send concise updates only when you have material progress."
+      },
+      "sources": [
+        {
+          "url": "https://usegems.com/post/understanding-investor-replies-to-your-pitch",
+          "title": "Understanding investor replies to your pitch (Gems)",
+          "reviewedDate": null,
+          "verificationStatus": "cited_in_research_package_pending_editor_reverification",
+          "claimSupported": "General background reading on how founders can interpret investor replies. Not a source for any specific investor's intent and not quoted on this page."
+        }
+      ],
+      "relatedArticleSlugs": [
+        "how-to-follow-up-with-vc-after-meeting",
+        "signs-vc-interested",
+        "how-many-investors-to-contact"
+      ],
+      "relatedToolSlugs": [
+        "investor-follow-up-builder",
+        "investor-signal-decoder"
+      ],
+      "relatedSignalIds": [
+        "circle-back-next-quarter",
+        "too-early",
+        "investor-ghosting"
+      ],
+      "followUpTemplate": "update",
+      "publication_status": "en_approved_for_en_milestone",
+      "publication": {
+        "en": "approved_for_en_milestone",
+        "sk": "draft_machine_translation_needs_native_review",
+        "cs": "draft_machine_translation_needs_native_review",
+        "de": "draft_machine_translation_needs_native_review",
+        "pl": "draft_machine_translation_needs_native_review"
+      },
+      "locales": {
+        "en": {
+          "status": "approved_for_en_milestone",
+          "phrase": "Let's keep in touch.",
+          "synonyms": [
+            "Keep us posted",
+            "Let's stay in touch",
+            "Keep me updated on your progress",
+            "Add me to your investor updates"
+          ],
+          "h1": "“Let’s keep in touch” — what it might mean and how to reply",
+          "shortAnswer": "An open door, not a commitment. It can mean genuine long-term interest, interest that is waiting for a specific signal, or a gentle no. A precise request for a particular update is a stronger signal than a warm but generic sign-off.",
+          "interpretations": [
+            {
+              "kind": "condition",
+              "possibility": "Interested, but waiting for a signal — a milestone, a lead investor or momentum in your round.",
+              "contextualClues": "They say what they'd like to see, ask when you expect to close, or ask who else is involved."
+            },
+            {
+              "kind": "interest",
+              "possibility": "Genuine long-term relationship interest without a current decision.",
+              "contextualClues": "They ask to be added to your investor updates, reply to them, or offer help unrelated to investing."
+            },
+            {
+              "kind": "pass",
+              "possibility": "A polite soft no that keeps the relationship pleasant.",
+              "contextualClues": "No specific request, no question about timing, and the phrase ends the conversation rather than opening a next step."
+            }
+          ],
+          "positiveSignals": [
+            "They ask for a specific update (a metric, a launch, a hire).",
+            "They propose a check-in at a defined point.",
+            "They reply to or comment on your updates.",
+            "They make an introduction without being asked."
+          ],
+          "weakSignals": [
+            "Generic warmth with no question about your business.",
+            "No acknowledgement of later updates.",
+            "It follows a meeting where they did most of the talking about the fund rather than asking about you."
+          ],
+          "clarifyingQuestion": "Happy to. What development would be most useful for me to share — and would an update after [milestone] be helpful?",
+          "recommendedAction": "Treat them as outside your active round unless they say otherwise. With their agreement, add them to a concise investor update and share material progress. Don't send weekly check-ins; send high-signal updates.",
+          "followUpTimingNote": "Send one short reply now. Afterwards, update when something material happens — a monthly or quarterly cadence is a common upper bound for unsolicited updates.",
+          "editableReplyTemplate": "Hi [Investor name],\n\nThanks again for the conversation — happy to stay in touch.\n\nSo my updates are actually useful to you: what would be most relevant to hear about — [option A, e.g. revenue growth], [option B, e.g. key hires], or something else? I'm planning to share a short update after [milestone].\n\nWould it be OK to add you to our investor update list? It goes out roughly [frequency] and is easy to unsubscribe from.\n\nBest,\n[Your name]",
+          "exampleScenario": {
+            "hypothetical": true,
+            "description": "Hypothetical: after a first call, an angel says “let’s keep in touch” and asks when the founder expects to launch the paid tier. That specific question tilts toward the “waiting for a signal” reading. The founder confirms the launch month, adds the angel to the quarterly update with permission, and sends the update with launch results."
+          },
+          "metaTitle": "“Let’s Keep in Touch”: What an Investor Might Mean | VC Says",
+          "metaDescription": "“Let’s keep in touch” from a VC can be real interest, a conditional maybe or a polite no. Signals to watch, what to ask and an editable reply.",
+          "editorialReviewer": null,
+          "reviewedAt": null,
+          "reviewNote": "EN editorial draft approved for the EN milestone by project instruction; no named human reviewer recorded yet."
+        },
+        "sk": {
+          "status": "draft_machine_translation_needs_native_review",
+          "phrase": "Zostaňme v kontakte."
+        },
+        "cs": {
+          "status": "draft_machine_translation_needs_native_review",
+          "phrase": "Zůstaňme v kontaktu."
+        },
+        "de": {
+          "status": "draft_machine_translation_needs_native_review",
+          "phrase": "Lasst uns in Kontakt bleiben."
+        },
+        "pl": {
+          "status": "draft_machine_translation_needs_native_review",
+          "phrase": "Pozostańmy w kontakcie."
+        }
+      }
+    },
+    {
+      "id": "circle-back-next-quarter",
+      "slug": "circle-back-next-quarter",
+      "recordType": "phrase",
+      "stageTags": [
+        "seed",
+        "series-a"
+      ],
+      "topicTags": [
+        "timing"
+      ],
+      "signalClass": "ambiguous",
+      "contexts": [
+        "post-meeting",
+        "email"
+      ],
+      "evidenceType": "editorial-analysis",
+      "sourceDisplayLabel": "Editorial guidance",
+      "attributed_investor_quote": null,
+      "revisedAt": "2026-11-09",
+      "seed": {
+        "hypotheses_en": "Budget/timing constraint, stage mismatch or a soft pass.",
+        "observable_context_en": "Specific calendar invitation or requested metric",
+        "clarifying_question_guidance_en": "Confirm what they want to see next quarter.",
+        "next_action_en": "Set one relevant follow-up and keep fundraising elsewhere."
+      },
+      "sources": [
+        {
+          "url": "https://www.ycombinator.com/blog/fundraising-advice-for-yc-companies/",
+          "title": "Fundraising advice for YC companies (Y Combinator)",
+          "reviewedDate": null,
+          "verificationStatus": "cited_in_research_package_pending_editor_reverification",
+          "claimSupported": "General background reading on running a time-boxed fundraising process and not over-relying on any one investor. Not quoted on this page."
+        }
+      ],
+      "relatedArticleSlugs": [
+        "how-to-follow-up-with-vc-after-meeting",
+        "how-many-investors-to-contact",
+        "vc-too-early-meaning"
+      ],
+      "relatedToolSlugs": [
+        "investor-follow-up-builder",
+        "investor-signal-decoder"
+      ],
+      "relatedSignalIds": [
+        "keep-in-touch",
+        "too-early",
+        "need-more-traction"
+      ],
+      "followUpTemplate": "update",
+      "publication_status": "en_approved_for_en_milestone",
+      "publication": {
+        "en": "approved_for_en_milestone",
+        "sk": "draft_machine_translation_needs_native_review",
+        "cs": "draft_machine_translation_needs_native_review",
+        "de": "draft_machine_translation_needs_native_review",
+        "pl": "draft_machine_translation_needs_native_review"
+      },
+      "locales": {
+        "en": {
+          "status": "approved_for_en_milestone",
+          "phrase": "Circle back next quarter.",
+          "synonyms": [
+            "Let's reconnect in a few months",
+            "Ping us next quarter",
+            "Timing isn't right for us now",
+            "Reach out again after the summer"
+          ],
+          "h1": "“Circle back next quarter” — what it might mean and how to reply",
+          "shortAnswer": "A timing message that can be real (fund pacing, partner bandwidth, their own fundraising) or a soft pass that uses time as the reason. What separates them is whether the investor says what would be different next quarter and agrees to a date.",
+          "interpretations": [
+            {
+              "kind": "condition",
+              "possibility": "They want to see progress over the interval — the delay is a way to get more data.",
+              "contextualClues": "They mention a metric, product release or hire they'd like to see by then."
+            },
+            {
+              "kind": "noise",
+              "possibility": "A genuine timing constraint on their side: deployment pacing, partner bandwidth, or raising their own fund.",
+              "contextualClues": "They explain the constraint openly; they suggest a month or put a call in the calendar."
+            },
+            {
+              "kind": "pass",
+              "possibility": "A soft pass that avoids saying no.",
+              "contextualClues": "No reason, no metric, no date; the phrase comes after limited engagement in the meeting."
+            }
+          ],
+          "positiveSignals": [
+            "They name what they want to see next quarter.",
+            "They propose or accept a specific date.",
+            "They explain a concrete internal reason for the timing."
+          ],
+          "weakSignals": [
+            "No reason or metric given.",
+            "They decline to put anything in the calendar.",
+            "Your round will likely close before then — and they know it."
+          ],
+          "clarifyingQuestion": "Happy to reconnect then. What would you most want to see by next quarter — and is there a particular month that works best?",
+          "recommendedAction": "Set one dated reminder and note what they asked to see. Don't pause your round waiting for them. If your timeline means you'll close earlier, say so politely so they can decide.",
+          "followUpTimingNote": "Reconnect around the month they named with a short update. If there's no reply, one gentle nudge a week or two later, then let it go.",
+          "editableReplyTemplate": "Hi [Investor name],\n\nThanks — happy to reconnect next quarter.\n\nSo the next conversation is useful: what would you most like to see by then? I'd expect to have [progress you expect, e.g. results from our first enterprise pilot].\n\nFor transparency, we're currently aiming to close our round by [target month]. If that changes the picture for you, I'm glad to share more before then.\n\nBest,\n[Your name]",
+          "exampleScenario": {
+            "hypothetical": true,
+            "description": "Hypothetical: a partner says “circle back next quarter” and explains they're finalising their own new fund. The genuine-timing reading is plausible, but the founder's round closes in six weeks. The founder replies with the close date and keeps the round moving; the partner chooses to pass this round but asks to be on future updates."
+          },
+          "metaTitle": "“Circle Back Next Quarter”: What a VC Might Mean | VC Says",
+          "metaDescription": "When an investor says “circle back next quarter”: timing constraint, wait-and-see, or soft pass. Signals, one clarifying question and a reply template.",
+          "editorialReviewer": null,
+          "reviewedAt": null,
+          "reviewNote": "EN editorial draft approved for the EN milestone by project instruction; no named human reviewer recorded yet."
+        },
+        "sk": {
+          "status": "draft_machine_translation_needs_native_review",
+          "phrase": "Ozvite sa nám opäť budúci štvrťrok."
+        },
+        "cs": {
+          "status": "draft_machine_translation_needs_native_review",
+          "phrase": "Ozvěte se nám znovu příští čtvrtletí."
+        },
+        "de": {
+          "status": "draft_machine_translation_needs_native_review",
+          "phrase": "Meldet euch im nächsten Quartal noch einmal."
+        },
+        "pl": {
+          "status": "draft_machine_translation_needs_native_review",
+          "phrase": "Wróćcie do nas w przyszłym kwartale."
+        }
+      }
+    },
+    {
+      "id": "send-deck",
+      "slug": "send-deck",
+      "recordType": "phrase",
+      "stageTags": [
+        "pre-seed",
+        "seed",
+        "series-a"
+      ],
+      "topicTags": [
+        "process"
+      ],
+      "signalClass": "ambiguous",
+      "contexts": [
+        "first-contact",
+        "event",
+        "email"
+      ],
+      "evidenceType": "editorial-analysis",
+      "sourceDisplayLabel": "Editorial guidance",
+      "attributed_investor_quote": null,
+      "revisedAt": "2026-11-09",
+      "seed": {
+        "hypotheses_en": "Initial screening or genuine preliminary interest.",
+        "observable_context_en": "A scheduled review call or specific questions",
+        "clarifying_question_guidance_en": "Ask whether a follow-up discussion makes sense after review.",
+        "next_action_en": "Send the current concise deck and offer a next step."
+      },
+      "sources": [
+        {
+          "url": "https://usegems.com/post/understanding-investor-replies-to-your-pitch",
+          "title": "Understanding investor replies to your pitch (Gems)",
+          "reviewedDate": null,
+          "verificationStatus": "cited_in_research_package_pending_editor_reverification",
+          "claimSupported": "General background reading on how founders can interpret investor replies. Not a source for any specific investor's intent and not quoted on this page."
+        }
+      ],
+      "relatedArticleSlugs": [
+        "how-to-follow-up-with-vc-after-meeting",
+        "how-many-investors-to-contact",
+        "questions-to-ask-venture-capitalists"
+      ],
+      "relatedToolSlugs": [
+        "investor-follow-up-builder",
+        "investor-signal-decoder"
+      ],
+      "relatedSignalIds": [
+        "second-meeting",
+        "partner-introduction",
+        "investor-ghosting"
+      ],
+      "followUpTemplate": "meeting",
+      "publication_status": "en_approved_for_en_milestone",
+      "publication": {
+        "en": "approved_for_en_milestone",
+        "sk": "draft_machine_translation_needs_native_review",
+        "cs": "draft_machine_translation_needs_native_review",
+        "de": "draft_machine_translation_needs_native_review",
+        "pl": "draft_machine_translation_needs_native_review"
+      },
+      "locales": {
+        "en": {
+          "status": "approved_for_en_milestone",
+          "phrase": "Send me your deck.",
+          "synonyms": [
+            "Can you send over your deck?",
+            "Send me your pitch deck",
+            "Happy to take a look at the deck",
+            "Share some materials"
+          ],
+          "h1": "“Send me your deck” — what it might mean and how to reply",
+          "shortAnswer": "Neutral on its own. It is usually an initial screening step and sometimes a sign of real early interest; what matters is what it follows and what happens after. Send a concise, current deck promptly and propose a specific next step.",
+          "interpretations": [
+            {
+              "kind": "noise",
+              "possibility": "Initial screening — a low-cost way for the fund to filter many companies.",
+              "contextualClues": "Asked at an event or by email without a conversation; often by an analyst or associate; no next step mentioned."
+            },
+            {
+              "kind": "interest",
+              "possibility": "Genuine preliminary interest after a good conversation.",
+              "contextualClues": "It follows specific questions about your business; they mention who else will review it or suggest a call after reading."
+            },
+            {
+              "kind": "pass",
+              "possibility": "A polite way to end a conversation — or market mapping for a thesis the fund is exploring.",
+              "contextualClues": "Very broad interest in your sector rather than your company; no follow-up questions after you send it."
+            }
+          ],
+          "positiveSignals": [
+            "They ask specific follow-up questions after reading.",
+            "They propose a call or name the next reviewer.",
+            "They request additional material (data room, model, references)."
+          ],
+          "weakSignals": [
+            "No acknowledgement after you send it.",
+            "The request came with no context about your company specifically.",
+            "They ask for highly sensitive data before any conversation."
+          ],
+          "clarifyingQuestion": "Of course — I'll send it today. After you've had a look, would a 20-minute call to go through questions make sense?",
+          "recommendedAction": "Send a concise, up-to-date deck within a day, with a three-to-four-line summary in the email body and a proposed next step. Share only what you are comfortable sharing at this stage.",
+          "followUpTimingNote": "Send within 24–48 hours. If there's no reply, one short follow-up after about a week, ideally with a small, real update.",
+          "editableReplyTemplate": "Hi [Investor name],\n\nThanks for your interest in [Company] — the deck is attached.\n\nIn short: we help [customer] [outcome]. Since [timeframe] we've [key progress], and we're raising [round size/stage] to [main use of funds].\n\nAfter you've had a look, would a 20-minute call to go through any questions make sense? I'm free [two time options].\n\nBest,\n[Your name]",
+          "exampleScenario": {
+            "hypothetical": true,
+            "description": "Hypothetical: at a demo day, an associate says “send me your deck” after a two-minute chat. The screening reading is most plausible. The founder sends the deck the next morning with a short summary and two call slots; the associate replies with three specific questions, which is a stronger signal than the original request."
+          },
+          "metaTitle": "“Send Me Your Deck”: What an Investor Might Mean | VC Says",
+          "metaDescription": "Is “send me your deck” interest or screening? How to read it, what strengthens the signal, and a short cover email you can edit and copy.",
+          "editorialReviewer": null,
+          "reviewedAt": null,
+          "reviewNote": "EN editorial draft approved for the EN milestone by project instruction; no named human reviewer recorded yet."
+        },
+        "sk": {
+          "status": "draft_machine_translation_needs_native_review",
+          "phrase": "Pošlite mi vašu prezentáciu pre investorov."
+        },
+        "cs": {
+          "status": "draft_machine_translation_needs_native_review",
+          "phrase": "Pošlete mi svou prezentaci pro investory."
+        },
+        "de": {
+          "status": "draft_machine_translation_needs_native_review",
+          "phrase": "Schickt mir euer Pitch Deck."
+        },
+        "pl": {
+          "status": "draft_machine_translation_needs_native_review",
+          "phrase": "Prześlijcie mi swój pitch deck."
+        }
+      }
+    },
+    {
+      "id": "second-meeting",
+      "slug": "second-meeting",
+      "recordType": "phrase",
+      "stageTags": [
+        "pre-seed",
+        "seed",
+        "series-a"
+      ],
+      "topicTags": [
+        "process"
+      ],
+      "signalClass": "positive",
+      "contexts": [
+        "post-meeting",
+        "active-process"
+      ],
+      "evidenceType": "editorial-analysis",
+      "sourceDisplayLabel": "Editorial guidance",
+      "attributed_investor_quote": null,
+      "revisedAt": "2026-11-09",
+      "seed": {
+        "hypotheses_en": "Meaningful process progress, but no commitment.",
+        "observable_context_en": "Calendar invitation, named agenda, partner attendance",
+        "clarifying_question_guidance_en": "Ask what the next conversation should resolve.",
+        "next_action_en": "Prepare evidence for that agenda; track progress."
+      },
+      "sources": [],
+      "relatedArticleSlugs": [
+        "signs-vc-interested",
+        "questions-to-ask-venture-capitalists",
+        "how-vcs-make-decisions"
+      ],
+      "relatedToolSlugs": [
+        "investor-signal-decoder",
+        "investor-follow-up-builder"
+      ],
+      "relatedSignalIds": [
+        "partner-introduction",
+        "send-deck",
+        "no-lead-investor"
+      ],
+      "followUpTemplate": "meeting",
+      "publication_status": "en_approved_for_en_milestone",
+      "publication": {
+        "en": "approved_for_en_milestone",
+        "sk": "draft_machine_translation_needs_native_review",
+        "cs": "draft_machine_translation_needs_native_review",
+        "de": "draft_machine_translation_needs_native_review",
+        "pl": "draft_machine_translation_needs_native_review"
+      },
+      "locales": {
+        "en": {
+          "status": "approved_for_en_milestone",
+          "phrase": "Let's schedule another meeting.",
+          "synonyms": [
+            "Let's set up a follow-up call",
+            "Can we continue the conversation?",
+            "Let's dig deeper next week",
+            "We'd like to meet again"
+          ],
+          "h1": "“Let’s schedule another meeting” — what it might mean and how to reply",
+          "shortAnswer": "A positive process signal: the investor is spending more time on you. It is still not a commitment. The strongest versions come with an agenda, a date, more senior attendees or specific data requests.",
+          "interpretations": [
+            {
+              "kind": "interest",
+              "possibility": "Real progress in their evaluation process.",
+              "contextualClues": "A calendar invite arrives quickly; a more senior partner joins; they explain their process and timeline."
+            },
+            {
+              "kind": "condition",
+              "possibility": "Diligence on a specific concern they want resolved before going further.",
+              "contextualClues": "They name a topic (go-to-market, unit economics, technology) or request specific data in advance."
+            },
+            {
+              "kind": "noise",
+              "possibility": "Relationship-building without a near-term decision — some investors meet many times before deciding.",
+              "contextualClues": "Same person, no agenda, 'just catching up'; no mention of process or timing."
+            }
+          ],
+          "positiveSignals": [
+            "A date and agenda are proposed quickly.",
+            "A more senior partner or specialist joins.",
+            "They request specific materials ahead of time.",
+            "They describe the next steps after this meeting."
+          ],
+          "weakSignals": [
+            "The meeting keeps getting rescheduled.",
+            "No agenda and no new attendees.",
+            "Several meetings with no movement in their process."
+          ],
+          "clarifyingQuestion": "Looking forward to it. What would be most useful for this conversation to resolve, and who else from your side will join?",
+          "recommendedAction": "Confirm the meeting, ask what it should resolve, and prepare evidence for that topic. Ask about their process and timeline. Keep your other conversations moving at the same pace.",
+          "followUpTimingNote": "Confirm within a day. Send any requested material before the meeting, and a short recap with next steps within 24 hours after it.",
+          "editableReplyTemplate": "Hi [Investor name],\n\nThanks — glad the conversation was useful. [Day/time] works well for us.\n\nTo make the most of the time: is there anything specific you'd like us to dig into — for example [topic, e.g. our sales pipeline or unit economics]? Happy to send material in advance.\n\nAnd will anyone else from [Fund] be joining, so I can bring the right people from our side?\n\nBest,\n[Your name]",
+          "exampleScenario": {
+            "hypothetical": true,
+            "description": "Hypothetical: after a first call, the partner asks for a second meeting and requests the customer pipeline in advance. The diligence-on-a-concern reading is most plausible. The founder sends the pipeline with context, brings the head of sales, and asks at the end what the next step in the fund's process would be."
+          },
+          "metaTitle": "“Let’s Schedule Another Meeting”: Is It a Good Sign? | VC Says",
+          "metaDescription": "A second VC meeting is a positive process signal but not a commitment. How to read it, what to prepare and a confirmation reply to copy.",
+          "editorialReviewer": null,
+          "reviewedAt": null,
+          "reviewNote": "EN editorial draft approved for the EN milestone by project instruction; no named human reviewer recorded yet."
+        },
+        "sk": {
+          "status": "draft_machine_translation_needs_native_review",
+          "phrase": "Dohodnime si ďalšie stretnutie."
+        },
+        "cs": {
+          "status": "draft_machine_translation_needs_native_review",
+          "phrase": "Domluvme si další schůzku."
+        },
+        "de": {
+          "status": "draft_machine_translation_needs_native_review",
+          "phrase": "Lasst uns ein weiteres Gespräch vereinbaren."
+        },
+        "pl": {
+          "status": "draft_machine_translation_needs_native_review",
+          "phrase": "Umówmy kolejne spotkanie."
+        }
+      }
+    },
+    {
+      "id": "partner-introduction",
+      "slug": "partner-introduction",
+      "recordType": "phrase",
+      "stageTags": [
+        "seed",
+        "series-a"
+      ],
+      "topicTags": [
+        "process"
+      ],
+      "signalClass": "positive",
+      "contexts": [
+        "post-meeting",
+        "active-process"
+      ],
+      "evidenceType": "editorial-analysis",
+      "sourceDisplayLabel": "Editorial guidance",
+      "attributed_investor_quote": null,
+      "revisedAt": "2026-11-09",
+      "seed": {
+        "hypotheses_en": "Potential internal champion or routine screening.",
+        "observable_context_en": "Introduced partner with mandate and follow-up date",
+        "clarifying_question_guidance_en": "Ask the aim of the partner discussion.",
+        "next_action_en": "Prepare for the fund-wide investment thesis."
+      },
+      "sources": [],
+      "relatedArticleSlugs": [
+        "signs-vc-interested",
+        "how-vcs-make-decisions",
+        "questions-to-ask-venture-capitalists"
+      ],
+      "relatedToolSlugs": [
+        "investor-signal-decoder",
+        "investor-follow-up-builder"
+      ],
+      "relatedSignalIds": [
+        "second-meeting",
+        "send-deck",
+        "no-lead-investor"
+      ],
+      "followUpTemplate": "meeting",
+      "publication_status": "en_approved_for_en_milestone",
+      "publication": {
+        "en": "approved_for_en_milestone",
+        "sk": "draft_machine_translation_needs_native_review",
+        "cs": "draft_machine_translation_needs_native_review",
+        "de": "draft_machine_translation_needs_native_review",
+        "pl": "draft_machine_translation_needs_native_review"
+      },
+      "locales": {
+        "en": {
+          "status": "approved_for_en_milestone",
+          "phrase": "I'd like you to meet my partner.",
+          "synonyms": [
+            "I'll loop in my partner",
+            "Let me bring in a colleague",
+            "I'd like a partner to hear this",
+            "Can you present to our partnership?"
+          ],
+          "h1": "“I’d like you to meet my partner” — what it might mean and how to reply",
+          "shortAnswer": "Usually a positive process signal: your contact is willing to spend internal capital on you. It may be a champion building support, a required second opinion, or a specialist check. Prepare for fund-level questions, and ask your contact what the partner will care about.",
+          "interpretations": [
+            {
+              "kind": "interest",
+              "possibility": "Your contact is acting as an internal champion and building support.",
+              "contextualClues": "The intro explains why they're excited; your contact stays involved and helps you prepare."
+            },
+            {
+              "kind": "noise",
+              "possibility": "A routine step — many funds require a second partner's view before going further.",
+              "contextualClues": "They describe it as standard process; no particular enthusiasm or concern is signalled."
+            },
+            {
+              "kind": "condition",
+              "possibility": "A specialist check on a concern — the partner has domain or technical expertise.",
+              "contextualClues": "The partner's background matches a risk discussed in your first meeting."
+            }
+          ],
+          "positiveSignals": [
+            "The intro is framed with a purpose and a date.",
+            "Your original contact stays involved and offers preparation tips.",
+            "Material requests or process explanations follow."
+          ],
+          "weakSignals": [
+            "The new partner seems unfamiliar with your company.",
+            "The intro arrives without context or a timeframe.",
+            "Your original contact goes quiet after the handoff."
+          ],
+          "clarifyingQuestion": "Thanks for the introduction. What would be most helpful to cover with [Partner name], and what are the next steps in your process after that?",
+          "recommendedAction": "Prepare for broader, fund-level questions — market size, how big the outcome could be, portfolio fit. Ask your contact which concerns to address. Send a short pre-read so the partner arrives informed.",
+          "followUpTimingNote": "Respond within a day and offer times. Send a recap within 24 hours of the partner meeting, copying your original contact.",
+          "editableReplyTemplate": "Hi [Investor name],\n\nThank you — I'd be glad to meet [Partner name].\n\nTo prepare well: is there anything you'd suggest we focus on for [Partner name] — for example [topic, e.g. market size or technical risk]? I'm happy to send a short pre-read in advance.\n\nAnd so I can plan around it, what would typically come after this conversation in your process?\n\nBest,\n[Your name]",
+          "exampleScenario": {
+            "hypothetical": true,
+            "description": "Hypothetical: an associate introduces a founder to a partner with a deep background in payments, two days after a meeting where regulatory risk came up. The specialist-check reading is plausible. The founder asks the associate what the partner will focus on and prepares a one-page regulatory overview."
+          },
+          "metaTitle": "“I’d Like You to Meet My Partner”: What It Might Mean | VC Says",
+          "metaDescription": "A partner introduction is usually a good process signal. What it might mean, signals to watch, how to prepare and a reply to copy.",
+          "editorialReviewer": null,
+          "reviewedAt": null,
+          "reviewNote": "EN editorial draft approved for the EN milestone by project instruction; no named human reviewer recorded yet."
+        },
+        "sk": {
+          "status": "draft_machine_translation_needs_native_review",
+          "phrase": "Rád by som vás zoznámil s kolegom z fondu."
+        },
+        "cs": {
+          "status": "draft_machine_translation_needs_native_review",
+          "phrase": "Rád bych vás seznámil s kolegou z fondu."
+        },
+        "de": {
+          "status": "draft_machine_translation_needs_native_review",
+          "phrase": "Ich würde euch gern meinem Partner vorstellen."
+        },
+        "pl": {
+          "status": "draft_machine_translation_needs_native_review",
+          "phrase": "Chciałbym przedstawić was mojemu partnerowi z funduszu."
+        }
+      }
+    },
+    {
+      "id": "need-more-traction",
+      "slug": "need-more-traction",
+      "recordType": "phrase",
+      "stageTags": [
+        "pre-seed",
+        "seed"
+      ],
+      "topicTags": [
+        "traction"
+      ],
+      "signalClass": "soft-no",
+      "contexts": [
+        "post-meeting",
+        "email",
+        "rejection"
+      ],
+      "evidenceType": "editorial-analysis",
+      "sourceDisplayLabel": "Editorial guidance",
+      "attributed_investor_quote": null,
+      "revisedAt": "2026-11-09",
+      "seed": {
+        "hypotheses_en": "Insufficient evidence of demand, growth or an easy general objection.",
+        "observable_context_en": "Explicit growth or retention threshold",
+        "clarifying_question_guidance_en": "Ask which traction metric matters most.",
+        "next_action_en": "Validate the milestone and show progress later."
+      },
+      "sources": [],
+      "relatedArticleSlugs": [
+        "vc-too-early-meaning",
+        "how-much-to-raise-runway",
+        "how-vcs-make-decisions"
+      ],
+      "relatedToolSlugs": [
+        "investor-follow-up-builder",
+        "investor-signal-decoder"
+      ],
+      "relatedSignalIds": [
+        "too-early",
+        "circle-back-next-quarter",
+        "keep-in-touch"
+      ],
+      "followUpTemplate": "tooearly",
+      "publication_status": "en_approved_for_en_milestone",
+      "publication": {
+        "en": "approved_for_en_milestone",
+        "sk": "draft_machine_translation_needs_native_review",
+        "cs": "draft_machine_translation_needs_native_review",
+        "de": "draft_machine_translation_needs_native_review",
+        "pl": "draft_machine_translation_needs_native_review"
+      },
+      "locales": {
+        "en": {
+          "status": "approved_for_en_milestone",
+          "phrase": "We need to see more traction.",
+          "synonyms": [
+            "Come back when you have more revenue",
+            "We want to see more growth",
+            "Show us more customer validation",
+            "The numbers aren't there yet"
+          ],
+          "h1": "“We need to see more traction” — what it might mean and how to reply",
+          "shortAnswer": "A real evidence gap, a stage mismatch, or a general objection that sits on top of a different concern. Ask which metric matters and at roughly what level — then decide whether that milestone fits your own plan before chasing it.",
+          "interpretations": [
+            {
+              "kind": "condition",
+              "possibility": "A specific evidence gap — demand, growth rate, retention or revenue quality.",
+              "contextualClues": "They name a metric or ask detailed questions about cohorts, pipeline or churn."
+            },
+            {
+              "kind": "mismatch",
+              "possibility": "A stage mismatch: the fund usually backs companies with more history.",
+              "contextualClues": "Their recent deals are later-stage; the comment is about thresholds rather than your trajectory."
+            },
+            {
+              "kind": "pass",
+              "possibility": "A general objection masking another concern (team, market, competition).",
+              "contextualClues": "The meeting focused on other topics; no metric is named; the comment comes at the very end."
+            }
+          ],
+          "positiveSignals": [
+            "They name the metric and a rough threshold.",
+            "They ask to hear when you reach it.",
+            "They engage with your numbers in detail."
+          ],
+          "weakSignals": [
+            "No metric or threshold mentioned.",
+            "Their questions focused on something else entirely.",
+            "They don't respond to a request for clarification."
+          ],
+          "clarifyingQuestion": "Which metric matters most to you — revenue, growth rate, retention or something else — and roughly what level would make a conversation worthwhile?",
+          "recommendedAction": "Record the metric and threshold if given. Decide whether it fits your own plan — don't chase an arbitrary number for one investor. Prioritise investors who back companies at your current stage, and send a short update if you hit the milestone.",
+          "followUpTimingNote": "Ask the clarifying question within a few days. Reconnect when the milestone is reached, with the data — not before.",
+          "editableReplyTemplate": "Hi [Investor name],\n\nThanks for being direct — that's useful.\n\nSo I understand what would move the needle: which metric matters most to you at our stage — [option A, e.g. monthly revenue], [option B, e.g. retention], or something else — and roughly what level would make a future conversation worthwhile?\n\nIf it lines up with our plan, I'd be glad to send a short update when we get there.\n\nBest,\n[Your name]",
+          "exampleScenario": {
+            "hypothetical": true,
+            "description": "Hypothetical: a consumer app founder hears “we need to see more traction” after a meeting dominated by questions about competition. With no metric named, the masking-another-concern reading is plausible. The founder asks which metric matters, learns competition was the real worry, and adds a differentiation slide for future pitches."
+          },
+          "metaTitle": "“We Need to See More Traction”: What a VC Might Mean | VC Says",
+          "metaDescription": "What “we need more traction” can mean from an investor, how to find out which metric matters, and an editable reply you can copy.",
+          "editorialReviewer": null,
+          "reviewedAt": null,
+          "reviewNote": "EN editorial draft approved for the EN milestone by project instruction; no named human reviewer recorded yet."
+        },
+        "sk": {
+          "status": "draft_machine_translation_needs_native_review",
+          "phrase": "Potrebujeme vidieť viac dôkazov o záujme zákazníkov."
+        },
+        "cs": {
+          "status": "draft_machine_translation_needs_native_review",
+          "phrase": "Potřebujeme vidět více důkazů o zájmu zákazníků."
+        },
+        "de": {
+          "status": "draft_machine_translation_needs_native_review",
+          "phrase": "Wir müssen mehr Traktion sehen."
+        },
+        "pl": {
+          "status": "draft_machine_translation_needs_native_review",
+          "phrase": "Musimy zobaczyć większą trakcję."
+        }
+      }
+    },
+    {
+      "id": "no-lead-investor",
+      "slug": "no-lead-investor",
+      "recordType": "phrase",
+      "stageTags": [
+        "seed",
+        "series-a"
+      ],
+      "topicTags": [
+        "terms"
+      ],
+      "signalClass": "soft-no",
+      "contexts": [
+        "post-meeting",
+        "active-process"
+      ],
+      "evidenceType": "editorial-analysis",
+      "sourceDisplayLabel": "Editorial guidance",
+      "attributed_investor_quote": null,
+      "revisedAt": "2026-11-09",
+      "seed": {
+        "hypotheses_en": "Only co-invest appetite, or a soft decline.",
+        "observable_context_en": "A stated check size and real follow-on terms",
+        "clarifying_question_guidance_en": "Ask whether participation is conditional on a named lead and ticket.",
+        "next_action_en": "Record as conditional; focus on securing a legitimate lead."
+      },
+      "sources": [
+        {
+          "url": "https://www.ycombinator.com/blog/fundraising-advice-for-yc-companies/",
+          "title": "Fundraising advice for YC companies (Y Combinator)",
+          "reviewedDate": null,
+          "verificationStatus": "cited_in_research_package_pending_editor_reverification",
+          "claimSupported": "General background reading on running a time-boxed fundraising process and not over-relying on any one investor. Not quoted on this page."
+        }
+      ],
+      "relatedArticleSlugs": [
+        "how-many-investors-to-contact",
+        "how-vcs-make-decisions",
+        "how-much-to-raise-runway"
+      ],
+      "relatedToolSlugs": [
+        "investor-follow-up-builder",
+        "investor-signal-decoder"
+      ],
+      "relatedSignalIds": [
+        "second-meeting",
+        "partner-introduction",
+        "keep-in-touch"
+      ],
+      "followUpTemplate": "nolead",
+      "publication_status": "en_approved_for_en_milestone",
+      "publication": {
+        "en": "approved_for_en_milestone",
+        "sk": "draft_machine_translation_needs_native_review",
+        "cs": "draft_machine_translation_needs_native_review",
+        "de": "draft_machine_translation_needs_native_review",
+        "pl": "draft_machine_translation_needs_native_review"
+      },
+      "locales": {
+        "en": {
+          "status": "approved_for_en_milestone",
+          "phrase": "Come back when you have a lead investor.",
+          "synonyms": [
+            "We'd join once you have a lead",
+            "Find a lead and we'll take a look",
+            "We don't lead rounds",
+            "Who's leading the round?"
+          ],
+          "h1": "“Come back when you have a lead investor” — what it might mean and how to reply",
+          "shortAnswer": "Conditional interest at best — and sometimes a polite no. Some investors genuinely only follow; others use it to wait for someone else's validation. Count it as conditional, never as committed, and ask what cheque size and conditions would apply.",
+          "interpretations": [
+            {
+              "kind": "condition",
+              "possibility": "Genuine follower appetite — the fund rarely or never leads and relies on a lead to set terms.",
+              "contextualClues": "Their portfolio shows few or no leads; they mention a cheque size or ask about the terms you're targeting."
+            },
+            {
+              "kind": "condition",
+              "possibility": "Interest that depends on validation: they want someone else to do the diligence and set the price.",
+              "contextualClues": "They ask who else you're talking to; enthusiasm is real but nothing concrete is offered."
+            },
+            {
+              "kind": "pass",
+              "possibility": "A soft decline with no real commitment behind it.",
+              "contextualClues": "No amount, no conditions, no request to be informed when a lead commits."
+            }
+          ],
+          "positiveSignals": [
+            "They state a cheque size and conditions.",
+            "They offer introductions to potential leads.",
+            "They ask to be informed as soon as a lead commits."
+          ],
+          "weakSignals": [
+            "No amount mentioned.",
+            "Enthusiasm without any detail.",
+            "They don't respond when you share an update on lead conversations."
+          ],
+          "clarifyingQuestion": "That's helpful, thank you. If we secure a lead on terms in the range we discussed, what cheque size would you consider — and are there conditions on who the lead is?",
+          "recommendedAction": "Record this as conditional, not committed, and don't count it toward your round total. Focus effort on finding a lead. Ask for introductions to funds that do lead at your stage.",
+          "followUpTimingNote": "Reply within a couple of days. Contact them again when a lead has committed or term-sheet talks are advanced.",
+          "editableReplyTemplate": "Hi [Investor name],\n\nThanks — that's clear and helpful.\n\nSo I can plan the round properly: if we secure a lead on terms around [target terms or range], what cheque size would you consider, and do you have any requirements for who the lead is?\n\nIf any funds come to mind that typically lead at our stage, an introduction would be hugely appreciated. I'll let you know as soon as a lead is in place.\n\nBest,\n[Your name]",
+          "exampleScenario": {
+            "hypothetical": true,
+            "description": "Hypothetical: a seed founder hears “come back when you have a lead” from a fund that names a cheque size and offers to introduce two lead investors. The genuine-follower reading is most plausible. The founder logs it as conditional, takes the intros, and updates the fund when a lead issues a term sheet."
+          },
+          "metaTitle": "“Come Back When You Have a Lead”: What It Might Mean | VC Says",
+          "metaDescription": "An investor who wants a lead first: real follower appetite or a soft no? Signals, what to ask about cheque size, and a reply to copy.",
+          "editorialReviewer": null,
+          "reviewedAt": null,
+          "reviewNote": "EN editorial draft approved for the EN milestone by project instruction; no named human reviewer recorded yet."
+        },
+        "sk": {
+          "status": "draft_machine_translation_needs_native_review",
+          "phrase": "Ozvite sa, keď budete mať hlavného investora."
+        },
+        "cs": {
+          "status": "draft_machine_translation_needs_native_review",
+          "phrase": "Ozvěte se, až budete mít hlavního investora."
+        },
+        "de": {
+          "status": "draft_machine_translation_needs_native_review",
+          "phrase": "Kommt wieder, wenn ihr einen Lead-Investor habt."
+        },
+        "pl": {
+          "status": "draft_machine_translation_needs_native_review",
+          "phrase": "Wróćcie, gdy będziecie mieć inwestora wiodącego."
+        }
+      }
+    },
+    {
+      "id": "investor-ghosting",
+      "slug": "investor-ghosting",
+      "recordType": "behavior",
+      "stageTags": [
+        "pre-seed",
+        "seed",
+        "series-a"
+      ],
+      "topicTags": [
+        "timing"
+      ],
+      "signalClass": "soft-no",
+      "contexts": [
+        "silence",
+        "active-process"
+      ],
+      "evidenceType": "editorial-analysis",
+      "sourceDisplayLabel": "Editorial guidance",
+      "attributed_investor_quote": null,
+      "revisedAt": "2026-11-09",
+      "seed": {
+        "hypotheses_en": "Bandwidth, poor fit, lost email, or low interest.",
+        "observable_context_en": "Earlier concrete engagement or promised decision date",
+        "clarifying_question_guidance_en": "Ask one brief status question, then move on.",
+        "next_action_en": "Use one sensible final check-in and reallocate attention."
+      },
+      "sources": [],
+      "relatedArticleSlugs": [
+        "how-to-follow-up-with-vc-after-meeting",
+        "signs-vc-interested",
+        "how-many-investors-to-contact"
+      ],
+      "relatedToolSlugs": [
+        "investor-follow-up-builder",
+        "investor-signal-decoder"
+      ],
+      "relatedSignalIds": [
+        "keep-in-touch",
+        "send-deck",
+        "circle-back-next-quarter"
+      ],
+      "followUpTemplate": "quiet",
+      "publication_status": "en_approved_for_en_milestone",
+      "publication": {
+        "en": "approved_for_en_milestone",
+        "sk": "draft_machine_translation_needs_native_review",
+        "cs": "draft_machine_translation_needs_native_review",
+        "de": "draft_machine_translation_needs_native_review",
+        "pl": "draft_machine_translation_needs_native_review"
+      },
+      "locales": {
+        "en": {
+          "status": "approved_for_en_milestone",
+          "phrase": "No response after two follow-ups.",
+          "synonyms": [
+            "Investor ghosting",
+            "VC not responding after meeting",
+            "No reply from investor",
+            "Investor went quiet"
+          ],
+          "h1": "No response after two follow-ups — what investor silence might mean",
+          "shortAnswer": "Silence is a behaviour, not a message, so read it cautiously. It can be bandwidth, a lost email, a stalled internal process — or low interest. After two unanswered follow-ups, send one brief close-the-loop note and redirect your energy to active conversations.",
+          "interpretations": [
+            {
+              "kind": "noise",
+              "possibility": "Bandwidth, travel or a crowded inbox — your email simply hasn't been prioritised.",
+              "contextualClues": "Earlier engagement was strong; the silence is short; they've replied promptly before."
+            },
+            {
+              "kind": "noise",
+              "possibility": "An internal process has stalled and they don't have an answer yet.",
+              "contextualClues": "They mentioned partner discussions or an investment committee; the silence follows a promised decision date."
+            },
+            {
+              "kind": "pass",
+              "possibility": "Low interest, communicated by not replying.",
+              "contextualClues": "Engagement was limited from the start; no concrete next step was ever agreed; several weeks have passed."
+            }
+          ],
+          "positiveSignals": [
+            "They had previously agreed a concrete next step or decision date.",
+            "They engaged in detail earlier (questions, material requests).",
+            "Someone else at the fund is still responsive."
+          ],
+          "weakSignals": [
+            "No concrete next step was ever agreed.",
+            "Several weeks of silence despite short, useful updates.",
+            "They've seen your follow-ups (e.g. replied to others) but not to you."
+          ],
+          "clarifyingQuestion": "Is this still something you'd like to explore, or should I take it off your plate for now? Either answer is completely fine.",
+          "recommendedAction": "Send one short close-the-loop message with a real update and a simple yes/no question. Then move them to 'inactive' in your pipeline and reallocate your attention. Don't send more chasers.",
+          "followUpTimingNote": "Wait until a promised date has passed by a few business days (or about a week after a meeting). After two unanswered follow-ups, one final note 1–2 weeks later — then stop.",
+          "editableReplyTemplate": "Hi [Investor name],\n\nI know things get busy, so I'll keep this short.\n\nA quick update: [one concrete piece of progress].\n\nIs [Company] still something you'd like to explore this round, or should I take it off your plate for now? Either answer is completely fine — it just helps me plan.\n\nBest,\n[Your name]",
+          "exampleScenario": {
+            "hypothetical": true,
+            "description": "Hypothetical: a partner promised a decision “by Friday”, then went quiet for two weeks despite two polite follow-ups. A stalled internal process and low interest are both plausible. The founder sends one close-the-loop note with a new customer win and a yes/no question, then focuses on two investors who are actively engaged."
+          },
+          "metaTitle": "Investor Not Responding After Follow-ups? What It Might Mean | VC Says",
+          "metaDescription": "What silence after two follow-ups from a VC might mean, how long to wait, and a short close-the-loop email you can edit and copy.",
+          "editorialReviewer": null,
+          "reviewedAt": null,
+          "reviewNote": "EN editorial draft approved for the EN milestone by project instruction; no named human reviewer recorded yet."
+        },
+        "sk": {
+          "status": "draft_machine_translation_needs_native_review",
+          "phrase": "Bez odpovede po dvoch pripomenutiach."
+        },
+        "cs": {
+          "status": "draft_machine_translation_needs_native_review",
+          "phrase": "Bez odpovědi po dvou připomenutích."
+        },
+        "de": {
+          "status": "draft_machine_translation_needs_native_review",
+          "phrase": "Keine Antwort nach zwei Nachfassnachrichten."
+        },
+        "pl": {
+          "status": "draft_machine_translation_needs_native_review",
+          "phrase": "Brak odpowiedzi po dwóch wiadomościach przypominających."
+        }
+      }
+    },
+    {
+      "id": "market-too-small",
+      "slug": "market-too-small",
+      "recordType": "phrase",
+      "stageTags": [
+        "pre-seed",
+        "seed",
+        "series-a"
+      ],
+      "topicTags": [
+        "market"
+      ],
+      "signalClass": "hard-no",
+      "contexts": [
+        "post-meeting",
+        "email"
+      ],
+      "evidenceType": "editorial-analysis",
+      "sourceDisplayLabel": "Editorial guidance",
+      "attributed_investor_quote": null,
+      "revisedAt": "2026-11-09",
+      "seed": {
+        "hypotheses_en": "Concern about return potential, TAM definition or go-to-market scope.",
+        "observable_context_en": "Concrete questions about adjacent segments",
+        "clarifying_question_guidance_en": "Ask which expansion assumptions are unconvincing.",
+        "next_action_en": "Tighten market evidence; do not exaggerate TAM."
+      },
+      "sources": [],
+      "relatedArticleSlugs": [],
+      "relatedToolSlugs": [],
+      "relatedSignalIds": [],
+      "publication_status": "draft",
+      "publication": {
+        "en": "draft",
+        "sk": "draft_machine_translation_needs_native_review",
+        "cs": "draft_machine_translation_needs_native_review",
+        "de": "draft_machine_translation_needs_native_review",
+        "pl": "draft_machine_translation_needs_native_review"
+      },
+      "locales": {
+        "en": {
+          "status": "draft",
+          "phrase": "The market looks too small."
+        },
+        "sk": {
+          "status": "draft_machine_translation_needs_native_review",
+          "phrase": "Trh sa nám zdá príliš malý."
+        },
+        "cs": {
+          "status": "draft_machine_translation_needs_native_review",
+          "phrase": "Trh se nám zdá příliš malý."
+        },
+        "de": {
+          "status": "draft_machine_translation_needs_native_review",
+          "phrase": "Der Markt scheint uns zu klein."
+        },
+        "pl": {
+          "status": "draft_machine_translation_needs_native_review",
+          "phrase": "Ten rynek wydaje nam się zbyt mały."
+        }
+      }
+    },
+    {
+      "id": "team-incomplete",
+      "slug": "team-incomplete",
+      "recordType": "phrase",
+      "stageTags": [
+        "pre-seed",
+        "seed",
+        "series-a"
+      ],
+      "topicTags": [
+        "team"
+      ],
+      "signalClass": "ambiguous",
+      "contexts": [
+        "post-meeting",
+        "email"
+      ],
+      "evidenceType": "editorial-analysis",
+      "sourceDisplayLabel": "Editorial guidance",
+      "attributed_investor_quote": null,
+      "revisedAt": "2026-11-09",
+      "seed": {
+        "hypotheses_en": "Missing function, commitment or execution capacity.",
+        "observable_context_en": "Specific role or capability the investor wants",
+        "clarifying_question_guidance_en": "Ask which team gap is blocking the investment.",
+        "next_action_en": "Prepare credible staffing/partnership plan."
+      },
+      "sources": [],
+      "relatedArticleSlugs": [],
+      "relatedToolSlugs": [],
+      "relatedSignalIds": [],
+      "publication_status": "draft",
+      "publication": {
+        "en": "draft",
+        "sk": "draft_machine_translation_needs_native_review",
+        "cs": "draft_machine_translation_needs_native_review",
+        "de": "draft_machine_translation_needs_native_review",
+        "pl": "draft_machine_translation_needs_native_review"
+      },
+      "locales": {
+        "en": {
+          "status": "draft",
+          "phrase": "Your team isn't complete yet."
+        },
+        "sk": {
+          "status": "draft_machine_translation_needs_native_review",
+          "phrase": "Váš tím zatiaľ nie je kompletný."
+        },
+        "cs": {
+          "status": "draft_machine_translation_needs_native_review",
+          "phrase": "Váš tým zatím není kompletní."
+        },
+        "de": {
+          "status": "draft_machine_translation_needs_native_review",
+          "phrase": "Euer Team ist noch nicht vollständig."
+        },
+        "pl": {
+          "status": "draft_machine_translation_needs_native_review",
+          "phrase": "Wasz zespół nie jest jeszcze kompletny."
+        }
+      }
+    },
+    {
+      "id": "local-only",
+      "slug": "local-only",
+      "recordType": "phrase",
+      "stageTags": [
+        "pre-seed",
+        "seed",
+        "series-a"
+      ],
+      "topicTags": [
+        "thesis"
+      ],
+      "signalClass": "hard-no",
+      "contexts": [
+        "post-meeting",
+        "email"
+      ],
+      "evidenceType": "editorial-analysis",
+      "sourceDisplayLabel": "Editorial guidance",
+      "attributed_investor_quote": null,
+      "revisedAt": "2026-11-09",
+      "seed": {
+        "hypotheses_en": "Mandate/geographic restriction or a general pass.",
+        "observable_context_en": "Published geographic investment policy",
+        "clarifying_question_guidance_en": "Clarify where incorporation or operations must be.",
+        "next_action_en": "Respect mandate; target eligible investors."
+      },
+      "sources": [],
+      "relatedArticleSlugs": [],
+      "relatedToolSlugs": [],
+      "relatedSignalIds": [],
+      "publication_status": "draft",
+      "publication": {
+        "en": "draft",
+        "sk": "draft_machine_translation_needs_native_review",
+        "cs": "draft_machine_translation_needs_native_review",
+        "de": "draft_machine_translation_needs_native_review",
+        "pl": "draft_machine_translation_needs_native_review"
+      },
+      "locales": {
+        "en": {
+          "status": "draft",
+          "phrase": "We invest only in companies based here."
+        },
+        "sk": {
+          "status": "draft_machine_translation_needs_native_review",
+          "phrase": "Investujeme len do firiem so sídlom v našom regióne."
+        },
+        "cs": {
+          "status": "draft_machine_translation_needs_native_review",
+          "phrase": "Investujeme jen do firem se sídlem v našem regionu."
+        },
+        "de": {
+          "status": "draft_machine_translation_needs_native_review",
+          "phrase": "Wir investieren nur in Unternehmen aus unserer Region."
+        },
+        "pl": {
+          "status": "draft_machine_translation_needs_native_review",
+          "phrase": "Inwestujemy tylko w spółki z naszego regionu."
+        }
+      }
+    },
+    {
+      "id": "not-investing-now",
+      "slug": "not-investing-now",
+      "recordType": "phrase",
+      "stageTags": [
+        "pre-seed",
+        "seed",
+        "series-a"
+      ],
+      "topicTags": [
+        "timing"
+      ],
+      "signalClass": "hard-no",
+      "contexts": [
+        "post-meeting",
+        "email"
+      ],
+      "evidenceType": "editorial-analysis",
+      "sourceDisplayLabel": "Editorial guidance",
+      "attributed_investor_quote": null,
+      "revisedAt": "2026-11-09",
+      "seed": {
+        "hypotheses_en": "Fund deployment pause, fundraising cycle or a polite rejection.",
+        "observable_context_en": "Published portfolio deployment status and future window",
+        "clarifying_question_guidance_en": "Ask if there is a definite reopening date.",
+        "next_action_en": "Remove from active round unless an exact follow-up is agreed."
+      },
+      "sources": [],
+      "relatedArticleSlugs": [],
+      "relatedToolSlugs": [],
+      "relatedSignalIds": [],
+      "publication_status": "draft",
+      "publication": {
+        "en": "draft",
+        "sk": "draft_machine_translation_needs_native_review",
+        "cs": "draft_machine_translation_needs_native_review",
+        "de": "draft_machine_translation_needs_native_review",
+        "pl": "draft_machine_translation_needs_native_review"
+      },
+      "locales": {
+        "en": {
+          "status": "draft",
+          "phrase": "We're not making new investments right now."
+        },
+        "sk": {
+          "status": "draft_machine_translation_needs_native_review",
+          "phrase": "Momentálne nerobíme nové investície."
+        },
+        "cs": {
+          "status": "draft_machine_translation_needs_native_review",
+          "phrase": "Momentálně neděláme nové investice."
+        },
+        "de": {
+          "status": "draft_machine_translation_needs_native_review",
+          "phrase": "Wir tätigen derzeit keine Neuinvestitionen."
+        },
+        "pl": {
+          "status": "draft_machine_translation_needs_native_review",
+          "phrase": "Obecnie nie realizujemy nowych inwestycji."
+        }
+      }
+    },
+    {
+      "id": "investment-committee",
+      "slug": "investment-committee",
+      "recordType": "phrase",
+      "stageTags": [
+        "pre-seed",
+        "seed",
+        "series-a"
+      ],
+      "topicTags": [
+        "process"
+      ],
+      "signalClass": "ambiguous",
+      "contexts": [
+        "post-meeting",
+        "email"
+      ],
+      "evidenceType": "editorial-analysis",
+      "sourceDisplayLabel": "Editorial guidance",
+      "attributed_investor_quote": null,
+      "revisedAt": "2026-11-09",
+      "seed": {
+        "hypotheses_en": "Formal decision step or a stall.",
+        "observable_context_en": "Scheduled committee date and due-diligence questions",
+        "clarifying_question_guidance_en": "Ask what materials and timeline the committee requires.",
+        "next_action_en": "Supply useful information and agree a check-in."
+      },
+      "sources": [],
+      "relatedArticleSlugs": [],
+      "relatedToolSlugs": [],
+      "relatedSignalIds": [],
+      "publication_status": "draft",
+      "publication": {
+        "en": "draft",
+        "sk": "draft_machine_translation_needs_native_review",
+        "cs": "draft_machine_translation_needs_native_review",
+        "de": "draft_machine_translation_needs_native_review",
+        "pl": "draft_machine_translation_needs_native_review"
+      },
+      "locales": {
+        "en": {
+          "status": "draft",
+          "phrase": "I need to discuss this with our investment committee."
+        },
+        "sk": {
+          "status": "draft_machine_translation_needs_native_review",
+          "phrase": "Musím to prebrať s investičným výborom."
+        },
+        "cs": {
+          "status": "draft_machine_translation_needs_native_review",
+          "phrase": "Musím to probrat s investičním výborem."
+        },
+        "de": {
+          "status": "draft_machine_translation_needs_native_review",
+          "phrase": "Ich muss das mit unserem Investmentkomitee besprechen."
+        },
+        "pl": {
+          "status": "draft_machine_translation_needs_native_review",
+          "phrase": "Muszę omówić to z naszym komitetem inwestycyjnym."
+        }
+      }
+    },
+    {
+      "id": "customer-references",
+      "slug": "customer-references",
+      "recordType": "phrase",
+      "stageTags": [
+        "pre-seed",
+        "seed",
+        "series-a"
+      ],
+      "topicTags": [
+        "diligence"
+      ],
+      "signalClass": "positive",
+      "contexts": [
+        "post-meeting",
+        "email"
+      ],
+      "evidenceType": "editorial-analysis",
+      "sourceDisplayLabel": "Editorial guidance",
+      "attributed_investor_quote": null,
+      "revisedAt": "2026-11-09",
+      "seed": {
+        "hypotheses_en": "Real diligence or early market research.",
+        "observable_context_en": "Named reference request and process owner",
+        "clarifying_question_guidance_en": "Ask the scope, timing and consent needs.",
+        "next_action_en": "Seek customer permission and prepare references."
+      },
+      "sources": [],
+      "relatedArticleSlugs": [],
+      "relatedToolSlugs": [],
+      "relatedSignalIds": [],
+      "publication_status": "draft",
+      "publication": {
+        "en": "draft",
+        "sk": "draft_machine_translation_needs_native_review",
+        "cs": "draft_machine_translation_needs_native_review",
+        "de": "draft_machine_translation_needs_native_review",
+        "pl": "draft_machine_translation_needs_native_review"
+      },
+      "locales": {
+        "en": {
+          "status": "draft",
+          "phrase": "Can we speak with your customers?"
+        },
+        "sk": {
+          "status": "draft_machine_translation_needs_native_review",
+          "phrase": "Môžeme sa porozprávať s vašimi zákazníkmi?"
+        },
+        "cs": {
+          "status": "draft_machine_translation_needs_native_review",
+          "phrase": "Můžeme si promluvit s vašimi zákazníky?"
+        },
+        "de": {
+          "status": "draft_machine_translation_needs_native_review",
+          "phrase": "Können wir mit euren Kunden sprechen?"
+        },
+        "pl": {
+          "status": "draft_machine_translation_needs_native_review",
+          "phrase": "Czy możemy porozmawiać z waszymi klientami?"
+        }
+      }
+    },
+    {
+      "id": "impressed-team",
+      "slug": "impressed-team",
+      "recordType": "phrase",
+      "stageTags": [
+        "pre-seed",
+        "seed",
+        "series-a"
+      ],
+      "topicTags": [
+        "team"
+      ],
+      "signalClass": "ambiguous",
+      "contexts": [
+        "post-meeting",
+        "email"
+      ],
+      "evidenceType": "editorial-analysis",
+      "sourceDisplayLabel": "Editorial guidance",
+      "attributed_investor_quote": null,
+      "revisedAt": "2026-11-09",
+      "seed": {
+        "hypotheses_en": "A genuine compliment, not necessarily funding interest.",
+        "observable_context_en": "Partner meetings and specific follow-up asks",
+        "clarifying_question_guidance_en": "Ask what next step would make sense.",
+        "next_action_en": "Thank them and focus on concrete process evidence."
+      },
+      "sources": [],
+      "relatedArticleSlugs": [],
+      "relatedToolSlugs": [],
+      "relatedSignalIds": [],
+      "publication_status": "draft",
+      "publication": {
+        "en": "draft",
+        "sk": "draft_machine_translation_needs_native_review",
+        "cs": "draft_machine_translation_needs_native_review",
+        "de": "draft_machine_translation_needs_native_review",
+        "pl": "draft_machine_translation_needs_native_review"
+      },
+      "locales": {
+        "en": {
+          "status": "draft",
+          "phrase": "We're impressed by your team."
+        },
+        "sk": {
+          "status": "draft_machine_translation_needs_native_review",
+          "phrase": "Váš tím na nás urobil dojem."
+        },
+        "cs": {
+          "status": "draft_machine_translation_needs_native_review",
+          "phrase": "Váš tým na nás udělal dojem."
+        },
+        "de": {
+          "status": "draft_machine_translation_needs_native_review",
+          "phrase": "Euer Team hat uns beeindruckt."
+        },
+        "pl": {
+          "status": "draft_machine_translation_needs_native_review",
+          "phrase": "Wasz zespół zrobił na nas wrażenie."
+        }
+      }
+    },
+    {
+      "id": "product-not-model",
+      "slug": "product-not-model",
+      "recordType": "phrase",
+      "stageTags": [
+        "pre-seed",
+        "seed",
+        "series-a"
+      ],
+      "topicTags": [
+        "business-model"
+      ],
+      "signalClass": "soft-no",
+      "contexts": [
+        "post-meeting",
+        "email"
+      ],
+      "evidenceType": "editorial-analysis",
+      "sourceDisplayLabel": "Editorial guidance",
+      "attributed_investor_quote": null,
+      "revisedAt": "2026-11-09",
+      "seed": {
+        "hypotheses_en": "Monetization or scale concern, possibly a mismatch.",
+        "observable_context_en": "Questions about margins, pricing, retention or GTM",
+        "clarifying_question_guidance_en": "Ask which business-model assumption fails their test.",
+        "next_action_en": "Validate with real unit economics and experiments."
+      },
+      "sources": [],
+      "relatedArticleSlugs": [],
+      "relatedToolSlugs": [],
+      "relatedSignalIds": [],
+      "publication_status": "draft",
+      "publication": {
+        "en": "draft",
+        "sk": "draft_machine_translation_needs_native_review",
+        "cs": "draft_machine_translation_needs_native_review",
+        "de": "draft_machine_translation_needs_native_review",
+        "pl": "draft_machine_translation_needs_native_review"
+      },
+      "locales": {
+        "en": {
+          "status": "draft",
+          "phrase": "We like the product, but not the business model."
+        },
+        "sk": {
+          "status": "draft_machine_translation_needs_native_review",
+          "phrase": "Produkt sa nám páči, ale nie váš biznis model."
+        },
+        "cs": {
+          "status": "draft_machine_translation_needs_native_review",
+          "phrase": "Produkt se nám líbí, ale ne váš obchodní model."
+        },
+        "de": {
+          "status": "draft_machine_translation_needs_native_review",
+          "phrase": "Wir mögen das Produkt, aber nicht das Geschäftsmodell."
+        },
+        "pl": {
+          "status": "draft_machine_translation_needs_native_review",
+          "phrase": "Podoba nam się produkt, ale nie model biznesowy."
+        }
+      }
+    },
+    {
+      "id": "valuation-too-high",
+      "slug": "valuation-too-high",
+      "recordType": "phrase",
+      "stageTags": [
+        "pre-seed",
+        "seed",
+        "series-a"
+      ],
+      "topicTags": [
+        "valuation"
+      ],
+      "signalClass": "ambiguous",
+      "contexts": [
+        "post-meeting",
+        "email"
+      ],
+      "evidenceType": "editorial-analysis",
+      "sourceDisplayLabel": "Editorial guidance",
+      "attributed_investor_quote": null,
+      "revisedAt": "2026-11-09",
+      "seed": {
+        "hypotheses_en": "Pricing gap, returns math concern or a negotiation.",
+        "observable_context_en": "Alternative numbers/terms and continued diligence",
+        "clarifying_question_guidance_en": "Ask what valuation range and structure could work.",
+        "next_action_en": "Model dilution and decide whether expectations align."
+      },
+      "sources": [],
+      "relatedArticleSlugs": [],
+      "relatedToolSlugs": [],
+      "relatedSignalIds": [],
+      "publication_status": "draft",
+      "publication": {
+        "en": "draft",
+        "sk": "draft_machine_translation_needs_native_review",
+        "cs": "draft_machine_translation_needs_native_review",
+        "de": "draft_machine_translation_needs_native_review",
+        "pl": "draft_machine_translation_needs_native_review"
+      },
+      "locales": {
+        "en": {
+          "status": "draft",
+          "phrase": "Your valuation is too high for us."
+        },
+        "sk": {
+          "status": "draft_machine_translation_needs_native_review",
+          "phrase": "Vaše ocenenie je pre nás príliš vysoké."
+        },
+        "cs": {
+          "status": "draft_machine_translation_needs_native_review",
+          "phrase": "Vaše ocenění je pro nás příliš vysoké."
+        },
+        "de": {
+          "status": "draft_machine_translation_needs_native_review",
+          "phrase": "Eure Bewertung ist uns zu hoch."
+        },
+        "pl": {
+          "status": "draft_machine_translation_needs_native_review",
+          "phrase": "Wasza wycena jest dla nas zbyt wysoka."
+        }
+      }
+    },
+    {
+      "id": "weak-defensibility",
+      "slug": "weak-defensibility",
+      "recordType": "phrase",
+      "stageTags": [
+        "pre-seed",
+        "seed",
+        "series-a"
+      ],
+      "topicTags": [
+        "competition"
+      ],
+      "signalClass": "ambiguous",
+      "contexts": [
+        "post-meeting",
+        "email"
+      ],
+      "evidenceType": "editorial-analysis",
+      "sourceDisplayLabel": "Editorial guidance",
+      "attributed_investor_quote": null,
+      "revisedAt": "2026-11-09",
+      "seed": {
+        "hypotheses_en": "Concern about competition, differentiation or switching costs.",
+        "observable_context_en": "Specific questions about customer lock-in or IP",
+        "clarifying_question_guidance_en": "Ask which competitive threat worries them most.",
+        "next_action_en": "Bring evidence of retention, differentiation and moat."
+      },
+      "sources": [],
+      "relatedArticleSlugs": [],
+      "relatedToolSlugs": [],
+      "relatedSignalIds": [],
+      "publication_status": "draft",
+      "publication": {
+        "en": "draft",
+        "sk": "draft_machine_translation_needs_native_review",
+        "cs": "draft_machine_translation_needs_native_review",
+        "de": "draft_machine_translation_needs_native_review",
+        "pl": "draft_machine_translation_needs_native_review"
+      },
+      "locales": {
+        "en": {
+          "status": "draft",
+          "phrase": "How defensible is this business?"
+        },
+        "sk": {
+          "status": "draft_machine_translation_needs_native_review",
+          "phrase": "Ako sa dokážete ubrániť konkurencii?"
+        },
+        "cs": {
+          "status": "draft_machine_translation_needs_native_review",
+          "phrase": "Jak se dokážete ubránit konkurenci?"
+        },
+        "de": {
+          "status": "draft_machine_translation_needs_native_review",
+          "phrase": "Wie gut könnt ihr euch gegen Wettbewerber behaupten?"
+        },
+        "pl": {
+          "status": "draft_machine_translation_needs_native_review",
+          "phrase": "Jak zamierzacie bronić przewagi przed konkurencją?"
+        }
+      }
+    },
+    {
+      "id": "unit-economics",
+      "slug": "unit-economics",
+      "recordType": "phrase",
+      "stageTags": [
+        "pre-seed",
+        "seed",
+        "series-a"
+      ],
+      "topicTags": [
+        "economics"
+      ],
+      "signalClass": "soft-no",
+      "contexts": [
+        "post-meeting",
+        "email"
+      ],
+      "evidenceType": "editorial-analysis",
+      "sourceDisplayLabel": "Editorial guidance",
+      "attributed_investor_quote": null,
+      "revisedAt": "2026-11-09",
+      "seed": {
+        "hypotheses_en": "Worry about contribution margins or scaling efficiency.",
+        "observable_context_en": "Specific CAC/payback/margin questions",
+        "clarifying_question_guidance_en": "Ask which metric is the key blocker.",
+        "next_action_en": "Produce cohort-level economics with transparent assumptions."
+      },
+      "sources": [],
+      "relatedArticleSlugs": [],
+      "relatedToolSlugs": [],
+      "relatedSignalIds": [],
+      "publication_status": "draft",
+      "publication": {
+        "en": "draft",
+        "sk": "draft_machine_translation_needs_native_review",
+        "cs": "draft_machine_translation_needs_native_review",
+        "de": "draft_machine_translation_needs_native_review",
+        "pl": "draft_machine_translation_needs_native_review"
+      },
+      "locales": {
+        "en": {
+          "status": "draft",
+          "phrase": "We need stronger unit economics."
+        },
+        "sk": {
+          "status": "draft_machine_translation_needs_native_review",
+          "phrase": "Potrebujeme vidieť lepšiu jednotkovú ekonomiku."
+        },
+        "cs": {
+          "status": "draft_machine_translation_needs_native_review",
+          "phrase": "Potřebujeme vidět lepší jednotkovou ekonomiku."
+        },
+        "de": {
+          "status": "draft_machine_translation_needs_native_review",
+          "phrase": "Wir müssen bessere Unit Economics sehen."
+        },
+        "pl": {
+          "status": "draft_machine_translation_needs_native_review",
+          "phrase": "Musimy zobaczyć lepszą ekonomikę jednostkową."
+        }
+      }
+    },
+    {
+      "id": "other-investors",
+      "slug": "other-investors",
+      "recordType": "phrase",
+      "stageTags": [
+        "pre-seed",
+        "seed",
+        "series-a"
+      ],
+      "topicTags": [
+        "process"
+      ],
+      "signalClass": "ambiguous",
+      "contexts": [
+        "post-meeting",
+        "email"
+      ],
+      "evidenceType": "editorial-analysis",
+      "sourceDisplayLabel": "Editorial guidance",
+      "attributed_investor_quote": null,
+      "revisedAt": "2026-11-09",
+      "seed": {
+        "hypotheses_en": "Social proof check or coordination of a round.",
+        "observable_context_en": "Specific commitment/timing questions and continued process",
+        "clarifying_question_guidance_en": "Ask how co-investor status affects their process.",
+        "next_action_en": "Provide truthful aggregate fundraising status, not invented FOMO."
+      },
+      "sources": [],
+      "relatedArticleSlugs": [],
+      "relatedToolSlugs": [],
+      "relatedSignalIds": [],
+      "publication_status": "draft",
+      "publication": {
+        "en": "draft",
+        "sk": "draft_machine_translation_needs_native_review",
+        "cs": "draft_machine_translation_needs_native_review",
+        "de": "draft_machine_translation_needs_native_review",
+        "pl": "draft_machine_translation_needs_native_review"
+      },
+      "locales": {
+        "en": {
+          "status": "draft",
+          "phrase": "What are other investors saying?"
+        },
+        "sk": {
+          "status": "draft_machine_translation_needs_native_review",
+          "phrase": "Čo hovoria ostatní investori?"
+        },
+        "cs": {
+          "status": "draft_machine_translation_needs_native_review",
+          "phrase": "Co říkají ostatní investoři?"
+        },
+        "de": {
+          "status": "draft_machine_translation_needs_native_review",
+          "phrase": "Was sagen andere Investoren?"
+        },
+        "pl": {
+          "status": "draft_machine_translation_needs_native_review",
+          "phrase": "Co mówią inni inwestorzy?"
+        }
+      }
+    },
+    {
+      "id": "next-milestone",
+      "slug": "next-milestone",
+      "recordType": "phrase",
+      "stageTags": [
+        "pre-seed",
+        "seed",
+        "series-a"
+      ],
+      "topicTags": [
+        "traction"
+      ],
+      "signalClass": "ambiguous",
+      "contexts": [
+        "post-meeting",
+        "email"
+      ],
+      "evidenceType": "editorial-analysis",
+      "sourceDisplayLabel": "Editorial guidance",
+      "attributed_investor_quote": null,
+      "revisedAt": "2026-11-09",
+      "seed": {
+        "hypotheses_en": "Conditional future interest or a generic decline.",
+        "observable_context_en": "Precisely defined milestone and reevaluation date",
+        "clarifying_question_guidance_en": "Ask what measurable proof point matters.",
+        "next_action_en": "Track the milestone and keep raising broadly."
+      },
+      "sources": [],
+      "relatedArticleSlugs": [],
+      "relatedToolSlugs": [],
+      "relatedSignalIds": [],
+      "publication_status": "draft",
+      "publication": {
+        "en": "draft",
+        "sk": "draft_machine_translation_needs_native_review",
+        "cs": "draft_machine_translation_needs_native_review",
+        "de": "draft_machine_translation_needs_native_review",
+        "pl": "draft_machine_translation_needs_native_review"
+      },
+      "locales": {
+        "en": {
+          "status": "draft",
+          "phrase": "We'd like to see you hit the next milestone."
+        },
+        "sk": {
+          "status": "draft_machine_translation_needs_native_review",
+          "phrase": "Radi by sme videli, že dosiahnete ďalší míľnik."
+        },
+        "cs": {
+          "status": "draft_machine_translation_needs_native_review",
+          "phrase": "Rádi bychom viděli, že dosáhnete dalšího milníku."
+        },
+        "de": {
+          "status": "draft_machine_translation_needs_native_review",
+          "phrase": "Wir würden gern sehen, dass ihr den nächsten Meilenstein erreicht."
+        },
+        "pl": {
+          "status": "draft_machine_translation_needs_native_review",
+          "phrase": "Chcielibyśmy zobaczyć, jak osiągacie kolejny kamień milowy."
+        }
+      }
+    },
+    {
+      "id": "financial-model",
+      "slug": "financial-model",
+      "recordType": "phrase",
+      "stageTags": [
+        "pre-seed",
+        "seed",
+        "series-a"
+      ],
+      "topicTags": [
+        "diligence"
+      ],
+      "signalClass": "positive",
+      "contexts": [
+        "post-meeting",
+        "email"
+      ],
+      "evidenceType": "editorial-analysis",
+      "sourceDisplayLabel": "Editorial guidance",
+      "attributed_investor_quote": null,
+      "revisedAt": "2026-11-09",
+      "seed": {
+        "hypotheses_en": "Growing diligence interest or baseline screening.",
+        "observable_context_en": "Detailed questions and scheduled review",
+        "clarifying_question_guidance_en": "Ask which scenarios they want to understand.",
+        "next_action_en": "Send realistic model with assumptions and correct version."
+      },
+      "sources": [],
+      "relatedArticleSlugs": [],
+      "relatedToolSlugs": [],
+      "relatedSignalIds": [],
+      "publication_status": "draft",
+      "publication": {
+        "en": "draft",
+        "sk": "draft_machine_translation_needs_native_review",
+        "cs": "draft_machine_translation_needs_native_review",
+        "de": "draft_machine_translation_needs_native_review",
+        "pl": "draft_machine_translation_needs_native_review"
+      },
+      "locales": {
+        "en": {
+          "status": "draft",
+          "phrase": "Can you send your financial model?"
+        },
+        "sk": {
+          "status": "draft_machine_translation_needs_native_review",
+          "phrase": "Môžete nám poslať finančný model?"
+        },
+        "cs": {
+          "status": "draft_machine_translation_needs_native_review",
+          "phrase": "Můžete nám poslat finanční model?"
+        },
+        "de": {
+          "status": "draft_machine_translation_needs_native_review",
+          "phrase": "Könnt ihr uns euer Finanzmodell schicken?"
+        },
+        "pl": {
+          "status": "draft_machine_translation_needs_native_review",
+          "phrase": "Czy możecie przesłać model finansowy?"
+        }
+      }
+    },
+    {
+      "id": "participate-not-lead",
+      "slug": "participate-not-lead",
+      "recordType": "phrase",
+      "stageTags": [
+        "pre-seed",
+        "seed",
+        "series-a"
+      ],
+      "topicTags": [
+        "terms"
+      ],
+      "signalClass": "ambiguous",
+      "contexts": [
+        "post-meeting",
+        "email"
+      ],
+      "evidenceType": "editorial-analysis",
+      "sourceDisplayLabel": "Editorial guidance",
+      "attributed_investor_quote": null,
+      "revisedAt": "2026-11-09",
+      "seed": {
+        "hypotheses_en": "A non-lead check possibility or a way to defer.",
+        "observable_context_en": "Written check-size range and explicit lead condition",
+        "clarifying_question_guidance_en": "Ask how large a check and what conditions apply.",
+        "next_action_en": "Keep it conditional; prioritize lead fundraising."
+      },
+      "sources": [],
+      "relatedArticleSlugs": [],
+      "relatedToolSlugs": [],
+      "relatedSignalIds": [],
+      "publication_status": "draft",
+      "publication": {
+        "en": "draft",
+        "sk": "draft_machine_translation_needs_native_review",
+        "cs": "draft_machine_translation_needs_native_review",
+        "de": "draft_machine_translation_needs_native_review",
+        "pl": "draft_machine_translation_needs_native_review"
+      },
+      "locales": {
+        "en": {
+          "status": "draft",
+          "phrase": "We could participate, but we won't lead."
+        },
+        "sk": {
+          "status": "draft_machine_translation_needs_native_review",
+          "phrase": "Mohli by sme sa zapojiť, ale nepovedieme kolo."
+        },
+        "cs": {
+          "status": "draft_machine_translation_needs_native_review",
+          "phrase": "Mohli bychom se zapojit, ale nepovedeme kolo."
+        },
+        "de": {
+          "status": "draft_machine_translation_needs_native_review",
+          "phrase": "Wir könnten mitinvestieren, aber die Runde nicht anführen."
+        },
+        "pl": {
+          "status": "draft_machine_translation_needs_native_review",
+          "phrase": "Możemy dołączyć, ale nie poprowadzimy rundy."
+        }
+      }
+    },
+    {
+      "id": "portfolio-intro",
+      "slug": "portfolio-intro",
+      "recordType": "phrase",
+      "stageTags": [
+        "pre-seed",
+        "seed",
+        "series-a"
+      ],
+      "topicTags": [
+        "diligence"
+      ],
+      "signalClass": "ambiguous",
+      "contexts": [
+        "post-meeting",
+        "email"
+      ],
+      "evidenceType": "editorial-analysis",
+      "sourceDisplayLabel": "Editorial guidance",
+      "attributed_investor_quote": null,
+      "revisedAt": "2026-11-09",
+      "seed": {
+        "hypotheses_en": "Reference diligence, help or market check.",
+        "observable_context_en": "Specific introduction with planned follow-up",
+        "clarifying_question_guidance_en": "Ask the purpose of the meeting.",
+        "next_action_en": "Prepare thoughtfully and respect introduction."
+      },
+      "sources": [],
+      "relatedArticleSlugs": [],
+      "relatedToolSlugs": [],
+      "relatedSignalIds": [],
+      "publication_status": "draft",
+      "publication": {
+        "en": "draft",
+        "sk": "draft_machine_translation_needs_native_review",
+        "cs": "draft_machine_translation_needs_native_review",
+        "de": "draft_machine_translation_needs_native_review",
+        "pl": "draft_machine_translation_needs_native_review"
+      },
+      "locales": {
+        "en": {
+          "status": "draft",
+          "phrase": "I'd like to introduce you to a portfolio founder."
+        },
+        "sk": {
+          "status": "draft_machine_translation_needs_native_review",
+          "phrase": "Rád by som vás spojil so zakladateľom z nášho portfólia."
+        },
+        "cs": {
+          "status": "draft_machine_translation_needs_native_review",
+          "phrase": "Rád bych vás propojil se zakladatelem z našeho portfolia."
+        },
+        "de": {
+          "status": "draft_machine_translation_needs_native_review",
+          "phrase": "Ich würde euch gern einem Gründer aus unserem Portfolio vorstellen."
+        },
+        "pl": {
+          "status": "draft_machine_translation_needs_native_review",
+          "phrase": "Chciałbym przedstawić was founderowi z naszego portfela."
+        }
+      }
+    },
+    {
+      "id": "process-weeks",
+      "slug": "process-weeks",
+      "recordType": "phrase",
+      "stageTags": [
+        "pre-seed",
+        "seed",
+        "series-a"
+      ],
+      "topicTags": [
+        "process"
+      ],
+      "signalClass": "ambiguous",
+      "contexts": [
+        "post-meeting",
+        "email"
+      ],
+      "evidenceType": "editorial-analysis",
+      "sourceDisplayLabel": "Editorial guidance",
+      "attributed_investor_quote": null,
+      "revisedAt": "2026-11-09",
+      "seed": {
+        "hypotheses_en": "Legitimate committee timing or delay.",
+        "observable_context_en": "Named milestones, owners and decision date",
+        "clarifying_question_guidance_en": "Ask about the remaining process and next decision point.",
+        "next_action_en": "Track timeline and maintain other investor discussions."
+      },
+      "sources": [],
+      "relatedArticleSlugs": [],
+      "relatedToolSlugs": [],
+      "relatedSignalIds": [],
+      "publication_status": "draft",
+      "publication": {
+        "en": "draft",
+        "sk": "draft_machine_translation_needs_native_review",
+        "cs": "draft_machine_translation_needs_native_review",
+        "de": "draft_machine_translation_needs_native_review",
+        "pl": "draft_machine_translation_needs_native_review"
+      },
+      "locales": {
+        "en": {
+          "status": "draft",
+          "phrase": "Our decision process takes a few weeks."
+        },
+        "sk": {
+          "status": "draft_machine_translation_needs_native_review",
+          "phrase": "Náš rozhodovací proces trvá niekoľko týždňov."
+        },
+        "cs": {
+          "status": "draft_machine_translation_needs_native_review",
+          "phrase": "Náš rozhodovací proces trvá několik týdnů."
+        },
+        "de": {
+          "status": "draft_machine_translation_needs_native_review",
+          "phrase": "Unser Entscheidungsprozess dauert einige Wochen."
+        },
+        "pl": {
+          "status": "draft_machine_translation_needs_native_review",
+          "phrase": "Nasz proces decyzyjny trwa kilka tygodni."
+        }
+      }
+    },
+    {
+      "id": "another-partner-meeting",
+      "slug": "another-partner-meeting",
+      "recordType": "phrase",
+      "stageTags": [
+        "pre-seed",
+        "seed",
+        "series-a"
+      ],
+      "topicTags": [
+        "process"
+      ],
+      "signalClass": "positive",
+      "contexts": [
+        "post-meeting",
+        "email"
+      ],
+      "evidenceType": "editorial-analysis",
+      "sourceDisplayLabel": "Editorial guidance",
+      "attributed_investor_quote": null,
+      "revisedAt": "2026-11-09",
+      "seed": {
+        "hypotheses_en": "Internal momentum, not a guaranteed investment.",
+        "observable_context_en": "Partner availability and substantive agenda",
+        "clarifying_question_guidance_en": "Ask which questions should be resolved at next meeting.",
+        "next_action_en": "Prepare relevant material and clarify next step."
+      },
+      "sources": [],
+      "relatedArticleSlugs": [],
+      "relatedToolSlugs": [],
+      "relatedSignalIds": [],
+      "publication_status": "draft",
+      "publication": {
+        "en": "draft",
+        "sk": "draft_machine_translation_needs_native_review",
+        "cs": "draft_machine_translation_needs_native_review",
+        "de": "draft_machine_translation_needs_native_review",
+        "pl": "draft_machine_translation_needs_native_review"
+      },
+      "locales": {
+        "en": {
+          "status": "draft",
+          "phrase": "Let's bring another partner into the next meeting."
+        },
+        "sk": {
+          "status": "draft_machine_translation_needs_native_review",
+          "phrase": "Na ďalšie stretnutie prizvime ďalšieho partnera z fondu."
+        },
+        "cs": {
+          "status": "draft_machine_translation_needs_native_review",
+          "phrase": "Na další schůzku přizvěme dalšího partnera z fondu."
+        },
+        "de": {
+          "status": "draft_machine_translation_needs_native_review",
+          "phrase": "Nehmen wir beim nächsten Gespräch einen weiteren Partner dazu."
+        },
+        "pl": {
+          "status": "draft_machine_translation_needs_native_review",
+          "phrase": "Zaprośmy kolejnego partnera na następne spotkanie."
+        }
+      }
+    },
+    {
+      "id": "not-our-stage",
+      "slug": "not-our-stage",
+      "recordType": "phrase",
+      "stageTags": [
+        "pre-seed",
+        "seed",
+        "series-a"
+      ],
+      "topicTags": [
+        "stage"
+      ],
+      "signalClass": "hard-no",
+      "contexts": [
+        "post-meeting",
+        "email"
+      ],
+      "evidenceType": "editorial-analysis",
+      "sourceDisplayLabel": "Editorial guidance",
+      "attributed_investor_quote": null,
+      "revisedAt": "2026-11-09",
+      "seed": {
+        "hypotheses_en": "Ineligible current stage or formal mandate mismatch.",
+        "observable_context_en": "Fund typical initial check/stage record",
+        "clarifying_question_guidance_en": "Ask whether there is any later relevant stage.",
+        "next_action_en": "Target stage-appropriate funds; no pressure to change mandate."
+      },
+      "sources": [],
+      "relatedArticleSlugs": [],
+      "relatedToolSlugs": [],
+      "relatedSignalIds": [],
+      "publication_status": "draft",
+      "publication": {
+        "en": "draft",
+        "sk": "draft_machine_translation_needs_native_review",
+        "cs": "draft_machine_translation_needs_native_review",
+        "de": "draft_machine_translation_needs_native_review",
+        "pl": "draft_machine_translation_needs_native_review"
+      },
+      "locales": {
+        "en": {
+          "status": "draft",
+          "phrase": "We don't invest at your stage."
+        },
+        "sk": {
+          "status": "draft_machine_translation_needs_native_review",
+          "phrase": "V tejto fáze bežne neinvestujeme."
+        },
+        "cs": {
+          "status": "draft_machine_translation_needs_native_review",
+          "phrase": "V této fázi běžně neinvestujeme."
+        },
+        "de": {
+          "status": "draft_machine_translation_needs_native_review",
+          "phrase": "In eurer Phase investieren wir normalerweise nicht."
+        },
+        "pl": {
+          "status": "draft_machine_translation_needs_native_review",
+          "phrase": "Zwykle nie inwestujemy na waszym etapie."
+        }
+      }
+    },
+    {
+      "id": "not-proceeding",
+      "slug": "not-proceeding",
+      "recordType": "phrase",
+      "stageTags": [
+        "pre-seed",
+        "seed",
+        "series-a"
+      ],
+      "topicTags": [
+        "decision"
+      ],
+      "signalClass": "hard-no",
+      "contexts": [
+        "post-meeting",
+        "email"
+      ],
+      "evidenceType": "editorial-analysis",
+      "sourceDisplayLabel": "Editorial guidance",
+      "attributed_investor_quote": null,
+      "revisedAt": "2026-11-09",
+      "seed": {
+        "hypotheses_en": "A definitive no for the current round.",
+        "observable_context_en": "Written explicit decision",
+        "clarifying_question_guidance_en": "Ask politely for one actionable takeaway if appropriate.",
+        "next_action_en": "Close the opportunity and avoid repeated pressure."
+      },
+      "sources": [],
+      "relatedArticleSlugs": [],
+      "relatedToolSlugs": [],
+      "relatedSignalIds": [],
+      "publication_status": "draft",
+      "publication": {
+        "en": "draft",
+        "sk": "draft_machine_translation_needs_native_review",
+        "cs": "draft_machine_translation_needs_native_review",
+        "de": "draft_machine_translation_needs_native_review",
+        "pl": "draft_machine_translation_needs_native_review"
+      },
+      "locales": {
+        "en": {
+          "status": "draft",
+          "phrase": "We won't proceed with an investment this round."
+        },
+        "sk": {
+          "status": "draft_machine_translation_needs_native_review",
+          "phrase": "V tomto kole nebudeme pokračovať v investičnom procese."
+        },
+        "cs": {
+          "status": "draft_machine_translation_needs_native_review",
+          "phrase": "V tejto rundě nebudeme pokračovat v investičním procesu."
+        },
+        "de": {
+          "status": "draft_machine_translation_needs_native_review",
+          "phrase": "Wir werden in dieser Runde nicht investieren."
+        },
+        "pl": {
+          "status": "draft_machine_translation_needs_native_review",
+          "phrase": "Nie będziemy kontynuować inwestycji w tej rundzie."
+        }
+      }
+    }
+  ]
+}

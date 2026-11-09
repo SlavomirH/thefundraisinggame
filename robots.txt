@@ -1,4 +1,5 @@
 User-agent: *
 Allow: /
+Disallow: /_staging/
 
 Sitemap: https://thefundraisinggame.com/sitemap.xml

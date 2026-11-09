@@ -1,0 +1,26 @@
+{
+  "investor-signal-decoder": {
+    "title": "Investor Signal Decoder | The Fundraising Game",
+    "description": "Separate concrete investor actions from polite language after a pitch meeting. Free browser tool—no account.",
+    "h1": "Investor Signal Decoder",
+    "path": "tools/investor-signal-decoder.html"
+  },
+  "investor-follow-up-builder": {
+    "title": "Investor Follow-up Builder | The Fundraising Game",
+    "description": "Draft a clear investor follow-up email from your meeting context. Copies locally—nothing is sent.",
+    "h1": "Investor Follow-up Builder",
+    "path": "tools/investor-follow-up-builder.html"
+  },
+  "fundraising-pipeline-calculator": {
+    "title": "Fundraising Pipeline Calculator | The Fundraising Game",
+    "description": "Estimate meetings and expected closes from outreach volume and conversion rates. Illustrative expected-value model.",
+    "h1": "Fundraising Pipeline Calculator",
+    "path": "tools/fundraising-pipeline-calculator.html"
+  },
+  "runway-raise-calculator": {
+    "title": "Runway &amp; Raise Calculator | The Fundraising Game",
+    "description": "Illustrative runway and raise sizing for a simplified priced-equity round. Not a SAFE calculator.",
+    "h1": "Runway &amp; Raise Calculator",
+    "path": "tools/runway-raise-calculator.html"
+  }
+}

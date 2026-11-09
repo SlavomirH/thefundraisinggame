@@ -1,0 +1,50 @@
+Cluster,Keyword candidate,Intent,Proposed asset,Priority,Competitive hypothesis,Source evidence,Search volume status,Next verification
+Investor signals,what does too early mean from vc,Informational,Article vc-too-early-meaning,P1,Niche compared with broad funding guides,Startup Daily / investor commentary,Not verified,Google Keyword Planner EN UK/US
+Investor signals,vc says too early,Informational,Article vc-too-early-meaning,P1,Specific question with observed answer content,Startup Daily,Not verified,Google Keyword Planner EN
+Investor signals,investor said too early what next,Action,Article vc-too-early-meaning,P1,Opportunity for action checklist,Related SERP / editorial hypothesis,Not verified,GSC after launch
+Investor signals,signs a vc is interested,Informational,Article signs-vc-interested,P1,Differentiated behavioral framework,VC pitch discussion sources,Not verified,Google Keyword Planner EN
+Investor signals,how to know if vc will invest,Informational,Signal Decoder,P1,Avoid fake probability claims,Observed pitch content thematic,Not verified,Google Keyword Planner EN
+Investor signals,vc interested but not responding,Action,Signal Decoder,P1,Concrete problem with functional next step,Investor ghosting competitor content,Not verified,Search Console query expansion
+Investor signals,why do vcs ghost founders,Informational,Article extension,P2,Crowded guide market; original quotes could improve,Startupfundraising site,Not verified,Keyword Planner + SERP review
+Investor signals,investor keep us posted meaning,Informational,Article extension,P2,Distinctive psychology voice,Editorial hypothesis,Not verified,Keyword Planner + SERP review
+Investor signals,why investors reject startups,Informational,Pillar article,P2,Broad and competitive; use unique investor perspectives,Startup Daily / other guides,Not verified,Keyword Planner + SERP review
+Investor signals,how venture capital investment decisions are made,Informational,Improve existing how-vcs-make-decisions,P2,Established authority competitors,Existing site article,Not verified,GSC existing query report
+Follow-up,follow up email after vc meeting,Template,Article how-to-follow-up-with-vc-after-meeting,P1,High action intent with competitor templates,SheetVenture / Leverventure / Serif,Not verified,Google Keyword Planner EN
+Follow-up,investor follow up email template,Template,Follow-up Builder,P1,Free generator offers functional differentiation,Template SERP,Not verified,Google Keyword Planner EN
+Follow-up,how long wait to follow up venture capital,Informational,Article how-to-follow-up-with-vc-after-meeting,P1,Specific timing question,SheetVenture,Not verified,Keyword Planner
+Follow-up,how to follow up after pitch meeting,Template,Follow-up Builder,P1,High user urgency,Leverventure / Stripe,Not verified,Keyword Planner
+Follow-up,vc ghosted after pitch what to do,Action,Article follow-up + decoder,P1,High pain and clear next step,Investor ghosting articles,Not verified,Keyword Planner
+Follow-up,follow up after investor rejection,Template,New follow-up scenario article,P2,Useful only if not duplicative,Related SERP,Not verified,Keyword Planner
+Follow-up,monthly investor update email example,Template,Future investor update generator,P2,Useful adjacent tool,DocSend / Techstars,Not verified,Keyword Planner
+Follow-up,what to send after investor meeting,Action,Article how-to-follow-up-with-vc-after-meeting,P2,Post-meeting workflow,Leverventure,Not verified,Keyword Planner
+Meeting prep,questions to ask venture capitalists,Checklist,Article questions-to-ask-venture-capitalists,P1,Published institutional checklists compete,UCSD / Focal,Not verified,Google Keyword Planner EN
+Meeting prep,questions to ask vc first meeting,Checklist,Article questions-to-ask-venture-capitalists,P1,Specific and easy to share,Focal / investor guides,Not verified,Keyword Planner
+Meeting prep,how to prepare for investor meeting,How-to,Improve existing how-to-pitch-to-investors,P2,Broad market authority competition,Techstars,Not verified,GSC + Keyword Planner
+Meeting prep,what do vcs look for in founders,Informational,New original interview article,P2,Needs consented original evidence,Focal / existing site draft,Not verified,Keyword Planner
+Meeting prep,how to pitch to investors,How-to,Existing article refresh,P2,Very competitive generic query,Techstars / OpenVC / site's existing article,Not verified,GSC existing query report
+Meeting prep,how long should a pitch to vcs take,Informational,Micro-guide,P3,Existing educational guides strong,Techstars / Leverventure,Not verified,Keyword Planner
+Fundraising math,how many vcs should i contact,Planning,Article how-many-investors-to-contact,P1,High fit with funnel calculator,Stripe / DocSend,Not verified,Google Keyword Planner EN
+Fundraising math,how many investors to contact pre seed,Planning,Pipeline Calculator,P1,Several dedicated SERP results,Stripe / SheetVenture,Not verified,Keyword Planner
+Fundraising math,fundraising pipeline calculator,Tool,Pipeline Calculator,P1,Functional utility with high intent,Fundraising pipeline articles,Not verified,Keyword Planner
+Fundraising math,how many investor meetings to raise seed,Planning,Pipeline Calculator,P1,Research-led question with competing guides,SheetVenture / DocSend,Not verified,Keyword Planner
+Fundraising math,venture capital conversion rate,Informational,Calculation explainer,P2,Must distinguish assumptions from data,DocSend / Stripe,Not verified,Keyword Planner
+Fundraising math,startup fundraising crm template,Template,Future CRM template,P2,Crowded established tools,Techstars,Not verified,Keyword Planner
+Fundraising math,pre seed fundraising process,How-to,Future pillar article,P2,Broad competitive market,Techstars / OpenVC,Not verified,Keyword Planner
+Fundraising math,how to find matching venture capital investors,How-to,Future investor fit worksheet,P2,Existing databases compete,OpenVC / multiple investor lists,Not verified,Keyword Planner
+Runway & equity,how much should my startup raise,Planning,Article how-much-to-raise-runway,P2,Highly competitive Carta and expert blogs,Carta / SeedForge,Not verified,Google Keyword Planner EN
+Runway & equity,pre seed runway calculator,Tool,Runway & Raise Calculator,P2,Interactive and useful but existing tools,Competitor tools,Not verified,Keyword Planner
+Runway & equity,raise size calculator startup,Tool,Runway & Raise Calculator,P2,User intent strong but calculators exist,Carta and startup tool collections,Not verified,Keyword Planner
+Runway & equity,seed round dilution calculator,Tool,Refer to YC SAFE and priced equity model,P3,YC dominates technical SERP,YC SAFE calculator,Not verified,Keyword Planner
+Runway & equity,how much runway before fundraising,Informational,Article how-much-to-raise-runway,P2,Milestone-specific content opportunity,Carta / Techstars,Not verified,Keyword Planner
+Runway & equity,post money safe dilution calculator,Tool,Link to authoritative YC tool,P3,Not initial differentiated wedge,YC SAFE calculator,Not verified,Keyword Planner
+European founders,how to raise venture capital in europe,How-to,Planned EU guide with verified sources,P2,Specific market expertise opportunity,Existing website draft,Not verified,Keyword Planner UK/EU
+European founders,pre seed funding europe,Informational,EU guide stage-specific,P2,Requires updated EU region benchmarks,Qualitative SERP; benchmark not extracted,Not verified,Keyword Planner EN EU
+European founders,how to approach european vcs,How-to,EU outreach example article,P2,Regional context possible differentiator,Editorial hypothesis,Not verified,Keyword Planner
+European founders,cee startup fundraising,Informational,CEE playbook original data,P2,Niche where local network may help,Editorial hypothesis,Not verified,Keyword Planner EN/CEE
+European founders,raising a seed round in slovakia,How-to,Slovakia specific guide,P3,Low volume possible highly relevant,Editorial hypothesis,Not verified,Keyword Planner SK/EN
+European founders,vc pitch email examples europe,Template,EU outreach examples,P2,Specific utility with local nuance,Editorial hypothesis,Not verified,Keyword Planner
+Book discovery,best books on startup fundraising,Comparison,Existing draft completion,P2,Crowded affiliate/comparison pages,Site existing draft,Not verified,Keyword Planner
+Book discovery,fundraising psychology book,Transactional,Book landing refresh,P2,Directly product-relevant,Editorial hypothesis,Not verified,Keyword Planner
+Book discovery,how to build relationship with vc,Informational,Interview-backed pillar article,P2,Distinctive book positioning,Techstars relationship guide,Not verified,Keyword Planner
+Book discovery,venture capital investor psychology,Informational,Improve existing article,P1,Direct primary message,Existing site article,Not verified,GSC existing query report
+Book discovery,why good startups don't get funded,Informational,Unique essay based on real cases,P2,Editorial hook with credible cases,Site homepage concept,Not verified,Keyword Planner

@@ -122,10 +122,10 @@
     b.id = 'tfg-cookie';
     b.setAttribute('role', 'dialog');
     b.setAttribute('aria-label', 'Cookie consent');
-    /* Bottom-left dock (not full-width center) so tool fields/results stay usable; pad body so content can scroll clear. Consent Mode defaults/controls unchanged. */
-    b.style.cssText = 'position:fixed;left:16px;right:auto;bottom:16px;z-index:9999;width:min(400px,calc(100vw - 32px));max-width:400px;margin:0;background:#12141C;color:#F5F1EA;border-radius:16px;padding:18px 20px;box-shadow:0 10px 30px rgba(0,0,0,.25);font-size:15px;line-height:1.5;display:flex;flex-direction:column;gap:12px';
-    b.innerHTML = '<p style="margin:0">We use Google Analytics cookies to understand how visitors use this site. Nothing is tracked unless you accept.</p>' +
-      '<div style="display:flex;gap:10px;flex-wrap:wrap;justify-content:flex-end">' +
+    /* In-flow sticky consent region: reserves layout space so it cannot cover hub cards/CTAs. Consent Mode defaults/controls unchanged. */
+    b.style.cssText = 'position:sticky;bottom:0;left:0;right:0;z-index:9999;width:100%;max-width:none;margin:0;box-sizing:border-box;background:#12141C;color:#F5F1EA;border-top:1px solid rgba(245,241,234,.18);padding:16px 24px;box-shadow:0 -8px 24px rgba(0,0,0,.2);font-size:15px;line-height:1.5;display:flex;flex-wrap:wrap;align-items:center;justify-content:space-between;gap:12px 20px';
+    b.innerHTML = '<p style="margin:0;flex:1 1 280px;max-width:720px">We use Google Analytics cookies to understand how visitors use this site. Nothing is tracked unless you accept.</p>' +
+      '<div style="display:flex;gap:10px;flex-wrap:wrap;justify-content:flex-end;flex:0 0 auto">' +
       '<button type="button" data-c="denied" style="min-height:44px;padding:0 18px;border-radius:999px;border:1px solid rgba(245,241,234,.4);background:transparent;color:#F5F1EA;font:inherit;cursor:pointer">Decline</button>' +
       '<button type="button" data-c="granted" style="min-height:44px;padding:0 18px;border-radius:999px;border:0;background:#F5F1EA;color:#12141C;font:inherit;font-weight:600;cursor:pointer">Accept</button></div>';
     b.addEventListener('click', function (e) {
@@ -134,11 +134,11 @@
       setChoice(v);
       if (v === 'granted') loadGA();
       else { gtag('consent', 'update', { analytics_storage: 'denied' }); removeGACookies(); }
-      clearBannerPad();
       b.parentNode.removeChild(b);
     });
-    document.body.appendChild(b);
-    document.body.style.paddingBottom = (b.offsetHeight + 32) + 'px';
+    var footer = document.querySelector('footer');
+    if (footer && footer.parentNode) footer.parentNode.insertBefore(b, footer);
+    else document.body.appendChild(b);
   }
 
   function addSettingsLink() {

@@ -1,2 +1,4 @@
 _build/
 _growth_pkg
+.vercel
+__pycache__/

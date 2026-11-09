@@ -1,0 +1,292 @@
+{
+  "locale": "sk",
+  "bcp47": "sk-SK",
+  "status": "machine_draft_fluent_reviewed_needs_native_approval",
+  "editorialReviewer": "claude-fluent-pass",
+  "reviewedAt": "2026-11-09",
+  "source": [
+    "assets/growth/tools.js",
+    "tools/*.html",
+    "tools.html",
+    "data/locales/en_tools_meta.json"
+  ],
+  "mathParity": "Only strings and display formatting differ from assets/growth/tools.js. Formulas, weights, thresholds, clamping (num()) and rounding (toFixed) are unchanged; the staging locale JS is generated from the EN file by literal string substitution and verified by scripts/locale_tools_parity.js (run from scripts/test_locale_drafts.py).",
+  "numberFormatting": "Display only: Intl.NumberFormat('sk-SK') for currency (EUR, never converted), counts and 1–2 decimal results (value is first rounded with the same toFixed() as EN, then formatted: 1 200,5). Percent is rendered as '12,3 %' (non-breaking space). Inputs are never reformatted or rewritten.",
+  "placeholderPolicy": "[názov firmy], [téma], [pokrok], [míľnik], [konkrétny ďalší krok] are machine-substituted by the Follow-up Builder and MUST stay verbatim. [meno investora], [vaše meno], [zákazník], [výsledok] also stay verbatim. Other bracketed hints are translated.",
+  "common": {
+    "breadcrumb_home": "Domov",
+    "breadcrumb_tools": "Nástroje",
+    "badge_no_account": "Bez registrácie",
+    "badge_local": "Beží lokálne vo vašom prehliadači",
+    "inputs_aria": "Vstupy nástroja",
+    "how_h2": "Ako nástroj používať",
+    "how_p": "Prejdite si predpoklady, overte fakty a rozhodnite o ďalšom praktickom kroku. Tieto nástroje ilustrujú pracovný rámec; žiadny automatický výpočet nenahradí investičný mandát investora ani vašu finančnú dokumentáciu.",
+    "related_guide": "Prečítajte si súvisiaci návod: {link}. Pozrite si aj ďalšie {tools}.",
+    "related_guide_link": "otvoriť článok",
+    "related_tools_link": "bezplatné nástroje pre fundraising",
+    "book_h3": "Fundraising je vzťah, nielen tabuľka.",
+    "book_p": "Kniha o ľudskej stránke získavania kapitálu. Vychádza čoskoro — zatiaľ iba v angličtine.",
+    "book_cta": "Pridajte sa na zoznam záujemcov o predbežný prístup ku knihe →",
+    "disclaimer": "Vzdelávací obsah a ilustratívne nástroje; nejde o právne, investičné ani daňové poradenstvo.",
+    "copied": "Skopírované ✓",
+    "copy_select": "Označte text a skopírujte ho",
+    "vcsays_link": "„{phrase}“ vo VC hovorí",
+    "in_english_note": "(v angličtine)"
+  },
+  "hub": {
+    "meta_title": "Bezplatné nástroje pre fundraising | The Fundraising Game",
+    "meta_description": "Pomôcky priamo v prehliadači: signály investorov, follow-up e-maily, výpočty pipeline a runwaye. Bez registrácie, nič sa neodosiela.",
+    "eyebrow": "Bezplatné nástroje pre fundraising",
+    "h1_before": "Praktické nástroje pre rozhovory ",
+    "h1_em": "po",
+    "h1_after": " pitchi",
+    "lead": "Pomôcky priamo v prehliadači: signály investorov, follow-upy, výpočty pipeline a runwaye. Bez registrácie. Z týchto stránok sa nič neodosiela.",
+    "card_badge": "Bezplatný nástroj",
+    "footer": "Iba vzdelávacie a ilustratívne — nejde o právne, daňové ani investičné poradenstvo. Kontext nájdete v súvisiacich {guides}.",
+    "footer_guides_link": "návodoch"
+  },
+  "tools": {
+    "investor-signal-decoder": {
+      "meta_title": "Dekodér signálov investorov | The Fundraising Game",
+      "meta_description": "Oddeľte konkrétne kroky investora od zdvorilých fráz po pitch stretnutí. Bezplatný nástroj v prehliadači — bez registrácie.",
+      "h1": "Dekodér signálov investorov",
+      "eyebrow": "Bezplatný nástroj · Stretnutia s investormi",
+      "inputs_h2": "Vaše vstupy",
+      "hint": "Označte iba to, čo sa naozaj stalo. Je to kvalitatívna pomôcka na rozhovor, nie pravdepodobnosť investície.",
+      "group_aria": "Správanie investora pozorované na stretnutí",
+      "calculate": "Vyhodnotiť signály →",
+      "result_eyebrow": "Výklad",
+      "initial_status": "Začnite výberom signálov",
+      "initial_count": "Nie je vybrané žiadne pozorovanie",
+      "initial_desc": "Označte skutočné správanie investora zo stretnutia a potom spustite vyhodnotenie.",
+      "next_h3": "Odporúčaný ďalší krok",
+      "initial_next": "Skôr než upravíte prognózu fundraisingu, získajte jasnejší ďalší krok.",
+      "browse_vcsays": "Prezrite si VC hovorí: bežné frázy investorov a ako na ne odpovedať",
+      "related_prefix": "Súvisiaci návod k fráze: ",
+      "notice": "Skóre je redakčná heuristika. Nie je kalibrované na skutočné pravdepodobnosti obchodov.",
+      "count_one": "{n} vybraný signál",
+      "count_few": "{n} vybrané signály",
+      "count_many": "{n} vybraných signálov",
+      "signalItems": {
+        "next": "Navrhne konkrétne ďalšie stretnutie alebo termín",
+        "partner": "Predstaví vás ďalšiemu partnerovi alebo človeku, ktorý rozhoduje",
+        "diligence": "Vyžiada si konkrétne dokumenty na due diligence alebo referencie zákazníkov",
+        "champion": "Jasne vysvetlí, ako u nich funguje interný rozhodovací proces",
+        "question": "Kladie konkrétne doplňujúce otázky o vašom biznise",
+        "polite": "Povie „zaujímavé, dajte nám vedieť“ bez ďalšieho kroku",
+        "noresponse": "Nedodržal dohodnutý termín odpovede a neozval sa",
+        "wrong": "Povie, že fáza, sektor, geografia alebo výška investície nesedí"
+      },
+      "results": {
+        "insufficient": {
+          "status": "Nedostatočný signál",
+          "desc": "Zatiaľ nemáte dosť dôkazov o konkrétnom procese. Opýtajte sa, či ste pre investora vhodní a aký bude ďalší rozhodovací bod.",
+          "next": "Pošlite krátky, konkrétny follow-up s návrhom vhodného ďalšieho kroku a pokračujte v rozhovoroch s ďalšími investormi."
+        },
+        "mismatch": {
+          "status": "Pravdepodobne štrukturálny nesúlad",
+          "desc": "Výslovný nesúlad vo fáze, investičnej téze, geografii alebo výške investície má väčšiu váhu než priateľský tón.",
+          "next": "Poďakujte, opýtajte sa, či nepoznajú vhodnejšieho kolegu alebo fond, a vyraďte príležitosť z aktívnej pipeline."
+        },
+        "meaningful": {
+          "status": "Významné signály procesu",
+          "desc": "Viacero konkrétnych krokov naznačuje skutočný hodnotiaci proces; investíciu však stále nezaručujú.",
+          "next": "Písomne si potvrďte, kto je za čo zodpovedný, aké materiály a termíny platia. Pokračujte aj v ostatných rozhovoroch."
+        },
+        "early": {
+          "status": "Prvé známky záujmu",
+          "desc": "Konkrétny krok vypovedá viac než komplimenty, proces však zatiaľ nie je presvedčivý.",
+          "next": "Splňte, o čo vás požiadali, a opýtajte sa, aké bude ďalšie rozhodnutie a kedy."
+        },
+        "weak": {
+          "status": "Slabá alebo klesajúca dynamika",
+          "desc": "Zdvorilý záujem bez činov alebo nedodržané sľuby si vyžadujú vyjasnenie, nie optimistický výklad.",
+          "next": "Pošlite jednu podstatnú novinku a požiadajte o jasné áno/nie, či pokračovať; nevymýšľajte si termíny."
+        }
+      },
+      "vcsays_para": "Tento dekodér váži, čo investori <em>urobili</em>. Čo <em>povedali</em>, nájdete v sekcii {hub} — napríklad {second-meeting}, {partner-introduction}, {not-right-fit} a {investor-ghosting}.",
+      "related_article": "vc-too-early-meaning"
+    },
+    "investor-follow-up-builder": {
+      "meta_title": "Generátor follow-up e-mailov | The Fundraising Game",
+      "meta_description": "Pripravte si jasný follow-up e-mail investorovi podľa kontextu stretnutia. Kopíruje sa lokálne — nič sa neodosiela.",
+      "h1": "Generátor follow-up e-mailov",
+      "eyebrow": "Bezplatný nástroj · Follow-up",
+      "inputs_h2": "Kontext stretnutia",
+      "hint": "Nič sa neodosiela e-mailom. Koncept zostáva vo vašom prehliadači, kým ho neskopírujete.",
+      "scenario_label": "Situácia",
+      "scenarios": {
+        "meeting": "Po stretnutí",
+        "tooearly": "Povedali, že je na to priskoro",
+        "quiet": "Ticho po prejavenom záujme",
+        "update": "Povedali „zostaňme v kontakte“ / „ozvite sa neskôr“",
+        "notfit": "Povedali, že to pre nich nie je vhodné",
+        "nolead": "Chcú najprv hlavného investora",
+        "cold": "Follow-up po prvom oslovení"
+      },
+      "fields": {
+        "company": {
+          "label": "Názov spoločnosti",
+          "placeholder": "ExampleCo"
+        },
+        "name": {
+          "label": "Meno investora",
+          "placeholder": "Alex"
+        },
+        "topic": {
+          "label": "Téma rozhovoru",
+          "placeholder": "náš produkt alebo trh"
+        },
+        "progress": {
+          "label": "Konkrétny pokrok",
+          "placeholder": "napr. podpísali sme dvoch dizajnových partnerov"
+        },
+        "milestone": {
+          "label": "Míľnik (ak je relevantný)",
+          "placeholder": "napr. 3 mesiace retencie"
+        },
+        "next": {
+          "label": "Konkrétny ďalší krok",
+          "placeholder": "20-minútový nadväzujúci hovor"
+        }
+      },
+      "calculate": "Vytvoriť koncept →",
+      "result_eyebrow": "Koncept e-mailu",
+      "output_label": "Výstup",
+      "copy": "Kopírovať do schránky",
+      "notice": "Iba vzdelávacia šablóna. Upravte ju tak, aby bola presná; nikdy si nevymýšľajte trakciu ani konkurenčné term sheety.",
+      "signal_note_prefix": "Situácia je predvolená podľa záznamu vo VC hovorí: ",
+      "email": {
+        "subject_prefix": "Predmet: ",
+        "greeting": "Dobrý deň, {person},",
+        "signoff": "S pozdravom,"
+      },
+      "defaults": {
+        "company": "[názov firmy]",
+        "person": "[meno investora]",
+        "topic": "náš biznis",
+        "progress": "[konkrétny, overiteľný pokrok]",
+        "milestone": "[dohodnutý míľnik]",
+        "next": "krátky nadväzujúci hovor"
+      },
+      "templates": {
+        "meeting": {
+          "subject": "Ďakujem za dnešný rozhovor — [názov firmy]",
+          "intro": "ďakujem za dnešný rozhovor a za váš pohľad na [téma].",
+          "mid": "Ako sme sa dohodli, pošlem vám [sľúbený materiál]. Naša najdôležitejšia novinka: [pokrok].",
+          "ask": "Mohli by sme ako ďalší krok naplánovať [konkrétny ďalší krok]?"
+        },
+        "tooearly": {
+          "subject": "Re: [názov firmy] — pokrok k míľniku",
+          "intro": "ďakujem za úprimnú spätnú väzbu, že na vaše súčasné investičné kritériá môžeme byť zatiaľ v príliš skorej fáze.",
+          "mid": "Od nášho rozhovoru sme pokročili takto: [pokrok]. Sústreďujem sa na míľnik, o ktorom sme hovorili: [míľnik].",
+          "ask": "Posunul by nás tento míľnik bližšie k vašej investičnej hranici, alebo je tu iná medzera, ktorú by sme mali riešiť?"
+        },
+        "quiet": {
+          "subject": "Krátka novinka o [názov firmy]",
+          "intro": "nadväzujem na náš rozhovor na tému [téma].",
+          "mid": "Krátka novinka od nášho posledného rozhovoru: [pokrok].",
+          "ask": "Máte ešte záujem v rozhovore pokračovať, alebo sa mám ozvať, keď splníme tento míľnik: [míľnik]? Pomôže mi akákoľvek odpoveď."
+        },
+        "update": {
+          "subject": "[názov firmy] — novinka: [pokrok]",
+          "intro": "ešte raz ďakujem za návrh zostať v kontakte po našom rozhovore na tému [téma].",
+          "mid": "Najdôležitejší posun od nášho rozhovoru: [pokrok]. Ďalej smerujeme k tomuto míľniku: [míľnik].",
+          "ask": "Bolo by pre vás užitočné zostať na našom krátkom zozname investorských noviniek, alebo vás zaujíma nejaká konkrétna metrika?"
+        },
+        "notfit": {
+          "subject": "Re: [názov firmy] — ďakujem",
+          "intro": "ďakujem za jasnú odpoveď — oceňujem, že nemusíme hádať.",
+          "mid": "Ak máte chvíľu: išlo hlavne o fázu, sektor alebo geografiu? Pomôže mi to zamerať sa na vhodnejších investorov.",
+          "ask": "Ak vám napadne fond, ktorý zvyčajne investuje do firiem, ako je tá naša, veľmi ocením tip."
+        },
+        "nolead": {
+          "subject": "[názov firmy] — štruktúra kola",
+          "intro": "ďakujem za jasnú informáciu, že podmienkou je pre vás hlavný investor v kole.",
+          "mid": "Teraz sa sústreďujeme na získanie hlavného investora. Naša najdôležitejšia novinka: [pokrok].",
+          "ask": "Ak získame hlavného investora za podmienok v rozsahu, o ktorom sme hovorili, akú výšku investície by ste zvážili a máte požiadavky na to, kto by mal kolo viesť? Veľmi ocením aj kontakty na fondy, ktoré v našej fáze kolá vedú."
+        },
+        "cold": {
+          "subject": "[názov firmy] — krátky follow-up",
+          "intro": "nadväzujem na svoju správu o [názov firmy], ktorá pomáha [zákazník] dosiahnuť [výsledok].",
+          "mid": "Jedna dôležitá novinka: [pokrok].",
+          "ask": "Spadá to do vášho súčasného investičného zamerania? Ak vám to pomôže, pošlem stručný prehľad."
+        }
+      },
+      "vcsays_para": "Nie ste si istí, čo investor myslel? {hub} vysvetľuje bežné frázy — napríklad {too-early}, {keep-in-touch} a {investor-ghosting} — a ku každej ponúka odpoveď, ktorú si môžete upraviť.",
+      "related_article": "how-to-follow-up-with-vc-after-meeting"
+    },
+    "fundraising-pipeline-calculator": {
+      "meta_title": "Kalkulačka investorskej pipeline | The Fundraising Game",
+      "meta_description": "Odhadnite počet stretnutí a očakávaných uzavretí podľa objemu oslovení a konverzných pomerov. Ilustratívny model očakávanej hodnoty.",
+      "h1": "Kalkulačka investorskej pipeline",
+      "eyebrow": "Bezplatný nástroj · Pipeline",
+      "inputs_h2": "Predpoklady lievika",
+      "hint": "Predvolené hodnoty sú ilustratívne. Nahraďte ich vlastnou históriou konverzií.",
+      "fields": {
+        "pipe-leads": "Počet oslovených investorov",
+        "pipe-r1": "Konverzia na prvé stretnutie (%)",
+        "pipe-r2": "Konverzia na druhé stretnutie (%)",
+        "pipe-r3": "Konverzia na term sheet (%)",
+        "pipe-r4": "Konverzia na uzavretie (%)"
+      },
+      "calculate": "Vypočítať očakávanú hodnotu →",
+      "result_eyebrow": "Očakávané výsledky",
+      "metrics": {
+        "pipe-meetings": "Prvé stretnutia",
+        "pipe-deep": "Hĺbkové stretnutia",
+        "pipe-terms": "Term sheety",
+        "pipe-closes": "Očakávané uzavretia"
+      },
+      "close_rate": "Celková miera uzavretia:",
+      "needed": "Počet oslovení potrebných na ~1 očakávané uzavretie:",
+      "note_low": "Pri týchto predpokladoch sa neočakáva ani jeden term sheet. Zlepšite zhodu s investormi, konverzie alebo objem oslovení; výsledky nie sú zaručené.",
+      "note_ok": "Ide o model očakávanej hodnoty, nie o predpoveď skutočných záväzkov. Pri malých číslach sa výsledky môžu výrazne líšiť.",
+      "related_article": "how-many-investors-to-contact"
+    },
+    "runway-raise-calculator": {
+      "meta_title": "Kalkulačka runwaye a výšky kola | The Fundraising Game",
+      "meta_description": "Ilustratívny výpočet runwaye a potrebnej výšky kola pre zjednodušené kolo s pevným ocenením (priced round). Nejde o kalkulačku pre SAFE.",
+      "h1": "Kalkulačka runwaye a výšky kola",
+      "eyebrow": "Bezplatný nástroj · Výška kola",
+      "inputs_h2": "Hotovosť a burn",
+      "hint": "Zjednodušený výpočet. Nezahŕňa opčný pool, SAFE, konvertibilné pôžičky ani poplatky.",
+      "fields": {
+        "run-cash": "Hotovosť na účte (€)",
+        "run-expenses": "Mesačné výdavky (€)",
+        "run-revenue": "Mesačné tržby (€)",
+        "run-months": "Cieľový runway (mesiace)",
+        "run-onetime": "Jednorazové náklady v období (€)",
+        "run-buffer": "Rezerva (%)",
+        "run-pre": "Pre-money ocenenie (€)"
+      },
+      "calculate": "Vypočítať výšku kola →",
+      "result_eyebrow": "Ilustratívne výsledky",
+      "metrics": {
+        "run-net": "Čistý burn / mesiac",
+        "run-existing": "Súčasný runway (mesiace)",
+        "run-raise": "Potrebná výška kola",
+        "run-dilution": "Zjednodušené riedenie"
+      },
+      "post": "Post-money (zjednodušene):",
+      "pool": "Výška rezervy:",
+      "no_net_burn": "Bez čistého burnu",
+      "note_no_pre": "Na výpočet zjednodušeného riedenia zadajte kladné pre-money ocenenie.",
+      "note_ok": "Iba ilustratívne kolo s pevným ocenením: nezahŕňa opčný pool, SAFE, konvertibilné pôžičky, poplatky ani zmeny burnu. Podmienky obchodu si overte so svojimi poradcami.",
+      "related_article": "how-much-to-raise-runway"
+    }
+  },
+  "placeholderMapFromEnglish": {
+    "Investor name": "meno investora",
+    "Company": "názov firmy",
+    "Your name": "vaše meno",
+    "Partner name": "meno partnera",
+    "Fund": "fond",
+    "milestone": "míľnik",
+    "progress": "pokrok",
+    "topic": "téma",
+    "customer": "zákazník",
+    "outcome": "výsledok",
+    "specific next step": "konkrétny ďalší krok"
+  }
+}

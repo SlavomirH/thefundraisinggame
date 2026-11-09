@@ -1,0 +1,569 @@
+{
+  "locale": "sk",
+  "status": "machine_draft_fluent_reviewed_needs_native_approval",
+  "source": "data/locales/en_first10_source.json",
+  "reviewedAt": "2026-11-09",
+  "records": [
+    {
+      "id": "too-early",
+      "status": "machine_draft_fluent_reviewed_needs_native_approval",
+      "phrase": "Na nás je to zatiaľ priskoro.",
+      "seedPhrase": "Zatiaľ ste pre nás v príliš skorej fáze.",
+      "synonyms": [
+        "Pre nás ste zatiaľ v príliš skorej fáze",
+        "Ozvite sa, keď budete mať viac dát",
+        "Zvyčajne vstupujeme do firiem o niečo neskôr",
+        "Najprv by sme radi videli väčší posun"
+      ],
+      "h1": "„Na nás je to zatiaľ priskoro“ — čo to môže znamenať a ako odpovedať",
+      "shortAnswer": "Najčastejšie ide o nesúlad vo fáze alebo o chýbajúce dôkazy, niekedy o zdvorilé odmietnutie. Rozdiel spoznáte podľa toho, či investor pomenuje konkrétny míľnik a požiada vás o správu o pokroku. Opýtajte sa preto na tento míľnik, pokračujte v získavaní kapitálu od investorov zameraných na skoršie fázy a vráťte sa až so skutočným pokrokom.",
+      "interpretations": [
+        {
+          "kind": "mismatch",
+          "possibility": "Nesúlad vo fáze alebo vo výške investície: fond zvyčajne investuje neskôr alebo investuje vyššie sumy, než aké zodpovedajú vášmu kolu.",
+          "contextualClues": "Ich posledné investície sú prevažne v neskorších fázach; spomínajú minimálne tržby, veľkosť kola alebo cieľový podiel; spätná väzba sa týka fungovania fondu, nie vašej firmy."
+        },
+        {
+          "kind": "condition",
+          "possibility": "Konkrétne riziko, ktoré chcú mať najprv vyriešené — dopyt zákazníkov, retencia, technický dôkaz alebo obsadenie kľúčovej pozície v tíme.",
+          "contextualClues": "Pomenujú metriku alebo míľnik, podrobne sa vypytujú na danú oblasť alebo vás požiadajú, aby ste sa ozvali, keď ho dosiahnete."
+        },
+        {
+          "kind": "pass",
+          "possibility": "Zdvorilé odmietnutie bez skutočného úmyslu vec v budúcnosti prehodnotiť.",
+          "contextualClues": "Žiadny míľnik, žiadny časový rámec ani žiadosť o priebežné správy; jednoriadková odpoveď po dlhom tichu; fond vo vašej fáze bežne investuje, no nič konkrétne neuvedie."
+        }
+      ],
+      "positiveSignals": [
+        "Pomenujú konkrétny míľnik (napr. úroveň tržieb, počet platiacich zákazníkov, retenciu kohorty).",
+        "Požiadajú vás, aby ste im v určitom bode poslali správu o pokroku.",
+        "Prepoja vás s investorom zameraným na skoršiu fázu alebo vám dajú spätnú väzbu na prezentáciu.",
+        "Povedal to niekto, kto o investíciách rozhoduje a vašej firme venoval skutočný čas."
+      ],
+      "weakSignals": [
+        "Žiadny míľnik, žiadny časový rámec a žiadna prosba zostať v kontakte.",
+        "Príde ako krátka odpoveď po niekoľkých týždňoch ticha.",
+        "Fond nedávno investoval do firmy vo vašej fáze — problémom teda môže byť skôr presvedčenie než fáza.",
+        "Formulácia pôsobí ako šablóna, ktorú dostáva množstvo zakladateľov."
+      ],
+      "clarifyingQuestion": "Ďakujem za úprimnú spätnú väzbu. Aby som sa sústredil na to podstatné — existuje jeden konkrétny míľnik (počet zákazníkov, retencia alebo niečo iné), pri ktorom by malo zmysel sa k rozhovoru vrátiť?",
+      "recommendedAction": "Zaznamenajte si spätnú väzbu aj prípadný míľnik, ktorý spomenuli. Skôr než urobíte závery, overte si, v akej fáze fond zvyčajne investuje. Pokračujte v kole s investormi špecializovanými na pre-seed a seed a tohto investora oslovte znova až vtedy, keď dosiahnete výrazný pokrok vo vzťahu k pomenovanému míľniku.",
+      "followUpTimingNote": "Do jedného až dvoch pracovných dní odpovedzte jedinou správou: poďakujte a položte doplňujúcu otázku. Potom sa ozvite, keď míľnik dosiahnete — nie len preto, že vám to pripomenul kalendár.",
+      "editableReplyTemplate": "Dobrý deň, [meno investora],\n\nďakujem, že ste si našli čas pozrieť sa na [názov firmy], aj za úprimnú spätnú väzbu.\n\nAby som sa sústredil na to podstatné: existuje jeden konkrétny dôkaz (napríklad [metrika, napr. platiaci zákazníci alebo retencia]), pri ktorom by malo zmysel sa v budúcnosti znova porozprávať? Ak áno, rád vám pošlem krátku správu o pokroku, keď ho dosiahneme.\n\nA ak poznáte investora, ktorý zvyčajne podporuje firmy v našej fáze, budem veľmi vďačný za prepojenie.\n\nS pozdravom,\n[vaše meno]",
+      "exampleScenario": {
+        "description": "Hypotetický príklad: zakladateľ B2B softvérovej firmy v seed fáze s tromi platenými pilotmi prezentuje fondu, ktorého posledné investície sú prevažne v sérii A. Partner fondu povie „na nás je to zatiaľ priskoro“ a dodá, že zvyčajne chcú dlhšiu históriu tržieb. Najpravdepodobnejší je tu výklad o nesúlade vo fáze. Zakladateľ poďakuje, opýta sa, či by malo zmysel poslať správu o pokroku po ďalších dvoch štvrťrokoch tržieb, a kolo presmeruje na seed investorov.",
+        "hypothetical": true
+      },
+      "metaTitle": "„Na nás je to zatiaľ priskoro“: čo tým VC myslí | VC Says",
+      "metaDescription": "Čo môže znamenať, keď VC povie „na nás je to zatiaľ priskoro“, čo signál posilňuje či oslabuje, na čo sa opýtať a upraviteľná odpoveď na skopírovanie.",
+      "editorialReviewer": "claude-fluent-pass",
+      "reviewedAt": "2026-11-09",
+      "reviewNote": "AI fluent review pass done (terminology, vykanie, calques, placeholders). Not reviewed by a native human; needs native SK approval before publication."
+    },
+    {
+      "id": "not-right-fit",
+      "status": "machine_draft_fluent_reviewed_needs_native_approval",
+      "phrase": "Nezapadá to do našej investičnej stratégie.",
+      "seedPhrase": "Nezapadá to do našej investičnej stratégie.",
+      "synonyms": [
+        "Nezodpovedá to našej investičnej téze",
+        "Je to mimo nášho zamerania",
+        "Do tohto segmentu neinvestujeme",
+        "Pre náš fond to nie je vhodné"
+      ],
+      "h1": "„Nezapadá to do našej investičnej stratégie“ — čo to môže znamenať a ako odpovedať",
+      "shortAnswer": "Najčastejšie jasné nie, ktoré súvisí s mandátom fondu — sektorom, fázou, geografiou alebo výškou investície. Občas je to zdvorilý spôsob, ako vyjadriť pochybnosti o trhu. Tak či onak sa takmer nikdy neoplatí polemizovať. Raz sa opýtajte, v čom presne nesúlad spočíva, a ak bol rozhovor priateľský, požiadajte o odporúčanie. Potom pokračujte ďalej.",
+      "interpretations": [
+        {
+          "kind": "mismatch",
+          "possibility": "Skutočný nesúlad s mandátom: sektor, fáza, geografia, výška investície alebo cieľový podiel sú mimo toho, čo fond môže robiť.",
+          "contextualClues": "Obmedzenie pomenujú; ich portfólio aj web to potvrdzujú; odmietnutie príde rýchlo, niekedy ešte pred stretnutím."
+        },
+        {
+          "kind": "pass",
+          "possibility": "Chýbajúce presvedčenie vyjadrené zdvorilo — neveria veľkosti trhu, zvolenému prístupu alebo načasovaniu.",
+          "contextualClues": "Investujú do príbuzných firiem vo vašej fáze; na stretnutí padli skeptické otázky o trhu; žiadne konkrétne obmedzenie nepomenujú."
+        },
+        {
+          "kind": "mismatch",
+          "possibility": "Konflikt v portfóliu — už podporujú firmu, ktorá sa s vašou prekrýva.",
+          "contextualClues": "V ich portfóliu je podobná firma; zdôvodnenie je vágne; odmietnu až potom, čo sa dozvedia viac o tom, ako sa na trhu profilujete."
+        }
+      ],
+      "positiveSignals": [
+        "Presne vysvetlia, ktorá časť mandátu nesedí — to vám pomôže lepšie cieliť.",
+        "Odporučia vhodnejší fond alebo ponúknu prepojenie.",
+        "Povedia, čo by sa muselo zmeniť, aby mal budúci rozhovor zmysel (zriedkavé, ale užitočné)."
+      ],
+      "weakSignals": [
+        "Všeobecný šablónový e-mail bez zdôvodnenia.",
+        "Žiadna odpoveď na zdvorilú otázku o dôvode — berte to ako konečné rozhodnutie.",
+        "Zdôrazňujú skôr svoju vyťaženosť než čokoľvek o vašej firme."
+      ],
+      "clarifyingQuestion": "Ďakujem za jasnú odpoveď — veľmi mi pomohla. Išlo hlavne o fázu, sektor alebo geografiu? Pomôže mi to zamerať sa na vhodnejších investorov.",
+      "recommendedAction": "Doplňujúcu otázku položte len raz a potom investora presuňte mimo aktívnej pipeline. Získané informácie využite na spresnenie zoznamu cieľových investorov (fáza, sektor, geografia, výška investície). Ak bol vzťah priateľský, požiadajte o jedno odporúčanie.",
+      "followUpTimingNote": "Odpovedzte raz, do dvoch-troch pracovných dní. V tomto kole sa už znova neozývajte; k rozhovoru sa vráťte, len ak sa ich investičná téza alebo vaša firma podstatne zmení.",
+      "editableReplyTemplate": "Dobrý deň, [meno investora],\n\nďakujem za jasnú odpoveď — vážim si, že ste nás nenechali v neistote.\n\nAk máte chvíľu: išlo hlavne o fázu, sektor alebo geografiu? Pomôže mi to zamerať sa na vhodnejších investorov.\n\nA ak vám napadne fond, ktorý zvyčajne podporuje [stručný opis firmy] v našej fáze, budem vďačný za tip.\n\nS pozdravom,\n[vaše meno]",
+      "exampleScenario": {
+        "description": "Hypotetický príklad: startup, ktorý kombinuje hardvér so softvérom, prezentuje fondu investujúcemu výhradne do čistého softvéru. Asociát fondu ešte v ten deň odpovie, že to „nezapadá do ich investičnej stratégie“. Najpravdepodobnejší je výklad o nesúlade s mandátom. Zakladateľ raz odpíše s otázkou, či bol problémom hardvér, dostane jednoriadkové potvrdenie a fondy, ktoré sa hardvéru vyhýbajú, vyradí zo zoznamu cieľových investorov.",
+        "hypothetical": true
+      },
+      "metaTitle": "„Nezapadá to do našej stratégie“: čo tým VC myslí | VC Says",
+      "metaDescription": "Ako čítať „nezapadá to do našej stratégie“: nesúlad s mandátom, chýbajúce presvedčenie či konflikt v portfóliu. Signály, jedna otázka a odpoveď na skopírovanie.",
+      "editorialReviewer": "claude-fluent-pass",
+      "reviewedAt": "2026-11-09",
+      "reviewNote": "AI fluent review pass done (terminology, vykanie, calques, placeholders). Not reviewed by a native human; needs native SK approval before publication."
+    },
+    {
+      "id": "keep-in-touch",
+      "status": "machine_draft_fluent_reviewed_needs_native_approval",
+      "phrase": "Zostaňme v kontakte.",
+      "seedPhrase": "Zostaňme v kontakte.",
+      "synonyms": [
+        "Dajte nám vedieť, ako napredujete",
+        "Buďme v kontakte",
+        "Informujte ma o vašom pokroku",
+        "Pridajte ma do vašich správ pre investorov"
+      ],
+      "h1": "„Zostaňme v kontakte“ — čo to môže znamenať a ako odpovedať",
+      "shortAnswer": "Pootvorené dvere, nie záväzok. Môže ísť o skutočný dlhodobý záujem, o záujem, ktorý čaká na konkrétny signál, alebo o jemné nie. Presná prosba o konkrétnu správu o pokroku je silnejší signál než milé, no všeobecné rozlúčenie.",
+      "interpretations": [
+        {
+          "kind": "condition",
+          "possibility": "Záujem, ktorý čaká na signál — míľnik, hlavného investora alebo kolo, ktoré naberá na obrátkach.",
+          "contextualClues": "Povedia, čo by chceli vidieť, opýtajú sa, kedy plánujete kolo uzavrieť, alebo kto ďalší sa na ňom podieľa."
+        },
+        {
+          "kind": "interest",
+          "possibility": "Skutočný záujem o dlhodobý vzťah, hoci teraz nepadne žiadne rozhodnutie.",
+          "contextualClues": "Požiadajú, aby ste ich pridali do pravidelných správ pre investorov, odpovedajú na ne alebo ponúknu pomoc nesúvisiacu s investíciou."
+        },
+        {
+          "kind": "pass",
+          "possibility": "Zdvorilé, jemné nie, ktoré udrží vzťah v dobrom.",
+          "contextualClues": "Žiadna konkrétna požiadavka, žiadna otázka na načasovanie a fráza rozhovor skôr uzatvára, než otvára ďalší krok."
+        }
+      ],
+      "positiveSignals": [
+        "Požiadajú o konkrétnu správu o pokroku (metriku, spustenie produktu, nábor).",
+        "Navrhnú, že sa ozvú v určitom presnom momente.",
+        "Odpovedajú na vaše správy alebo ich komentujú.",
+        "Sami od seba vás s niekým prepoja."
+      ],
+      "weakSignals": [
+        "Všeobecná srdečnosť bez jedinej otázky o vašej firme.",
+        "Na neskoršie správy nijako nereagujú.",
+        "Prišla po stretnutí, na ktorom väčšinu času hovorili o fonde, a nie o vás."
+      ],
+      "clarifyingQuestion": "S radosťou. O akom vývoji by pre vás bolo najužitočnejšie dostávať správy — a pomohla by vám správa o pokroku po dosiahnutí míľnika [míľnik]?",
+      "recommendedAction": "Pokiaľ nepovedia inak, považujte ich za investorov mimo vášho aktívneho kola. S ich súhlasom ich pridajte do stručných správ pre investorov a informujte ich o podstatnom pokroku. Neposielajte každý týždeň pripomenutia; posielajte správy, ktoré majú skutočnú výpovednú hodnotu.",
+      "followUpTimingNote": "Teraz pošlite jednu krátku odpoveď. Potom sa ozvite, keď sa stane niečo podstatné — mesačná alebo štvrťročná frekvencia je bežná horná hranica pre nevyžiadané správy o pokroku.",
+      "editableReplyTemplate": "Dobrý deň, [meno investora],\n\nešte raz ďakujem za rozhovor — rád zostanem v kontakte.\n\nAby boli moje správy pre vás naozaj užitočné: o čom by ste chceli počuť najradšej — [možnosť A, napr. rast tržieb], [možnosť B, napr. kľúčové pozície v tíme] alebo niečo iné? Krátku správu o pokroku plánujem poslať po dosiahnutí míľnika [míľnik].\n\nMôžem vás pridať do zoznamu príjemcov našich správ pre investorov? Posielame ich približne [frekvencia] a odhlásiť sa dá jednoducho.\n\nS pozdravom,\n[vaše meno]",
+      "exampleScenario": {
+        "description": "Hypotetický príklad: po prvom hovore povie biznis anjel „zostaňme v kontakte“ a opýta sa, kedy zakladateľ plánuje spustiť platenú verziu. Táto konkrétna otázka nakláňa výklad k možnosti „čaká na signál“. Zakladateľ potvrdí mesiac spustenia, so súhlasom pridá anjela do štvrťročných správ a pošle mu správu o pokroku s výsledkami spustenia.",
+        "hypothetical": true
+      },
+      "metaTitle": "„Zostaňme v kontakte“: čo tým investor myslí | VC Says",
+      "metaDescription": "„Zostaňme v kontakte“ od VC môže byť skutočný záujem, podmienené možno alebo zdvorilé nie. Signály, na čo sa opýtať a upraviteľná odpoveď.",
+      "editorialReviewer": "claude-fluent-pass",
+      "reviewedAt": "2026-11-09",
+      "reviewNote": "AI fluent review pass done (terminology, vykanie, calques, placeholders). Not reviewed by a native human; needs native SK approval before publication."
+    },
+    {
+      "id": "circle-back-next-quarter",
+      "status": "machine_draft_fluent_reviewed_needs_native_approval",
+      "phrase": "Ozvite sa nám znova budúci štvrťrok.",
+      "seedPhrase": "Ozvite sa nám opäť budúci štvrťrok.",
+      "synonyms": [
+        "Porozprávajme sa znova o pár mesiacov",
+        "Ozvite sa v ďalšom štvrťroku",
+        "Momentálne to pre nás nie je vhodný čas",
+        "Ozvite sa znova po lete"
+      ],
+      "h1": "„Ozvite sa nám znova budúci štvrťrok“ — čo to môže znamenať a ako odpovedať",
+      "shortAnswer": "Správa o načasovaní, ktorá môže byť skutočná (tempo investovania fondu, vyťaženosť partnerov, vlastný fundraising fondu), alebo jemné odmietnutie, ktoré čas len používa ako zámienku. Rozlíšite ich podľa toho, či investor povie, čo by sa malo do budúceho štvrťroka zmeniť, a či súhlasí s konkrétnym termínom.",
+      "interpretations": [
+        {
+          "kind": "condition",
+          "possibility": "Chcú za ten čas vidieť pokrok — odklad je spôsob, ako získať viac dát.",
+          "contextualClues": "Spomenú metriku, uvedenie produktu alebo nábor, ktoré by chceli dovtedy vidieť."
+        },
+        {
+          "kind": "noise",
+          "possibility": "Skutočné časové obmedzenie na ich strane: tempo investovania, vyťaženosť partnerov alebo zbieranie peňazí do vlastného fondu.",
+          "contextualClues": "Obmedzenie otvorene vysvetlia; navrhnú konkrétny mesiac alebo rovno pošlú pozvánku do kalendára."
+        },
+        {
+          "kind": "pass",
+          "possibility": "Jemné odmietnutie, ktoré sa vyhýba slovu nie.",
+          "contextualClues": "Žiadny dôvod, žiadna metrika, žiadny termín; fráza zaznie po stretnutí, na ktorom bol záujem obmedzený."
+        }
+      ],
+      "positiveSignals": [
+        "Pomenujú, čo chcú v budúcom štvrťroku vidieť.",
+        "Navrhnú konkrétny termín alebo ho prijmú.",
+        "Vysvetlia konkrétny interný dôvod načasovania."
+      ],
+      "weakSignals": [
+        "Neuvedú žiadny dôvod ani metriku.",
+        "Odmietnu si čokoľvek zapísať do kalendára.",
+        "Vaše kolo sa pravdepodobne uzavrie skôr — a oni to vedia."
+      ],
+      "clarifyingQuestion": "Rád sa vtedy ozvem. Čo by ste do budúceho štvrťroka chceli vidieť najviac — a je nejaký mesiac, ktorý vám vyhovuje najlepšie?",
+      "recommendedAction": "Nastavte si jednu pripomienku s konkrétnym dátumom a poznamenajte si, čo chceli vidieť. Nepozastavujte kvôli nim celé kolo. Ak plánujete uzavrieť skôr, zdvorilo im to povedzte, aby sa mohli rozhodnúť.",
+      "followUpTimingNote": "Ozvite sa približne v mesiaci, ktorý pomenovali, s krátkou správou o pokroku. Ak neodpovedia, pošlite o týždeň-dva jedno jemné pripomenutie a potom to nechajte tak.",
+      "editableReplyTemplate": "Dobrý deň, [meno investora],\n\nďakujem — rád sa ozvem v budúcom štvrťroku.\n\nAby bol ďalší rozhovor užitočný: čo by ste dovtedy chceli vidieť najviac? Očakávam, že už budeme mať [očakávaný pokrok, napr. výsledky nášho prvého pilotného projektu s veľkým firemným zákazníkom].\n\nPre úplnosť: uzavretie kola momentálne plánujeme na [cieľový mesiac]. Ak to pre vás niečo mení, rád vám ešte predtým pošlem viac informácií.\n\nS pozdravom,\n[vaše meno]",
+      "exampleScenario": {
+        "description": "Hypotetický príklad: partner fondu povie „ozvite sa nám znova budúci štvrťrok“ a vysvetlí, že práve dokončujú zbieranie peňazí do nového fondu. Výklad o skutočnom časovom obmedzení je pravdepodobný, no zakladateľ chce kolo uzavrieť o šesť týždňov. Odpíše s termínom uzavretia a pokračuje v kole; partner sa rozhodne v tomto kole neinvestovať, ale požiada o zasielanie budúcich správ o pokroku.",
+        "hypothetical": true
+      },
+      "metaTitle": "„Ozvite sa budúci štvrťrok“: čo tým VC myslí | VC Says",
+      "metaDescription": "Keď investor povie „ozvite sa budúci štvrťrok“: časové obmedzenie, vyčkávanie, alebo jemné nie? Signály, jedna doplňujúca otázka a šablóna odpovede.",
+      "editorialReviewer": "claude-fluent-pass",
+      "reviewedAt": "2026-11-09",
+      "reviewNote": "AI fluent review pass done (terminology, vykanie, calques, placeholders). Not reviewed by a native human; needs native SK approval before publication."
+    },
+    {
+      "id": "send-deck",
+      "status": "machine_draft_fluent_reviewed_needs_native_approval",
+      "phrase": "Pošlite mi svoju prezentáciu.",
+      "seedPhrase": "Pošlite mi vašu prezentáciu pre investorov.",
+      "synonyms": [
+        "Môžete mi poslať svoju prezentáciu?",
+        "Pošlite mi pitch deck",
+        "Rád sa pozriem na vašu prezentáciu",
+        "Pošlite nám nejaké podklady"
+      ],
+      "h1": "„Pošlite mi svoju prezentáciu“ — čo to môže znamenať a ako odpovedať",
+      "shortAnswer": "Samo osebe neutrálne. Zvyčajne ide o prvotný skríning, niekedy o prejav skutočného počiatočného záujmu; rozhoduje, čo žiadosti predchádzalo a čo nasleduje potom. Pošlite stručnú, aktuálnu prezentáciu pre investorov (pitch deck) bez zbytočného odkladu a navrhnite konkrétny ďalší krok.",
+      "interpretations": [
+        {
+          "kind": "noise",
+          "possibility": "Prvotný skríning — nenáročný spôsob, ako fond preosieva veľké množstvo firiem.",
+          "contextualClues": "Žiadosť zaznie na podujatí alebo príde e-mailom bez predchádzajúceho rozhovoru; často od analytika alebo asociáta; ďalší krok sa nespomína."
+        },
+        {
+          "kind": "interest",
+          "possibility": "Skutočný predbežný záujem po dobrom rozhovore.",
+          "contextualClues": "Žiadosť nasleduje po konkrétnych otázkach o vašej firme; spomenú, kto ďalší sa na prezentáciu pozrie, alebo po jej prečítaní navrhnú hovor."
+        },
+        {
+          "kind": "pass",
+          "possibility": "Zdvorilý spôsob, ako ukončiť rozhovor — alebo mapovanie trhu pre tézu, ktorú fond skúma.",
+          "contextualClues": "Veľmi všeobecný záujem o váš sektor, nie o vašu firmu; po odoslaní prezentácie žiadne doplňujúce otázky."
+        }
+      ],
+      "positiveSignals": [
+        "Po prečítaní položia konkrétne doplňujúce otázky.",
+        "Navrhnú hovor alebo pomenujú, kto sa na prezentáciu pozrie ďalší.",
+        "Vyžiadajú si ďalšie materiály (dátovú miestnosť, finančný model, referencie)."
+      ],
+      "weakSignals": [
+        "Po odoslaní nijako nepotvrdia prijatie.",
+        "Žiadosť prišla bez akéhokoľvek kontextu týkajúceho sa práve vašej firmy.",
+        "Ešte pred akýmkoľvek rozhovorom žiadajú veľmi citlivé údaje."
+      ],
+      "clarifyingQuestion": "Samozrejme — pošlem ju ešte dnes. Keď si ju pozriete, malo by zmysel dohodnúť si 20-minútový hovor na vaše otázky?",
+      "recommendedAction": "Do jedného dňa pošlite stručnú, aktuálnu prezentáciu, v tele e-mailu pridajte zhrnutie na tri-štyri riadky a navrhnite ďalší krok. Poskytnite len to, čo ste v tejto fáze ochotní zdieľať.",
+      "followUpTimingNote": "Pošlite do 24–48 hodín. Ak neodpovedia, približne po týždni pošlite jednu krátku následnú správu, ideálne s malou, ale skutočnou novinkou.",
+      "editableReplyTemplate": "Dobrý deň, [meno investora],\n\nďakujem za záujem o [názov firmy] — prezentáciu posielam v prílohe.\n\nStručne: pomáhame [zákazník] [výsledok]. Za [časové obdobie] sme dosiahli [kľúčový pokrok] a teraz získavame [veľkosť/fáza kola] na [hlavné využitie prostriedkov].\n\nKeď si ju pozriete, malo by zmysel dohodnúť si 20-minútový hovor na vaše otázky? Mám čas [dva navrhované termíny].\n\nS pozdravom,\n[vaše meno]",
+      "exampleScenario": {
+        "description": "Hypotetický príklad: na demo dni povie asociát fondu po dvojminútovom rozhovore „pošlite mi svoju prezentáciu“. Najpravdepodobnejší je výklad o prvotnom skríningu. Zakladateľ pošle prezentáciu hneď na druhý deň ráno spolu s krátkym zhrnutím a dvoma termínmi na hovor; asociát odpovie tromi konkrétnymi otázkami, čo je silnejší signál než samotná pôvodná žiadosť.",
+        "hypothetical": true
+      },
+      "metaTitle": "„Pošlite mi svoju prezentáciu“: čo tým investor myslí | VC Says",
+      "metaDescription": "Je „pošlite mi svoju prezentáciu“ záujem, alebo len skríning? Ako to čítať, čo signál posilňuje a krátky sprievodný e-mail na úpravu a skopírovanie.",
+      "editorialReviewer": "claude-fluent-pass",
+      "reviewedAt": "2026-11-09",
+      "reviewNote": "AI fluent review pass done (terminology, vykanie, calques, placeholders). Not reviewed by a native human; needs native SK approval before publication."
+    },
+    {
+      "id": "second-meeting",
+      "status": "machine_draft_fluent_reviewed_needs_native_approval",
+      "phrase": "Dohodnime si ďalšie stretnutie.",
+      "seedPhrase": "Dohodnime si ďalšie stretnutie.",
+      "synonyms": [
+        "Dohodnime si ďalší hovor",
+        "Môžeme v rozhovore pokračovať?",
+        "Poďme to budúci týždeň prebrať podrobnejšie",
+        "Radi by sme sa stretli znova"
+      ],
+      "h1": "„Dohodnime si ďalšie stretnutie“ — čo to môže znamenať a ako odpovedať",
+      "shortAnswer": "Pozitívny signál v procese: investor vám venuje ďalší čas. Stále to však nie je záväzok. Najsilnejšie verzie prichádzajú s programom, termínom, účasťou seniornejších ľudí alebo s konkrétnou požiadavkou na dáta.",
+      "interpretations": [
+        {
+          "kind": "interest",
+          "possibility": "Skutočný posun v ich hodnotiacom procese.",
+          "contextualClues": "Pozvánka do kalendára príde rýchlo; pridá sa seniornejší partner; vysvetlia vám svoj proces a časový harmonogram."
+        },
+        {
+          "kind": "condition",
+          "possibility": "Preverovanie konkrétnej pochybnosti, ktorú chcú vyriešiť skôr, než pôjdu ďalej.",
+          "contextualClues": "Pomenujú tému (go-to-market, jednotková ekonomika, technológia) alebo si vopred vyžiadajú konkrétne dáta."
+        },
+        {
+          "kind": "noise",
+          "possibility": "Budovanie vzťahu bez rozhodnutia v blízkom čase — niektorí investori sa pred rozhodnutím stretnú mnohokrát.",
+          "contextualClues": "Tá istá osoba, žiadny program, „len tak sa porozprávať“; o procese ani termínoch nepadne ani slovo."
+        }
+      ],
+      "positiveSignals": [
+        "Termín a program navrhnú rýchlo.",
+        "Pridá sa seniornejší partner alebo špecialista.",
+        "Vopred si vyžiadajú konkrétne materiály.",
+        "Opíšu, aké kroky nasledujú po tomto stretnutí."
+      ],
+      "weakSignals": [
+        "Stretnutie sa opakovane presúva.",
+        "Žiadny program a žiadni noví účastníci.",
+        "Niekoľko stretnutí bez akéhokoľvek posunu v ich procese."
+      ],
+      "clarifyingQuestion": "Teším sa. Čo by sme na tomto stretnutí mali predovšetkým vyriešiť a kto ďalší sa z vašej strany zúčastní?",
+      "recommendedAction": "Potvrďte stretnutie, opýtajte sa, čo má vyriešiť, a pripravte si k tejto téme podklady. Opýtajte sa na ich proces a harmonogram. Rozhovory s ostatnými investormi veďte ďalej rovnakým tempom.",
+      "followUpTimingNote": "Potvrďte do jedného dňa. Vyžiadané materiály pošlite ešte pred stretnutím a do 24 hodín po ňom pošlite krátke zhrnutie s ďalšími krokmi.",
+      "editableReplyTemplate": "Dobrý deň, [meno investora],\n\nďakujem — teší ma, že bol rozhovor užitočný. [Deň/čas] nám vyhovuje.\n\nAby sme čas využili čo najlepšie: je niečo, na čo by ste sa chceli zamerať podrobnejšie — napríklad [téma, napr. náš obchodný pipeline alebo jednotková ekonomika]? Materiály vám rád pošlem vopred.\n\nA zúčastní sa aj niekto ďalší z [fond], aby som mohol prizvať správnych ľudí z našej strany?\n\nS pozdravom,\n[vaše meno]",
+      "exampleScenario": {
+        "description": "Hypotetický príklad: po prvom hovore požiada partner fondu o druhé stretnutie a vopred si vyžiada prehľad obchodných príležitostí. Najpravdepodobnejší je výklad o preverovaní konkrétnej pochybnosti. Zakladateľ pošle prehľad aj s kontextom, na stretnutie prizve šéfa obchodu a na konci sa opýta, aký by bol ďalší krok v procese fondu.",
+        "hypothetical": true
+      },
+      "metaTitle": "„Dohodnime si ďalšie stretnutie“: je to dobré znamenie? | VC Says",
+      "metaDescription": "Druhé stretnutie s VC je pozitívny signál v procese, no nie záväzok. Ako ho čítať, čo pripraviť a potvrdzujúca odpoveď na skopírovanie.",
+      "editorialReviewer": "claude-fluent-pass",
+      "reviewedAt": "2026-11-09",
+      "reviewNote": "AI fluent review pass done (terminology, vykanie, calques, placeholders). Not reviewed by a native human; needs native SK approval before publication."
+    },
+    {
+      "id": "partner-introduction",
+      "status": "machine_draft_fluent_reviewed_needs_native_approval",
+      "phrase": "Rád by som vás zoznámil s kolegom z fondu.",
+      "seedPhrase": "Rád by som vás zoznámil s kolegom z fondu.",
+      "synonyms": [
+        "Prizvem k tomu jedného z našich partnerov",
+        "Prizvem aj kolegu",
+        "Chcel by som, aby to počul aj partner fondu",
+        "Mohli by ste to odprezentovať všetkým partnerom fondu?"
+      ],
+      "h1": "„Rád by som vás zoznámil s kolegom z fondu“ — čo to môže znamenať a ako odpovedať",
+      "shortAnswer": "Zvyčajne pozitívny signál v procese: váš kontakt je ochotný kvôli vám vynaložiť interný kapitál, teda vlastnú dôveryhodnosť vo fonde. Môže ísť o zástancu, ktorý pre vás získava podporu, o povinný druhý názor alebo o odbornú kontrolu. Pripravte sa na otázky z pohľadu celého fondu a opýtajte sa svojho kontaktu, na čo bude partner klásť dôraz.",
+      "interpretations": [
+        {
+          "kind": "interest",
+          "possibility": "Váš kontakt vystupuje ako interný zástanca a získava pre vás podporu.",
+          "contextualClues": "V predstavení vysvetlí, čo ho zaujalo; váš kontakt zostáva zapojený a pomáha vám s prípravou."
+        },
+        {
+          "kind": "noise",
+          "possibility": "Rutinný krok — mnohé fondy vyžadujú pred ďalším postupom názor druhého partnera.",
+          "contextualClues": "Opíšu to ako štandardný postup; nesignalizujú ani zvláštne nadšenie, ani obavy."
+        },
+        {
+          "kind": "condition",
+          "possibility": "Odborná kontrola konkrétnej pochybnosti — partner má odborné alebo technické znalosti v danej oblasti.",
+          "contextualClues": "Profil partnera zodpovedá riziku, o ktorom sa hovorilo na prvom stretnutí."
+        }
+      ],
+      "positiveSignals": [
+        "Predstavenie má jasný účel a termín.",
+        "Váš pôvodný kontakt zostáva zapojený a dáva vám tipy na prípravu.",
+        "Nasledujú žiadosti o materiály alebo vysvetlenie procesu."
+      ],
+      "weakSignals": [
+        "Nový partner akoby vašu firmu nepoznal.",
+        "Predstavenie príde bez kontextu a bez časového rámca.",
+        "Po odovzdaní kontaktu sa váš pôvodný kontakt odmlčí."
+      ],
+      "clarifyingQuestion": "Ďakujem za predstavenie. Čo by bolo najužitočnejšie prebrať s [meno partnera] a aké sú potom ďalšie kroky vo vašom procese?",
+      "recommendedAction": "Pripravte sa na širšie otázky z pohľadu celého fondu — veľkosť trhu, aký veľký môže byť výsledný exit, zapadnutie do portfólia. Opýtajte sa svojho kontaktu, ktoré pochybnosti treba riešiť. Pošlite vopred krátky podklad, aby partner prišiel pripravený.",
+      "followUpTimingNote": "Odpovedzte do jedného dňa a navrhnite termíny. Do 24 hodín po stretnutí s partnerom pošlite zhrnutie a pôvodný kontakt dajte do kópie.",
+      "editableReplyTemplate": "Dobrý deň, [meno investora],\n\nďakujem — s [meno partnera] sa rád stretnem.\n\nAby som sa dobre pripravil: na čo by ste odporučili zamerať sa pre [meno partnera] — napríklad [téma, napr. veľkosť trhu alebo technologické riziko]? Vopred rád pošlem krátky podklad na prečítanie.\n\nA aby som si to vedel naplánovať: čo vo vašom procese po tomto rozhovore zvyčajne nasleduje?\n\nS pozdravom,\n[vaše meno]",
+      "exampleScenario": {
+        "description": "Hypotetický príklad: dva dni po stretnutí, na ktorom sa hovorilo o regulačnom riziku, asociát predstaví zakladateľa partnerovi fondu s dlhoročnými skúsenosťami v platobnom sektore. Výklad o odbornej kontrole je pravdepodobný. Zakladateľ sa asociáta opýta, na čo sa partner zameria, a pripraví jednostranový prehľad regulácie.",
+        "hypothetical": true
+      },
+      "metaTitle": "„Rád by som vás zoznámil s kolegom z fondu“: čo to znamená | VC Says",
+      "metaDescription": "Predstavenie partnerovi fondu je zvyčajne dobrý signál v procese. Čo môže znamenať, aké signály sledovať, ako sa pripraviť a odpoveď na skopírovanie.",
+      "editorialReviewer": "claude-fluent-pass",
+      "reviewedAt": "2026-11-09",
+      "reviewNote": "AI fluent review pass done (terminology, vykanie, calques, placeholders). Not reviewed by a native human; needs native SK approval before publication."
+    },
+    {
+      "id": "need-more-traction",
+      "status": "machine_draft_fluent_reviewed_needs_native_approval",
+      "phrase": "Potrebujeme vidieť väčšiu trakciu.",
+      "seedPhrase": "Potrebujeme vidieť viac dôkazov o záujme zákazníkov.",
+      "synonyms": [
+        "Ozvite sa, keď budete mať vyššie tržby",
+        "Chceme vidieť rýchlejší rast",
+        "Ukážte nám viac dôkazov od zákazníkov",
+        "Čísla tam ešte nie sú"
+      ],
+      "h1": "„Potrebujeme vidieť väčšiu trakciu“ — čo to môže znamenať a ako odpovedať",
+      "shortAnswer": "Skutočne chýbajúce dôkazy o trakcii (teda o tom, že produkt u zákazníkov zaberá), nesúlad vo fáze alebo všeobecná námietka, za ktorou sa skrýva iná pochybnosť. Opýtajte sa, na ktorej metrike záleží a približne akú úroveň by chceli vidieť — a skôr než sa za týmto míľnikom rozbehnete, zvážte, či zapadá do vášho vlastného plánu.",
+      "interpretations": [
+        {
+          "kind": "condition",
+          "possibility": "Konkrétne chýbajúce dôkazy — dopyt, tempo rastu, retencia alebo kvalita tržieb.",
+          "contextualClues": "Pomenujú metriku alebo sa podrobne pýtajú na kohorty, obchodný pipeline či odchod zákazníkov (churn)."
+        },
+        {
+          "kind": "mismatch",
+          "possibility": "Nesúlad vo fáze: fond zvyčajne podporuje firmy s dlhšou históriou.",
+          "contextualClues": "Ich posledné investície sú v neskorších fázach; poznámka sa týka ich prahových hodnôt, nie vášho vývoja."
+        },
+        {
+          "kind": "pass",
+          "possibility": "Všeobecná námietka, za ktorou sa skrýva iná pochybnosť (tím, trh, konkurencia).",
+          "contextualClues": "Stretnutie sa točilo okolo iných tém; žiadna metrika nezaznie; poznámka padne až úplne na konci."
+        }
+      ],
+      "positiveSignals": [
+        "Pomenujú metriku aj približnú prahovú hodnotu.",
+        "Požiadajú, aby ste sa ozvali, keď ju dosiahnete.",
+        "Podrobne sa zaoberajú vašimi číslami."
+      ],
+      "weakSignals": [
+        "Nespomenú žiadnu metriku ani prahovú hodnotu.",
+        "Ich otázky sa týkali niečoho úplne iného.",
+        "Na žiadosť o upresnenie nereagujú."
+      ],
+      "clarifyingQuestion": "Na ktorej metrike vám záleží najviac — tržby, tempo rastu, retencia alebo niečo iné — a približne aká úroveň by bola dôvodom na ďalší rozhovor?",
+      "recommendedAction": "Ak metriku a prahovú hodnotu uvedú, zaznamenajte si ich. Zvážte, či zapadajú do vášho vlastného plánu — nenaháňajte ľubovoľné číslo kvôli jedinému investorovi. Uprednostnite investorov, ktorí podporujú firmy vo vašej aktuálnej fáze, a keď míľnik dosiahnete, pošlite krátku správu o pokroku.",
+      "followUpTimingNote": "Doplňujúcu otázku položte do niekoľkých dní. Znova sa ozvite, keď míľnik dosiahnete, aj s dátami — nie skôr.",
+      "editableReplyTemplate": "Dobrý deň, [meno investora],\n\nďakujem za priamosť — veľmi mi to pomáha.\n\nAby som pochopil, čo by mohlo situáciu zmeniť: na ktorej metrike vám v našej fáze záleží najviac — [možnosť A, napr. mesačné tržby], [možnosť B, napr. retencia] alebo niečo iné — a približne aká úroveň by bola dôvodom na ďalší rozhovor?\n\nAk to bude v súlade s naším plánom, rád vám pošlem krátku správu o pokroku, keď to dosiahneme.\n\nS pozdravom,\n[vaše meno]",
+      "exampleScenario": {
+        "description": "Hypotetický príklad: zakladateľ spotrebiteľskej aplikácie počuje „potrebujeme vidieť väčšiu trakciu“ po stretnutí, na ktorom dominovali otázky o konkurencii. Keďže nezaznela žiadna metrika, je pravdepodobný výklad, že námietka zakrýva inú pochybnosť. Zakladateľ sa opýta, na ktorej metrike záleží, zistí, že skutočnou obavou bola konkurencia, a do budúcich prezentácií pridá slajd o tom, čím sa odlišujú.",
+        "hypothetical": true
+      },
+      "metaTitle": "„Potrebujeme vidieť väčšiu trakciu“: čo tým VC myslí | VC Says",
+      "metaDescription": "Čo môže znamenať, keď investor chce „vidieť väčšiu trakciu“, ako zistiť, na ktorej metrike záleží, a upraviteľná odpoveď na skopírovanie.",
+      "editorialReviewer": "claude-fluent-pass",
+      "reviewedAt": "2026-11-09",
+      "reviewNote": "AI fluent review pass done (terminology, vykanie, calques, placeholders). Not reviewed by a native human; needs native SK approval before publication."
+    },
+    {
+      "id": "no-lead-investor",
+      "status": "machine_draft_fluent_reviewed_needs_native_approval",
+      "phrase": "Ozvite sa, keď budete mať hlavného investora.",
+      "seedPhrase": "Ozvite sa, keď budete mať hlavného investora.",
+      "synonyms": [
+        "Pridáme sa, keď budete mať lead investora",
+        "Nájdite si hlavného investora a potom sa na to pozrieme",
+        "Kolá nevedieme",
+        "Kto vedie kolo?"
+      ],
+      "h1": "„Ozvite sa, keď budete mať hlavného investora“ — čo to môže znamenať a ako odpovedať",
+      "shortAnswer": "V najlepšom prípade podmienený záujem — a niekedy zdvorilé nie. Niektorí investori sa do kôl skutočne len pridávajú; iní touto vetou čakajú, kým vás niekto iný „overí“. Berte to ako podmienené, nikdy nie ako prísľub, a opýtajte sa, akú výšku investície by zvažovali a za akých podmienok.",
+      "interpretations": [
+        {
+          "kind": "condition",
+          "possibility": "Skutočná ochota pridať sa ako spoluinvestor — fond kolá vedie zriedka alebo vôbec a spolieha sa na to, že podmienky nastaví hlavný investor (lead investor).",
+          "contextualClues": "V ich portfóliu je málo kôl, ktoré viedli, alebo žiadne; spomenú výšku investície alebo sa opýtajú na podmienky, o ktoré sa usilujete."
+        },
+        {
+          "kind": "condition",
+          "possibility": "Záujem, ktorý závisí od overenia: chcú, aby due diligence urobil a cenu stanovil niekto iný.",
+          "contextualClues": "Pýtajú sa, s kým ďalším rokujete; nadšenie je úprimné, no nič konkrétne neponúknu."
+        },
+        {
+          "kind": "pass",
+          "possibility": "Jemné odmietnutie bez akéhokoľvek skutočného záväzku.",
+          "contextualClues": "Žiadna suma, žiadne podmienky, žiadna prosba, aby ste im dali vedieť, keď sa hlavný investor zaviaže."
+        }
+      ],
+      "positiveSignals": [
+        "Uvedú výšku investície a podmienky.",
+        "Ponúknu prepojenie s potenciálnymi hlavnými investormi.",
+        "Požiadajú, aby ste im dali vedieť hneď, ako sa hlavný investor zaviaže."
+      ],
+      "weakSignals": [
+        "Nespomenú žiadnu sumu.",
+        "Nadšenie bez akýchkoľvek podrobností.",
+        "Nereagujú, keď im pošlete novinky o rokovaniach s potenciálnymi hlavnými investormi."
+      ],
+      "clarifyingQuestion": "To je užitočné, ďakujem. Ak získame hlavného investora za podmienok v rozsahu, o ktorom sme hovorili, akú výšku investície by ste zvažovali — a máte nejaké požiadavky na to, kto by mal byť hlavným investorom?",
+      "recommendedAction": "Zaznamenajte si to ako podmienený záujem, nie ako prísľub, a nezapočítavajte to do celkovej sumy kola. Úsilie sústreďte na hľadanie hlavného investora. Požiadajte o prepojenie s fondmi, ktoré vo vašej fáze kolá vedú.",
+      "followUpTimingNote": "Odpovedzte do dvoch-troch dní. Znova sa ozvite, keď sa hlavný investor zaviaže alebo keď budú rokovania o term sheete v pokročilej fáze.",
+      "editableReplyTemplate": "Dobrý deň, [meno investora],\n\nďakujem — je to jasné a užitočné.\n\nAby som mohol kolo dobre naplánovať: ak získame hlavného investora za podmienok okolo [cieľové podmienky alebo rozsah], akú výšku investície by ste zvažovali a máte nejaké požiadavky na to, kto by mal byť hlavným investorom?\n\nAk vám napadnú fondy, ktoré v našej fáze zvyčajne vedú kolá, budem veľmi vďačný za prepojenie. Dám vám vedieť hneď, ako budeme mať hlavného investora.\n\nS pozdravom,\n[vaše meno]",
+      "exampleScenario": {
+        "description": "Hypotetický príklad: zakladateľ v seed fáze počuje „ozvite sa, keď budete mať hlavného investora“ od fondu, ktorý uvedie výšku investície a ponúkne prepojenie s dvoma investormi, ktorí kolá vedú. Najpravdepodobnejší je výklad o skutočnej ochote pridať sa. Zakladateľ si to zaznamená ako podmienený záujem, prepojenia využije a fondu dá vedieť, keď hlavný investor pošle term sheet.",
+        "hypothetical": true
+      },
+      "metaTitle": "„Ozvite sa, keď budete mať hlavného investora“: čo to znamená | VC Says",
+      "metaDescription": "Investor chce najprv hlavného investora: skutočná ochota pridať sa, alebo jemné nie? Signály, ako sa opýtať na výšku investície a odpoveď na skopírovanie.",
+      "editorialReviewer": "claude-fluent-pass",
+      "reviewedAt": "2026-11-09",
+      "reviewNote": "AI fluent review pass done (terminology, vykanie, calques, placeholders). Not reviewed by a native human; needs native SK approval before publication."
+    },
+    {
+      "id": "investor-ghosting",
+      "status": "machine_draft_fluent_reviewed_needs_native_approval",
+      "phrase": "Žiadna odpoveď ani po dvoch pripomenutiach.",
+      "seedPhrase": "Bez odpovede po dvoch pripomenutiach.",
+      "synonyms": [
+        "Investor sa odmlčal (ghosting)",
+        "VC neodpovedá po stretnutí",
+        "Investor neodpisuje",
+        "Investor stíchol"
+      ],
+      "h1": "Žiadna odpoveď ani po dvoch pripomenutiach — čo môže znamenať mlčanie investora",
+      "shortAnswer": "Mlčanie je správanie, nie správa, preto ho čítajte opatrne. Môže ísť o nedostatok času, stratený e-mail, zaseknutý interný proces — alebo o nízky záujem. Po dvoch nezodpovedaných pripomenutiach pošlite jednu krátku správu, ktorá vec uzavrie, a energiu presmerujte na aktívne rozhovory.",
+      "interpretations": [
+        {
+          "kind": "noise",
+          "possibility": "Nedostatok času, cestovanie alebo preplnená schránka — váš e-mail jednoducho nebol prioritou.",
+          "contextualClues": "Predtým bol záujem silný; ticho trvá krátko; v minulosti odpovedali rýchlo."
+        },
+        {
+          "kind": "noise",
+          "possibility": "Interný proces sa zasekol a zatiaľ nemajú odpoveď.",
+          "contextualClues": "Spomínali diskusie medzi partnermi alebo investičný výbor; ticho nasleduje po prisľúbenom termíne rozhodnutia."
+        },
+        {
+          "kind": "pass",
+          "possibility": "Nízky záujem, vyjadrený tým, že neodpovedajú.",
+          "contextualClues": "Záujem bol od začiatku obmedzený; nikdy sa nedohodol konkrétny ďalší krok; uplynulo niekoľko týždňov."
+        }
+      ],
+      "positiveSignals": [
+        "Predtým sa dohodli na konkrétnom ďalšom kroku alebo termíne rozhodnutia.",
+        "Predtým sa podrobne zapájali (otázky, žiadosti o materiály).",
+        "Niekto iný z fondu stále reaguje."
+      ],
+      "weakSignals": [
+        "Nikdy sa nedohodol žiadny konkrétny ďalší krok.",
+        "Niekoľko týždňov ticha napriek krátkym a užitočným správam o pokroku.",
+        "Vaše pripomenutia videli (napr. odpísali iným), no vám neodpovedali."
+      ],
+      "clarifyingQuestion": "Chceli by ste sa tomu ešte venovať, alebo to mám zatiaľ považovať za uzavreté? Obe odpovede sú úplne v poriadku.",
+      "recommendedAction": "Pošlite jednu krátku uzatváraciu správu so skutočnou novinkou a jednoduchou otázkou typu áno/nie. Potom investora v pipeline presuňte medzi „neaktívnych“ a pozornosť venujte iným. Ďalšie pripomenutia už neposielajte.",
+      "followUpTimingNote": "Počkajte, kým od prisľúbeného termínu uplynie niekoľko pracovných dní (alebo približne týždeň po stretnutí). Po dvoch nezodpovedaných pripomenutiach pošlite o 1–2 týždne jednu poslednú správu — a potom prestaňte.",
+      "editableReplyTemplate": "Dobrý deň, [meno investora],\n\nviem, že máte veľa práce, preto budem stručný.\n\nKrátka novinka: [jeden konkrétny pokrok].\n\nMáte o [názov firmy] v tomto kole stále záujem, alebo to mám zatiaľ považovať za uzavreté? Obe odpovede sú úplne v poriadku — len mi to pomôže pri plánovaní.\n\nS pozdravom,\n[vaše meno]",
+      "exampleScenario": {
+        "description": "Hypotetický príklad: partner fondu sľúbil rozhodnutie „do piatku“ a potom dva týždne mlčal napriek dvom zdvorilým pripomenutiam. Pravdepodobné je zaseknutie interného procesu aj nízky záujem. Zakladateľ pošle jednu uzatváraciu správu s novým získaným zákazníkom a otázkou áno/nie a potom sa sústredí na dvoch investorov, ktorí sa aktívne zapájajú.",
+        "hypothetical": true
+      },
+      "metaTitle": "Investor neodpovedá ani po pripomenutiach? Čo to môže znamenať | VC Says",
+      "metaDescription": "Čo môže znamenať mlčanie VC po dvoch pripomenutiach, ako dlho čakať a krátky uzatvárací e-mail, ktorý môžete upraviť a skopírovať.",
+      "editorialReviewer": "claude-fluent-pass",
+      "reviewedAt": "2026-11-09",
+      "reviewNote": "AI fluent review pass done (terminology, vykanie, calques, placeholders). Not reviewed by a native human; needs native SK approval before publication."
+    }
+  ],
+  "placeholderPolicy": {
+    "note": "Visible bracket placeholders are localized for founders; locale tools.locale.js replaces the same localized tokens. EN public tools keep English tokens.",
+    "mapFromEnglish": {
+      "Investor name": "meno investora",
+      "Company": "názov firmy",
+      "Your name": "vaše meno",
+      "Partner name": "meno partnera",
+      "Fund": "fond",
+      "milestone": "míľnik",
+      "progress": "pokrok",
+      "topic": "téma",
+      "customer": "zákazník",
+      "outcome": "výsledok",
+      "specific next step": "konkrétny ďalší krok"
+    },
+    "status": "machine_draft_fluent_reviewed_needs_native_approval"
+  }
+}
